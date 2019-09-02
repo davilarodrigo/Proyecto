@@ -22,7 +22,19 @@ namespace ProyectoPAV
 
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+      
+
+        private void Form2_Load(object sender, EventArgs e)
+        {
+            this.MinimumSize = new Size(600, 400);
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button5_Click(object sender, EventArgs e)
         {
 
         }

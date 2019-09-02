@@ -60,6 +60,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Formularios\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Form2.resx">
       <DependentUpon>Form2.cs</DependentUpon>
     </EmbeddedResource>
@@ -71,6 +74,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -87,6 +91,20 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Clases\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="resources\Add_256x256.png" />
+    <Content Include="resources\Cancel_256x256.png" />
+    <Content Include="resources\Check_256x256.png" />
+    <Content Include="resources\Delete_256x256.png" />
+    <Content Include="resources\Edit_256x256.png" />
+    <Content Include="resources\Folder_256x256.png" />
+    <Content Include="resources\Help_256x256.png" />
+    <Content Include="resources\Log Out_256x256.png" />
+    <Content Include="resources\Refresh_256x256.png" />
+    <Content Include="resources\Save_256x256.png" />
+    <Content Include="resources\Search_256x256.png" />
+    <Content Include="resources\Settings_256x256.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
