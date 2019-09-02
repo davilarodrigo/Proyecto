@@ -46,25 +46,70 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Formularios\Form1.cs">
+    <Compile Include="Formularios\FrmClientesModificar.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Formularios\FrmClientesModificar.Designer.cs">
+      <DependentUpon>FrmClientesModificar.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\Form2.cs">
+    <Compile Include="Formularios\FrmClientesNuevo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\Form2.Designer.cs">
-      <DependentUpon>Form2.cs</DependentUpon>
+    <Compile Include="Formularios\FrmClientesNuevo.Designer.cs">
+      <DependentUpon>FrmClientesNuevo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FrmEscritorio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmEscritorio.Designer.cs">
+      <DependentUpon>FrmEscritorio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FrmClientesConsultar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmClientesConsultar.Designer.cs">
+      <DependentUpon>FrmClientesConsultar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FrmProductosConsultar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmProductosConsultar.Designer.cs">
+      <DependentUpon>FrmProductosConsultar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FrmProductosModificar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmProductosModificar.Designer.cs">
+      <DependentUpon>FrmProductosModificar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FrmProductosNuevo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmProductosNuevo.Designer.cs">
+      <DependentUpon>FrmProductosNuevo.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Formularios\Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="Formularios\FrmClientesModificar.resx">
+      <DependentUpon>FrmClientesModificar.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Form2.resx">
-      <DependentUpon>Form2.cs</DependentUpon>
+    <EmbeddedResource Include="Formularios\FrmClientesNuevo.resx">
+      <DependentUpon>FrmClientesNuevo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmEscritorio.resx">
+      <DependentUpon>FrmEscritorio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmClientesConsultar.resx">
+      <DependentUpon>FrmClientesConsultar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmProductosConsultar.resx">
+      <DependentUpon>FrmProductosConsultar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmProductosModificar.resx">
+      <DependentUpon>FrmProductosModificar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmProductosNuevo.resx">
+      <DependentUpon>FrmProductosNuevo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
