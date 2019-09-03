@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace ProyectoPAV.Formularios
 {
-    public partial class FrmClientesNuevo : Form
+    public partial class FrmProveedoresNuevo : Form
     {
-        public FrmClientesNuevo()
+        public FrmProveedoresNuevo()
         {
             InitializeComponent();
         }

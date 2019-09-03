@@ -46,6 +46,36 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Formularios\Auxiliares\FrmCargos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Auxiliares\FrmCargos.Designer.cs">
+      <DependentUpon>FrmCargos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Auxiliares\FrmCategorias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Auxiliares\FrmCategorias.Designer.cs">
+      <DependentUpon>FrmCategorias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Auxiliares\FrmLocalidades.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Auxiliares\FrmLocalidades.Designer.cs">
+      <DependentUpon>FrmLocalidades.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Auxiliares\FrmMarca.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Auxiliares\FrmMarca.Designer.cs">
+      <DependentUpon>FrmMarca.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Auxiliares\FrmTipoDocumentos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Auxiliares\FrmTipoDocumentos.Designer.cs">
+      <DependentUpon>FrmTipoDocumentos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\FrmClientesModificar.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -57,6 +87,24 @@
     </Compile>
     <Compile Include="Formularios\FrmClientesNuevo.Designer.cs">
       <DependentUpon>FrmClientesNuevo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FrmEmpleadosConsultar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmEmpleadosConsultar.Designer.cs">
+      <DependentUpon>FrmEmpleadosConsultar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FrmEmpleadosModificar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmEmpleadosModificar.Designer.cs">
+      <DependentUpon>FrmEmpleadosModificar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FrmEmpleadosNuevo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmEmpleadosNuevo.Designer.cs">
+      <DependentUpon>FrmEmpleadosNuevo.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\FrmEscritorio.cs">
       <SubType>Form</SubType>
@@ -88,13 +136,73 @@
     <Compile Include="Formularios\FrmProductosNuevo.Designer.cs">
       <DependentUpon>FrmProductosNuevo.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\FrmProveedoresConsultar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmProveedoresConsultar.Designer.cs">
+      <DependentUpon>FrmProveedoresConsultar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FrmProveedoresModificar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmProveedoresModificar.Designer.cs">
+      <DependentUpon>FrmProveedoresModificar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FrmProveedoresNuevo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmProveedoresNuevo.Designer.cs">
+      <DependentUpon>FrmProveedoresNuevo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Ventas %28NO es ABM%29\FrmVentasConsultar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Ventas %28NO es ABM%29\FrmVentasConsultar.Designer.cs">
+      <DependentUpon>FrmVentasConsultar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Ventas %28NO es ABM%29\FrmVentasDetalle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Ventas %28NO es ABM%29\FrmVentasDetalle.Designer.cs">
+      <DependentUpon>FrmVentasDetalle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Ventas %28NO es ABM%29\FrmVentasNueva.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Ventas %28NO es ABM%29\FrmVentasNueva.Designer.cs">
+      <DependentUpon>FrmVentasNueva.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Formularios\Auxiliares\FrmCargos.resx">
+      <DependentUpon>FrmCargos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Auxiliares\FrmCategorias.resx">
+      <DependentUpon>FrmCategorias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Auxiliares\FrmLocalidades.resx">
+      <DependentUpon>FrmLocalidades.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Auxiliares\FrmMarca.resx">
+      <DependentUpon>FrmMarca.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Auxiliares\FrmTipoDocumentos.resx">
+      <DependentUpon>FrmTipoDocumentos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\FrmClientesModificar.resx">
       <DependentUpon>FrmClientesModificar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\FrmClientesNuevo.resx">
       <DependentUpon>FrmClientesNuevo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmEmpleadosConsultar.resx">
+      <DependentUpon>FrmEmpleadosConsultar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmEmpleadosModificar.resx">
+      <DependentUpon>FrmEmpleadosModificar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmEmpleadosNuevo.resx">
+      <DependentUpon>FrmEmpleadosNuevo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\FrmEscritorio.resx">
       <DependentUpon>FrmEscritorio.cs</DependentUpon>
@@ -110,6 +218,21 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\FrmProductosNuevo.resx">
       <DependentUpon>FrmProductosNuevo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmProveedoresConsultar.resx">
+      <DependentUpon>FrmProveedoresConsultar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmProveedoresModificar.resx">
+      <DependentUpon>FrmProveedoresModificar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmProveedoresNuevo.resx">
+      <DependentUpon>FrmProveedoresNuevo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Ventas %28NO es ABM%29\FrmVentasConsultar.resx">
+      <DependentUpon>FrmVentasConsultar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Ventas %28NO es ABM%29\FrmVentasNueva.resx">
+      <DependentUpon>FrmVentasNueva.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -146,6 +269,8 @@
     <Content Include="resources\Folder_256x256.png" />
     <Content Include="resources\Help_256x256.png" />
     <Content Include="resources\Log Out_256x256.png" />
+    <None Include="resources\Logo Programa.png" />
+    <None Include="resources\Logo Programa ico.ico" />
     <Content Include="resources\Refresh_256x256.png" />
     <Content Include="resources\Save_256x256.png" />
     <Content Include="resources\Search_256x256.png" />

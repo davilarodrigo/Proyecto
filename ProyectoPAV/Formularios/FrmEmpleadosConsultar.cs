@@ -7,26 +7,33 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ProyectoPAV.Formularios;
 
-namespace ProyectoPAV.Formularios
+namespace ProyectoPAV
 {
-    public partial class FrmProductosConsultar : Form
+    public partial class FrmEmpleadosConsultar : Form
     {
-        public FrmProductosConsultar()
+        public FrmEmpleadosConsultar()
         {
             InitializeComponent();
         }
 
+
         private void BtnNuevo_Click(object sender, EventArgs e)
         {
-            FrmProductosNuevo NuevoProducto = new FrmProductosNuevo();
-            NuevoProducto.ShowDialog();
+            FrmEmpleadosNuevo NuevoEmpleado = new FrmEmpleadosNuevo();
+            NuevoEmpleado.ShowDialog();
         }
 
         private void BtnModificar_Click(object sender, EventArgs e)
         {
-            FrmProductosModificar ModificarProducto = new FrmProductosModificar();
-            ModificarProducto.ShowDialog();
+            FrmEmpleadosModificar ModificarEmpleado = new FrmEmpleadosModificar();
+            ModificarEmpleado.ShowDialog();
+        }
+
+        private void FrmClientesConsultar_Load(object sender, EventArgs e)
+        {
+            this.MinimumSize = new Size(600, 400);
         }
 
         private void BtnSalir_Click(object sender, EventArgs e)

@@ -117,6 +117,7 @@
             this.BtnSalir.Size = new System.Drawing.Size(50, 50);
             this.BtnSalir.TabIndex = 79;
             this.BtnSalir.UseVisualStyleBackColor = true;
+            this.BtnSalir.Click += new System.EventHandler(this.BtnSalir_Click);
             // 
             // BtnAceptar
             // 

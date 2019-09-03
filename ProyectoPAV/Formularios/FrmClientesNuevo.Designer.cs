@@ -52,6 +52,8 @@
             this.TextBoxDia = new System.Windows.Forms.TextBox();
             this.TextBoxMes = new System.Windows.Forms.TextBox();
             this.TextBoxAnio = new System.Windows.Forms.TextBox();
+            this.ComboLocalidad = new System.Windows.Forms.ComboBox();
+            this.LblLocalidad = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // LblApellido
@@ -219,18 +221,19 @@
             this.BtnSalir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.BtnSalir.BackgroundImage = global::ProyectoPAV.Properties.Resources.Log_Out_256x256;
             this.BtnSalir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.BtnSalir.Location = new System.Drawing.Point(342, 277);
+            this.BtnSalir.Location = new System.Drawing.Point(358, 301);
             this.BtnSalir.Name = "BtnSalir";
             this.BtnSalir.Size = new System.Drawing.Size(50, 50);
             this.BtnSalir.TabIndex = 21;
             this.BtnSalir.UseVisualStyleBackColor = true;
+            this.BtnSalir.Click += new System.EventHandler(this.BtnSalir_Click);
             // 
             // BtnAceptar
             // 
             this.BtnAceptar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.BtnAceptar.BackgroundImage = global::ProyectoPAV.Properties.Resources.Check_256x256;
             this.BtnAceptar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.BtnAceptar.Location = new System.Drawing.Point(286, 277);
+            this.BtnAceptar.Location = new System.Drawing.Point(302, 301);
             this.BtnAceptar.Name = "BtnAceptar";
             this.BtnAceptar.Size = new System.Drawing.Size(50, 50);
             this.BtnAceptar.TabIndex = 20;
@@ -257,11 +260,30 @@
             this.TextBoxAnio.Size = new System.Drawing.Size(94, 20);
             this.TextBoxAnio.TabIndex = 24;
             // 
+            // ComboLocalidad
+            // 
+            this.ComboLocalidad.FormattingEnabled = true;
+            this.ComboLocalidad.Location = new System.Drawing.Point(139, 265);
+            this.ComboLocalidad.Name = "ComboLocalidad";
+            this.ComboLocalidad.Size = new System.Drawing.Size(197, 21);
+            this.ComboLocalidad.TabIndex = 25;
+            // 
+            // LblLocalidad
+            // 
+            this.LblLocalidad.AutoSize = true;
+            this.LblLocalidad.Location = new System.Drawing.Point(80, 268);
+            this.LblLocalidad.Name = "LblLocalidad";
+            this.LblLocalidad.Size = new System.Drawing.Size(53, 13);
+            this.LblLocalidad.TabIndex = 26;
+            this.LblLocalidad.Text = "Localidad";
+            // 
             // FrmClientesNuevo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(404, 339);
+            this.ClientSize = new System.Drawing.Size(420, 363);
+            this.Controls.Add(this.LblLocalidad);
+            this.Controls.Add(this.ComboLocalidad);
             this.Controls.Add(this.TextBoxAnio);
             this.Controls.Add(this.TextBoxMes);
             this.Controls.Add(this.TextBoxDia);
@@ -319,5 +341,7 @@
         private System.Windows.Forms.TextBox TextBoxDia;
         private System.Windows.Forms.TextBox TextBoxMes;
         private System.Windows.Forms.TextBox TextBoxAnio;
+        private System.Windows.Forms.ComboBox ComboLocalidad;
+        private System.Windows.Forms.Label LblLocalidad;
     }
 }

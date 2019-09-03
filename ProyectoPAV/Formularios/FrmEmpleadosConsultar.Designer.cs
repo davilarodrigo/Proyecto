@@ -1,6 +1,8 @@
-﻿namespace ProyectoPAV
+﻿using System;
+
+namespace ProyectoPAV
 {
-    partial class FrmClientesConsultar
+    partial class FrmEmpleadosConsultar
     {
         /// <summary>
         /// Required designer variable.
@@ -34,27 +36,26 @@
             this.TextBoxApellido = new System.Windows.Forms.TextBox();
             this.TextBoxDocumento = new System.Windows.Forms.TextBox();
             this.ComboTipoDocumento = new System.Windows.Forms.ComboBox();
-            this.DataGridClientes = new System.Windows.Forms.DataGridView();
+            this.DataGridEmpleados = new System.Windows.Forms.DataGridView();
             this.clmTipoDocumento = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmNroDocumento = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmApellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmTelefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ClmFechaNacimiento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ClmFechaNaciminto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ClmFechaAlta = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmSexo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmEmail = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clmCalle = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clmNumeroCalle = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clmLocalidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ClmFechaBaja = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.LblDocumento = new System.Windows.Forms.Label();
             this.LblNombre = new System.Windows.Forms.Label();
             this.TextBoxNombre = new System.Windows.Forms.TextBox();
-            this.BtnNuevo = new System.Windows.Forms.Button();
             this.BtnSalir = new System.Windows.Forms.Button();
             this.BtnEliminar = new System.Windows.Forms.Button();
             this.BtnModificar = new System.Windows.Forms.Button();
+            this.BtnNuevo = new System.Windows.Forms.Button();
             this.GroupBoxFiltros.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DataGridClientes)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DataGridEmpleados)).BeginInit();
             this.SuspendLayout();
             // 
             // GroupBoxFiltros
@@ -67,7 +68,7 @@
             this.GroupBoxFiltros.Controls.Add(this.TextBoxApellido);
             this.GroupBoxFiltros.Controls.Add(this.TextBoxDocumento);
             this.GroupBoxFiltros.Controls.Add(this.ComboTipoDocumento);
-            this.GroupBoxFiltros.Controls.Add(this.DataGridClientes);
+            this.GroupBoxFiltros.Controls.Add(this.DataGridEmpleados);
             this.GroupBoxFiltros.Controls.Add(this.LblDocumento);
             this.GroupBoxFiltros.Controls.Add(this.LblNombre);
             this.GroupBoxFiltros.Controls.Add(this.TextBoxNombre);
@@ -119,31 +120,30 @@
             this.ComboTipoDocumento.Size = new System.Drawing.Size(78, 21);
             this.ComboTipoDocumento.TabIndex = 6;
             // 
-            // DataGridClientes
+            // DataGridEmpleados
             // 
-            this.DataGridClientes.AllowUserToAddRows = false;
-            this.DataGridClientes.AllowUserToDeleteRows = false;
-            this.DataGridClientes.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.DataGridEmpleados.AllowUserToAddRows = false;
+            this.DataGridEmpleados.AllowUserToDeleteRows = false;
+            this.DataGridEmpleados.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.DataGridClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DataGridClientes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.DataGridEmpleados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DataGridEmpleados.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.clmTipoDocumento,
             this.clmNroDocumento,
             this.clmApellido,
             this.clmNombre,
             this.clmTelefono,
-            this.ClmFechaNacimiento,
+            this.ClmFechaNaciminto,
+            this.ClmFechaAlta,
             this.clmSexo,
             this.clmEmail,
-            this.clmCalle,
-            this.clmNumeroCalle,
-            this.clmLocalidad});
-            this.DataGridClientes.Location = new System.Drawing.Point(6, 100);
-            this.DataGridClientes.Name = "DataGridClientes";
-            this.DataGridClientes.ReadOnly = true;
-            this.DataGridClientes.Size = new System.Drawing.Size(699, 313);
-            this.DataGridClientes.TabIndex = 5;
+            this.ClmFechaBaja});
+            this.DataGridEmpleados.Location = new System.Drawing.Point(6, 100);
+            this.DataGridEmpleados.Name = "DataGridEmpleados";
+            this.DataGridEmpleados.ReadOnly = true;
+            this.DataGridEmpleados.Size = new System.Drawing.Size(699, 313);
+            this.DataGridEmpleados.TabIndex = 5;
             // 
             // clmTipoDocumento
             // 
@@ -175,11 +175,17 @@
             this.clmTelefono.Name = "clmTelefono";
             this.clmTelefono.ReadOnly = true;
             // 
-            // ClmFechaNacimiento
+            // ClmFechaNaciminto
             // 
-            this.ClmFechaNacimiento.HeaderText = "Fecha Nacimiento";
-            this.ClmFechaNacimiento.Name = "ClmFechaNacimiento";
-            this.ClmFechaNacimiento.ReadOnly = true;
+            this.ClmFechaNaciminto.HeaderText = "Fecha Nacimiento";
+            this.ClmFechaNaciminto.Name = "ClmFechaNaciminto";
+            this.ClmFechaNaciminto.ReadOnly = true;
+            // 
+            // ClmFechaAlta
+            // 
+            this.ClmFechaAlta.HeaderText = "Fecha de Alta";
+            this.ClmFechaAlta.Name = "ClmFechaAlta";
+            this.ClmFechaAlta.ReadOnly = true;
             // 
             // clmSexo
             // 
@@ -193,23 +199,11 @@
             this.clmEmail.Name = "clmEmail";
             this.clmEmail.ReadOnly = true;
             // 
-            // clmCalle
+            // ClmFechaBaja
             // 
-            this.clmCalle.HeaderText = "Calle";
-            this.clmCalle.Name = "clmCalle";
-            this.clmCalle.ReadOnly = true;
-            // 
-            // clmNumeroCalle
-            // 
-            this.clmNumeroCalle.HeaderText = "Numero";
-            this.clmNumeroCalle.Name = "clmNumeroCalle";
-            this.clmNumeroCalle.ReadOnly = true;
-            // 
-            // clmLocalidad
-            // 
-            this.clmLocalidad.HeaderText = "Localidad";
-            this.clmLocalidad.Name = "clmLocalidad";
-            this.clmLocalidad.ReadOnly = true;
+            this.ClmFechaBaja.HeaderText = "Fecha de Baja";
+            this.ClmFechaBaja.Name = "ClmFechaBaja";
+            this.ClmFechaBaja.ReadOnly = true;
             // 
             // LblDocumento
             // 
@@ -235,18 +229,6 @@
             this.TextBoxNombre.Name = "TextBoxNombre";
             this.TextBoxNombre.Size = new System.Drawing.Size(338, 20);
             this.TextBoxNombre.TabIndex = 0;
-            // 
-            // BtnNuevo
-            // 
-            this.BtnNuevo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.BtnNuevo.BackgroundImage = global::ProyectoPAV.Properties.Resources.Add_256x256;
-            this.BtnNuevo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.BtnNuevo.Location = new System.Drawing.Point(12, 437);
-            this.BtnNuevo.Name = "BtnNuevo";
-            this.BtnNuevo.Size = new System.Drawing.Size(50, 50);
-            this.BtnNuevo.TabIndex = 9;
-            this.BtnNuevo.UseVisualStyleBackColor = true;
-            this.BtnNuevo.Click += new System.EventHandler(this.BtnNuevo_Click);
             // 
             // BtnSalir
             // 
@@ -283,7 +265,19 @@
             this.BtnModificar.UseVisualStyleBackColor = true;
             this.BtnModificar.Click += new System.EventHandler(this.BtnModificar_Click);
             // 
-            // FrmClientesConsultar
+            // BtnNuevo
+            // 
+            this.BtnNuevo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.BtnNuevo.BackgroundImage = global::ProyectoPAV.Properties.Resources.Add_256x256;
+            this.BtnNuevo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.BtnNuevo.Location = new System.Drawing.Point(12, 437);
+            this.BtnNuevo.Name = "BtnNuevo";
+            this.BtnNuevo.Size = new System.Drawing.Size(50, 50);
+            this.BtnNuevo.TabIndex = 9;
+            this.BtnNuevo.UseVisualStyleBackColor = true;
+            this.BtnNuevo.Click += new System.EventHandler(this.BtnNuevo_Click);
+            // 
+            // FrmEmpleadosConsultar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -293,14 +287,19 @@
             this.Controls.Add(this.BtnEliminar);
             this.Controls.Add(this.BtnModificar);
             this.Controls.Add(this.GroupBoxFiltros);
-            this.Name = "FrmClientesConsultar";
-            this.Text = "Consultar Clientes";
-            this.Load += new System.EventHandler(this.FrmClientesConsultar_Load);
+            this.Name = "FrmEmpleadosConsultar";
+            this.Text = "Consultar Empleados";
+            this.Load += new System.EventHandler(this.FrmEmpleadosConsultar_Load);
             this.GroupBoxFiltros.ResumeLayout(false);
             this.GroupBoxFiltros.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DataGridClientes)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DataGridEmpleados)).EndInit();
             this.ResumeLayout(false);
 
+        }
+
+        private void FrmEmpleadosConsultar_Load(object sender, EventArgs e)
+        {
+            //throw new NotImplementedException();
         }
 
         #endregion
@@ -309,7 +308,7 @@
         private System.Windows.Forms.Label LblDocumento;
         private System.Windows.Forms.Label LblNombre;
         private System.Windows.Forms.TextBox TextBoxNombre;
-        private System.Windows.Forms.DataGridView DataGridClientes;
+        private System.Windows.Forms.DataGridView DataGridEmpleados;
         private System.Windows.Forms.Label LblApellido;
         private System.Windows.Forms.TextBox TextBoxApellido;
         private System.Windows.Forms.TextBox TextBoxDocumento;
@@ -324,11 +323,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn clmApellido;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmNombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmTelefono;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ClmFechaNacimiento;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ClmFechaNaciminto;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ClmFechaAlta;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmSexo;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmEmail;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clmCalle;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clmNumeroCalle;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clmLocalidad;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ClmFechaBaja;
     }
 }

@@ -10,16 +10,13 @@ using System.Windows.Forms;
 
 namespace ProyectoPAV.Formularios
 {
-    public partial class FrmClientesNuevo : Form
+    public partial class FrmVentasConsultar : Form
     {
-        public FrmClientesNuevo()
+        public FrmVentasConsultar()
         {
             InitializeComponent();
         }
 
-        private void BtnSalir_Click(object sender, EventArgs e)
-        {
-            this.Dispose();
-        }
+
     }
 }

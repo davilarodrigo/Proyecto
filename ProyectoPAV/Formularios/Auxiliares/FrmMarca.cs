@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ProyectoPAV.Formularios
+namespace ProyectoPAV.Formularios.Auxiliares
 {
-    public partial class FrmClientesNuevo : Form
+    public partial class FrmMarca : Form
     {
-        public FrmClientesNuevo()
+        public FrmMarca()
         {
             InitializeComponent();
         }

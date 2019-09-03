@@ -8,16 +8,21 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ProyectoPAV.Formularios
+namespace ProyectoPAV.Formularios.Auxiliares
 {
-    public partial class FrmClientesNuevo : Form
+    public partial class FrmCategorias : Form
     {
-        public FrmClientesNuevo()
+        public FrmCategorias()
         {
             InitializeComponent();
         }
 
         private void BtnSalir_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+        }
+
+        private void BtnSalir_Click_1(object sender, EventArgs e)
         {
             this.Dispose();
         }

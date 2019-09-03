@@ -35,5 +35,10 @@ namespace ProyectoPAV
         {
             this.MinimumSize = new Size(600, 400);
         }
+
+        private void BtnSalir_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+        }
     }
 }

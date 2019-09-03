@@ -33,6 +33,16 @@
             this.archivoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cambiarLoginToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aBMToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.clientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.productosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.proveedoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.empleadosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.auxiliaresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.categoríasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.marcasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.localidadesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tiposDeDocumentoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cargosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ToolStripEscritorio = new System.Windows.Forms.ToolStrip();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.TableEstructura = new System.Windows.Forms.TableLayoutPanel();
@@ -40,18 +50,21 @@
             this.TableBotonesPrinciales = new System.Windows.Forms.TableLayoutPanel();
             this.BtnClientes = new System.Windows.Forms.Button();
             this.BtnProductos = new System.Windows.Forms.Button();
-            this.BtnVentas = new System.Windows.Forms.Button();
-            this.BtnProveedores = new System.Windows.Forms.Button();
-            this.BtnCompras = new System.Windows.Forms.Button();
-            this.BtnEmpleados = new System.Windows.Forms.Button();
             this.BtnReservas = new System.Windows.Forms.Button();
             this.BtnEstadisticas = new System.Windows.Forms.Button();
+            this.BtnProveedores = new System.Windows.Forms.Button();
+            this.BtnEmpleados = new System.Windows.Forms.Button();
+            this.BtnCompras = new System.Windows.Forms.Button();
+            this.BtnVentas = new System.Windows.Forms.Button();
             this.TableMenuSecundario = new System.Windows.Forms.TableLayoutPanel();
+            this.PictureBoxLogo = new System.Windows.Forms.PictureBox();
             this.MenuStripEscritorio.SuspendLayout();
             this.ToolStripEscritorio.SuspendLayout();
             this.TableEstructura.SuspendLayout();
             this.TableMenuPrincipal.SuspendLayout();
             this.TableBotonesPrinciales.SuspendLayout();
+            this.TableMenuSecundario.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureBoxLogo)).BeginInit();
             this.SuspendLayout();
             // 
             // MenuStripEscritorio
@@ -81,9 +94,90 @@
             // 
             // aBMToolStripMenuItem
             // 
+            this.aBMToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.clientesToolStripMenuItem,
+            this.productosToolStripMenuItem,
+            this.proveedoresToolStripMenuItem,
+            this.empleadosToolStripMenuItem,
+            this.auxiliaresToolStripMenuItem});
             this.aBMToolStripMenuItem.Name = "aBMToolStripMenuItem";
             this.aBMToolStripMenuItem.Size = new System.Drawing.Size(45, 20);
             this.aBMToolStripMenuItem.Text = "ABM";
+            // 
+            // clientesToolStripMenuItem
+            // 
+            this.clientesToolStripMenuItem.Name = "clientesToolStripMenuItem";
+            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.clientesToolStripMenuItem.Text = "Clientes";
+            this.clientesToolStripMenuItem.Click += new System.EventHandler(this.ClientesToolStripMenuItem_Click);
+            // 
+            // productosToolStripMenuItem
+            // 
+            this.productosToolStripMenuItem.Name = "productosToolStripMenuItem";
+            this.productosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.productosToolStripMenuItem.Text = "Productos";
+            this.productosToolStripMenuItem.Click += new System.EventHandler(this.ProductosToolStripMenuItem_Click);
+            // 
+            // proveedoresToolStripMenuItem
+            // 
+            this.proveedoresToolStripMenuItem.Name = "proveedoresToolStripMenuItem";
+            this.proveedoresToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.proveedoresToolStripMenuItem.Text = "Proveedores";
+            this.proveedoresToolStripMenuItem.Click += new System.EventHandler(this.ProveedoresToolStripMenuItem_Click);
+            // 
+            // empleadosToolStripMenuItem
+            // 
+            this.empleadosToolStripMenuItem.Name = "empleadosToolStripMenuItem";
+            this.empleadosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.empleadosToolStripMenuItem.Text = "Empleados";
+            this.empleadosToolStripMenuItem.Click += new System.EventHandler(this.EmpleadosToolStripMenuItem_Click);
+            // 
+            // auxiliaresToolStripMenuItem
+            // 
+            this.auxiliaresToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.categoríasToolStripMenuItem,
+            this.marcasToolStripMenuItem,
+            this.localidadesToolStripMenuItem,
+            this.tiposDeDocumentoToolStripMenuItem,
+            this.cargosToolStripMenuItem});
+            this.auxiliaresToolStripMenuItem.Name = "auxiliaresToolStripMenuItem";
+            this.auxiliaresToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.auxiliaresToolStripMenuItem.Text = "Auxiliares";
+            // 
+            // categoríasToolStripMenuItem
+            // 
+            this.categoríasToolStripMenuItem.Name = "categoríasToolStripMenuItem";
+            this.categoríasToolStripMenuItem.Size = new System.Drawing.Size(184, 22);
+            this.categoríasToolStripMenuItem.Text = "Categorías";
+            this.categoríasToolStripMenuItem.Click += new System.EventHandler(this.CategoríasToolStripMenuItem_Click);
+            // 
+            // marcasToolStripMenuItem
+            // 
+            this.marcasToolStripMenuItem.Name = "marcasToolStripMenuItem";
+            this.marcasToolStripMenuItem.Size = new System.Drawing.Size(184, 22);
+            this.marcasToolStripMenuItem.Text = "Marcas";
+            this.marcasToolStripMenuItem.Click += new System.EventHandler(this.MarcasToolStripMenuItem_Click);
+            // 
+            // localidadesToolStripMenuItem
+            // 
+            this.localidadesToolStripMenuItem.Name = "localidadesToolStripMenuItem";
+            this.localidadesToolStripMenuItem.Size = new System.Drawing.Size(184, 22);
+            this.localidadesToolStripMenuItem.Text = "Localidades";
+            this.localidadesToolStripMenuItem.Click += new System.EventHandler(this.LocalidadesToolStripMenuItem_Click);
+            // 
+            // tiposDeDocumentoToolStripMenuItem
+            // 
+            this.tiposDeDocumentoToolStripMenuItem.Name = "tiposDeDocumentoToolStripMenuItem";
+            this.tiposDeDocumentoToolStripMenuItem.Size = new System.Drawing.Size(184, 22);
+            this.tiposDeDocumentoToolStripMenuItem.Text = "Tipos de Documento";
+            this.tiposDeDocumentoToolStripMenuItem.Click += new System.EventHandler(this.TiposDeDocumentoToolStripMenuItem_Click);
+            // 
+            // cargosToolStripMenuItem
+            // 
+            this.cargosToolStripMenuItem.Name = "cargosToolStripMenuItem";
+            this.cargosToolStripMenuItem.Size = new System.Drawing.Size(184, 22);
+            this.cargosToolStripMenuItem.Text = "Cargos";
+            this.cargosToolStripMenuItem.Click += new System.EventHandler(this.CargosToolStripMenuItem_Click);
             // 
             // ToolStripEscritorio
             // 
@@ -151,12 +245,12 @@
             this.TableBotonesPrinciales.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.TableBotonesPrinciales.Controls.Add(this.BtnClientes, 0, 0);
             this.TableBotonesPrinciales.Controls.Add(this.BtnProductos, 1, 0);
-            this.TableBotonesPrinciales.Controls.Add(this.BtnVentas, 2, 0);
-            this.TableBotonesPrinciales.Controls.Add(this.BtnProveedores, 0, 1);
-            this.TableBotonesPrinciales.Controls.Add(this.BtnCompras, 1, 1);
-            this.TableBotonesPrinciales.Controls.Add(this.BtnEmpleados, 2, 1);
             this.TableBotonesPrinciales.Controls.Add(this.BtnReservas, 0, 2);
             this.TableBotonesPrinciales.Controls.Add(this.BtnEstadisticas, 1, 2);
+            this.TableBotonesPrinciales.Controls.Add(this.BtnProveedores, 2, 0);
+            this.TableBotonesPrinciales.Controls.Add(this.BtnEmpleados, 0, 1);
+            this.TableBotonesPrinciales.Controls.Add(this.BtnCompras, 2, 1);
+            this.TableBotonesPrinciales.Controls.Add(this.BtnVentas, 1, 1);
             this.TableBotonesPrinciales.Location = new System.Drawing.Point(3, 3);
             this.TableBotonesPrinciales.Name = "TableBotonesPrinciales";
             this.TableBotonesPrinciales.RowCount = 3;
@@ -192,54 +286,6 @@
             this.BtnProductos.UseVisualStyleBackColor = true;
             this.BtnProductos.Click += new System.EventHandler(this.BtnProductos_Click);
             // 
-            // BtnVentas
-            // 
-            this.BtnVentas.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.BtnVentas.Location = new System.Drawing.Point(331, 3);
-            this.BtnVentas.Name = "BtnVentas";
-            this.BtnVentas.Size = new System.Drawing.Size(160, 118);
-            this.BtnVentas.TabIndex = 2;
-            this.BtnVentas.Text = "Ventas";
-            this.BtnVentas.UseVisualStyleBackColor = true;
-            // 
-            // BtnProveedores
-            // 
-            this.BtnProveedores.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.BtnProveedores.Location = new System.Drawing.Point(3, 127);
-            this.BtnProveedores.Name = "BtnProveedores";
-            this.BtnProveedores.Size = new System.Drawing.Size(158, 118);
-            this.BtnProveedores.TabIndex = 3;
-            this.BtnProveedores.Text = "Proveedores";
-            this.BtnProveedores.UseVisualStyleBackColor = true;
-            // 
-            // BtnCompras
-            // 
-            this.BtnCompras.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.BtnCompras.Location = new System.Drawing.Point(167, 127);
-            this.BtnCompras.Name = "BtnCompras";
-            this.BtnCompras.Size = new System.Drawing.Size(158, 118);
-            this.BtnCompras.TabIndex = 4;
-            this.BtnCompras.Text = "Compras a Proveedores";
-            this.BtnCompras.UseVisualStyleBackColor = true;
-            // 
-            // BtnEmpleados
-            // 
-            this.BtnEmpleados.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.BtnEmpleados.Location = new System.Drawing.Point(331, 127);
-            this.BtnEmpleados.Name = "BtnEmpleados";
-            this.BtnEmpleados.Size = new System.Drawing.Size(160, 118);
-            this.BtnEmpleados.TabIndex = 5;
-            this.BtnEmpleados.Text = "Empleados";
-            this.BtnEmpleados.UseVisualStyleBackColor = true;
-            // 
             // BtnReservas
             // 
             this.BtnReservas.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -264,6 +310,56 @@
             this.BtnEstadisticas.Text = "Estadísticas y Reportes";
             this.BtnEstadisticas.UseVisualStyleBackColor = true;
             // 
+            // BtnProveedores
+            // 
+            this.BtnProveedores.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.BtnProveedores.Location = new System.Drawing.Point(331, 3);
+            this.BtnProveedores.Name = "BtnProveedores";
+            this.BtnProveedores.Size = new System.Drawing.Size(160, 118);
+            this.BtnProveedores.TabIndex = 3;
+            this.BtnProveedores.Text = "Proveedores";
+            this.BtnProveedores.UseVisualStyleBackColor = true;
+            this.BtnProveedores.Click += new System.EventHandler(this.BtnProveedores_Click);
+            // 
+            // BtnEmpleados
+            // 
+            this.BtnEmpleados.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.BtnEmpleados.Location = new System.Drawing.Point(3, 127);
+            this.BtnEmpleados.Name = "BtnEmpleados";
+            this.BtnEmpleados.Size = new System.Drawing.Size(158, 118);
+            this.BtnEmpleados.TabIndex = 5;
+            this.BtnEmpleados.Text = "Empleados";
+            this.BtnEmpleados.UseVisualStyleBackColor = true;
+            this.BtnEmpleados.Click += new System.EventHandler(this.BtnEmpleados_Click);
+            // 
+            // BtnCompras
+            // 
+            this.BtnCompras.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.BtnCompras.Location = new System.Drawing.Point(331, 127);
+            this.BtnCompras.Name = "BtnCompras";
+            this.BtnCompras.Size = new System.Drawing.Size(160, 118);
+            this.BtnCompras.TabIndex = 4;
+            this.BtnCompras.Text = "Compras a Proveedores";
+            this.BtnCompras.UseVisualStyleBackColor = true;
+            // 
+            // BtnVentas
+            // 
+            this.BtnVentas.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.BtnVentas.Location = new System.Drawing.Point(167, 127);
+            this.BtnVentas.Name = "BtnVentas";
+            this.BtnVentas.Size = new System.Drawing.Size(158, 118);
+            this.BtnVentas.TabIndex = 2;
+            this.BtnVentas.Text = "Ventas";
+            this.BtnVentas.UseVisualStyleBackColor = true;
+            // 
             // TableMenuSecundario
             // 
             this.TableMenuSecundario.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -272,6 +368,7 @@
             this.TableMenuSecundario.BackColor = System.Drawing.Color.Pink;
             this.TableMenuSecundario.ColumnCount = 1;
             this.TableMenuSecundario.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.TableMenuSecundario.Controls.Add(this.PictureBoxLogo, 0, 0);
             this.TableMenuSecundario.Location = new System.Drawing.Point(503, 3);
             this.TableMenuSecundario.Name = "TableMenuSecundario";
             this.TableMenuSecundario.RowCount = 2;
@@ -279,6 +376,18 @@
             this.TableMenuSecundario.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.TableMenuSecundario.Size = new System.Drawing.Size(264, 374);
             this.TableMenuSecundario.TabIndex = 1;
+            // 
+            // PictureBoxLogo
+            // 
+            this.PictureBoxLogo.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.PictureBoxLogo.BackColor = System.Drawing.Color.Pink;
+            this.PictureBoxLogo.BackgroundImage = global::ProyectoPAV.Properties.Resources.Logo_Programa;
+            this.PictureBoxLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.PictureBoxLogo.Location = new System.Drawing.Point(51, 42);
+            this.PictureBoxLogo.Name = "PictureBoxLogo";
+            this.PictureBoxLogo.Size = new System.Drawing.Size(162, 215);
+            this.PictureBoxLogo.TabIndex = 0;
+            this.PictureBoxLogo.TabStop = false;
             // 
             // FrmEscritorio
             // 
@@ -300,6 +409,8 @@
             this.TableEstructura.ResumeLayout(false);
             this.TableMenuPrincipal.ResumeLayout(false);
             this.TableBotonesPrinciales.ResumeLayout(false);
+            this.TableMenuSecundario.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.PictureBoxLogo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -325,6 +436,17 @@
         private System.Windows.Forms.Button BtnReservas;
         private System.Windows.Forms.Button BtnEstadisticas;
         private System.Windows.Forms.TableLayoutPanel TableMenuSecundario;
+        private System.Windows.Forms.ToolStripMenuItem clientesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem productosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem proveedoresToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem empleadosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem auxiliaresToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem categoríasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem marcasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem localidadesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem tiposDeDocumentoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cargosToolStripMenuItem;
+        private System.Windows.Forms.PictureBox PictureBoxLogo;
     }
 }
 

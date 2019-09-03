@@ -10,23 +10,24 @@ using System.Windows.Forms;
 
 namespace ProyectoPAV.Formularios
 {
-    public partial class FrmProductosConsultar : Form
+    public partial class FrmProveedoresConsultar : Form
     {
-        public FrmProductosConsultar()
+        public FrmProveedoresConsultar()
         {
             InitializeComponent();
         }
 
         private void BtnNuevo_Click(object sender, EventArgs e)
         {
-            FrmProductosNuevo NuevoProducto = new FrmProductosNuevo();
-            NuevoProducto.ShowDialog();
+            FrmProveedoresNuevo NuevoProveedor = new FrmProveedoresNuevo();
+            NuevoProveedor.ShowDialog();
         }
 
         private void BtnModificar_Click(object sender, EventArgs e)
         {
-            FrmProductosModificar ModificarProducto = new FrmProductosModificar();
-            ModificarProducto.ShowDialog();
+            FrmProveedoresModificar ModificarProveedor = new FrmProveedoresModificar();
+            ModificarProveedor.ShowDialog();
+
         }
 
         private void BtnSalir_Click(object sender, EventArgs e)

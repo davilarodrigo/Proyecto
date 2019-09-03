@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.GropuBoxFiltros = new System.Windows.Forms.GroupBox();
+            this.BtnBuscar = new System.Windows.Forms.Button();
             this.LblMarca = new System.Windows.Forms.Label();
             this.TextBoxMarca = new System.Windows.Forms.TextBox();
             this.ComboCategorias = new System.Windows.Forms.ComboBox();
@@ -37,6 +38,7 @@
             this.ClmMarca = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ClmCategoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ClmTalle = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ClmStockDisponible = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.LblCategoria = new System.Windows.Forms.Label();
             this.LblNombre = new System.Windows.Forms.Label();
             this.TextBoxNombreProducto = new System.Windows.Forms.TextBox();
@@ -44,7 +46,6 @@
             this.BtnSalir = new System.Windows.Forms.Button();
             this.BtnEliminar = new System.Windows.Forms.Button();
             this.BtnModificar = new System.Windows.Forms.Button();
-            this.BtnBuscar = new System.Windows.Forms.Button();
             this.GropuBoxFiltros.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridProductos)).BeginInit();
             this.SuspendLayout();
@@ -68,6 +69,16 @@
             this.GropuBoxFiltros.TabIndex = 9;
             this.GropuBoxFiltros.TabStop = false;
             this.GropuBoxFiltros.Text = "Filtros";
+            // 
+            // BtnBuscar
+            // 
+            this.BtnBuscar.BackgroundImage = global::ProyectoPAV.Properties.Resources.Search_256x256;
+            this.BtnBuscar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.BtnBuscar.Location = new System.Drawing.Point(408, 57);
+            this.BtnBuscar.Name = "BtnBuscar";
+            this.BtnBuscar.Size = new System.Drawing.Size(48, 48);
+            this.BtnBuscar.TabIndex = 9;
+            this.BtnBuscar.UseVisualStyleBackColor = true;
             // 
             // LblMarca
             // 
@@ -105,7 +116,8 @@
             this.ClmNombre,
             this.ClmMarca,
             this.ClmCategoria,
-            this.ClmTalle});
+            this.ClmTalle,
+            this.ClmStockDisponible});
             this.DataGridProductos.Location = new System.Drawing.Point(6, 111);
             this.DataGridProductos.Name = "DataGridProductos";
             this.DataGridProductos.ReadOnly = true;
@@ -117,14 +129,14 @@
             this.ClmNombre.HeaderText = "Nombre";
             this.ClmNombre.Name = "ClmNombre";
             this.ClmNombre.ReadOnly = true;
-            this.ClmNombre.Width = 250;
+            this.ClmNombre.Width = 200;
             // 
             // ClmMarca
             // 
             this.ClmMarca.HeaderText = "Marca";
             this.ClmMarca.Name = "ClmMarca";
             this.ClmMarca.ReadOnly = true;
-            this.ClmMarca.Width = 200;
+            this.ClmMarca.Width = 150;
             // 
             // ClmCategoria
             // 
@@ -138,6 +150,12 @@
             this.ClmTalle.HeaderText = "Talle";
             this.ClmTalle.Name = "ClmTalle";
             this.ClmTalle.ReadOnly = true;
+            // 
+            // ClmStockDisponible
+            // 
+            this.ClmStockDisponible.HeaderText = "Stock Disponible";
+            this.ClmStockDisponible.Name = "ClmStockDisponible";
+            this.ClmStockDisponible.ReadOnly = true;
             // 
             // LblCategoria
             // 
@@ -186,6 +204,7 @@
             this.BtnSalir.Size = new System.Drawing.Size(50, 50);
             this.BtnSalir.TabIndex = 13;
             this.BtnSalir.UseVisualStyleBackColor = true;
+            this.BtnSalir.Click += new System.EventHandler(this.BtnSalir_Click);
             // 
             // BtnEliminar
             // 
@@ -209,16 +228,6 @@
             this.BtnModificar.TabIndex = 11;
             this.BtnModificar.UseVisualStyleBackColor = true;
             this.BtnModificar.Click += new System.EventHandler(this.BtnModificar_Click);
-            // 
-            // BtnBuscar
-            // 
-            this.BtnBuscar.BackgroundImage = global::ProyectoPAV.Properties.Resources.Search_256x256;
-            this.BtnBuscar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.BtnBuscar.Location = new System.Drawing.Point(408, 57);
-            this.BtnBuscar.Name = "BtnBuscar";
-            this.BtnBuscar.Size = new System.Drawing.Size(48, 48);
-            this.BtnBuscar.TabIndex = 9;
-            this.BtnBuscar.UseVisualStyleBackColor = true;
             // 
             // FrmProductosConsultar
             // 
@@ -258,5 +267,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ClmMarca;
         private System.Windows.Forms.DataGridViewTextBoxColumn ClmCategoria;
         private System.Windows.Forms.DataGridViewTextBoxColumn ClmTalle;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ClmStockDisponible;
     }
 }
