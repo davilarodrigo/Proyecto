@@ -64,11 +64,11 @@
     <Compile Include="Formularios\Auxiliares\FrmLocalidades.Designer.cs">
       <DependentUpon>FrmLocalidades.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\Auxiliares\FrmMarca.cs">
+    <Compile Include="Formularios\Auxiliares\FrmMarcas.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\Auxiliares\FrmMarca.Designer.cs">
-      <DependentUpon>FrmMarca.cs</DependentUpon>
+    <Compile Include="Formularios\Auxiliares\FrmMarcas.Designer.cs">
+      <DependentUpon>FrmMarcas.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\Auxiliares\FrmTipoDocumentos.cs">
       <SubType>Form</SubType>
@@ -183,8 +183,8 @@
     <EmbeddedResource Include="Formularios\Auxiliares\FrmLocalidades.resx">
       <DependentUpon>FrmLocalidades.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Auxiliares\FrmMarca.resx">
-      <DependentUpon>FrmMarca.cs</DependentUpon>
+    <EmbeddedResource Include="Formularios\Auxiliares\FrmMarcas.resx">
+      <DependentUpon>FrmMarcas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Auxiliares\FrmTipoDocumentos.resx">
       <DependentUpon>FrmTipoDocumentos.cs</DependentUpon>
@@ -261,6 +261,7 @@
     <Folder Include="Clases\" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="resources\Add_16x16.png" />
     <Content Include="resources\Add_256x256.png" />
     <Content Include="resources\Cancel_256x256.png" />
     <Content Include="resources\Check_256x256.png" />

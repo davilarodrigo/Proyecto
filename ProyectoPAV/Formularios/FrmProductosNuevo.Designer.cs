@@ -28,135 +28,142 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.ComboMarca = new System.Windows.Forms.ComboBox();
-            this.LblMarca = new System.Windows.Forms.Label();
-            this.LblTalle = new System.Windows.Forms.Label();
-            this.TextBoxTalle = new System.Windows.Forms.TextBox();
-            this.ComboCategoria = new System.Windows.Forms.ComboBox();
-            this.TextBoxNombre = new System.Windows.Forms.TextBox();
-            this.LblCategoria = new System.Windows.Forms.Label();
-            this.LblNombre = new System.Windows.Forms.Label();
-            this.BtnSalir = new System.Windows.Forms.Button();
-            this.BtnAceptar = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmProductosNuevo));
+            this.comboMarca = new System.Windows.Forms.ComboBox();
+            this.lblMarca = new System.Windows.Forms.Label();
+            this.lblTalle = new System.Windows.Forms.Label();
+            this.textBoxTalle = new System.Windows.Forms.TextBox();
+            this.comboCategoria = new System.Windows.Forms.ComboBox();
+            this.textBoxNombre = new System.Windows.Forms.TextBox();
+            this.lblCategoria = new System.Windows.Forms.Label();
+            this.lblNombre = new System.Windows.Forms.Label();
+            this.btnSalir = new System.Windows.Forms.Button();
+            this.btnAceptar = new System.Windows.Forms.Button();
+            this.btnNuevaMarca = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // ComboMarca
+            // comboMarca
             // 
-            this.ComboMarca.FormattingEnabled = true;
-            this.ComboMarca.Location = new System.Drawing.Point(81, 58);
-            this.ComboMarca.Name = "ComboMarca";
-            this.ComboMarca.Size = new System.Drawing.Size(206, 21);
-            this.ComboMarca.TabIndex = 81;
+            this.comboMarca.FormattingEnabled = true;
+            this.comboMarca.Location = new System.Drawing.Point(81, 58);
+            this.comboMarca.Name = "comboMarca";
+            this.comboMarca.Size = new System.Drawing.Size(206, 21);
+            this.comboMarca.TabIndex = 81;
             // 
-            // LblMarca
+            // lblMarca
             // 
-            this.LblMarca.AutoSize = true;
-            this.LblMarca.Location = new System.Drawing.Point(38, 61);
-            this.LblMarca.Name = "LblMarca";
-            this.LblMarca.Size = new System.Drawing.Size(37, 13);
-            this.LblMarca.TabIndex = 80;
-            this.LblMarca.Text = "Marca";
+            this.lblMarca.AutoSize = true;
+            this.lblMarca.Location = new System.Drawing.Point(38, 61);
+            this.lblMarca.Name = "lblMarca";
+            this.lblMarca.Size = new System.Drawing.Size(37, 13);
+            this.lblMarca.TabIndex = 80;
+            this.lblMarca.Text = "Marca";
             // 
-            // LblTalle
+            // lblTalle
             // 
-            this.LblTalle.AutoSize = true;
-            this.LblTalle.Location = new System.Drawing.Point(45, 115);
-            this.LblTalle.Name = "LblTalle";
-            this.LblTalle.Size = new System.Drawing.Size(30, 13);
-            this.LblTalle.TabIndex = 77;
-            this.LblTalle.Text = "Talle";
+            this.lblTalle.AutoSize = true;
+            this.lblTalle.Location = new System.Drawing.Point(45, 115);
+            this.lblTalle.Name = "lblTalle";
+            this.lblTalle.Size = new System.Drawing.Size(30, 13);
+            this.lblTalle.TabIndex = 77;
+            this.lblTalle.Text = "Talle";
             // 
-            // TextBoxTalle
+            // textBoxTalle
             // 
-            this.TextBoxTalle.Location = new System.Drawing.Point(81, 112);
-            this.TextBoxTalle.Name = "TextBoxTalle";
-            this.TextBoxTalle.Size = new System.Drawing.Size(85, 20);
-            this.TextBoxTalle.TabIndex = 76;
+            this.textBoxTalle.Location = new System.Drawing.Point(81, 112);
+            this.textBoxTalle.Name = "textBoxTalle";
+            this.textBoxTalle.Size = new System.Drawing.Size(85, 20);
+            this.textBoxTalle.TabIndex = 76;
             // 
-            // ComboCategoria
+            // comboCategoria
             // 
-            this.ComboCategoria.FormattingEnabled = true;
-            this.ComboCategoria.Location = new System.Drawing.Point(81, 85);
-            this.ComboCategoria.Name = "ComboCategoria";
-            this.ComboCategoria.Size = new System.Drawing.Size(206, 21);
-            this.ComboCategoria.TabIndex = 75;
+            this.comboCategoria.FormattingEnabled = true;
+            this.comboCategoria.Location = new System.Drawing.Point(81, 85);
+            this.comboCategoria.Name = "comboCategoria";
+            this.comboCategoria.Size = new System.Drawing.Size(206, 21);
+            this.comboCategoria.TabIndex = 75;
             // 
-            // TextBoxNombre
+            // textBoxNombre
             // 
-            this.TextBoxNombre.Location = new System.Drawing.Point(81, 32);
-            this.TextBoxNombre.Name = "TextBoxNombre";
-            this.TextBoxNombre.Size = new System.Drawing.Size(206, 20);
-            this.TextBoxNombre.TabIndex = 74;
+            this.textBoxNombre.Location = new System.Drawing.Point(81, 32);
+            this.textBoxNombre.Name = "textBoxNombre";
+            this.textBoxNombre.Size = new System.Drawing.Size(206, 20);
+            this.textBoxNombre.TabIndex = 74;
             // 
-            // LblCategoria
+            // lblCategoria
             // 
-            this.LblCategoria.AutoSize = true;
-            this.LblCategoria.Location = new System.Drawing.Point(23, 88);
-            this.LblCategoria.Name = "LblCategoria";
-            this.LblCategoria.Size = new System.Drawing.Size(52, 13);
-            this.LblCategoria.TabIndex = 73;
-            this.LblCategoria.Text = "Categoria";
+            this.lblCategoria.AutoSize = true;
+            this.lblCategoria.Location = new System.Drawing.Point(23, 88);
+            this.lblCategoria.Name = "lblCategoria";
+            this.lblCategoria.Size = new System.Drawing.Size(52, 13);
+            this.lblCategoria.TabIndex = 73;
+            this.lblCategoria.Text = "Categoria";
             // 
-            // LblNombre
+            // lblNombre
             // 
-            this.LblNombre.AutoSize = true;
-            this.LblNombre.Location = new System.Drawing.Point(31, 35);
-            this.LblNombre.Name = "LblNombre";
-            this.LblNombre.Size = new System.Drawing.Size(44, 13);
-            this.LblNombre.TabIndex = 72;
-            this.LblNombre.Text = "Nombre";
+            this.lblNombre.AutoSize = true;
+            this.lblNombre.Location = new System.Drawing.Point(31, 35);
+            this.lblNombre.Name = "lblNombre";
+            this.lblNombre.Size = new System.Drawing.Size(44, 13);
+            this.lblNombre.TabIndex = 72;
+            this.lblNombre.Text = "Nombre";
             // 
-            // BtnSalir
+            // btnSalir
             // 
-            this.BtnSalir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.BtnSalir.BackgroundImage = global::ProyectoPAV.Properties.Resources.Log_Out_256x256;
-            this.BtnSalir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.BtnSalir.Location = new System.Drawing.Point(373, 131);
-            this.BtnSalir.Name = "BtnSalir";
-            this.BtnSalir.Size = new System.Drawing.Size(50, 50);
-            this.BtnSalir.TabIndex = 79;
-            this.BtnSalir.UseVisualStyleBackColor = true;
-            this.BtnSalir.Click += new System.EventHandler(this.BtnSalir_Click);
+            this.btnSalir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSalir.BackgroundImage = global::ProyectoPAV.Properties.Resources.Log_Out_256x256;
+            this.btnSalir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnSalir.Location = new System.Drawing.Point(373, 131);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(50, 50);
+            this.btnSalir.TabIndex = 79;
+            this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.BtnSalir_Click);
             // 
-            // BtnAceptar
+            // btnAceptar
             // 
-            this.BtnAceptar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.BtnAceptar.BackgroundImage = global::ProyectoPAV.Properties.Resources.Check_256x256;
-            this.BtnAceptar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.BtnAceptar.Location = new System.Drawing.Point(317, 131);
-            this.BtnAceptar.Name = "BtnAceptar";
-            this.BtnAceptar.Size = new System.Drawing.Size(50, 50);
-            this.BtnAceptar.TabIndex = 78;
-            this.BtnAceptar.UseVisualStyleBackColor = true;
+            this.btnAceptar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAceptar.BackgroundImage = global::ProyectoPAV.Properties.Resources.Check_256x256;
+            this.btnAceptar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnAceptar.Location = new System.Drawing.Point(317, 131);
+            this.btnAceptar.Name = "btnAceptar";
+            this.btnAceptar.Size = new System.Drawing.Size(50, 50);
+            this.btnAceptar.TabIndex = 78;
+            this.btnAceptar.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // btnNuevaMarca
             // 
-            this.button1.Location = new System.Drawing.Point(293, 58);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(105, 23);
-            this.button1.TabIndex = 82;
-            this.button1.Text = "Nueva Marca";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnNuevaMarca.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnNuevaMarca.Image = global::ProyectoPAV.Properties.Resources.Add_16x16;
+            this.btnNuevaMarca.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnNuevaMarca.Location = new System.Drawing.Point(293, 55);
+            this.btnNuevaMarca.Name = "btnNuevaMarca";
+            this.btnNuevaMarca.Size = new System.Drawing.Size(100, 27);
+            this.btnNuevaMarca.TabIndex = 82;
+            this.btnNuevaMarca.Text = "Nueva Marca";
+            this.btnNuevaMarca.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnNuevaMarca.UseVisualStyleBackColor = true;
+            this.btnNuevaMarca.Click += new System.EventHandler(this.BtnNuevaMarca_Click);
             // 
             // FrmProductosNuevo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(435, 193);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.ComboMarca);
-            this.Controls.Add(this.LblMarca);
-            this.Controls.Add(this.BtnSalir);
-            this.Controls.Add(this.BtnAceptar);
-            this.Controls.Add(this.LblTalle);
-            this.Controls.Add(this.TextBoxTalle);
-            this.Controls.Add(this.ComboCategoria);
-            this.Controls.Add(this.TextBoxNombre);
-            this.Controls.Add(this.LblCategoria);
-            this.Controls.Add(this.LblNombre);
+            this.Controls.Add(this.btnNuevaMarca);
+            this.Controls.Add(this.comboMarca);
+            this.Controls.Add(this.lblMarca);
+            this.Controls.Add(this.btnSalir);
+            this.Controls.Add(this.btnAceptar);
+            this.Controls.Add(this.lblTalle);
+            this.Controls.Add(this.textBoxTalle);
+            this.Controls.Add(this.comboCategoria);
+            this.Controls.Add(this.textBoxNombre);
+            this.Controls.Add(this.lblCategoria);
+            this.Controls.Add(this.lblNombre);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmProductosNuevo";
-            this.Text = "FrmProductosNuevo";
+            this.Text = "Nuevo Producto";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -164,16 +171,16 @@
 
         #endregion
 
-        private System.Windows.Forms.ComboBox ComboMarca;
-        private System.Windows.Forms.Label LblMarca;
-        private System.Windows.Forms.Button BtnSalir;
-        private System.Windows.Forms.Button BtnAceptar;
-        private System.Windows.Forms.Label LblTalle;
-        private System.Windows.Forms.TextBox TextBoxTalle;
-        private System.Windows.Forms.ComboBox ComboCategoria;
-        private System.Windows.Forms.TextBox TextBoxNombre;
-        private System.Windows.Forms.Label LblCategoria;
-        private System.Windows.Forms.Label LblNombre;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ComboBox comboMarca;
+        private System.Windows.Forms.Label lblMarca;
+        private System.Windows.Forms.Button btnSalir;
+        private System.Windows.Forms.Button btnAceptar;
+        private System.Windows.Forms.Label lblTalle;
+        private System.Windows.Forms.TextBox textBoxTalle;
+        private System.Windows.Forms.ComboBox comboCategoria;
+        private System.Windows.Forms.TextBox textBoxNombre;
+        private System.Windows.Forms.Label lblCategoria;
+        private System.Windows.Forms.Label lblNombre;
+        private System.Windows.Forms.Button btnNuevaMarca;
     }
 }

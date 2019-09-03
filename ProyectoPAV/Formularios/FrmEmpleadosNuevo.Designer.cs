@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmEmpleadosNuevo));
             this.TextBoxAnio = new System.Windows.Forms.TextBox();
             this.TextBoxMes = new System.Windows.Forms.TextBox();
             this.TextBoxDia = new System.Windows.Forms.TextBox();
@@ -48,25 +49,28 @@
             this.LblDocumento = new System.Windows.Forms.Label();
             this.LblNombre = new System.Windows.Forms.Label();
             this.LblApellido = new System.Windows.Forms.Label();
+            this.comboCargo = new System.Windows.Forms.ComboBox();
+            this.lblCargo = new System.Windows.Forms.Label();
+            this.btnNuevoCargo = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // TextBoxAnio
             // 
-            this.TextBoxAnio.Location = new System.Drawing.Point(247, 138);
+            this.TextBoxAnio.Location = new System.Drawing.Point(247, 159);
             this.TextBoxAnio.Name = "TextBoxAnio";
             this.TextBoxAnio.Size = new System.Drawing.Size(94, 20);
             this.TextBoxAnio.TabIndex = 72;
             // 
             // TextBoxMes
             // 
-            this.TextBoxMes.Location = new System.Drawing.Point(191, 138);
+            this.TextBoxMes.Location = new System.Drawing.Point(191, 159);
             this.TextBoxMes.Name = "TextBoxMes";
             this.TextBoxMes.Size = new System.Drawing.Size(50, 20);
             this.TextBoxMes.TabIndex = 71;
             // 
             // TextBoxDia
             // 
-            this.TextBoxDia.Location = new System.Drawing.Point(135, 138);
+            this.TextBoxDia.Location = new System.Drawing.Point(135, 159);
             this.TextBoxDia.Name = "TextBoxDia";
             this.TextBoxDia.Size = new System.Drawing.Size(50, 20);
             this.TextBoxDia.TabIndex = 70;
@@ -76,7 +80,7 @@
             this.BtnSalir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.BtnSalir.BackgroundImage = global::ProyectoPAV.Properties.Resources.Log_Out_256x256;
             this.BtnSalir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.BtnSalir.Location = new System.Drawing.Point(372, 225);
+            this.BtnSalir.Location = new System.Drawing.Point(414, 229);
             this.BtnSalir.Name = "BtnSalir";
             this.BtnSalir.Size = new System.Drawing.Size(50, 50);
             this.BtnSalir.TabIndex = 69;
@@ -88,7 +92,7 @@
             this.BtnAceptar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.BtnAceptar.BackgroundImage = global::ProyectoPAV.Properties.Resources.Check_256x256;
             this.BtnAceptar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.BtnAceptar.Location = new System.Drawing.Point(316, 225);
+            this.BtnAceptar.Location = new System.Drawing.Point(358, 229);
             this.BtnAceptar.Name = "BtnAceptar";
             this.BtnAceptar.Size = new System.Drawing.Size(50, 50);
             this.BtnAceptar.TabIndex = 68;
@@ -97,7 +101,7 @@
             // LblTelefono
             // 
             this.LblTelefono.AutoSize = true;
-            this.LblTelefono.Location = new System.Drawing.Point(80, 190);
+            this.LblTelefono.Location = new System.Drawing.Point(80, 214);
             this.LblTelefono.Name = "LblTelefono";
             this.LblTelefono.Size = new System.Drawing.Size(49, 13);
             this.LblTelefono.TabIndex = 65;
@@ -105,7 +109,7 @@
             // 
             // TextBoxTelefono
             // 
-            this.TextBoxTelefono.Location = new System.Drawing.Point(135, 187);
+            this.TextBoxTelefono.Location = new System.Drawing.Point(135, 211);
             this.TextBoxTelefono.Name = "TextBoxTelefono";
             this.TextBoxTelefono.Size = new System.Drawing.Size(155, 20);
             this.TextBoxTelefono.TabIndex = 62;
@@ -113,7 +117,7 @@
             // LblEmail
             // 
             this.LblEmail.AutoSize = true;
-            this.LblEmail.Location = new System.Drawing.Point(97, 164);
+            this.LblEmail.Location = new System.Drawing.Point(97, 188);
             this.LblEmail.Name = "LblEmail";
             this.LblEmail.Size = new System.Drawing.Size(32, 13);
             this.LblEmail.TabIndex = 61;
@@ -122,7 +126,7 @@
             // LblNacimiento
             // 
             this.LblNacimiento.AutoSize = true;
-            this.LblNacimiento.Location = new System.Drawing.Point(36, 141);
+            this.LblNacimiento.Location = new System.Drawing.Point(36, 162);
             this.LblNacimiento.Name = "LblNacimiento";
             this.LblNacimiento.Size = new System.Drawing.Size(93, 13);
             this.LblNacimiento.TabIndex = 60;
@@ -131,7 +135,7 @@
             // LblSexo
             // 
             this.LblSexo.AutoSize = true;
-            this.LblSexo.Location = new System.Drawing.Point(98, 114);
+            this.LblSexo.Location = new System.Drawing.Point(97, 138);
             this.LblSexo.Name = "LblSexo";
             this.LblSexo.Size = new System.Drawing.Size(31, 13);
             this.LblSexo.TabIndex = 59;
@@ -140,7 +144,7 @@
             // RadioMujer
             // 
             this.RadioMujer.AutoSize = true;
-            this.RadioMujer.Location = new System.Drawing.Point(203, 112);
+            this.RadioMujer.Location = new System.Drawing.Point(202, 136);
             this.RadioMujer.Name = "RadioMujer";
             this.RadioMujer.Size = new System.Drawing.Size(51, 17);
             this.RadioMujer.TabIndex = 58;
@@ -151,7 +155,7 @@
             // RadioHombre
             // 
             this.RadioHombre.AutoSize = true;
-            this.RadioHombre.Location = new System.Drawing.Point(135, 112);
+            this.RadioHombre.Location = new System.Drawing.Point(134, 136);
             this.RadioHombre.Name = "RadioHombre";
             this.RadioHombre.Size = new System.Drawing.Size(62, 17);
             this.RadioHombre.TabIndex = 57;
@@ -161,7 +165,7 @@
             // 
             // TextBoxEmail
             // 
-            this.TextBoxEmail.Location = new System.Drawing.Point(135, 161);
+            this.TextBoxEmail.Location = new System.Drawing.Point(135, 185);
             this.TextBoxEmail.Name = "TextBoxEmail";
             this.TextBoxEmail.Size = new System.Drawing.Size(206, 20);
             this.TextBoxEmail.TabIndex = 56;
@@ -222,11 +226,45 @@
             this.LblApellido.TabIndex = 49;
             this.LblApellido.Text = "Apellido";
             // 
+            // comboCargo
+            // 
+            this.comboCargo.FormattingEnabled = true;
+            this.comboCargo.Location = new System.Drawing.Point(134, 111);
+            this.comboCargo.Name = "comboCargo";
+            this.comboCargo.Size = new System.Drawing.Size(207, 21);
+            this.comboCargo.TabIndex = 96;
+            // 
+            // lblCargo
+            // 
+            this.lblCargo.AutoSize = true;
+            this.lblCargo.Location = new System.Drawing.Point(93, 114);
+            this.lblCargo.Name = "lblCargo";
+            this.lblCargo.Size = new System.Drawing.Size(35, 13);
+            this.lblCargo.TabIndex = 95;
+            this.lblCargo.Text = "Cargo";
+            // 
+            // btnNuevoCargo
+            // 
+            this.btnNuevoCargo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnNuevoCargo.Image = global::ProyectoPAV.Properties.Resources.Add_16x16;
+            this.btnNuevoCargo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnNuevoCargo.Location = new System.Drawing.Point(347, 107);
+            this.btnNuevoCargo.Name = "btnNuevoCargo";
+            this.btnNuevoCargo.Size = new System.Drawing.Size(100, 27);
+            this.btnNuevoCargo.TabIndex = 97;
+            this.btnNuevoCargo.Text = "Nuevo Cargo";
+            this.btnNuevoCargo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnNuevoCargo.UseVisualStyleBackColor = true;
+            this.btnNuevoCargo.Click += new System.EventHandler(this.BtnNuevoCargo_Click);
+            // 
             // FrmEmpleadosNuevo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(434, 287);
+            this.ClientSize = new System.Drawing.Size(476, 291);
+            this.Controls.Add(this.btnNuevoCargo);
+            this.Controls.Add(this.comboCargo);
+            this.Controls.Add(this.lblCargo);
             this.Controls.Add(this.TextBoxAnio);
             this.Controls.Add(this.TextBoxMes);
             this.Controls.Add(this.TextBoxDia);
@@ -247,6 +285,7 @@
             this.Controls.Add(this.LblDocumento);
             this.Controls.Add(this.LblNombre);
             this.Controls.Add(this.LblApellido);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmEmpleadosNuevo";
             this.Text = "Nuevo Empleado";
             this.ResumeLayout(false);
@@ -276,5 +315,8 @@
         private System.Windows.Forms.Label LblDocumento;
         private System.Windows.Forms.Label LblNombre;
         private System.Windows.Forms.Label LblApellido;
+        private System.Windows.Forms.ComboBox comboCargo;
+        private System.Windows.Forms.Label lblCargo;
+        private System.Windows.Forms.Button btnNuevoCargo;
     }
 }

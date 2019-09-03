@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace ProyectoPAV.Formularios.Auxiliares
 {
-    public partial class FrmMarca : Form
+    public partial class FrmMarcas : Form
     {
-        public FrmMarca()
+        public FrmMarcas()
         {
             InitializeComponent();
         }

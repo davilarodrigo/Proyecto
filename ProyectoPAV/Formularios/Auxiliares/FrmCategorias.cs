@@ -21,10 +21,5 @@ namespace ProyectoPAV.Formularios.Auxiliares
         {
             this.Dispose();
         }
-
-        private void BtnSalir_Click_1(object sender, EventArgs e)
-        {
-            this.Dispose();
-        }
     }
 }

@@ -19,14 +19,14 @@ namespace ProyectoPAV.Formularios
 
         private void BtnNuevo_Click(object sender, EventArgs e)
         {
-            FrmProveedoresNuevo NuevoProveedor = new FrmProveedoresNuevo();
-            NuevoProveedor.ShowDialog();
+            FrmProveedoresNuevo _nuevoProveedor = new FrmProveedoresNuevo();
+            _nuevoProveedor.ShowDialog();
         }
 
         private void BtnModificar_Click(object sender, EventArgs e)
         {
-            FrmProveedoresModificar ModificarProveedor = new FrmProveedoresModificar();
-            ModificarProveedor.ShowDialog();
+            FrmProveedoresModificar _modificarProveedor = new FrmProveedoresModificar();
+            _modificarProveedor.ShowDialog();
 
         }
 

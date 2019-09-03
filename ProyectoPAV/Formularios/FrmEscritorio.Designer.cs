@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmEscritorio));
-            this.MenuStripEscritorio = new System.Windows.Forms.MenuStrip();
+            this.menuStripEscritorio = new System.Windows.Forms.MenuStrip();
             this.archivoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cambiarLoginToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aBMToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -43,40 +43,40 @@
             this.localidadesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tiposDeDocumentoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cargosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ToolStripEscritorio = new System.Windows.Forms.ToolStrip();
+            this.toolStripEscritorio = new System.Windows.Forms.ToolStrip();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
-            this.TableEstructura = new System.Windows.Forms.TableLayoutPanel();
-            this.TableMenuPrincipal = new System.Windows.Forms.TableLayoutPanel();
-            this.TableBotonesPrinciales = new System.Windows.Forms.TableLayoutPanel();
-            this.BtnClientes = new System.Windows.Forms.Button();
-            this.BtnProductos = new System.Windows.Forms.Button();
-            this.BtnReservas = new System.Windows.Forms.Button();
-            this.BtnEstadisticas = new System.Windows.Forms.Button();
-            this.BtnProveedores = new System.Windows.Forms.Button();
-            this.BtnEmpleados = new System.Windows.Forms.Button();
-            this.BtnCompras = new System.Windows.Forms.Button();
-            this.BtnVentas = new System.Windows.Forms.Button();
-            this.TableMenuSecundario = new System.Windows.Forms.TableLayoutPanel();
-            this.PictureBoxLogo = new System.Windows.Forms.PictureBox();
-            this.MenuStripEscritorio.SuspendLayout();
-            this.ToolStripEscritorio.SuspendLayout();
-            this.TableEstructura.SuspendLayout();
-            this.TableMenuPrincipal.SuspendLayout();
-            this.TableBotonesPrinciales.SuspendLayout();
-            this.TableMenuSecundario.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PictureBoxLogo)).BeginInit();
+            this.tableEstructura = new System.Windows.Forms.TableLayoutPanel();
+            this.tableMenuPrincipal = new System.Windows.Forms.TableLayoutPanel();
+            this.tableBotonesPrinciales = new System.Windows.Forms.TableLayoutPanel();
+            this.btnClientes = new System.Windows.Forms.Button();
+            this.btnProductos = new System.Windows.Forms.Button();
+            this.btnReservas = new System.Windows.Forms.Button();
+            this.btnEstadisticas = new System.Windows.Forms.Button();
+            this.btnProveedores = new System.Windows.Forms.Button();
+            this.btnEmpleados = new System.Windows.Forms.Button();
+            this.btnCompras = new System.Windows.Forms.Button();
+            this.btnVentas = new System.Windows.Forms.Button();
+            this.tableMenuSecundario = new System.Windows.Forms.TableLayoutPanel();
+            this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
+            this.menuStripEscritorio.SuspendLayout();
+            this.toolStripEscritorio.SuspendLayout();
+            this.tableEstructura.SuspendLayout();
+            this.tableMenuPrincipal.SuspendLayout();
+            this.tableBotonesPrinciales.SuspendLayout();
+            this.tableMenuSecundario.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
             this.SuspendLayout();
             // 
-            // MenuStripEscritorio
+            // menuStripEscritorio
             // 
-            this.MenuStripEscritorio.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.menuStripEscritorio.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.archivoToolStripMenuItem,
             this.aBMToolStripMenuItem});
-            this.MenuStripEscritorio.Location = new System.Drawing.Point(0, 0);
-            this.MenuStripEscritorio.Name = "MenuStripEscritorio";
-            this.MenuStripEscritorio.Size = new System.Drawing.Size(800, 24);
-            this.MenuStripEscritorio.TabIndex = 0;
-            this.MenuStripEscritorio.Text = "menuStrip1";
+            this.menuStripEscritorio.Location = new System.Drawing.Point(0, 0);
+            this.menuStripEscritorio.Name = "menuStripEscritorio";
+            this.menuStripEscritorio.Size = new System.Drawing.Size(800, 24);
+            this.menuStripEscritorio.TabIndex = 0;
+            this.menuStripEscritorio.Text = "menuStrip1";
             // 
             // archivoToolStripMenuItem
             // 
@@ -107,28 +107,28 @@
             // clientesToolStripMenuItem
             // 
             this.clientesToolStripMenuItem.Name = "clientesToolStripMenuItem";
-            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
             this.clientesToolStripMenuItem.Text = "Clientes";
             this.clientesToolStripMenuItem.Click += new System.EventHandler(this.ClientesToolStripMenuItem_Click);
             // 
             // productosToolStripMenuItem
             // 
             this.productosToolStripMenuItem.Name = "productosToolStripMenuItem";
-            this.productosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.productosToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
             this.productosToolStripMenuItem.Text = "Productos";
             this.productosToolStripMenuItem.Click += new System.EventHandler(this.ProductosToolStripMenuItem_Click);
             // 
             // proveedoresToolStripMenuItem
             // 
             this.proveedoresToolStripMenuItem.Name = "proveedoresToolStripMenuItem";
-            this.proveedoresToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.proveedoresToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
             this.proveedoresToolStripMenuItem.Text = "Proveedores";
             this.proveedoresToolStripMenuItem.Click += new System.EventHandler(this.ProveedoresToolStripMenuItem_Click);
             // 
             // empleadosToolStripMenuItem
             // 
             this.empleadosToolStripMenuItem.Name = "empleadosToolStripMenuItem";
-            this.empleadosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.empleadosToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
             this.empleadosToolStripMenuItem.Text = "Empleados";
             this.empleadosToolStripMenuItem.Click += new System.EventHandler(this.EmpleadosToolStripMenuItem_Click);
             // 
@@ -141,7 +141,7 @@
             this.tiposDeDocumentoToolStripMenuItem,
             this.cargosToolStripMenuItem});
             this.auxiliaresToolStripMenuItem.Name = "auxiliaresToolStripMenuItem";
-            this.auxiliaresToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.auxiliaresToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
             this.auxiliaresToolStripMenuItem.Text = "Auxiliares";
             // 
             // categoríasToolStripMenuItem
@@ -179,15 +179,15 @@
             this.cargosToolStripMenuItem.Text = "Cargos";
             this.cargosToolStripMenuItem.Click += new System.EventHandler(this.CargosToolStripMenuItem_Click);
             // 
-            // ToolStripEscritorio
+            // toolStripEscritorio
             // 
-            this.ToolStripEscritorio.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripEscritorio.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripButton1});
-            this.ToolStripEscritorio.Location = new System.Drawing.Point(0, 24);
-            this.ToolStripEscritorio.Name = "ToolStripEscritorio";
-            this.ToolStripEscritorio.Size = new System.Drawing.Size(800, 25);
-            this.ToolStripEscritorio.TabIndex = 1;
-            this.ToolStripEscritorio.Text = "toolStrip1";
+            this.toolStripEscritorio.Location = new System.Drawing.Point(0, 24);
+            this.toolStripEscritorio.Name = "toolStripEscritorio";
+            this.toolStripEscritorio.Size = new System.Drawing.Size(800, 25);
+            this.toolStripEscritorio.TabIndex = 1;
+            this.toolStripEscritorio.Text = "toolStrip1";
             // 
             // toolStripButton1
             // 
@@ -198,219 +198,220 @@
             this.toolStripButton1.Size = new System.Drawing.Size(23, 22);
             this.toolStripButton1.Text = "toolStripButton1";
             // 
-            // TableEstructura
+            // tableEstructura
             // 
-            this.TableEstructura.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.tableEstructura.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.TableEstructura.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.TableEstructura.ColumnCount = 1;
-            this.TableEstructura.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.TableEstructura.Controls.Add(this.TableMenuPrincipal, 0, 0);
-            this.TableEstructura.Location = new System.Drawing.Point(12, 52);
-            this.TableEstructura.Name = "TableEstructura";
-            this.TableEstructura.RowCount = 1;
-            this.TableEstructura.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 90F));
-            this.TableEstructura.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.TableEstructura.Size = new System.Drawing.Size(776, 386);
-            this.TableEstructura.TabIndex = 2;
+            this.tableEstructura.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.tableEstructura.ColumnCount = 1;
+            this.tableEstructura.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableEstructura.Controls.Add(this.tableMenuPrincipal, 0, 0);
+            this.tableEstructura.Location = new System.Drawing.Point(12, 52);
+            this.tableEstructura.Name = "tableEstructura";
+            this.tableEstructura.RowCount = 1;
+            this.tableEstructura.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 90F));
+            this.tableEstructura.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableEstructura.Size = new System.Drawing.Size(776, 386);
+            this.tableEstructura.TabIndex = 2;
             // 
-            // TableMenuPrincipal
+            // tableMenuPrincipal
             // 
-            this.TableMenuPrincipal.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.tableMenuPrincipal.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.TableMenuPrincipal.BackColor = System.Drawing.Color.PaleGreen;
-            this.TableMenuPrincipal.ColumnCount = 2;
-            this.TableMenuPrincipal.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 65F));
-            this.TableMenuPrincipal.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35F));
-            this.TableMenuPrincipal.Controls.Add(this.TableBotonesPrinciales, 0, 0);
-            this.TableMenuPrincipal.Controls.Add(this.TableMenuSecundario, 1, 0);
-            this.TableMenuPrincipal.Location = new System.Drawing.Point(3, 3);
-            this.TableMenuPrincipal.Name = "TableMenuPrincipal";
-            this.TableMenuPrincipal.RowCount = 1;
-            this.TableMenuPrincipal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.TableMenuPrincipal.Size = new System.Drawing.Size(770, 380);
-            this.TableMenuPrincipal.TabIndex = 0;
+            this.tableMenuPrincipal.BackColor = System.Drawing.Color.PaleGreen;
+            this.tableMenuPrincipal.ColumnCount = 2;
+            this.tableMenuPrincipal.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 65F));
+            this.tableMenuPrincipal.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35F));
+            this.tableMenuPrincipal.Controls.Add(this.tableBotonesPrinciales, 0, 0);
+            this.tableMenuPrincipal.Controls.Add(this.tableMenuSecundario, 1, 0);
+            this.tableMenuPrincipal.Location = new System.Drawing.Point(3, 3);
+            this.tableMenuPrincipal.Name = "tableMenuPrincipal";
+            this.tableMenuPrincipal.RowCount = 1;
+            this.tableMenuPrincipal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableMenuPrincipal.Size = new System.Drawing.Size(770, 380);
+            this.tableMenuPrincipal.TabIndex = 0;
             // 
-            // TableBotonesPrinciales
+            // tableBotonesPrinciales
             // 
-            this.TableBotonesPrinciales.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.tableBotonesPrinciales.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.TableBotonesPrinciales.BackColor = System.Drawing.Color.PeachPuff;
-            this.TableBotonesPrinciales.ColumnCount = 3;
-            this.TableBotonesPrinciales.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.TableBotonesPrinciales.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.TableBotonesPrinciales.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.TableBotonesPrinciales.Controls.Add(this.BtnClientes, 0, 0);
-            this.TableBotonesPrinciales.Controls.Add(this.BtnProductos, 1, 0);
-            this.TableBotonesPrinciales.Controls.Add(this.BtnReservas, 0, 2);
-            this.TableBotonesPrinciales.Controls.Add(this.BtnEstadisticas, 1, 2);
-            this.TableBotonesPrinciales.Controls.Add(this.BtnProveedores, 2, 0);
-            this.TableBotonesPrinciales.Controls.Add(this.BtnEmpleados, 0, 1);
-            this.TableBotonesPrinciales.Controls.Add(this.BtnCompras, 2, 1);
-            this.TableBotonesPrinciales.Controls.Add(this.BtnVentas, 1, 1);
-            this.TableBotonesPrinciales.Location = new System.Drawing.Point(3, 3);
-            this.TableBotonesPrinciales.Name = "TableBotonesPrinciales";
-            this.TableBotonesPrinciales.RowCount = 3;
-            this.TableBotonesPrinciales.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.TableBotonesPrinciales.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.TableBotonesPrinciales.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.TableBotonesPrinciales.Size = new System.Drawing.Size(494, 374);
-            this.TableBotonesPrinciales.TabIndex = 0;
+            this.tableBotonesPrinciales.BackColor = System.Drawing.Color.PeachPuff;
+            this.tableBotonesPrinciales.ColumnCount = 3;
+            this.tableBotonesPrinciales.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableBotonesPrinciales.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableBotonesPrinciales.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableBotonesPrinciales.Controls.Add(this.btnClientes, 0, 0);
+            this.tableBotonesPrinciales.Controls.Add(this.btnProductos, 1, 0);
+            this.tableBotonesPrinciales.Controls.Add(this.btnReservas, 0, 2);
+            this.tableBotonesPrinciales.Controls.Add(this.btnEstadisticas, 1, 2);
+            this.tableBotonesPrinciales.Controls.Add(this.btnProveedores, 2, 0);
+            this.tableBotonesPrinciales.Controls.Add(this.btnEmpleados, 0, 1);
+            this.tableBotonesPrinciales.Controls.Add(this.btnCompras, 2, 1);
+            this.tableBotonesPrinciales.Controls.Add(this.btnVentas, 1, 1);
+            this.tableBotonesPrinciales.Location = new System.Drawing.Point(3, 3);
+            this.tableBotonesPrinciales.Name = "tableBotonesPrinciales";
+            this.tableBotonesPrinciales.RowCount = 3;
+            this.tableBotonesPrinciales.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableBotonesPrinciales.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableBotonesPrinciales.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableBotonesPrinciales.Size = new System.Drawing.Size(494, 374);
+            this.tableBotonesPrinciales.TabIndex = 0;
             // 
-            // BtnClientes
+            // btnClientes
             // 
-            this.BtnClientes.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.btnClientes.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.BtnClientes.Location = new System.Drawing.Point(3, 3);
-            this.BtnClientes.Name = "BtnClientes";
-            this.BtnClientes.Size = new System.Drawing.Size(158, 118);
-            this.BtnClientes.TabIndex = 0;
-            this.BtnClientes.Text = "Clientes";
-            this.BtnClientes.UseVisualStyleBackColor = true;
-            this.BtnClientes.Click += new System.EventHandler(this.BtnClientes_Click);
+            this.btnClientes.Location = new System.Drawing.Point(3, 3);
+            this.btnClientes.Name = "btnClientes";
+            this.btnClientes.Size = new System.Drawing.Size(158, 118);
+            this.btnClientes.TabIndex = 0;
+            this.btnClientes.Text = "Clientes";
+            this.btnClientes.UseVisualStyleBackColor = true;
+            this.btnClientes.Click += new System.EventHandler(this.BtnClientes_Click);
             // 
-            // BtnProductos
+            // btnProductos
             // 
-            this.BtnProductos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.btnProductos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.BtnProductos.Location = new System.Drawing.Point(167, 3);
-            this.BtnProductos.Name = "BtnProductos";
-            this.BtnProductos.Size = new System.Drawing.Size(158, 118);
-            this.BtnProductos.TabIndex = 1;
-            this.BtnProductos.Text = "Productos";
-            this.BtnProductos.UseVisualStyleBackColor = true;
-            this.BtnProductos.Click += new System.EventHandler(this.BtnProductos_Click);
+            this.btnProductos.Location = new System.Drawing.Point(167, 3);
+            this.btnProductos.Name = "btnProductos";
+            this.btnProductos.Size = new System.Drawing.Size(158, 118);
+            this.btnProductos.TabIndex = 1;
+            this.btnProductos.Text = "Productos";
+            this.btnProductos.UseVisualStyleBackColor = true;
+            this.btnProductos.Click += new System.EventHandler(this.BtnProductos_Click);
             // 
-            // BtnReservas
+            // btnReservas
             // 
-            this.BtnReservas.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.btnReservas.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.BtnReservas.Location = new System.Drawing.Point(3, 251);
-            this.BtnReservas.Name = "BtnReservas";
-            this.BtnReservas.Size = new System.Drawing.Size(158, 120);
-            this.BtnReservas.TabIndex = 6;
-            this.BtnReservas.Text = "Reservas";
-            this.BtnReservas.UseVisualStyleBackColor = true;
+            this.btnReservas.Location = new System.Drawing.Point(3, 251);
+            this.btnReservas.Name = "btnReservas";
+            this.btnReservas.Size = new System.Drawing.Size(158, 120);
+            this.btnReservas.TabIndex = 6;
+            this.btnReservas.Text = "Reservas";
+            this.btnReservas.UseVisualStyleBackColor = true;
             // 
-            // BtnEstadisticas
+            // btnEstadisticas
             // 
-            this.BtnEstadisticas.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.btnEstadisticas.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.BtnEstadisticas.Location = new System.Drawing.Point(167, 251);
-            this.BtnEstadisticas.Name = "BtnEstadisticas";
-            this.BtnEstadisticas.Size = new System.Drawing.Size(158, 120);
-            this.BtnEstadisticas.TabIndex = 7;
-            this.BtnEstadisticas.Text = "Estadísticas y Reportes";
-            this.BtnEstadisticas.UseVisualStyleBackColor = true;
+            this.btnEstadisticas.Location = new System.Drawing.Point(167, 251);
+            this.btnEstadisticas.Name = "btnEstadisticas";
+            this.btnEstadisticas.Size = new System.Drawing.Size(158, 120);
+            this.btnEstadisticas.TabIndex = 7;
+            this.btnEstadisticas.Text = "Estadísticas y Reportes";
+            this.btnEstadisticas.UseVisualStyleBackColor = true;
             // 
-            // BtnProveedores
+            // btnProveedores
             // 
-            this.BtnProveedores.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.btnProveedores.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.BtnProveedores.Location = new System.Drawing.Point(331, 3);
-            this.BtnProveedores.Name = "BtnProveedores";
-            this.BtnProveedores.Size = new System.Drawing.Size(160, 118);
-            this.BtnProveedores.TabIndex = 3;
-            this.BtnProveedores.Text = "Proveedores";
-            this.BtnProveedores.UseVisualStyleBackColor = true;
-            this.BtnProveedores.Click += new System.EventHandler(this.BtnProveedores_Click);
+            this.btnProveedores.Location = new System.Drawing.Point(331, 3);
+            this.btnProveedores.Name = "btnProveedores";
+            this.btnProveedores.Size = new System.Drawing.Size(160, 118);
+            this.btnProveedores.TabIndex = 3;
+            this.btnProveedores.Text = "Proveedores";
+            this.btnProveedores.UseVisualStyleBackColor = true;
+            this.btnProveedores.Click += new System.EventHandler(this.BtnProveedores_Click);
             // 
-            // BtnEmpleados
+            // btnEmpleados
             // 
-            this.BtnEmpleados.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.btnEmpleados.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.BtnEmpleados.Location = new System.Drawing.Point(3, 127);
-            this.BtnEmpleados.Name = "BtnEmpleados";
-            this.BtnEmpleados.Size = new System.Drawing.Size(158, 118);
-            this.BtnEmpleados.TabIndex = 5;
-            this.BtnEmpleados.Text = "Empleados";
-            this.BtnEmpleados.UseVisualStyleBackColor = true;
-            this.BtnEmpleados.Click += new System.EventHandler(this.BtnEmpleados_Click);
+            this.btnEmpleados.Location = new System.Drawing.Point(3, 127);
+            this.btnEmpleados.Name = "btnEmpleados";
+            this.btnEmpleados.Size = new System.Drawing.Size(158, 118);
+            this.btnEmpleados.TabIndex = 5;
+            this.btnEmpleados.Text = "Empleados";
+            this.btnEmpleados.UseVisualStyleBackColor = true;
+            this.btnEmpleados.Click += new System.EventHandler(this.BtnEmpleados_Click);
             // 
-            // BtnCompras
+            // btnCompras
             // 
-            this.BtnCompras.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.btnCompras.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.BtnCompras.Location = new System.Drawing.Point(331, 127);
-            this.BtnCompras.Name = "BtnCompras";
-            this.BtnCompras.Size = new System.Drawing.Size(160, 118);
-            this.BtnCompras.TabIndex = 4;
-            this.BtnCompras.Text = "Compras a Proveedores";
-            this.BtnCompras.UseVisualStyleBackColor = true;
+            this.btnCompras.Location = new System.Drawing.Point(331, 127);
+            this.btnCompras.Name = "btnCompras";
+            this.btnCompras.Size = new System.Drawing.Size(160, 118);
+            this.btnCompras.TabIndex = 4;
+            this.btnCompras.Text = "Compras a Proveedores";
+            this.btnCompras.UseVisualStyleBackColor = true;
             // 
-            // BtnVentas
+            // btnVentas
             // 
-            this.BtnVentas.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.btnVentas.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.BtnVentas.Location = new System.Drawing.Point(167, 127);
-            this.BtnVentas.Name = "BtnVentas";
-            this.BtnVentas.Size = new System.Drawing.Size(158, 118);
-            this.BtnVentas.TabIndex = 2;
-            this.BtnVentas.Text = "Ventas";
-            this.BtnVentas.UseVisualStyleBackColor = true;
+            this.btnVentas.Location = new System.Drawing.Point(167, 127);
+            this.btnVentas.Name = "btnVentas";
+            this.btnVentas.Size = new System.Drawing.Size(158, 118);
+            this.btnVentas.TabIndex = 2;
+            this.btnVentas.Text = "Ventas";
+            this.btnVentas.UseVisualStyleBackColor = true;
             // 
-            // TableMenuSecundario
+            // tableMenuSecundario
             // 
-            this.TableMenuSecundario.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.tableMenuSecundario.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.TableMenuSecundario.BackColor = System.Drawing.Color.Pink;
-            this.TableMenuSecundario.ColumnCount = 1;
-            this.TableMenuSecundario.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.TableMenuSecundario.Controls.Add(this.PictureBoxLogo, 0, 0);
-            this.TableMenuSecundario.Location = new System.Drawing.Point(503, 3);
-            this.TableMenuSecundario.Name = "TableMenuSecundario";
-            this.TableMenuSecundario.RowCount = 2;
-            this.TableMenuSecundario.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 80F));
-            this.TableMenuSecundario.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.TableMenuSecundario.Size = new System.Drawing.Size(264, 374);
-            this.TableMenuSecundario.TabIndex = 1;
+            this.tableMenuSecundario.BackColor = System.Drawing.Color.Pink;
+            this.tableMenuSecundario.ColumnCount = 1;
+            this.tableMenuSecundario.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableMenuSecundario.Controls.Add(this.pictureBoxLogo, 0, 0);
+            this.tableMenuSecundario.Location = new System.Drawing.Point(503, 3);
+            this.tableMenuSecundario.Name = "tableMenuSecundario";
+            this.tableMenuSecundario.RowCount = 2;
+            this.tableMenuSecundario.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 80F));
+            this.tableMenuSecundario.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableMenuSecundario.Size = new System.Drawing.Size(264, 374);
+            this.tableMenuSecundario.TabIndex = 1;
             // 
-            // PictureBoxLogo
+            // pictureBoxLogo
             // 
-            this.PictureBoxLogo.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.PictureBoxLogo.BackColor = System.Drawing.Color.Pink;
-            this.PictureBoxLogo.BackgroundImage = global::ProyectoPAV.Properties.Resources.Logo_Programa;
-            this.PictureBoxLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.PictureBoxLogo.Location = new System.Drawing.Point(51, 42);
-            this.PictureBoxLogo.Name = "PictureBoxLogo";
-            this.PictureBoxLogo.Size = new System.Drawing.Size(162, 215);
-            this.PictureBoxLogo.TabIndex = 0;
-            this.PictureBoxLogo.TabStop = false;
+            this.pictureBoxLogo.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBoxLogo.BackColor = System.Drawing.Color.Pink;
+            this.pictureBoxLogo.BackgroundImage = global::ProyectoPAV.Properties.Resources.Logo_Programa;
+            this.pictureBoxLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBoxLogo.Location = new System.Drawing.Point(51, 42);
+            this.pictureBoxLogo.Name = "pictureBoxLogo";
+            this.pictureBoxLogo.Size = new System.Drawing.Size(162, 215);
+            this.pictureBoxLogo.TabIndex = 0;
+            this.pictureBoxLogo.TabStop = false;
             // 
             // FrmEscritorio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.TableEstructura);
-            this.Controls.Add(this.ToolStripEscritorio);
-            this.Controls.Add(this.MenuStripEscritorio);
-            this.MainMenuStrip = this.MenuStripEscritorio;
+            this.Controls.Add(this.tableEstructura);
+            this.Controls.Add(this.toolStripEscritorio);
+            this.Controls.Add(this.menuStripEscritorio);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MainMenuStrip = this.menuStripEscritorio;
             this.Name = "FrmEscritorio";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Escritorio";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.MenuStripEscritorio.ResumeLayout(false);
-            this.MenuStripEscritorio.PerformLayout();
-            this.ToolStripEscritorio.ResumeLayout(false);
-            this.ToolStripEscritorio.PerformLayout();
-            this.TableEstructura.ResumeLayout(false);
-            this.TableMenuPrincipal.ResumeLayout(false);
-            this.TableBotonesPrinciales.ResumeLayout(false);
-            this.TableMenuSecundario.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.PictureBoxLogo)).EndInit();
+            this.menuStripEscritorio.ResumeLayout(false);
+            this.menuStripEscritorio.PerformLayout();
+            this.toolStripEscritorio.ResumeLayout(false);
+            this.toolStripEscritorio.PerformLayout();
+            this.tableEstructura.ResumeLayout(false);
+            this.tableMenuPrincipal.ResumeLayout(false);
+            this.tableBotonesPrinciales.ResumeLayout(false);
+            this.tableMenuSecundario.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -418,24 +419,24 @@
 
         #endregion
 
-        private System.Windows.Forms.MenuStrip MenuStripEscritorio;
+        private System.Windows.Forms.MenuStrip menuStripEscritorio;
         private System.Windows.Forms.ToolStripMenuItem archivoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cambiarLoginToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aBMToolStripMenuItem;
-        private System.Windows.Forms.ToolStrip ToolStripEscritorio;
+        private System.Windows.Forms.ToolStrip toolStripEscritorio;
         private System.Windows.Forms.ToolStripButton toolStripButton1;
-        private System.Windows.Forms.TableLayoutPanel TableEstructura;
-        private System.Windows.Forms.TableLayoutPanel TableMenuPrincipal;
-        private System.Windows.Forms.TableLayoutPanel TableBotonesPrinciales;
-        private System.Windows.Forms.Button BtnClientes;
-        private System.Windows.Forms.Button BtnProductos;
-        private System.Windows.Forms.Button BtnVentas;
-        private System.Windows.Forms.Button BtnProveedores;
-        private System.Windows.Forms.Button BtnCompras;
-        private System.Windows.Forms.Button BtnEmpleados;
-        private System.Windows.Forms.Button BtnReservas;
-        private System.Windows.Forms.Button BtnEstadisticas;
-        private System.Windows.Forms.TableLayoutPanel TableMenuSecundario;
+        private System.Windows.Forms.TableLayoutPanel tableEstructura;
+        private System.Windows.Forms.TableLayoutPanel tableMenuPrincipal;
+        private System.Windows.Forms.TableLayoutPanel tableBotonesPrinciales;
+        private System.Windows.Forms.Button btnClientes;
+        private System.Windows.Forms.Button btnProductos;
+        private System.Windows.Forms.Button btnVentas;
+        private System.Windows.Forms.Button btnProveedores;
+        private System.Windows.Forms.Button btnCompras;
+        private System.Windows.Forms.Button btnEmpleados;
+        private System.Windows.Forms.Button btnReservas;
+        private System.Windows.Forms.Button btnEstadisticas;
+        private System.Windows.Forms.TableLayoutPanel tableMenuSecundario;
         private System.Windows.Forms.ToolStripMenuItem clientesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem productosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem proveedoresToolStripMenuItem;
@@ -446,7 +447,7 @@
         private System.Windows.Forms.ToolStripMenuItem localidadesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem tiposDeDocumentoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cargosToolStripMenuItem;
-        private System.Windows.Forms.PictureBox PictureBoxLogo;
+        private System.Windows.Forms.PictureBox pictureBoxLogo;
     }
 }
 

@@ -28,99 +28,101 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.BtnEliminar = new System.Windows.Forms.Button();
-            this.BtnSalir = new System.Windows.Forms.Button();
-            this.BtnAceptar = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.LblNuevoTipoDocumento = new System.Windows.Forms.Label();
-            this.BtnAgregar = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmTipoDocumentos));
+            this.btnEliminar = new System.Windows.Forms.Button();
+            this.btnSalir = new System.Windows.Forms.Button();
+            this.btnAceptar = new System.Windows.Forms.Button();
+            this.textBoxNuevoTipoDoc = new System.Windows.Forms.TextBox();
+            this.lblNuevoTipoDoc = new System.Windows.Forms.Label();
+            this.btnAgregar = new System.Windows.Forms.Button();
+            this.dataGridTipoDoc = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridTipoDoc)).BeginInit();
             this.SuspendLayout();
             // 
-            // BtnEliminar
+            // btnEliminar
             // 
-            this.BtnEliminar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.BtnEliminar.BackgroundImage = global::ProyectoPAV.Properties.Resources.Delete_256x256;
-            this.BtnEliminar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.BtnEliminar.Location = new System.Drawing.Point(312, 299);
-            this.BtnEliminar.Name = "BtnEliminar";
-            this.BtnEliminar.Size = new System.Drawing.Size(50, 50);
-            this.BtnEliminar.TabIndex = 38;
-            this.BtnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnEliminar.BackgroundImage = global::ProyectoPAV.Properties.Resources.Delete_256x256;
+            this.btnEliminar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnEliminar.Location = new System.Drawing.Point(312, 299);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(50, 50);
+            this.btnEliminar.TabIndex = 38;
+            this.btnEliminar.UseVisualStyleBackColor = true;
             // 
-            // BtnSalir
+            // btnSalir
             // 
-            this.BtnSalir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.BtnSalir.BackgroundImage = global::ProyectoPAV.Properties.Resources.Log_Out_256x256;
-            this.BtnSalir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.BtnSalir.Location = new System.Drawing.Point(424, 299);
-            this.BtnSalir.Name = "BtnSalir";
-            this.BtnSalir.Size = new System.Drawing.Size(50, 50);
-            this.BtnSalir.TabIndex = 37;
-            this.BtnSalir.UseVisualStyleBackColor = true;
-            this.BtnSalir.Click += new System.EventHandler(this.BtnSalir_Click);
+            this.btnSalir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSalir.BackgroundImage = global::ProyectoPAV.Properties.Resources.Log_Out_256x256;
+            this.btnSalir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnSalir.Location = new System.Drawing.Point(424, 299);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(50, 50);
+            this.btnSalir.TabIndex = 37;
+            this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.BtnSalir_Click);
             // 
-            // BtnAceptar
+            // btnAceptar
             // 
-            this.BtnAceptar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.BtnAceptar.BackgroundImage = global::ProyectoPAV.Properties.Resources.Check_256x256;
-            this.BtnAceptar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.BtnAceptar.Location = new System.Drawing.Point(368, 299);
-            this.BtnAceptar.Name = "BtnAceptar";
-            this.BtnAceptar.Size = new System.Drawing.Size(50, 50);
-            this.BtnAceptar.TabIndex = 36;
-            this.BtnAceptar.UseVisualStyleBackColor = true;
+            this.btnAceptar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAceptar.BackgroundImage = global::ProyectoPAV.Properties.Resources.Check_256x256;
+            this.btnAceptar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnAceptar.Location = new System.Drawing.Point(368, 299);
+            this.btnAceptar.Name = "btnAceptar";
+            this.btnAceptar.Size = new System.Drawing.Size(50, 50);
+            this.btnAceptar.TabIndex = 36;
+            this.btnAceptar.UseVisualStyleBackColor = true;
             // 
-            // textBox1
+            // textBoxNuevoTipoDoc
             // 
-            this.textBox1.Location = new System.Drawing.Point(152, 27);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(164, 20);
-            this.textBox1.TabIndex = 35;
+            this.textBoxNuevoTipoDoc.Location = new System.Drawing.Point(152, 27);
+            this.textBoxNuevoTipoDoc.Name = "textBoxNuevoTipoDoc";
+            this.textBoxNuevoTipoDoc.Size = new System.Drawing.Size(164, 20);
+            this.textBoxNuevoTipoDoc.TabIndex = 35;
             // 
-            // LblNuevoTipoDocumento
+            // lblNuevoTipoDoc
             // 
-            this.LblNuevoTipoDocumento.AutoSize = true;
-            this.LblNuevoTipoDocumento.Location = new System.Drawing.Point(25, 30);
-            this.LblNuevoTipoDocumento.Name = "LblNuevoTipoDocumento";
-            this.LblNuevoTipoDocumento.Size = new System.Drawing.Size(121, 13);
-            this.LblNuevoTipoDocumento.TabIndex = 34;
-            this.LblNuevoTipoDocumento.Text = "Nuevo Tipo Documento";
+            this.lblNuevoTipoDoc.AutoSize = true;
+            this.lblNuevoTipoDoc.Location = new System.Drawing.Point(25, 30);
+            this.lblNuevoTipoDoc.Name = "lblNuevoTipoDoc";
+            this.lblNuevoTipoDoc.Size = new System.Drawing.Size(121, 13);
+            this.lblNuevoTipoDoc.TabIndex = 34;
+            this.lblNuevoTipoDoc.Text = "Nuevo Tipo Documento";
             // 
-            // BtnAgregar
+            // btnAgregar
             // 
-            this.BtnAgregar.BackgroundImage = global::ProyectoPAV.Properties.Resources.Add_256x256;
-            this.BtnAgregar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.BtnAgregar.Location = new System.Drawing.Point(322, 12);
-            this.BtnAgregar.Name = "BtnAgregar";
-            this.BtnAgregar.Size = new System.Drawing.Size(50, 50);
-            this.BtnAgregar.TabIndex = 33;
-            this.BtnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.BackgroundImage = global::ProyectoPAV.Properties.Resources.Add_256x256;
+            this.btnAgregar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnAgregar.Location = new System.Drawing.Point(322, 12);
+            this.btnAgregar.Name = "btnAgregar";
+            this.btnAgregar.Size = new System.Drawing.Size(50, 50);
+            this.btnAgregar.TabIndex = 33;
+            this.btnAgregar.UseVisualStyleBackColor = true;
             // 
-            // dataGridView1
+            // dataGridTipoDoc
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(28, 67);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(416, 213);
-            this.dataGridView1.TabIndex = 32;
+            this.dataGridTipoDoc.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridTipoDoc.Location = new System.Drawing.Point(28, 67);
+            this.dataGridTipoDoc.Name = "dataGridTipoDoc";
+            this.dataGridTipoDoc.Size = new System.Drawing.Size(416, 213);
+            this.dataGridTipoDoc.TabIndex = 32;
             // 
             // FrmTipoDocumentos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(486, 361);
-            this.Controls.Add(this.BtnEliminar);
-            this.Controls.Add(this.BtnSalir);
-            this.Controls.Add(this.BtnAceptar);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.LblNuevoTipoDocumento);
-            this.Controls.Add(this.BtnAgregar);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.btnEliminar);
+            this.Controls.Add(this.btnSalir);
+            this.Controls.Add(this.btnAceptar);
+            this.Controls.Add(this.textBoxNuevoTipoDoc);
+            this.Controls.Add(this.lblNuevoTipoDoc);
+            this.Controls.Add(this.btnAgregar);
+            this.Controls.Add(this.dataGridTipoDoc);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmTipoDocumentos";
             this.Text = "FrmTipoDocumentos";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridTipoDoc)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -128,12 +130,12 @@
 
         #endregion
 
-        private System.Windows.Forms.Button BtnEliminar;
-        private System.Windows.Forms.Button BtnSalir;
-        private System.Windows.Forms.Button BtnAceptar;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label LblNuevoTipoDocumento;
-        private System.Windows.Forms.Button BtnAgregar;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button btnEliminar;
+        private System.Windows.Forms.Button btnSalir;
+        private System.Windows.Forms.Button btnAceptar;
+        private System.Windows.Forms.TextBox textBoxNuevoTipoDoc;
+        private System.Windows.Forms.Label lblNuevoTipoDoc;
+        private System.Windows.Forms.Button btnAgregar;
+        private System.Windows.Forms.DataGridView dataGridTipoDoc;
     }
 }

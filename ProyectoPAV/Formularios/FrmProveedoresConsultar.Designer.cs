@@ -28,118 +28,119 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.BtnNuevo = new System.Windows.Forms.Button();
-            this.BtnSalir = new System.Windows.Forms.Button();
-            this.BtnEliminar = new System.Windows.Forms.Button();
-            this.BtnModificar = new System.Windows.Forms.Button();
-            this.GroupBoxFiltros = new System.Windows.Forms.GroupBox();
-            this.BtnBuscar = new System.Windows.Forms.Button();
-            this.DataGridProveedores = new System.Windows.Forms.DataGridView();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmProveedoresConsultar));
+            this.btnNuevo = new System.Windows.Forms.Button();
+            this.btnSalir = new System.Windows.Forms.Button();
+            this.btnEliminar = new System.Windows.Forms.Button();
+            this.btnModificar = new System.Windows.Forms.Button();
+            this.groupBoxFiltros = new System.Windows.Forms.GroupBox();
+            this.btnBuscar = new System.Windows.Forms.Button();
+            this.dataGridProveedores = new System.Windows.Forms.DataGridView();
             this.ClmRazonSocial = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmTelefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmEmail = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmCalle = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmNumeroCalle = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmLocalidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.LblNombre = new System.Windows.Forms.Label();
-            this.TextBoxNombre = new System.Windows.Forms.TextBox();
-            this.GroupBoxFiltros.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DataGridProveedores)).BeginInit();
+            this.lblNombre = new System.Windows.Forms.Label();
+            this.textBoxNombre = new System.Windows.Forms.TextBox();
+            this.groupBoxFiltros.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridProveedores)).BeginInit();
             this.SuspendLayout();
             // 
-            // BtnNuevo
+            // btnNuevo
             // 
-            this.BtnNuevo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.BtnNuevo.BackgroundImage = global::ProyectoPAV.Properties.Resources.Add_256x256;
-            this.BtnNuevo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.BtnNuevo.Location = new System.Drawing.Point(12, 451);
-            this.BtnNuevo.Name = "BtnNuevo";
-            this.BtnNuevo.Size = new System.Drawing.Size(50, 50);
-            this.BtnNuevo.TabIndex = 14;
-            this.BtnNuevo.UseVisualStyleBackColor = true;
-            this.BtnNuevo.Click += new System.EventHandler(this.BtnNuevo_Click);
+            this.btnNuevo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnNuevo.BackgroundImage = global::ProyectoPAV.Properties.Resources.Add_256x256;
+            this.btnNuevo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnNuevo.Location = new System.Drawing.Point(12, 451);
+            this.btnNuevo.Name = "btnNuevo";
+            this.btnNuevo.Size = new System.Drawing.Size(50, 50);
+            this.btnNuevo.TabIndex = 14;
+            this.btnNuevo.UseVisualStyleBackColor = true;
+            this.btnNuevo.Click += new System.EventHandler(this.BtnNuevo_Click);
             // 
-            // BtnSalir
+            // btnSalir
             // 
-            this.BtnSalir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.BtnSalir.BackgroundImage = global::ProyectoPAV.Properties.Resources.Log_Out_256x256;
-            this.BtnSalir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.BtnSalir.Location = new System.Drawing.Point(699, 451);
-            this.BtnSalir.Name = "BtnSalir";
-            this.BtnSalir.Size = new System.Drawing.Size(50, 50);
-            this.BtnSalir.TabIndex = 13;
-            this.BtnSalir.UseVisualStyleBackColor = true;
-            this.BtnSalir.Click += new System.EventHandler(this.BtnSalir_Click);
+            this.btnSalir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSalir.BackgroundImage = global::ProyectoPAV.Properties.Resources.Log_Out_256x256;
+            this.btnSalir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnSalir.Location = new System.Drawing.Point(699, 451);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(50, 50);
+            this.btnSalir.TabIndex = 13;
+            this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.BtnSalir_Click);
             // 
-            // BtnEliminar
+            // btnEliminar
             // 
-            this.BtnEliminar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.BtnEliminar.BackgroundImage = global::ProyectoPAV.Properties.Resources.Delete_256x256;
-            this.BtnEliminar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.BtnEliminar.Location = new System.Drawing.Point(124, 451);
-            this.BtnEliminar.Name = "BtnEliminar";
-            this.BtnEliminar.Size = new System.Drawing.Size(50, 50);
-            this.BtnEliminar.TabIndex = 12;
-            this.BtnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnEliminar.BackgroundImage = global::ProyectoPAV.Properties.Resources.Delete_256x256;
+            this.btnEliminar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnEliminar.Location = new System.Drawing.Point(124, 451);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(50, 50);
+            this.btnEliminar.TabIndex = 12;
+            this.btnEliminar.UseVisualStyleBackColor = true;
             // 
-            // BtnModificar
+            // btnModificar
             // 
-            this.BtnModificar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.BtnModificar.BackgroundImage = global::ProyectoPAV.Properties.Resources.Edit_256x256;
-            this.BtnModificar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.BtnModificar.Location = new System.Drawing.Point(68, 451);
-            this.BtnModificar.Name = "BtnModificar";
-            this.BtnModificar.Size = new System.Drawing.Size(50, 50);
-            this.BtnModificar.TabIndex = 11;
-            this.BtnModificar.UseVisualStyleBackColor = true;
-            this.BtnModificar.Click += new System.EventHandler(this.BtnModificar_Click);
+            this.btnModificar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnModificar.BackgroundImage = global::ProyectoPAV.Properties.Resources.Edit_256x256;
+            this.btnModificar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnModificar.Location = new System.Drawing.Point(68, 451);
+            this.btnModificar.Name = "btnModificar";
+            this.btnModificar.Size = new System.Drawing.Size(50, 50);
+            this.btnModificar.TabIndex = 11;
+            this.btnModificar.UseVisualStyleBackColor = true;
+            this.btnModificar.Click += new System.EventHandler(this.BtnModificar_Click);
             // 
-            // GroupBoxFiltros
+            // groupBoxFiltros
             // 
-            this.GroupBoxFiltros.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.groupBoxFiltros.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.GroupBoxFiltros.Controls.Add(this.BtnBuscar);
-            this.GroupBoxFiltros.Controls.Add(this.DataGridProveedores);
-            this.GroupBoxFiltros.Controls.Add(this.LblNombre);
-            this.GroupBoxFiltros.Controls.Add(this.TextBoxNombre);
-            this.GroupBoxFiltros.Location = new System.Drawing.Point(12, 12);
-            this.GroupBoxFiltros.Name = "GroupBoxFiltros";
-            this.GroupBoxFiltros.Size = new System.Drawing.Size(737, 408);
-            this.GroupBoxFiltros.TabIndex = 10;
-            this.GroupBoxFiltros.TabStop = false;
-            this.GroupBoxFiltros.Text = "Filtros";
+            this.groupBoxFiltros.Controls.Add(this.btnBuscar);
+            this.groupBoxFiltros.Controls.Add(this.dataGridProveedores);
+            this.groupBoxFiltros.Controls.Add(this.lblNombre);
+            this.groupBoxFiltros.Controls.Add(this.textBoxNombre);
+            this.groupBoxFiltros.Location = new System.Drawing.Point(12, 12);
+            this.groupBoxFiltros.Name = "groupBoxFiltros";
+            this.groupBoxFiltros.Size = new System.Drawing.Size(737, 408);
+            this.groupBoxFiltros.TabIndex = 10;
+            this.groupBoxFiltros.TabStop = false;
+            this.groupBoxFiltros.Text = "Filtros";
             // 
-            // BtnBuscar
+            // btnBuscar
             // 
-            this.BtnBuscar.BackgroundImage = global::ProyectoPAV.Properties.Resources.Search_256x256;
-            this.BtnBuscar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.BtnBuscar.Location = new System.Drawing.Point(445, 19);
-            this.BtnBuscar.Name = "BtnBuscar";
-            this.BtnBuscar.Size = new System.Drawing.Size(48, 48);
-            this.BtnBuscar.TabIndex = 9;
-            this.BtnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.BackgroundImage = global::ProyectoPAV.Properties.Resources.Search_256x256;
+            this.btnBuscar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnBuscar.Location = new System.Drawing.Point(445, 19);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(48, 48);
+            this.btnBuscar.TabIndex = 9;
+            this.btnBuscar.UseVisualStyleBackColor = true;
             // 
-            // DataGridProveedores
+            // dataGridProveedores
             // 
-            this.DataGridProveedores.AllowUserToAddRows = false;
-            this.DataGridProveedores.AllowUserToDeleteRows = false;
-            this.DataGridProveedores.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.dataGridProveedores.AllowUserToAddRows = false;
+            this.dataGridProveedores.AllowUserToDeleteRows = false;
+            this.dataGridProveedores.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.DataGridProveedores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DataGridProveedores.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridProveedores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridProveedores.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ClmRazonSocial,
             this.clmTelefono,
             this.clmEmail,
             this.clmCalle,
             this.clmNumeroCalle,
             this.clmLocalidad});
-            this.DataGridProveedores.Location = new System.Drawing.Point(6, 73);
-            this.DataGridProveedores.Name = "DataGridProveedores";
-            this.DataGridProveedores.ReadOnly = true;
-            this.DataGridProveedores.Size = new System.Drawing.Size(725, 329);
-            this.DataGridProveedores.TabIndex = 5;
+            this.dataGridProveedores.Location = new System.Drawing.Point(6, 73);
+            this.dataGridProveedores.Name = "dataGridProveedores";
+            this.dataGridProveedores.ReadOnly = true;
+            this.dataGridProveedores.Size = new System.Drawing.Size(725, 329);
+            this.dataGridProveedores.TabIndex = 5;
             // 
             // ClmRazonSocial
             // 
@@ -177,57 +178,59 @@
             this.clmLocalidad.Name = "clmLocalidad";
             this.clmLocalidad.ReadOnly = true;
             // 
-            // LblNombre
+            // lblNombre
             // 
-            this.LblNombre.AutoSize = true;
-            this.LblNombre.Location = new System.Drawing.Point(51, 37);
-            this.LblNombre.Name = "LblNombre";
-            this.LblNombre.Size = new System.Drawing.Size(70, 13);
-            this.LblNombre.TabIndex = 1;
-            this.LblNombre.Text = "Razon Social";
+            this.lblNombre.AutoSize = true;
+            this.lblNombre.Location = new System.Drawing.Point(51, 37);
+            this.lblNombre.Name = "lblNombre";
+            this.lblNombre.Size = new System.Drawing.Size(70, 13);
+            this.lblNombre.TabIndex = 1;
+            this.lblNombre.Text = "Razon Social";
             // 
-            // TextBoxNombre
+            // textBoxNombre
             // 
-            this.TextBoxNombre.Location = new System.Drawing.Point(127, 34);
-            this.TextBoxNombre.Name = "TextBoxNombre";
-            this.TextBoxNombre.Size = new System.Drawing.Size(312, 20);
-            this.TextBoxNombre.TabIndex = 0;
+            this.textBoxNombre.Location = new System.Drawing.Point(127, 34);
+            this.textBoxNombre.Name = "textBoxNombre";
+            this.textBoxNombre.Size = new System.Drawing.Size(312, 20);
+            this.textBoxNombre.TabIndex = 0;
             // 
             // FrmProveedoresConsultar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(761, 513);
-            this.Controls.Add(this.BtnNuevo);
-            this.Controls.Add(this.BtnSalir);
-            this.Controls.Add(this.BtnEliminar);
-            this.Controls.Add(this.BtnModificar);
-            this.Controls.Add(this.GroupBoxFiltros);
+            this.Controls.Add(this.btnNuevo);
+            this.Controls.Add(this.btnSalir);
+            this.Controls.Add(this.btnEliminar);
+            this.Controls.Add(this.btnModificar);
+            this.Controls.Add(this.groupBoxFiltros);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmProveedoresConsultar";
-            this.Text = "FrmProveedoresConsultar";
-            this.GroupBoxFiltros.ResumeLayout(false);
-            this.GroupBoxFiltros.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DataGridProveedores)).EndInit();
+            this.Text = "Consultar Proveedores";
+            this.groupBoxFiltros.ResumeLayout(false);
+            this.groupBoxFiltros.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridProveedores)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Button BtnNuevo;
-        private System.Windows.Forms.Button BtnSalir;
-        private System.Windows.Forms.Button BtnEliminar;
-        private System.Windows.Forms.Button BtnModificar;
-        private System.Windows.Forms.GroupBox GroupBoxFiltros;
-        private System.Windows.Forms.Button BtnBuscar;
-        private System.Windows.Forms.DataGridView DataGridProveedores;
-        private System.Windows.Forms.Label LblNombre;
-        private System.Windows.Forms.TextBox TextBoxNombre;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ClmRazonSocial;
+        private System.Windows.Forms.Button btnNuevo;
+        private System.Windows.Forms.Button btnSalir;
+        private System.Windows.Forms.Button btnEliminar;
+        private System.Windows.Forms.Button btnModificar;
+        private System.Windows.Forms.GroupBox groupBoxFiltros;
+        private System.Windows.Forms.Button btnBuscar;
+        private System.Windows.Forms.DataGridView dataGridProveedores;
+        private System.Windows.Forms.Label lblNombre;
+        private System.Windows.Forms.TextBox textBoxNombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clmRazonSocial;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmTelefono;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmEmail;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmCalle;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmNumeroCalle;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmLocalidad;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ClmRazonSocial;
     }
 }

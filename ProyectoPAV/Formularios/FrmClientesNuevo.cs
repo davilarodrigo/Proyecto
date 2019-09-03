@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ProyectoPAV.Formularios.Auxiliares;
 
 namespace ProyectoPAV.Formularios
 {
@@ -20,6 +21,12 @@ namespace ProyectoPAV.Formularios
         private void BtnSalir_Click(object sender, EventArgs e)
         {
             this.Dispose();
+        }
+
+        private void BtnNuevaLocalidad_Click(object sender, EventArgs e)
+        {
+            FrmLocalidades _localidades = new FrmLocalidades();
+            _localidades.ShowDialog();
         }
     }
 }

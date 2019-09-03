@@ -28,99 +28,101 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.BtnEliminar = new System.Windows.Forms.Button();
-            this.BtnSalir = new System.Windows.Forms.Button();
-            this.BtnAceptar = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.LblNuevaLocalidad = new System.Windows.Forms.Label();
-            this.BtnAgregar = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmLocalidades));
+            this.btnEliminar = new System.Windows.Forms.Button();
+            this.btnSalir = new System.Windows.Forms.Button();
+            this.btnAceptar = new System.Windows.Forms.Button();
+            this.textBoxNuevaLocalidad = new System.Windows.Forms.TextBox();
+            this.lblNuevaLocalidad = new System.Windows.Forms.Label();
+            this.btnAgregar = new System.Windows.Forms.Button();
+            this.dataGridLocalidades = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridLocalidades)).BeginInit();
             this.SuspendLayout();
             // 
-            // BtnEliminar
+            // btnEliminar
             // 
-            this.BtnEliminar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.BtnEliminar.BackgroundImage = global::ProyectoPAV.Properties.Resources.Delete_256x256;
-            this.BtnEliminar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.BtnEliminar.Location = new System.Drawing.Point(270, 292);
-            this.BtnEliminar.Name = "BtnEliminar";
-            this.BtnEliminar.Size = new System.Drawing.Size(50, 50);
-            this.BtnEliminar.TabIndex = 31;
-            this.BtnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnEliminar.BackgroundImage = global::ProyectoPAV.Properties.Resources.Delete_256x256;
+            this.btnEliminar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnEliminar.Location = new System.Drawing.Point(270, 292);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(50, 50);
+            this.btnEliminar.TabIndex = 31;
+            this.btnEliminar.UseVisualStyleBackColor = true;
             // 
-            // BtnSalir
+            // btnSalir
             // 
-            this.BtnSalir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.BtnSalir.BackgroundImage = global::ProyectoPAV.Properties.Resources.Log_Out_256x256;
-            this.BtnSalir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.BtnSalir.Location = new System.Drawing.Point(382, 292);
-            this.BtnSalir.Name = "BtnSalir";
-            this.BtnSalir.Size = new System.Drawing.Size(50, 50);
-            this.BtnSalir.TabIndex = 30;
-            this.BtnSalir.UseVisualStyleBackColor = true;
-            this.BtnSalir.Click += new System.EventHandler(this.BtnSalir_Click);
+            this.btnSalir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSalir.BackgroundImage = global::ProyectoPAV.Properties.Resources.Log_Out_256x256;
+            this.btnSalir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnSalir.Location = new System.Drawing.Point(382, 292);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(50, 50);
+            this.btnSalir.TabIndex = 30;
+            this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.BtnSalir_Click);
             // 
-            // BtnAceptar
+            // btnAceptar
             // 
-            this.BtnAceptar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.BtnAceptar.BackgroundImage = global::ProyectoPAV.Properties.Resources.Check_256x256;
-            this.BtnAceptar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.BtnAceptar.Location = new System.Drawing.Point(326, 292);
-            this.BtnAceptar.Name = "BtnAceptar";
-            this.BtnAceptar.Size = new System.Drawing.Size(50, 50);
-            this.BtnAceptar.TabIndex = 29;
-            this.BtnAceptar.UseVisualStyleBackColor = true;
+            this.btnAceptar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAceptar.BackgroundImage = global::ProyectoPAV.Properties.Resources.Check_256x256;
+            this.btnAceptar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnAceptar.Location = new System.Drawing.Point(326, 292);
+            this.btnAceptar.Name = "btnAceptar";
+            this.btnAceptar.Size = new System.Drawing.Size(50, 50);
+            this.btnAceptar.TabIndex = 29;
+            this.btnAceptar.UseVisualStyleBackColor = true;
             // 
-            // textBox1
+            // textBoxNuevaLocalidad
             // 
-            this.textBox1.Location = new System.Drawing.Point(106, 25);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(164, 20);
-            this.textBox1.TabIndex = 28;
+            this.textBoxNuevaLocalidad.Location = new System.Drawing.Point(106, 25);
+            this.textBoxNuevaLocalidad.Name = "textBoxNuevaLocalidad";
+            this.textBoxNuevaLocalidad.Size = new System.Drawing.Size(164, 20);
+            this.textBoxNuevaLocalidad.TabIndex = 28;
             // 
-            // LblNuevaLocalidad
+            // lblNuevaLocalidad
             // 
-            this.LblNuevaLocalidad.AutoSize = true;
-            this.LblNuevaLocalidad.Location = new System.Drawing.Point(12, 28);
-            this.LblNuevaLocalidad.Name = "LblNuevaLocalidad";
-            this.LblNuevaLocalidad.Size = new System.Drawing.Size(88, 13);
-            this.LblNuevaLocalidad.TabIndex = 27;
-            this.LblNuevaLocalidad.Text = "Nueva Localidad";
+            this.lblNuevaLocalidad.AutoSize = true;
+            this.lblNuevaLocalidad.Location = new System.Drawing.Point(12, 28);
+            this.lblNuevaLocalidad.Name = "lblNuevaLocalidad";
+            this.lblNuevaLocalidad.Size = new System.Drawing.Size(88, 13);
+            this.lblNuevaLocalidad.TabIndex = 27;
+            this.lblNuevaLocalidad.Text = "Nueva Localidad";
             // 
-            // BtnAgregar
+            // btnAgregar
             // 
-            this.BtnAgregar.BackgroundImage = global::ProyectoPAV.Properties.Resources.Add_256x256;
-            this.BtnAgregar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.BtnAgregar.Location = new System.Drawing.Point(276, 9);
-            this.BtnAgregar.Name = "BtnAgregar";
-            this.BtnAgregar.Size = new System.Drawing.Size(50, 50);
-            this.BtnAgregar.TabIndex = 26;
-            this.BtnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.BackgroundImage = global::ProyectoPAV.Properties.Resources.Add_256x256;
+            this.btnAgregar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnAgregar.Location = new System.Drawing.Point(276, 9);
+            this.btnAgregar.Name = "btnAgregar";
+            this.btnAgregar.Size = new System.Drawing.Size(50, 50);
+            this.btnAgregar.TabIndex = 26;
+            this.btnAgregar.UseVisualStyleBackColor = true;
             // 
-            // dataGridView1
+            // dataGridLocalidades
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(15, 65);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(416, 213);
-            this.dataGridView1.TabIndex = 25;
+            this.dataGridLocalidades.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridLocalidades.Location = new System.Drawing.Point(15, 65);
+            this.dataGridLocalidades.Name = "dataGridLocalidades";
+            this.dataGridLocalidades.Size = new System.Drawing.Size(416, 213);
+            this.dataGridLocalidades.TabIndex = 25;
             // 
             // FrmLocalidades
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(444, 354);
-            this.Controls.Add(this.BtnEliminar);
-            this.Controls.Add(this.BtnSalir);
-            this.Controls.Add(this.BtnAceptar);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.LblNuevaLocalidad);
-            this.Controls.Add(this.BtnAgregar);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.btnEliminar);
+            this.Controls.Add(this.btnSalir);
+            this.Controls.Add(this.btnAceptar);
+            this.Controls.Add(this.textBoxNuevaLocalidad);
+            this.Controls.Add(this.lblNuevaLocalidad);
+            this.Controls.Add(this.btnAgregar);
+            this.Controls.Add(this.dataGridLocalidades);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmLocalidades";
-            this.Text = "FrmLocalidades";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Text = "Localidades";
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridLocalidades)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -128,12 +130,12 @@
 
         #endregion
 
-        private System.Windows.Forms.Button BtnEliminar;
-        private System.Windows.Forms.Button BtnSalir;
-        private System.Windows.Forms.Button BtnAceptar;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label LblNuevaLocalidad;
-        private System.Windows.Forms.Button BtnAgregar;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button btnEliminar;
+        private System.Windows.Forms.Button btnSalir;
+        private System.Windows.Forms.Button btnAceptar;
+        private System.Windows.Forms.TextBox textBoxNuevaLocalidad;
+        private System.Windows.Forms.Label lblNuevaLocalidad;
+        private System.Windows.Forms.Button btnAgregar;
+        private System.Windows.Forms.DataGridView dataGridLocalidades;
     }
 }

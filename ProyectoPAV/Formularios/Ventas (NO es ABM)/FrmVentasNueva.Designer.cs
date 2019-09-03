@@ -38,7 +38,7 @@
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // BtnSalir
+            // btnSalir
             // 
             this.BtnSalir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.BtnSalir.BackgroundImage = global::ProyectoPAV.Properties.Resources.Log_Out_256x256;
@@ -49,7 +49,7 @@
             this.BtnSalir.TabIndex = 45;
             this.BtnSalir.UseVisualStyleBackColor = true;
             // 
-            // BtnAceptar
+            // btnAceptar
             // 
             this.BtnAceptar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.BtnAceptar.BackgroundImage = global::ProyectoPAV.Properties.Resources.Check_256x256;

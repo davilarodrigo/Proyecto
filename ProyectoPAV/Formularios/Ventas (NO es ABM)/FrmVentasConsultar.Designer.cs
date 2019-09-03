@@ -147,7 +147,7 @@
             this.BtnNuevo.TabIndex = 14;
             this.BtnNuevo.UseVisualStyleBackColor = true;
             // 
-            // BtnSalir
+            // btnSalir
             // 
             this.BtnSalir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.BtnSalir.BackgroundImage = global::ProyectoPAV.Properties.Resources.Log_Out_256x256;
@@ -158,7 +158,7 @@
             this.BtnSalir.TabIndex = 13;
             this.BtnSalir.UseVisualStyleBackColor = true;
             // 
-            // BtnEliminar
+            // btnEliminar
             // 
             this.BtnEliminar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.BtnEliminar.BackgroundImage = global::ProyectoPAV.Properties.Resources.Delete_256x256;

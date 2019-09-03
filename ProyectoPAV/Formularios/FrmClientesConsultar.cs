@@ -21,14 +21,14 @@ namespace ProyectoPAV
 
         private void BtnNuevo_Click(object sender, EventArgs e)
         {
-            FrmClientesNuevo NuevoCliente = new FrmClientesNuevo();
-            NuevoCliente.ShowDialog();
+            FrmClientesNuevo _nuevoCliente = new FrmClientesNuevo();
+            _nuevoCliente.ShowDialog();
         }
 
         private void BtnModificar_Click(object sender, EventArgs e)
         {
-            FrmClientesModificar ModificarCliente = new FrmClientesModificar();
-            ModificarCliente.ShowDialog();
+            FrmClientesModificar _modificarCliente = new FrmClientesModificar();
+            _modificarCliente.ShowDialog();
         }
 
         private void FrmClientesConsultar_Load(object sender, EventArgs e)

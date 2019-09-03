@@ -21,107 +21,107 @@ namespace ProyectoPAV
 
         private void BtnClientes_Click(object sender, EventArgs e)
         {
-            FrmClientesConsultar ConnsultarClientes = new FrmClientesConsultar();
+            FrmClientesConsultar _consultarClientes = new FrmClientesConsultar();
             this.Hide();
-            ConnsultarClientes.ShowDialog();
+            _consultarClientes.ShowDialog();
             this.Show();
 
         }
 
         private void BtnProductos_Click(object sender, EventArgs e)
         {
-            FrmProductosConsultar ConsultarProductos = new FrmProductosConsultar();
+            FrmProductosConsultar _consultarProductos = new FrmProductosConsultar();
             this.Hide();
-            ConsultarProductos.ShowDialog();
+            _consultarProductos.ShowDialog();
             this.Show();
 
         }
 
         private void ClientesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FrmClientesConsultar ConnsultarClientes = new FrmClientesConsultar();
+            FrmClientesConsultar _consultarClientes = new FrmClientesConsultar();
             this.Hide();
-            ConnsultarClientes.ShowDialog();
+            _consultarClientes.ShowDialog();
             this.Show();
         }
 
         private void ProductosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FrmProductosConsultar ConsultarProductos = new FrmProductosConsultar();
+            FrmProductosConsultar _consultarProductos = new FrmProductosConsultar();
             this.Hide();
-            ConsultarProductos.ShowDialog();
+            _consultarProductos.ShowDialog();
             this.Show();
         }
 
         private void BtnProveedores_Click(object sender, EventArgs e)
         {
-            FrmProveedoresConsultar ConsultarProveedores = new FrmProveedoresConsultar();
+            FrmProveedoresConsultar _consultarProveedores = new FrmProveedoresConsultar();
             this.Hide();
-            ConsultarProveedores.ShowDialog();
+            _consultarProveedores.ShowDialog();
             this.Show();
         }
 
         private void BtnEmpleados_Click(object sender, EventArgs e)
         {
-            FrmEmpleadosConsultar ConsultarEmpleados = new FrmEmpleadosConsultar();
+            FrmEmpleadosConsultar _consultarEmpleados = new FrmEmpleadosConsultar();
             this.Hide();
-            ConsultarEmpleados.ShowDialog();
+            _consultarEmpleados.ShowDialog();
             this.Show();
         }
 
         private void ProveedoresToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FrmProveedoresConsultar ConsultarProveedores = new FrmProveedoresConsultar();
+            FrmProveedoresConsultar _consultarProveedores = new FrmProveedoresConsultar();
             this.Hide();
-            ConsultarProveedores.ShowDialog();
+            _consultarProveedores.ShowDialog();
             this.Show();
         }
 
         private void EmpleadosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FrmEmpleadosConsultar ConsultarEmpleados = new FrmEmpleadosConsultar();
+            FrmEmpleadosConsultar _consultarEmpleados = new FrmEmpleadosConsultar();
             this.Hide();
-            ConsultarEmpleados.ShowDialog();
+            _consultarEmpleados.ShowDialog();
             this.Show();
         }
 
         private void MarcasToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FrmMarca Marcas = new FrmMarca();
+            FrmMarcas _marcas = new FrmMarcas();
             this.Hide();
-            Marcas.ShowDialog();
+            _marcas.ShowDialog();
             this.Show();
         }
 
         private void LocalidadesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FrmLocalidades Localidades = new FrmLocalidades();
+            FrmLocalidades _localidades = new FrmLocalidades();
             this.Hide();
-            Localidades.ShowDialog();
+            _localidades.ShowDialog();
             this.Show();
         }
 
         private void TiposDeDocumentoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FrmTipoDocumentos TipoDocumentos = new FrmTipoDocumentos();
+            FrmTipoDocumentos _tipoDocumentos = new FrmTipoDocumentos();
             this.Hide();
-            TipoDocumentos.ShowDialog();
+            _tipoDocumentos.ShowDialog();
             this.Show();
         }
 
         private void CategoríasToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FrmCategorias Categorias = new FrmCategorias();
+            FrmCategorias _categorias = new FrmCategorias();
             this.Hide();
-            Categorias.ShowDialog();
+            _categorias.ShowDialog();
             this.Show();
         }
 
         private void CargosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FrmCargos Cargos = new FrmCargos();
+            FrmCargos _cargos = new FrmCargos();
             this.Hide();
-            Cargos.ShowDialog();
+            _cargos.ShowDialog();
             this.Show();
         }
     }

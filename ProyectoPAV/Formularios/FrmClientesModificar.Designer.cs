@@ -28,286 +28,304 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.TextBoxAnio = new System.Windows.Forms.TextBox();
-            this.TextBoxMes = new System.Windows.Forms.TextBox();
-            this.TextBoxDia = new System.Windows.Forms.TextBox();
-            this.LblNumeroCalle = new System.Windows.Forms.Label();
-            this.LblCalle = new System.Windows.Forms.Label();
-            this.LblTelefono = new System.Windows.Forms.Label();
-            this.TextBoxNumeroCalle = new System.Windows.Forms.TextBox();
-            this.TextBoxCalle = new System.Windows.Forms.TextBox();
-            this.TextBoxTelefono = new System.Windows.Forms.TextBox();
-            this.LblEmail = new System.Windows.Forms.Label();
-            this.LblNacimiento = new System.Windows.Forms.Label();
-            this.LblSexo = new System.Windows.Forms.Label();
-            this.RadioMujer = new System.Windows.Forms.RadioButton();
-            this.RadioHombre = new System.Windows.Forms.RadioButton();
-            this.TextBoxEmail = new System.Windows.Forms.TextBox();
-            this.TextBoxDocumento = new System.Windows.Forms.TextBox();
-            this.ComboTipoDoc = new System.Windows.Forms.ComboBox();
-            this.TextBoxNombre = new System.Windows.Forms.TextBox();
-            this.TextBoxApellido = new System.Windows.Forms.TextBox();
-            this.LblDocumento = new System.Windows.Forms.Label();
-            this.LblNombre = new System.Windows.Forms.Label();
-            this.LblApellido = new System.Windows.Forms.Label();
-            this.BtnSalir = new System.Windows.Forms.Button();
-            this.BtnGuardar = new System.Windows.Forms.Button();
-            this.LblLocalidad = new System.Windows.Forms.Label();
-            this.ComboLocalidad = new System.Windows.Forms.ComboBox();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmClientesModificar));
+            this.textBoxAnio = new System.Windows.Forms.TextBox();
+            this.textBoxMes = new System.Windows.Forms.TextBox();
+            this.textBoxDia = new System.Windows.Forms.TextBox();
+            this.lblNumeroCalle = new System.Windows.Forms.Label();
+            this.lblCalle = new System.Windows.Forms.Label();
+            this.lblTelefono = new System.Windows.Forms.Label();
+            this.textBoxNumeroCalle = new System.Windows.Forms.TextBox();
+            this.textBoxCalle = new System.Windows.Forms.TextBox();
+            this.textBoxTelefono = new System.Windows.Forms.TextBox();
+            this.lblEmail = new System.Windows.Forms.Label();
+            this.lblNacimiento = new System.Windows.Forms.Label();
+            this.lblSexo = new System.Windows.Forms.Label();
+            this.radioMujer = new System.Windows.Forms.RadioButton();
+            this.radioHombre = new System.Windows.Forms.RadioButton();
+            this.textBoxEmail = new System.Windows.Forms.TextBox();
+            this.textBoxDocumento = new System.Windows.Forms.TextBox();
+            this.comboTipoDoc = new System.Windows.Forms.ComboBox();
+            this.textBoxNombre = new System.Windows.Forms.TextBox();
+            this.textBoxApellido = new System.Windows.Forms.TextBox();
+            this.lblDocumento = new System.Windows.Forms.Label();
+            this.lblNombre = new System.Windows.Forms.Label();
+            this.lblApellido = new System.Windows.Forms.Label();
+            this.btnSalir = new System.Windows.Forms.Button();
+            this.btnGuardar = new System.Windows.Forms.Button();
+            this.lblLocalidad = new System.Windows.Forms.Label();
+            this.comboLocalidad = new System.Windows.Forms.ComboBox();
+            this.btnNuevaLocalidad = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // TextBoxAnio
+            // textBoxAnio
             // 
-            this.TextBoxAnio.Location = new System.Drawing.Point(247, 142);
-            this.TextBoxAnio.Name = "TextBoxAnio";
-            this.TextBoxAnio.Size = new System.Drawing.Size(94, 20);
-            this.TextBoxAnio.TabIndex = 48;
+            this.textBoxAnio.Location = new System.Drawing.Point(247, 142);
+            this.textBoxAnio.Name = "textBoxAnio";
+            this.textBoxAnio.Size = new System.Drawing.Size(94, 20);
+            this.textBoxAnio.TabIndex = 48;
             // 
-            // TextBoxMes
+            // textBoxMes
             // 
-            this.TextBoxMes.Location = new System.Drawing.Point(191, 142);
-            this.TextBoxMes.Name = "TextBoxMes";
-            this.TextBoxMes.Size = new System.Drawing.Size(50, 20);
-            this.TextBoxMes.TabIndex = 47;
+            this.textBoxMes.Location = new System.Drawing.Point(191, 142);
+            this.textBoxMes.Name = "textBoxMes";
+            this.textBoxMes.Size = new System.Drawing.Size(50, 20);
+            this.textBoxMes.TabIndex = 47;
             // 
-            // TextBoxDia
+            // textBoxDia
             // 
-            this.TextBoxDia.Location = new System.Drawing.Point(135, 142);
-            this.TextBoxDia.Name = "TextBoxDia";
-            this.TextBoxDia.Size = new System.Drawing.Size(50, 20);
-            this.TextBoxDia.TabIndex = 46;
+            this.textBoxDia.Location = new System.Drawing.Point(135, 142);
+            this.textBoxDia.Name = "textBoxDia";
+            this.textBoxDia.Size = new System.Drawing.Size(50, 20);
+            this.textBoxDia.TabIndex = 46;
             // 
-            // LblNumeroCalle
+            // lblNumeroCalle
             // 
-            this.LblNumeroCalle.AutoSize = true;
-            this.LblNumeroCalle.Location = new System.Drawing.Point(85, 246);
-            this.LblNumeroCalle.Name = "LblNumeroCalle";
-            this.LblNumeroCalle.Size = new System.Drawing.Size(44, 13);
-            this.LblNumeroCalle.TabIndex = 43;
-            this.LblNumeroCalle.Text = "Número";
+            this.lblNumeroCalle.AutoSize = true;
+            this.lblNumeroCalle.Location = new System.Drawing.Point(85, 246);
+            this.lblNumeroCalle.Name = "lblNumeroCalle";
+            this.lblNumeroCalle.Size = new System.Drawing.Size(44, 13);
+            this.lblNumeroCalle.TabIndex = 43;
+            this.lblNumeroCalle.Text = "Número";
             // 
-            // LblCalle
+            // lblCalle
             // 
-            this.LblCalle.AutoSize = true;
-            this.LblCalle.Location = new System.Drawing.Point(99, 220);
-            this.LblCalle.Name = "LblCalle";
-            this.LblCalle.Size = new System.Drawing.Size(30, 13);
-            this.LblCalle.TabIndex = 42;
-            this.LblCalle.Text = "Calle";
+            this.lblCalle.AutoSize = true;
+            this.lblCalle.Location = new System.Drawing.Point(99, 220);
+            this.lblCalle.Name = "lblCalle";
+            this.lblCalle.Size = new System.Drawing.Size(30, 13);
+            this.lblCalle.TabIndex = 42;
+            this.lblCalle.Text = "Calle";
             // 
-            // LblTelefono
+            // lblTelefono
             // 
-            this.LblTelefono.AutoSize = true;
-            this.LblTelefono.Location = new System.Drawing.Point(80, 194);
-            this.LblTelefono.Name = "LblTelefono";
-            this.LblTelefono.Size = new System.Drawing.Size(49, 13);
-            this.LblTelefono.TabIndex = 41;
-            this.LblTelefono.Text = "Teléfono";
+            this.lblTelefono.AutoSize = true;
+            this.lblTelefono.Location = new System.Drawing.Point(80, 194);
+            this.lblTelefono.Name = "lblTelefono";
+            this.lblTelefono.Size = new System.Drawing.Size(49, 13);
+            this.lblTelefono.TabIndex = 41;
+            this.lblTelefono.Text = "Teléfono";
             // 
-            // TextBoxNumeroCalle
+            // textBoxNumeroCalle
             // 
-            this.TextBoxNumeroCalle.Location = new System.Drawing.Point(135, 243);
-            this.TextBoxNumeroCalle.Name = "TextBoxNumeroCalle";
-            this.TextBoxNumeroCalle.Size = new System.Drawing.Size(85, 20);
-            this.TextBoxNumeroCalle.TabIndex = 40;
+            this.textBoxNumeroCalle.Location = new System.Drawing.Point(135, 243);
+            this.textBoxNumeroCalle.Name = "textBoxNumeroCalle";
+            this.textBoxNumeroCalle.Size = new System.Drawing.Size(85, 20);
+            this.textBoxNumeroCalle.TabIndex = 40;
             // 
-            // TextBoxCalle
+            // textBoxCalle
             // 
-            this.TextBoxCalle.Location = new System.Drawing.Point(135, 217);
-            this.TextBoxCalle.Name = "TextBoxCalle";
-            this.TextBoxCalle.Size = new System.Drawing.Size(206, 20);
-            this.TextBoxCalle.TabIndex = 39;
+            this.textBoxCalle.Location = new System.Drawing.Point(135, 217);
+            this.textBoxCalle.Name = "textBoxCalle";
+            this.textBoxCalle.Size = new System.Drawing.Size(206, 20);
+            this.textBoxCalle.TabIndex = 39;
             // 
-            // TextBoxTelefono
+            // textBoxTelefono
             // 
-            this.TextBoxTelefono.Location = new System.Drawing.Point(135, 191);
-            this.TextBoxTelefono.Name = "TextBoxTelefono";
-            this.TextBoxTelefono.Size = new System.Drawing.Size(155, 20);
-            this.TextBoxTelefono.TabIndex = 38;
+            this.textBoxTelefono.Location = new System.Drawing.Point(135, 191);
+            this.textBoxTelefono.Name = "textBoxTelefono";
+            this.textBoxTelefono.Size = new System.Drawing.Size(155, 20);
+            this.textBoxTelefono.TabIndex = 38;
             // 
-            // LblEmail
+            // lblEmail
             // 
-            this.LblEmail.AutoSize = true;
-            this.LblEmail.Location = new System.Drawing.Point(97, 168);
-            this.LblEmail.Name = "LblEmail";
-            this.LblEmail.Size = new System.Drawing.Size(32, 13);
-            this.LblEmail.TabIndex = 37;
-            this.LblEmail.Text = "Email";
+            this.lblEmail.AutoSize = true;
+            this.lblEmail.Location = new System.Drawing.Point(97, 168);
+            this.lblEmail.Name = "lblEmail";
+            this.lblEmail.Size = new System.Drawing.Size(32, 13);
+            this.lblEmail.TabIndex = 37;
+            this.lblEmail.Text = "Email";
             // 
-            // LblNacimiento
+            // lblNacimiento
             // 
-            this.LblNacimiento.AutoSize = true;
-            this.LblNacimiento.Location = new System.Drawing.Point(36, 145);
-            this.LblNacimiento.Name = "LblNacimiento";
-            this.LblNacimiento.Size = new System.Drawing.Size(93, 13);
-            this.LblNacimiento.TabIndex = 36;
-            this.LblNacimiento.Text = "Fecha Nacimiento";
+            this.lblNacimiento.AutoSize = true;
+            this.lblNacimiento.Location = new System.Drawing.Point(36, 145);
+            this.lblNacimiento.Name = "lblNacimiento";
+            this.lblNacimiento.Size = new System.Drawing.Size(93, 13);
+            this.lblNacimiento.TabIndex = 36;
+            this.lblNacimiento.Text = "Fecha Nacimiento";
             // 
-            // LblSexo
+            // lblSexo
             // 
-            this.LblSexo.AutoSize = true;
-            this.LblSexo.Location = new System.Drawing.Point(98, 118);
-            this.LblSexo.Name = "LblSexo";
-            this.LblSexo.Size = new System.Drawing.Size(31, 13);
-            this.LblSexo.TabIndex = 35;
-            this.LblSexo.Text = "Sexo";
+            this.lblSexo.AutoSize = true;
+            this.lblSexo.Location = new System.Drawing.Point(98, 118);
+            this.lblSexo.Name = "lblSexo";
+            this.lblSexo.Size = new System.Drawing.Size(31, 13);
+            this.lblSexo.TabIndex = 35;
+            this.lblSexo.Text = "Sexo";
             // 
-            // RadioMujer
+            // radioMujer
             // 
-            this.RadioMujer.AutoSize = true;
-            this.RadioMujer.Location = new System.Drawing.Point(203, 116);
-            this.RadioMujer.Name = "RadioMujer";
-            this.RadioMujer.Size = new System.Drawing.Size(51, 17);
-            this.RadioMujer.TabIndex = 34;
-            this.RadioMujer.TabStop = true;
-            this.RadioMujer.Text = "Mujer";
-            this.RadioMujer.UseVisualStyleBackColor = true;
+            this.radioMujer.AutoSize = true;
+            this.radioMujer.Location = new System.Drawing.Point(203, 116);
+            this.radioMujer.Name = "radioMujer";
+            this.radioMujer.Size = new System.Drawing.Size(51, 17);
+            this.radioMujer.TabIndex = 34;
+            this.radioMujer.TabStop = true;
+            this.radioMujer.Text = "Mujer";
+            this.radioMujer.UseVisualStyleBackColor = true;
             // 
-            // RadioHombre
+            // radioHombre
             // 
-            this.RadioHombre.AutoSize = true;
-            this.RadioHombre.Location = new System.Drawing.Point(135, 116);
-            this.RadioHombre.Name = "RadioHombre";
-            this.RadioHombre.Size = new System.Drawing.Size(62, 17);
-            this.RadioHombre.TabIndex = 33;
-            this.RadioHombre.TabStop = true;
-            this.RadioHombre.Text = "Hombre";
-            this.RadioHombre.UseVisualStyleBackColor = true;
+            this.radioHombre.AutoSize = true;
+            this.radioHombre.Location = new System.Drawing.Point(135, 116);
+            this.radioHombre.Name = "radioHombre";
+            this.radioHombre.Size = new System.Drawing.Size(62, 17);
+            this.radioHombre.TabIndex = 33;
+            this.radioHombre.TabStop = true;
+            this.radioHombre.Text = "Hombre";
+            this.radioHombre.UseVisualStyleBackColor = true;
             // 
-            // TextBoxEmail
+            // textBoxEmail
             // 
-            this.TextBoxEmail.Location = new System.Drawing.Point(135, 165);
-            this.TextBoxEmail.Name = "TextBoxEmail";
-            this.TextBoxEmail.Size = new System.Drawing.Size(206, 20);
-            this.TextBoxEmail.TabIndex = 32;
+            this.textBoxEmail.Location = new System.Drawing.Point(135, 165);
+            this.textBoxEmail.Name = "textBoxEmail";
+            this.textBoxEmail.Size = new System.Drawing.Size(206, 20);
+            this.textBoxEmail.TabIndex = 32;
             // 
-            // TextBoxDocumento
+            // textBoxDocumento
             // 
-            this.TextBoxDocumento.Location = new System.Drawing.Point(227, 88);
-            this.TextBoxDocumento.Name = "TextBoxDocumento";
-            this.TextBoxDocumento.Size = new System.Drawing.Size(114, 20);
-            this.TextBoxDocumento.TabIndex = 31;
+            this.textBoxDocumento.Location = new System.Drawing.Point(227, 88);
+            this.textBoxDocumento.Name = "textBoxDocumento";
+            this.textBoxDocumento.Size = new System.Drawing.Size(114, 20);
+            this.textBoxDocumento.TabIndex = 31;
             // 
-            // ComboTipoDoc
+            // comboTipoDoc
             // 
-            this.ComboTipoDoc.FormattingEnabled = true;
-            this.ComboTipoDoc.Location = new System.Drawing.Point(135, 88);
-            this.ComboTipoDoc.Name = "ComboTipoDoc";
-            this.ComboTipoDoc.Size = new System.Drawing.Size(85, 21);
-            this.ComboTipoDoc.TabIndex = 30;
+            this.comboTipoDoc.FormattingEnabled = true;
+            this.comboTipoDoc.Location = new System.Drawing.Point(135, 88);
+            this.comboTipoDoc.Name = "comboTipoDoc";
+            this.comboTipoDoc.Size = new System.Drawing.Size(85, 21);
+            this.comboTipoDoc.TabIndex = 30;
             // 
-            // TextBoxNombre
+            // textBoxNombre
             // 
-            this.TextBoxNombre.Location = new System.Drawing.Point(135, 62);
-            this.TextBoxNombre.Name = "TextBoxNombre";
-            this.TextBoxNombre.Size = new System.Drawing.Size(206, 20);
-            this.TextBoxNombre.TabIndex = 29;
+            this.textBoxNombre.Location = new System.Drawing.Point(135, 62);
+            this.textBoxNombre.Name = "textBoxNombre";
+            this.textBoxNombre.Size = new System.Drawing.Size(206, 20);
+            this.textBoxNombre.TabIndex = 29;
             // 
-            // TextBoxApellido
+            // textBoxApellido
             // 
-            this.TextBoxApellido.Location = new System.Drawing.Point(135, 36);
-            this.TextBoxApellido.Name = "TextBoxApellido";
-            this.TextBoxApellido.Size = new System.Drawing.Size(206, 20);
-            this.TextBoxApellido.TabIndex = 28;
+            this.textBoxApellido.Location = new System.Drawing.Point(135, 36);
+            this.textBoxApellido.Name = "textBoxApellido";
+            this.textBoxApellido.Size = new System.Drawing.Size(206, 20);
+            this.textBoxApellido.TabIndex = 28;
             // 
-            // LblDocumento
+            // lblDocumento
             // 
-            this.LblDocumento.AutoSize = true;
-            this.LblDocumento.Location = new System.Drawing.Point(67, 91);
-            this.LblDocumento.Name = "LblDocumento";
-            this.LblDocumento.Size = new System.Drawing.Size(62, 13);
-            this.LblDocumento.TabIndex = 27;
-            this.LblDocumento.Text = "Documento";
+            this.lblDocumento.AutoSize = true;
+            this.lblDocumento.Location = new System.Drawing.Point(67, 91);
+            this.lblDocumento.Name = "lblDocumento";
+            this.lblDocumento.Size = new System.Drawing.Size(62, 13);
+            this.lblDocumento.TabIndex = 27;
+            this.lblDocumento.Text = "Documento";
             // 
-            // LblNombre
+            // lblNombre
             // 
-            this.LblNombre.AutoSize = true;
-            this.LblNombre.Location = new System.Drawing.Point(85, 65);
-            this.LblNombre.Name = "LblNombre";
-            this.LblNombre.Size = new System.Drawing.Size(44, 13);
-            this.LblNombre.TabIndex = 26;
-            this.LblNombre.Text = "Nombre";
+            this.lblNombre.AutoSize = true;
+            this.lblNombre.Location = new System.Drawing.Point(85, 65);
+            this.lblNombre.Name = "lblNombre";
+            this.lblNombre.Size = new System.Drawing.Size(44, 13);
+            this.lblNombre.TabIndex = 26;
+            this.lblNombre.Text = "Nombre";
             // 
-            // LblApellido
+            // lblApellido
             // 
-            this.LblApellido.AutoSize = true;
-            this.LblApellido.Location = new System.Drawing.Point(85, 39);
-            this.LblApellido.Name = "LblApellido";
-            this.LblApellido.Size = new System.Drawing.Size(44, 13);
-            this.LblApellido.TabIndex = 25;
-            this.LblApellido.Text = "Apellido";
+            this.lblApellido.AutoSize = true;
+            this.lblApellido.Location = new System.Drawing.Point(85, 39);
+            this.lblApellido.Name = "lblApellido";
+            this.lblApellido.Size = new System.Drawing.Size(44, 13);
+            this.lblApellido.TabIndex = 25;
+            this.lblApellido.Text = "Apellido";
             // 
-            // BtnSalir
+            // btnSalir
             // 
-            this.BtnSalir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.BtnSalir.BackgroundImage = global::ProyectoPAV.Properties.Resources.Log_Out_256x256;
-            this.BtnSalir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.BtnSalir.Location = new System.Drawing.Point(367, 308);
-            this.BtnSalir.Name = "BtnSalir";
-            this.BtnSalir.Size = new System.Drawing.Size(50, 50);
-            this.BtnSalir.TabIndex = 45;
-            this.BtnSalir.UseVisualStyleBackColor = true;
-            this.BtnSalir.Click += new System.EventHandler(this.BtnSalir_Click);
+            this.btnSalir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSalir.BackgroundImage = global::ProyectoPAV.Properties.Resources.Log_Out_256x256;
+            this.btnSalir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnSalir.Location = new System.Drawing.Point(430, 308);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(50, 50);
+            this.btnSalir.TabIndex = 45;
+            this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.BtnSalir_Click);
             // 
-            // BtnGuardar
+            // btnGuardar
             // 
-            this.BtnGuardar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.BtnGuardar.BackgroundImage = global::ProyectoPAV.Properties.Resources.Save_256x256;
-            this.BtnGuardar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.BtnGuardar.Location = new System.Drawing.Point(311, 308);
-            this.BtnGuardar.Name = "BtnGuardar";
-            this.BtnGuardar.Size = new System.Drawing.Size(50, 50);
-            this.BtnGuardar.TabIndex = 44;
-            this.BtnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnGuardar.BackgroundImage = global::ProyectoPAV.Properties.Resources.Save_256x256;
+            this.btnGuardar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnGuardar.Location = new System.Drawing.Point(374, 308);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(50, 50);
+            this.btnGuardar.TabIndex = 44;
+            this.btnGuardar.UseVisualStyleBackColor = true;
             // 
-            // LblLocalidad
+            // lblLocalidad
             // 
-            this.LblLocalidad.AutoSize = true;
-            this.LblLocalidad.Location = new System.Drawing.Point(76, 272);
-            this.LblLocalidad.Name = "LblLocalidad";
-            this.LblLocalidad.Size = new System.Drawing.Size(53, 13);
-            this.LblLocalidad.TabIndex = 50;
-            this.LblLocalidad.Text = "Localidad";
+            this.lblLocalidad.AutoSize = true;
+            this.lblLocalidad.Location = new System.Drawing.Point(76, 272);
+            this.lblLocalidad.Name = "lblLocalidad";
+            this.lblLocalidad.Size = new System.Drawing.Size(53, 13);
+            this.lblLocalidad.TabIndex = 50;
+            this.lblLocalidad.Text = "Localidad";
             // 
-            // ComboLocalidad
+            // comboLocalidad
             // 
-            this.ComboLocalidad.FormattingEnabled = true;
-            this.ComboLocalidad.Location = new System.Drawing.Point(135, 269);
-            this.ComboLocalidad.Name = "ComboLocalidad";
-            this.ComboLocalidad.Size = new System.Drawing.Size(206, 21);
-            this.ComboLocalidad.TabIndex = 49;
+            this.comboLocalidad.FormattingEnabled = true;
+            this.comboLocalidad.Location = new System.Drawing.Point(135, 269);
+            this.comboLocalidad.Name = "comboLocalidad";
+            this.comboLocalidad.Size = new System.Drawing.Size(206, 21);
+            this.comboLocalidad.TabIndex = 49;
+            // 
+            // btnNuevaLocalidad
+            // 
+            this.btnNuevaLocalidad.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnNuevaLocalidad.Image = global::ProyectoPAV.Properties.Resources.Add_16x16;
+            this.btnNuevaLocalidad.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnNuevaLocalidad.Location = new System.Drawing.Point(347, 265);
+            this.btnNuevaLocalidad.Name = "btnNuevaLocalidad";
+            this.btnNuevaLocalidad.Size = new System.Drawing.Size(117, 27);
+            this.btnNuevaLocalidad.TabIndex = 85;
+            this.btnNuevaLocalidad.Text = "Nueva Localidad";
+            this.btnNuevaLocalidad.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnNuevaLocalidad.UseVisualStyleBackColor = true;
+            this.btnNuevaLocalidad.Click += new System.EventHandler(this.BtnNuevaLocalidad_Click);
             // 
             // FrmClientesModificar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(429, 370);
-            this.Controls.Add(this.LblLocalidad);
-            this.Controls.Add(this.ComboLocalidad);
-            this.Controls.Add(this.TextBoxAnio);
-            this.Controls.Add(this.TextBoxMes);
-            this.Controls.Add(this.TextBoxDia);
-            this.Controls.Add(this.BtnSalir);
-            this.Controls.Add(this.BtnGuardar);
-            this.Controls.Add(this.LblNumeroCalle);
-            this.Controls.Add(this.LblCalle);
-            this.Controls.Add(this.LblTelefono);
-            this.Controls.Add(this.TextBoxNumeroCalle);
-            this.Controls.Add(this.TextBoxCalle);
-            this.Controls.Add(this.TextBoxTelefono);
-            this.Controls.Add(this.LblEmail);
-            this.Controls.Add(this.LblNacimiento);
-            this.Controls.Add(this.LblSexo);
-            this.Controls.Add(this.RadioMujer);
-            this.Controls.Add(this.RadioHombre);
-            this.Controls.Add(this.TextBoxEmail);
-            this.Controls.Add(this.TextBoxDocumento);
-            this.Controls.Add(this.ComboTipoDoc);
-            this.Controls.Add(this.TextBoxNombre);
-            this.Controls.Add(this.TextBoxApellido);
-            this.Controls.Add(this.LblDocumento);
-            this.Controls.Add(this.LblNombre);
-            this.Controls.Add(this.LblApellido);
+            this.ClientSize = new System.Drawing.Size(492, 370);
+            this.Controls.Add(this.btnNuevaLocalidad);
+            this.Controls.Add(this.lblLocalidad);
+            this.Controls.Add(this.comboLocalidad);
+            this.Controls.Add(this.textBoxAnio);
+            this.Controls.Add(this.textBoxMes);
+            this.Controls.Add(this.textBoxDia);
+            this.Controls.Add(this.btnSalir);
+            this.Controls.Add(this.btnGuardar);
+            this.Controls.Add(this.lblNumeroCalle);
+            this.Controls.Add(this.lblCalle);
+            this.Controls.Add(this.lblTelefono);
+            this.Controls.Add(this.textBoxNumeroCalle);
+            this.Controls.Add(this.textBoxCalle);
+            this.Controls.Add(this.textBoxTelefono);
+            this.Controls.Add(this.lblEmail);
+            this.Controls.Add(this.lblNacimiento);
+            this.Controls.Add(this.lblSexo);
+            this.Controls.Add(this.radioMujer);
+            this.Controls.Add(this.radioHombre);
+            this.Controls.Add(this.textBoxEmail);
+            this.Controls.Add(this.textBoxDocumento);
+            this.Controls.Add(this.comboTipoDoc);
+            this.Controls.Add(this.textBoxNombre);
+            this.Controls.Add(this.textBoxApellido);
+            this.Controls.Add(this.lblDocumento);
+            this.Controls.Add(this.lblNombre);
+            this.Controls.Add(this.lblApellido);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmClientesModificar";
             this.Text = "Modificar Cliente";
             this.ResumeLayout(false);
@@ -317,31 +335,32 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox TextBoxAnio;
-        private System.Windows.Forms.TextBox TextBoxMes;
-        private System.Windows.Forms.TextBox TextBoxDia;
-        private System.Windows.Forms.Button BtnSalir;
-        private System.Windows.Forms.Button BtnGuardar;
-        private System.Windows.Forms.Label LblNumeroCalle;
-        private System.Windows.Forms.Label LblCalle;
-        private System.Windows.Forms.Label LblTelefono;
-        private System.Windows.Forms.TextBox TextBoxNumeroCalle;
-        private System.Windows.Forms.TextBox TextBoxCalle;
-        private System.Windows.Forms.TextBox TextBoxTelefono;
-        private System.Windows.Forms.Label LblEmail;
-        private System.Windows.Forms.Label LblNacimiento;
-        private System.Windows.Forms.Label LblSexo;
-        private System.Windows.Forms.RadioButton RadioMujer;
-        private System.Windows.Forms.RadioButton RadioHombre;
-        private System.Windows.Forms.TextBox TextBoxEmail;
-        private System.Windows.Forms.TextBox TextBoxDocumento;
-        private System.Windows.Forms.ComboBox ComboTipoDoc;
-        private System.Windows.Forms.TextBox TextBoxNombre;
-        private System.Windows.Forms.TextBox TextBoxApellido;
-        private System.Windows.Forms.Label LblDocumento;
-        private System.Windows.Forms.Label LblNombre;
-        private System.Windows.Forms.Label LblApellido;
-        private System.Windows.Forms.Label LblLocalidad;
-        private System.Windows.Forms.ComboBox ComboLocalidad;
+        private System.Windows.Forms.TextBox textBoxAnio;
+        private System.Windows.Forms.TextBox textBoxMes;
+        private System.Windows.Forms.TextBox textBoxDia;
+        private System.Windows.Forms.Button btnSalir;
+        private System.Windows.Forms.Button btnGuardar;
+        private System.Windows.Forms.Label lblNumeroCalle;
+        private System.Windows.Forms.Label lblCalle;
+        private System.Windows.Forms.Label lblTelefono;
+        private System.Windows.Forms.TextBox textBoxNumeroCalle;
+        private System.Windows.Forms.TextBox textBoxCalle;
+        private System.Windows.Forms.TextBox textBoxTelefono;
+        private System.Windows.Forms.Label lblEmail;
+        private System.Windows.Forms.Label lblNacimiento;
+        private System.Windows.Forms.Label lblSexo;
+        private System.Windows.Forms.RadioButton radioMujer;
+        private System.Windows.Forms.RadioButton radioHombre;
+        private System.Windows.Forms.TextBox textBoxEmail;
+        private System.Windows.Forms.TextBox textBoxDocumento;
+        private System.Windows.Forms.ComboBox comboTipoDoc;
+        private System.Windows.Forms.TextBox textBoxNombre;
+        private System.Windows.Forms.TextBox textBoxApellido;
+        private System.Windows.Forms.Label lblDocumento;
+        private System.Windows.Forms.Label lblNombre;
+        private System.Windows.Forms.Label lblApellido;
+        private System.Windows.Forms.Label lblLocalidad;
+        private System.Windows.Forms.ComboBox comboLocalidad;
+        private System.Windows.Forms.Button btnNuevaLocalidad;
     }
 }
