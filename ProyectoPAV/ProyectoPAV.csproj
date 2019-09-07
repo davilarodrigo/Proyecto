@@ -46,7 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Clases\BE.cs" />
+    <Compile Include="Clases\BEConexionBaseDatos.cs" />
     <Compile Include="Clases\CodigoABM.cs" />
     <Compile Include="Formularios\Auxiliares\FrmCargos.cs">
       <SubType>Form</SubType>

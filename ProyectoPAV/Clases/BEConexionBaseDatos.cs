@@ -5,27 +5,29 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data;
 using System.Data.SqlClient;
+using System.Data.OleDb;
 
 namespace ProyectoPAV.Clases
 {
-    class BE
+    class BEConexionBaseDatos
     {
         public enum estado_BE { correcto, error }
-        static string conexion = "server = DESKTOP-0B3JQNF\\SQLEXPRESS; database = TP PAV; integrated security = true";
-        SqlConnection conex = new SqlConnection(conexion);
-        SqlCommand comando = new SqlCommand();
-
+        static string cadenaConexion = "Provider=SQLNCLI11;Data Source=DESKTOP-FHCPBI9" + "\u005C" + "SQLEXPRESS01;Integrated Security=SSPI;Initial Catalog=ProyectoPAV";
+        //LUCAS static string conexion = "server = DESKTOP-0B3JQNF\\SQLEXPRESS; database = TP PAV; integrated security = true";
+        OleDbConnection conexion = new OleDbConnection(cadenaConexion);
+        OleDbCommand comando = new OleDbCommand();
+        //+ "\u005C" +
         private void conectar()
         {
-            conex.ConnectionString = conexion;
-            conex.Open();
-            comando.Connection = conex;
+            conexion.ConnectionString = cadenaConexion;
+            conexion.Open();
+            comando.Connection = conexion;
             comando.CommandType = CommandType.Text;
         }
 
         private void desconectar()
         {
-            conex.Close();
+            conexion.Close();
         }
 
         public DataTable ejecutar_consulta(string sql)

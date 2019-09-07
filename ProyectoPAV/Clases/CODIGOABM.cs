@@ -19,11 +19,11 @@ namespace ProyectoPAV.Clases
         //                     WHERE n_usuario like '%" + patron + "%'";
         //    return BD.ejecutar_consulta(sql);
         //}
-        public DataTable consultarProveedores(string razonsocial)
+        public DataTable ConsultarProveedores(string razonsocial)
         {
-            BE BD = new BE();
+            BEConexionBaseDatos BD = new BEConexionBaseDatos();
             string sql = @"SELECT P.*, L.Nombre
-                             FROM PROVEEDORES P join LOCALIDADES3 L ON P.IdLocalidad = L.IdLocalidad
+                             FROM Proveedor P join Localidad L ON P.IdLocalidad = L.IdLocalidad
                             WHERE " + razonsocial + "= P.RazonSocial";
             return BD.ejecutar_consulta(sql);
         }
@@ -31,10 +31,10 @@ namespace ProyectoPAV.Clases
         public void InsertarLocalidad(string Nombre)
         {
             string sql_insert = "";
-            sql_insert = @"INSERT INTO LOCALIDADES3 (Nombre) VALUES ('" + Nombre +"')";
-            BE _BD = new BE();
+            sql_insert = @"INSERT INTO Localidad (Nombre) VALUES ('" + Nombre +"')";
+            BEConexionBaseDatos _BD = new BEConexionBaseDatos();
             if (_BD.insertar(sql_insert) ==
-                BE.estado_BE.correcto)
+                BEConexionBaseDatos.estado_BE.correcto)
             {
                 MessageBox.Show("Se cargó correctamente los datos");
             }
@@ -46,19 +46,19 @@ namespace ProyectoPAV.Clases
 
         public DataTable ConsultarLocalidades()
         {
-            BE BD = new BE();
+            BEConexionBaseDatos BD = new BEConexionBaseDatos();
             string sql = @"SELECT *
-                             FROM LOCALIDADES3";
+                             FROM Localidad";
             return BD.ejecutar_consulta(sql);
         }
 
         public void EliminarLocalidad(string Nombre)
         {
             string sql_insert = "";
-            sql_insert = @"DELETE FROM LOCALIDADES3 WHERE Nombre = '" + Nombre + "'";
-            BE _BD = new BE();
+            sql_insert = @"DELETE FROM Localidad WHERE Nombre = '" + Nombre + "'";
+            BEConexionBaseDatos _BD = new BEConexionBaseDatos();
             if (_BD.eliminar(sql_insert) ==
-                BE.estado_BE.correcto)
+                BEConexionBaseDatos.estado_BE.correcto)
             {
                 MessageBox.Show("Se elimino correctamente los datos");
             }
