@@ -35,7 +35,7 @@ namespace ProyectoPAV.Formularios.Auxiliares
             }
             if (this.textBoxNuevaLocalidad.Text != "")
             {
-                CODIGOABM localidad = new CODIGOABM();
+                CodigoABM localidad = new CodigoABM();
                 localidad.InsertarLocalidad(this.textBoxNuevaLocalidad.Text);
 
                 consulta();
@@ -60,7 +60,7 @@ namespace ProyectoPAV.Formularios.Auxiliares
 
         public void consulta()
         {
-            CODIGOABM localidades = new CODIGOABM();
+            CodigoABM localidades = new CodigoABM();
             DataTable tabla = new DataTable();
             tabla = localidades.ConsultarLocalidades();
             cargar_grilla(tabla);
@@ -70,7 +70,7 @@ namespace ProyectoPAV.Formularios.Auxiliares
         {
             if (dataGridLocalidades.CurrentRow != null)
             {
-                CODIGOABM localidad = new CODIGOABM();
+                CodigoABM localidad = new CodigoABM();
                 string Nombre = dataGridLocalidades.CurrentRow.Cells["ColumnaNombre"].Value.ToString();
                 localidad.EliminarLocalidad(Nombre);
                 consulta();

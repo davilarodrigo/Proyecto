@@ -9,7 +9,7 @@ using System.Windows.Forms;
 
 namespace ProyectoPAV.Clases
 {
-    class CODIGOABM
+    class CodigoABM
     {
         //public DataTable consultarClientes(string patron)
         //{
