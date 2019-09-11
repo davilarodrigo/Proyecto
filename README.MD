@@ -2,6 +2,7 @@
 
 ### COMANDOS.
 * Actualiza el branch local (en tu pc) con lo que haya en master (git).
+
 ``` git pull origin master ```
 
 ## Contribuidores
