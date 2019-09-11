@@ -1,8 +1,9 @@
 # Proyecto de PAV1
 
 ### COMANDOS.
-Actualiza el branch local (en tu pc) con lo que haya en master (git).
-`git pull origin master`
+
+- Actualiza el branch local (en tu pc) con lo que haya en master (git).
+- `git pull origin master`
 
 ## Contribuidores
 * Actis Agudiak Lucas.
