@@ -2,8 +2,7 @@
 
 ### COMANDOS.
 Actualiza el branch local (en tu pc) con lo que haya en master (git).
-
-``` git pull origin master ```
+`git pull origin master`
 
 ## Contribuidores
 * Actis Agudiak Lucas.
@@ -14,4 +13,5 @@ Actualiza el branch local (en tu pc) con lo que haya en master (git).
 * Zanini Gaspar.
 
 
-#### Cualquier duda que tengan de git dejen acá y cuando lo vea lo agrego.
+#### Cualquier duda que tengan de git dejen acá abajo un comentario y cuando lo vea lo agrego.
+
