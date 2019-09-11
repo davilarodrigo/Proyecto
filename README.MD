@@ -2,10 +2,10 @@
 
 ### Comandos para Git.
 
-- Actualiza el branch local (en tu pc) con lo que haya en master (git).
+- Actualiza el branch local (en tu pc) con lo que haya en master (Git).
 - `git pull origin master`
 
-[Algunos comandos útiles](https://www.youtube.com/watch?v=dQw4w9WgXcQ)
+[Documentación de todos los comandos de Git](https://www.youtube.com/watch?v=dQw4w9WgXcQ)
 
 ## Contribuidores
 * Actis Agudiak Lucas.
