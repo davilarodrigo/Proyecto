@@ -30,7 +30,7 @@ namespace ProyectoPAV.Formularios.Auxiliares
 
         public void consulta()
         {
-            CodigoABM cargos = new CodigoABM();
+            AuxiliaresABM cargos = new AuxiliaresABM();
             DataTable tabla = new DataTable();
             tabla = cargos.ConsultarAuxiliares("Cargo");
             cargos.cargarGrillaAuxiliares(tabla, dataGridCargos);
@@ -49,7 +49,7 @@ namespace ProyectoPAV.Formularios.Auxiliares
             }
             if (this.textBoxNuevoCargo.Text != "")
             {
-                CodigoABM cargo = new CodigoABM();
+                AuxiliaresABM cargo = new AuxiliaresABM();
                 cargo.InsertarAuxiliares(this.textBoxNuevoCargo.Text, "Cargo");
 
                 consulta();
@@ -63,7 +63,7 @@ namespace ProyectoPAV.Formularios.Auxiliares
                 if (MessageBox.Show("Seguro que desea eliminarlo?", "Confirmar Cancelar",
                     MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
                 {
-                    CodigoABM cargo = new CodigoABM();
+                    AuxiliaresABM cargo = new AuxiliaresABM();
                     string Nombre = dataGridCargos.CurrentRow.Cells[1].Value.ToString();
                     cargo.EliminarAuxiliares(Nombre, "Cargo");
                     consulta();

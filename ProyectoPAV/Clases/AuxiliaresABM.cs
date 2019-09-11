@@ -9,7 +9,7 @@ using System.Windows.Forms;
 
 namespace ProyectoPAV.Clases
 {
-    class CodigoABM
+    class AuxiliaresABM
     {
         //public DataTable consultarClientes(string patron)
         //{
@@ -19,14 +19,14 @@ namespace ProyectoPAV.Clases
         //                     WHERE n_usuario like '%" + patron + "%'";
         //    return BD.ejecutar_consulta(sql);
         //}
-        public DataTable ConsultarProveedores(string razonsocial)
-        {
-            BEConexionBaseDatos BD = new BEConexionBaseDatos();
-            string sql = @"SELECT P.*, L.Nombre
-                             FROM Proveedor P join Localidad L ON P.IdLocalidad = L.IdLocalidad
-                            WHERE " + razonsocial + "= P.RazonSocial";
-            return BD.ejecutar_consulta(sql);
-        }
+        //public DataTable ConsultarProveedores(string razonsocial)
+        //{
+        //    BEConexionBaseDatos BD = new BEConexionBaseDatos();
+        //    string sql = @"SELECT P.*, L.Nombre
+        //                     FROM Proveedor P join Localidad L ON P.IdLocalidad = L.IdLocalidad
+        //                    WHERE " + razonsocial + "= P.RazonSocial";
+        //    return BD.ejecutar_consulta(sql);
+        //}
 
         public void InsertarAuxiliares(string Nombre, string Tabla)
         {

@@ -30,7 +30,7 @@ namespace ProyectoPAV.Formularios.Auxiliares
 
         public void consulta()
         {
-            CodigoABM marcas = new CodigoABM();
+            AuxiliaresABM marcas = new AuxiliaresABM();
             DataTable tabla = new DataTable();
             tabla = marcas.ConsultarAuxiliares("Marca");
             marcas.cargarGrillaAuxiliares(tabla, dataGridMarcas);
@@ -48,7 +48,7 @@ namespace ProyectoPAV.Formularios.Auxiliares
             }
             if (this.textBoxNuevaMarca.Text != "")
             {
-                CodigoABM marca = new CodigoABM();
+                AuxiliaresABM marca = new AuxiliaresABM();
                 marca.InsertarAuxiliares(this.textBoxNuevaMarca.Text, "Marca");
 
                 consulta();
@@ -62,7 +62,7 @@ namespace ProyectoPAV.Formularios.Auxiliares
                 if (MessageBox.Show("Seguro que desea eliminarlo?", "Confirmar Cancelar",
                     MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
                 {
-                    CodigoABM marca = new CodigoABM();
+                    AuxiliaresABM marca = new AuxiliaresABM();
                     string Nombre = dataGridMarcas.CurrentRow.Cells[1].Value.ToString();
                     marca.EliminarAuxiliares(Nombre, "Marca");
                     consulta();

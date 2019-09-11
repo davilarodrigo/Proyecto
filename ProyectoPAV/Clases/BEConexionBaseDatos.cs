@@ -12,13 +12,13 @@ namespace ProyectoPAV.Clases
     class BEConexionBaseDatos
     {
         public enum estado_BE { correcto, error }
-        //RODO static string cadenaConexion = "Provider=SQLNCLI11;Data Source=DESKTOP-FHCPBI9" + "\u005C" + "SQLEXPRESS01;Integrated Security=SSPI;Initial Catalog=ProyectoPAV";
-        static string cadenaConexion = "server = DESKTOP-0B3JQNF\\SQLEXPRESS; database = TP PAV; integrated security = true";
-        //OleDbConnection conexion = new OleDbConnection(cadenaConexion);
-        //OleDbCommand comando = new OleDbCommand();
         //+ "\u005C" +
-        SqlConnection conexion = new SqlConnection(cadenaConexion);
-        SqlCommand comando = new SqlCommand();
+        static string cadenaConexion = "Provider=SQLNCLI11;Data Source=DESKTOP-FHCPBI9" + "\u005C" + "SQLEXPRESS01;Integrated Security=SSPI;Initial Catalog=ProyectoPAV";
+        // LUCAS static string cadenaConexion = "server = DESKTOP-0B3JQNF\\SQLEXPRESS; database = TP PAV; integrated security = true";
+        OleDbConnection conexion = new OleDbConnection(cadenaConexion);
+        OleDbCommand comando = new OleDbCommand();
+        //SqlConnection conexion = new SqlConnection(cadenaConexion);
+        //SqlCommand comando = new SqlCommand();
         private void conectar()
         {
             conexion.ConnectionString = cadenaConexion;

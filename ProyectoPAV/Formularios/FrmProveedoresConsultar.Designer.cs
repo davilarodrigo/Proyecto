@@ -36,15 +36,8 @@
             this.groupBoxFiltros = new System.Windows.Forms.GroupBox();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.dataGridProveedores = new System.Windows.Forms.DataGridView();
-            this.cmlRazonSocial = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clmTelefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clmEmail = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clmCalle = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clmNumeroCalle = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clmLocalidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.IdProveedor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblNombre = new System.Windows.Forms.Label();
-            this.textBoxNombre = new System.Windows.Forms.TextBox();
+            this.textBoxRazonSocial = new System.Windows.Forms.TextBox();
             this.groupBoxFiltros.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridProveedores)).BeginInit();
             this.SuspendLayout();
@@ -104,7 +97,7 @@
             this.groupBoxFiltros.Controls.Add(this.btnBuscar);
             this.groupBoxFiltros.Controls.Add(this.dataGridProveedores);
             this.groupBoxFiltros.Controls.Add(this.lblNombre);
-            this.groupBoxFiltros.Controls.Add(this.textBoxNombre);
+            this.groupBoxFiltros.Controls.Add(this.textBoxRazonSocial);
             this.groupBoxFiltros.Location = new System.Drawing.Point(12, 12);
             this.groupBoxFiltros.Name = "groupBoxFiltros";
             this.groupBoxFiltros.Size = new System.Drawing.Size(737, 408);
@@ -121,6 +114,7 @@
             this.btnBuscar.Size = new System.Drawing.Size(48, 48);
             this.btnBuscar.TabIndex = 9;
             this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.BtnBuscar_Click);
             // 
             // dataGridProveedores
             // 
@@ -130,62 +124,11 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridProveedores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridProveedores.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.cmlRazonSocial,
-            this.clmTelefono,
-            this.clmEmail,
-            this.clmCalle,
-            this.clmNumeroCalle,
-            this.clmLocalidad,
-            this.IdProveedor});
             this.dataGridProveedores.Location = new System.Drawing.Point(6, 73);
             this.dataGridProveedores.Name = "dataGridProveedores";
             this.dataGridProveedores.ReadOnly = true;
             this.dataGridProveedores.Size = new System.Drawing.Size(725, 329);
             this.dataGridProveedores.TabIndex = 5;
-            // 
-            // cmlRazonSocial
-            // 
-            this.cmlRazonSocial.HeaderText = "Razon Social";
-            this.cmlRazonSocial.Name = "cmlRazonSocial";
-            this.cmlRazonSocial.ReadOnly = true;
-            // 
-            // clmTelefono
-            // 
-            this.clmTelefono.HeaderText = "Telefono";
-            this.clmTelefono.Name = "clmTelefono";
-            this.clmTelefono.ReadOnly = true;
-            // 
-            // clmEmail
-            // 
-            this.clmEmail.HeaderText = "Email";
-            this.clmEmail.Name = "clmEmail";
-            this.clmEmail.ReadOnly = true;
-            // 
-            // clmCalle
-            // 
-            this.clmCalle.HeaderText = "Calle";
-            this.clmCalle.Name = "clmCalle";
-            this.clmCalle.ReadOnly = true;
-            // 
-            // clmNumeroCalle
-            // 
-            this.clmNumeroCalle.HeaderText = "Numero";
-            this.clmNumeroCalle.Name = "clmNumeroCalle";
-            this.clmNumeroCalle.ReadOnly = true;
-            // 
-            // clmLocalidad
-            // 
-            this.clmLocalidad.HeaderText = "Localidad";
-            this.clmLocalidad.Name = "clmLocalidad";
-            this.clmLocalidad.ReadOnly = true;
-            // 
-            // IdProveedor
-            // 
-            this.IdProveedor.HeaderText = "IdProveedor";
-            this.IdProveedor.Name = "IdProveedor";
-            this.IdProveedor.ReadOnly = true;
-            this.IdProveedor.Visible = false;
             // 
             // lblNombre
             // 
@@ -196,12 +139,12 @@
             this.lblNombre.TabIndex = 1;
             this.lblNombre.Text = "Razon Social";
             // 
-            // textBoxNombre
+            // textBoxRazonSocial
             // 
-            this.textBoxNombre.Location = new System.Drawing.Point(127, 34);
-            this.textBoxNombre.Name = "textBoxNombre";
-            this.textBoxNombre.Size = new System.Drawing.Size(312, 20);
-            this.textBoxNombre.TabIndex = 0;
+            this.textBoxRazonSocial.Location = new System.Drawing.Point(127, 34);
+            this.textBoxRazonSocial.Name = "textBoxRazonSocial";
+            this.textBoxRazonSocial.Size = new System.Drawing.Size(312, 20);
+            this.textBoxRazonSocial.TabIndex = 0;
             // 
             // FrmProveedoresConsultar
             // 
@@ -216,6 +159,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmProveedoresConsultar";
             this.Text = "Consultar Proveedores";
+            this.Load += new System.EventHandler(this.FrmProveedoresConsultar_Load);
             this.groupBoxFiltros.ResumeLayout(false);
             this.groupBoxFiltros.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridProveedores)).EndInit();
@@ -233,14 +177,7 @@
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.DataGridView dataGridProveedores;
         private System.Windows.Forms.Label lblNombre;
-        private System.Windows.Forms.TextBox textBoxNombre;
+        private System.Windows.Forms.TextBox textBoxRazonSocial;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmRazonSocial;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cmlRazonSocial;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clmTelefono;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clmEmail;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clmCalle;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clmNumeroCalle;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clmLocalidad;
-        private System.Windows.Forms.DataGridViewTextBoxColumn IdProveedor;
     }
 }

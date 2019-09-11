@@ -35,7 +35,7 @@ namespace ProyectoPAV.Formularios.Auxiliares
             }
             if (this.textBoxNuevaLocalidad.Text != "")
             {
-                CodigoABM localidad = new CodigoABM();
+                AuxiliaresABM localidad = new AuxiliaresABM();
                 localidad.InsertarAuxiliares(this.textBoxNuevaLocalidad.Text, "Localidad");
 
                 consulta();
@@ -49,7 +49,7 @@ namespace ProyectoPAV.Formularios.Auxiliares
 
         public void consulta()
         {
-            CodigoABM localidades = new CodigoABM();
+            AuxiliaresABM localidades = new AuxiliaresABM();
             DataTable tabla = new DataTable();
             tabla = localidades.ConsultarAuxiliares("Localidad");
             localidades.cargarGrillaAuxiliares(tabla, dataGridLocalidades);
@@ -62,7 +62,7 @@ namespace ProyectoPAV.Formularios.Auxiliares
                 if (MessageBox.Show("Seguro que desea eliminarlo?", "Confirmar Cancelar",
                     MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
                 {
-                    CodigoABM localidad = new CodigoABM();
+                    AuxiliaresABM localidad = new AuxiliaresABM();
                     string Nombre = dataGridLocalidades.CurrentRow.Cells[1].Value.ToString();
                     localidad.EliminarAuxiliares(Nombre, "Localidad");
                     consulta();
