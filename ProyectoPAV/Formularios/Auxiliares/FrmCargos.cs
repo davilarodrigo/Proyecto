@@ -8,19 +8,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ProyectoPAV
+namespace ProyectoPAV.Formularios.Auxiliares
 {
-    public partial class Form1 : Form
+    public partial class FrmCargos : Form
     {
-        public Form1()
+        public FrmCargos()
         {
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void BtnSalir_Click(object sender, EventArgs e)
         {
-            Form2 form2 = new Form2();
-            form2.ShowDialog();
+            this.Dispose();
         }
     }
 }
