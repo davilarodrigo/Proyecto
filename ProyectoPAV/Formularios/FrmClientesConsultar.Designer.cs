@@ -89,6 +89,7 @@
             this.btnBuscar.Size = new System.Drawing.Size(48, 48);
             this.btnBuscar.TabIndex = 9;
             this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // lblApellido
             // 
