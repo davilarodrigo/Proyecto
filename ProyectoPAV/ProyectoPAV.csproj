@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Clases\BE.cs" />
     <Compile Include="Formularios\Auxiliares\FrmCargos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -257,9 +258,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Clases\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="resources\Add_16x16.png" />
     <Content Include="resources\Add_256x256.png" />
