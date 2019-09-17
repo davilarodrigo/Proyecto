@@ -32,13 +32,13 @@ namespace ProyectoPAV.Formularios
 
         private void btnAceptar_Click(object sender, EventArgs e)
         {
-            CODIGOABM proveedor = new CODIGOABM();
-            proveedor.InsertarProveedor(this.textBoxRazonSocial.Text
-                            , this.textBoxEmail.Text
-                            , this.textBoxTelefono.Text
-                            , this.textBoxCalle.Text
-                            , this.textBoxNumeroCalle.Text
-                            , this.comboLocalidad.SelectedValue.ToString());
+            //CODIGOABM proveedor = new CODIGOABM();
+            //proveedor.InsertarProveedor(this.textBoxRazonSocial.Text
+            //                , this.textBoxEmail.Text
+            //                , Convert.ToInt32(this.textBoxTelefono.Text)
+            //                , this.textBoxCalle.Text
+            //                , Convert.ToInt32(this.textBoxNumeroCalle.Text)
+            //                , Convert.ToInt32("1"));
         }
     }
-}
+}//this.comboLocalidad.SelectedValue.ToString()

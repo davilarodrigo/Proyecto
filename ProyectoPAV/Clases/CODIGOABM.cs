@@ -23,42 +23,48 @@ namespace ProyectoPAV.Clases
         {
             BE BD = new BE();
             string sql = @"SELECT P.*, L.Nombre
-                             FROM PROVEEDORES P join LOCALIDADES L ON P.IdLocalidad = L.IdLocalidad
+                             FROM PROVEEDORES P join LOCALIDADES3 L ON P.IdLocalidad = L.IdLocalidad
                             WHERE " + razonsocial + "= P.RazonSocial";
             return BD.ejecutar_consulta(sql);
         }
-        public void InsertarProveedor(string RazonSocial
-                               , string Email
-                               , string Telefono
-                               , string Calle
-                               , string NumeroCalle
-                               , string IdLocalidad)
+
+        public void InsertarLocalidad(string Nombre)
         {
             string sql_insert = "";
-            sql_insert = @"INSERT INTO PROVEEDORES (
-                         RazonSocial
-                        , Email
-                        , Telefono
-                        , Calle
-                        , NumeroCalle
-                        , IdLocalidad) VALUES ("
-                        + "'" + RazonSocial + "'"
-                        + ",'" + Email + "'"
-                        + ",'" + Telefono + "'"
-                        + "," + Calle + "'"
-                        + "," + NumeroCalle + "'"
-                        + "," + IdLocalidad + ")";
-            BE BD = new BE();
-            if (BD.insertar(sql_insert) ==
+            sql_insert = @"INSERT INTO LOCALIDADES3 (Nombre) VALUES ('" + Nombre +"')";
+            BE _BD = new BE();
+            if (_BD.insertar(sql_insert) ==
                 BE.estado_BE.correcto)
             {
-                MessageBox.Show(@"Se cargó 
-                    correctamente los datos");
+                MessageBox.Show("Se cargó correctamente los datos");
             }
             else
             {
-                MessageBox.Show(@"No se cargó 
-                    correctamente los datos");
+                MessageBox.Show("No se cargó correctamente los datos");
+            }
+        }
+
+        public DataTable ConsultarLocalidades()
+        {
+            BE BD = new BE();
+            string sql = @"SELECT *
+                             FROM LOCALIDADES3";
+            return BD.ejecutar_consulta(sql);
+        }
+
+        public void EliminarLocalidad(string Nombre)
+        {
+            string sql_insert = "";
+            sql_insert = @"DELETE FROM LOCALIDADES3 WHERE Nombre = '" + Nombre + "'";
+            BE _BD = new BE();
+            if (_BD.eliminar(sql_insert) ==
+                BE.estado_BE.correcto)
+            {
+                MessageBox.Show("Se elimino correctamente los datos");
+            }
+            else
+            {
+                MessageBox.Show("No se elimino correctamente los datos");
             }
         }
     }

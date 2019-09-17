@@ -36,8 +36,6 @@
             this.groupBoxFiltros = new System.Windows.Forms.GroupBox();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.dataGridProveedores = new System.Windows.Forms.DataGridView();
-            this.lblNombre = new System.Windows.Forms.Label();
-            this.textBoxNombre = new System.Windows.Forms.TextBox();
             this.cmlRazonSocial = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmTelefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmEmail = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -45,6 +43,8 @@
             this.clmNumeroCalle = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmLocalidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.IdProveedor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lblNombre = new System.Windows.Forms.Label();
+            this.textBoxNombre = new System.Windows.Forms.TextBox();
             this.groupBoxFiltros.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridProveedores)).BeginInit();
             this.SuspendLayout();
@@ -121,7 +121,6 @@
             this.btnBuscar.Size = new System.Drawing.Size(48, 48);
             this.btnBuscar.TabIndex = 9;
             this.btnBuscar.UseVisualStyleBackColor = true;
-            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // dataGridProveedores
             // 
@@ -144,22 +143,6 @@
             this.dataGridProveedores.ReadOnly = true;
             this.dataGridProveedores.Size = new System.Drawing.Size(725, 329);
             this.dataGridProveedores.TabIndex = 5;
-            // 
-            // lblNombre
-            // 
-            this.lblNombre.AutoSize = true;
-            this.lblNombre.Location = new System.Drawing.Point(51, 37);
-            this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(70, 13);
-            this.lblNombre.TabIndex = 1;
-            this.lblNombre.Text = "Razon Social";
-            // 
-            // textBoxNombre
-            // 
-            this.textBoxNombre.Location = new System.Drawing.Point(127, 34);
-            this.textBoxNombre.Name = "textBoxNombre";
-            this.textBoxNombre.Size = new System.Drawing.Size(312, 20);
-            this.textBoxNombre.TabIndex = 0;
             // 
             // cmlRazonSocial
             // 
@@ -203,6 +186,22 @@
             this.IdProveedor.Name = "IdProveedor";
             this.IdProveedor.ReadOnly = true;
             this.IdProveedor.Visible = false;
+            // 
+            // lblNombre
+            // 
+            this.lblNombre.AutoSize = true;
+            this.lblNombre.Location = new System.Drawing.Point(51, 37);
+            this.lblNombre.Name = "lblNombre";
+            this.lblNombre.Size = new System.Drawing.Size(70, 13);
+            this.lblNombre.TabIndex = 1;
+            this.lblNombre.Text = "Razon Social";
+            // 
+            // textBoxNombre
+            // 
+            this.textBoxNombre.Location = new System.Drawing.Point(127, 34);
+            this.textBoxNombre.Name = "textBoxNombre";
+            this.textBoxNombre.Size = new System.Drawing.Size(312, 20);
+            this.textBoxNombre.TabIndex = 0;
             // 
             // FrmProveedoresConsultar
             // 

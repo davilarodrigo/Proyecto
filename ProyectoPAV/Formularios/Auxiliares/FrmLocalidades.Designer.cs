@@ -36,6 +36,7 @@
             this.lblNuevaLocalidad = new System.Windows.Forms.Label();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.dataGridLocalidades = new System.Windows.Forms.DataGridView();
+            this.columnaNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridLocalidades)).BeginInit();
             this.SuspendLayout();
             // 
@@ -44,18 +45,19 @@
             this.btnEliminar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnEliminar.BackgroundImage = global::ProyectoPAV.Properties.Resources.Delete_256x256;
             this.btnEliminar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnEliminar.Location = new System.Drawing.Point(270, 292);
+            this.btnEliminar.Location = new System.Drawing.Point(166, 231);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(50, 50);
             this.btnEliminar.TabIndex = 31;
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btnSalir
             // 
             this.btnSalir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSalir.BackgroundImage = global::ProyectoPAV.Properties.Resources.Log_Out_256x256;
             this.btnSalir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnSalir.Location = new System.Drawing.Point(382, 292);
+            this.btnSalir.Location = new System.Drawing.Point(278, 231);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(50, 50);
             this.btnSalir.TabIndex = 30;
@@ -67,7 +69,7 @@
             this.btnAceptar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnAceptar.BackgroundImage = global::ProyectoPAV.Properties.Resources.Check_256x256;
             this.btnAceptar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnAceptar.Location = new System.Drawing.Point(326, 292);
+            this.btnAceptar.Location = new System.Drawing.Point(222, 231);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(50, 50);
             this.btnAceptar.TabIndex = 29;
@@ -98,20 +100,29 @@
             this.btnAgregar.Size = new System.Drawing.Size(50, 50);
             this.btnAgregar.TabIndex = 26;
             this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // dataGridLocalidades
             // 
+            this.dataGridLocalidades.AllowUserToAddRows = false;
             this.dataGridLocalidades.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridLocalidades.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.columnaNombre});
             this.dataGridLocalidades.Location = new System.Drawing.Point(15, 65);
             this.dataGridLocalidades.Name = "dataGridLocalidades";
-            this.dataGridLocalidades.Size = new System.Drawing.Size(416, 213);
+            this.dataGridLocalidades.Size = new System.Drawing.Size(201, 154);
             this.dataGridLocalidades.TabIndex = 25;
+            // 
+            // columnaNombre
+            // 
+            this.columnaNombre.HeaderText = "Nombre";
+            this.columnaNombre.Name = "columnaNombre";
             // 
             // FrmLocalidades
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(444, 354);
+            this.ClientSize = new System.Drawing.Size(340, 293);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnAceptar);
@@ -122,6 +133,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmLocalidades";
             this.Text = "Localidades";
+            this.Load += new System.EventHandler(this.FrmLocalidades_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridLocalidades)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -137,5 +149,6 @@
         private System.Windows.Forms.Label lblNuevaLocalidad;
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.DataGridView dataGridLocalidades;
+        private System.Windows.Forms.DataGridViewTextBoxColumn columnaNombre;
     }
 }
