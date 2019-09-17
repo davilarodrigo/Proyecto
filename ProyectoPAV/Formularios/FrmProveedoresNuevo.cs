@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ProyectoPAV.Formularios.Auxiliares;
+using ProyectoPAV.Clases;
 
 namespace ProyectoPAV.Formularios
 {
@@ -27,6 +28,17 @@ namespace ProyectoPAV.Formularios
         {
             FrmLocalidades _localidades = new FrmLocalidades();
             _localidades.ShowDialog();
+        }
+
+        private void btnAceptar_Click(object sender, EventArgs e)
+        {
+            CODIGOABM proveedor = new CODIGOABM();
+            proveedor.InsertarProveedor(this.textBoxRazonSocial.Text
+                            , this.textBoxEmail.Text
+                            , this.textBoxTelefono.Text
+                            , this.textBoxCalle.Text
+                            , this.textBoxNumeroCalle.Text
+                            , this.comboLocalidad.SelectedValue.ToString());
         }
     }
 }

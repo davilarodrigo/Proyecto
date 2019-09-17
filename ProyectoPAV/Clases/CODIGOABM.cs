@@ -27,5 +27,39 @@ namespace ProyectoPAV.Clases
                             WHERE " + razonsocial + "= P.RazonSocial";
             return BD.ejecutar_consulta(sql);
         }
+        public void InsertarProveedor(string RazonSocial
+                               , string Email
+                               , string Telefono
+                               , string Calle
+                               , string NumeroCalle
+                               , string IdLocalidad)
+        {
+            string sql_insert = "";
+            sql_insert = @"INSERT INTO PROVEEDORES (
+                         RazonSocial
+                        , Email
+                        , Telefono
+                        , Calle
+                        , NumeroCalle
+                        , IdLocalidad) VALUES ("
+                        + "'" + RazonSocial + "'"
+                        + ",'" + Email + "'"
+                        + ",'" + Telefono + "'"
+                        + "," + Calle + "'"
+                        + "," + NumeroCalle + "'"
+                        + "," + IdLocalidad + ")";
+            BE BD = new BE();
+            if (BD.insertar(sql_insert) ==
+                BE.estado_BE.correcto)
+            {
+                MessageBox.Show(@"Se cargó 
+                    correctamente los datos");
+            }
+            else
+            {
+                MessageBox.Show(@"No se cargó 
+                    correctamente los datos");
+            }
+        }
     }
 }
