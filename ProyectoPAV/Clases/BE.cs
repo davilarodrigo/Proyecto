@@ -11,7 +11,9 @@ namespace ProyectoPAV.Clases
     class BE
     {
         public enum estado_BE { correcto, error }
-        string cadena_conexion = "Provider=SQLNCLI11;Data Source=maquis;User ID=avisuales1;Initial Catalog=_TRATAMIENTO_ERRORES_3k3;password=avisuales1";
+        string cadena_conexion = "";
+        //CAMBIAR CADENA DE CONEXION
+        //EJEMPLO DE CONEXION string cadena_conexion = "Provider=SQLNCLI11;Data Source=maquis;User ID=avisuales1;Initial Catalog=_TRATAMIENTO_ERRORES_3k3;password=avisuales1";
         OleDbConnection conexion = new OleDbConnection();
         OleDbCommand cmd = new OleDbCommand();
         private void conectar()
