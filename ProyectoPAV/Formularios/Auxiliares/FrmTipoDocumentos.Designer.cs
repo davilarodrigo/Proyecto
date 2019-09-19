@@ -31,11 +31,11 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmTipoDocumentos));
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
-            this.btnAceptar = new System.Windows.Forms.Button();
             this.textBoxNuevoTipoDoc = new System.Windows.Forms.TextBox();
             this.lblNuevoTipoDoc = new System.Windows.Forms.Label();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.dataGridTipoDoc = new System.Windows.Forms.DataGridView();
+            this.ColumnaNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridTipoDoc)).BeginInit();
             this.SuspendLayout();
             // 
@@ -44,11 +44,12 @@
             this.btnEliminar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnEliminar.BackgroundImage = global::ProyectoPAV.Properties.Resources.Delete_256x256;
             this.btnEliminar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnEliminar.Location = new System.Drawing.Point(312, 299);
+            this.btnEliminar.Location = new System.Drawing.Point(368, 299);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(50, 50);
             this.btnEliminar.TabIndex = 38;
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btnSalir
             // 
@@ -61,17 +62,6 @@
             this.btnSalir.TabIndex = 37;
             this.btnSalir.UseVisualStyleBackColor = true;
             this.btnSalir.Click += new System.EventHandler(this.BtnSalir_Click);
-            // 
-            // btnAceptar
-            // 
-            this.btnAceptar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAceptar.BackgroundImage = global::ProyectoPAV.Properties.Resources.Check_256x256;
-            this.btnAceptar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnAceptar.Location = new System.Drawing.Point(368, 299);
-            this.btnAceptar.Name = "btnAceptar";
-            this.btnAceptar.Size = new System.Drawing.Size(50, 50);
-            this.btnAceptar.TabIndex = 36;
-            this.btnAceptar.UseVisualStyleBackColor = true;
             // 
             // textBoxNuevoTipoDoc
             // 
@@ -98,14 +88,23 @@
             this.btnAgregar.Size = new System.Drawing.Size(50, 50);
             this.btnAgregar.TabIndex = 33;
             this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // dataGridTipoDoc
             // 
+            this.dataGridTipoDoc.AllowUserToAddRows = false;
             this.dataGridTipoDoc.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridTipoDoc.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ColumnaNombre});
             this.dataGridTipoDoc.Location = new System.Drawing.Point(28, 67);
             this.dataGridTipoDoc.Name = "dataGridTipoDoc";
             this.dataGridTipoDoc.Size = new System.Drawing.Size(416, 213);
             this.dataGridTipoDoc.TabIndex = 32;
+            // 
+            // ColumnaNombre
+            // 
+            this.ColumnaNombre.HeaderText = "Nombre";
+            this.ColumnaNombre.Name = "ColumnaNombre";
             // 
             // FrmTipoDocumentos
             // 
@@ -114,7 +113,6 @@
             this.ClientSize = new System.Drawing.Size(486, 361);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnSalir);
-            this.Controls.Add(this.btnAceptar);
             this.Controls.Add(this.textBoxNuevoTipoDoc);
             this.Controls.Add(this.lblNuevoTipoDoc);
             this.Controls.Add(this.btnAgregar);
@@ -122,6 +120,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmTipoDocumentos";
             this.Text = "FrmTipoDocumentos";
+            this.Load += new System.EventHandler(this.FrmTipoDocumentos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridTipoDoc)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -132,10 +131,10 @@
 
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Button btnSalir;
-        private System.Windows.Forms.Button btnAceptar;
         private System.Windows.Forms.TextBox textBoxNuevoTipoDoc;
         private System.Windows.Forms.Label lblNuevoTipoDoc;
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.DataGridView dataGridTipoDoc;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnaNombre;
     }
 }

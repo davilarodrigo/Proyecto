@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmLocalidades));
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
-            this.btnAceptar = new System.Windows.Forms.Button();
             this.textBoxNuevaLocalidad = new System.Windows.Forms.TextBox();
             this.lblNuevaLocalidad = new System.Windows.Forms.Label();
             this.btnAgregar = new System.Windows.Forms.Button();
@@ -45,7 +44,7 @@
             this.btnEliminar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnEliminar.BackgroundImage = global::ProyectoPAV.Properties.Resources.Delete_256x256;
             this.btnEliminar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnEliminar.Location = new System.Drawing.Point(166, 231);
+            this.btnEliminar.Location = new System.Drawing.Point(220, 231);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(50, 50);
             this.btnEliminar.TabIndex = 31;
@@ -63,17 +62,6 @@
             this.btnSalir.TabIndex = 30;
             this.btnSalir.UseVisualStyleBackColor = true;
             this.btnSalir.Click += new System.EventHandler(this.BtnSalir_Click);
-            // 
-            // btnAceptar
-            // 
-            this.btnAceptar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAceptar.BackgroundImage = global::ProyectoPAV.Properties.Resources.Check_256x256;
-            this.btnAceptar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnAceptar.Location = new System.Drawing.Point(222, 231);
-            this.btnAceptar.Name = "btnAceptar";
-            this.btnAceptar.Size = new System.Drawing.Size(50, 50);
-            this.btnAceptar.TabIndex = 29;
-            this.btnAceptar.UseVisualStyleBackColor = true;
             // 
             // textBoxNuevaLocalidad
             // 
@@ -125,7 +113,6 @@
             this.ClientSize = new System.Drawing.Size(340, 293);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnSalir);
-            this.Controls.Add(this.btnAceptar);
             this.Controls.Add(this.textBoxNuevaLocalidad);
             this.Controls.Add(this.lblNuevaLocalidad);
             this.Controls.Add(this.btnAgregar);
@@ -144,7 +131,6 @@
 
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Button btnSalir;
-        private System.Windows.Forms.Button btnAceptar;
         private System.Windows.Forms.TextBox textBoxNuevaLocalidad;
         private System.Windows.Forms.Label lblNuevaLocalidad;
         private System.Windows.Forms.Button btnAgregar;

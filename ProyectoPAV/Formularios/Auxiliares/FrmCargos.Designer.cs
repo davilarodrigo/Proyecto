@@ -31,11 +31,11 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmCargos));
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
-            this.btnAceptar = new System.Windows.Forms.Button();
             this.textBoxNuevoCargo = new System.Windows.Forms.TextBox();
             this.lblNuevoCargo = new System.Windows.Forms.Label();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.dataGridCargos = new System.Windows.Forms.DataGridView();
+            this.ColumnaNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridCargos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -44,11 +44,12 @@
             this.btnEliminar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnEliminar.BackgroundImage = global::ProyectoPAV.Properties.Resources.Delete_256x256;
             this.btnEliminar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnEliminar.Location = new System.Drawing.Point(332, 291);
+            this.btnEliminar.Location = new System.Drawing.Point(389, 291);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(50, 50);
             this.btnEliminar.TabIndex = 45;
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btnSalir
             // 
@@ -61,17 +62,6 @@
             this.btnSalir.TabIndex = 44;
             this.btnSalir.UseVisualStyleBackColor = true;
             this.btnSalir.Click += new System.EventHandler(this.BtnSalir_Click);
-            // 
-            // btnAceptar
-            // 
-            this.btnAceptar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAceptar.BackgroundImage = global::ProyectoPAV.Properties.Resources.Check_256x256;
-            this.btnAceptar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnAceptar.Location = new System.Drawing.Point(388, 291);
-            this.btnAceptar.Name = "btnAceptar";
-            this.btnAceptar.Size = new System.Drawing.Size(50, 50);
-            this.btnAceptar.TabIndex = 43;
-            this.btnAceptar.UseVisualStyleBackColor = true;
             // 
             // textBoxNuevoCargo
             // 
@@ -98,14 +88,23 @@
             this.btnAgregar.Size = new System.Drawing.Size(50, 50);
             this.btnAgregar.TabIndex = 40;
             this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // dataGridCargos
             // 
+            this.dataGridCargos.AllowUserToAddRows = false;
             this.dataGridCargos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridCargos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ColumnaNombre});
             this.dataGridCargos.Location = new System.Drawing.Point(23, 65);
             this.dataGridCargos.Name = "dataGridCargos";
             this.dataGridCargos.Size = new System.Drawing.Size(416, 213);
             this.dataGridCargos.TabIndex = 39;
+            // 
+            // ColumnaNombre
+            // 
+            this.ColumnaNombre.HeaderText = "Nombre";
+            this.ColumnaNombre.Name = "ColumnaNombre";
             // 
             // FrmCargos
             // 
@@ -114,7 +113,6 @@
             this.ClientSize = new System.Drawing.Size(506, 353);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnSalir);
-            this.Controls.Add(this.btnAceptar);
             this.Controls.Add(this.textBoxNuevoCargo);
             this.Controls.Add(this.lblNuevoCargo);
             this.Controls.Add(this.btnAgregar);
@@ -122,6 +120,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmCargos";
             this.Text = "Cargos";
+            this.Load += new System.EventHandler(this.FrmCargos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridCargos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -132,10 +131,10 @@
 
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Button btnSalir;
-        private System.Windows.Forms.Button btnAceptar;
         private System.Windows.Forms.TextBox textBoxNuevoCargo;
         private System.Windows.Forms.Label lblNuevoCargo;
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.DataGridView dataGridCargos;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnaNombre;
     }
 }

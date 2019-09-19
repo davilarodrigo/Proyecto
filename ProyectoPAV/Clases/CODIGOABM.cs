@@ -28,10 +28,10 @@ namespace ProyectoPAV.Clases
             return BD.ejecutar_consulta(sql);
         }
 
-        public void InsertarLocalidad(string Nombre)
+        public void InsertarAuxiliares(string Nombre, string Tabla)
         {
             string sql_insert = "";
-            sql_insert = @"INSERT INTO Localidad (Nombre) VALUES ('" + Nombre +"')";
+            sql_insert = @"INSERT INTO "+ Tabla +" (Nombre) VALUES ('" + Nombre +"')";
             BEConexionBaseDatos _BD = new BEConexionBaseDatos();
             if (_BD.insertar(sql_insert) ==
                 BEConexionBaseDatos.estado_BE.correcto)
@@ -44,20 +44,20 @@ namespace ProyectoPAV.Clases
             }
         }
 
-        public DataTable ConsultarLocalidades()
+        public DataTable ConsultarAuxiliares(string Tabla)
         {
             BEConexionBaseDatos BD = new BEConexionBaseDatos();
             string sql = @"SELECT *
-                             FROM Localidad";
+                             FROM " + Tabla;
             return BD.ejecutar_consulta(sql);
         }
 
-        public void EliminarLocalidad(string Nombre)
+        public void EliminarAuxiliares(string Nombre, string Tabla)
         {
-            string sql_insert = "";
-            sql_insert = @"DELETE FROM Localidad WHERE Nombre = '" + Nombre + "'";
+            string sql_delete = "";
+            sql_delete = @"DELETE FROM "+ Tabla + " WHERE Nombre = '" + Nombre + "'";
             BEConexionBaseDatos _BD = new BEConexionBaseDatos();
-            if (_BD.eliminar(sql_insert) ==
+            if (_BD.eliminar(sql_delete) ==
                 BEConexionBaseDatos.estado_BE.correcto)
             {
                 MessageBox.Show("Se elimino correctamente los datos");

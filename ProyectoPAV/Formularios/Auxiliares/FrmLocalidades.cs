@@ -36,7 +36,7 @@ namespace ProyectoPAV.Formularios.Auxiliares
             if (this.textBoxNuevaLocalidad.Text != "")
             {
                 CodigoABM localidad = new CodigoABM();
-                localidad.InsertarLocalidad(this.textBoxNuevaLocalidad.Text);
+                localidad.InsertarAuxiliares(this.textBoxNuevaLocalidad.Text, "Localidad");
 
                 consulta();
             }
@@ -62,7 +62,7 @@ namespace ProyectoPAV.Formularios.Auxiliares
         {
             CodigoABM localidades = new CodigoABM();
             DataTable tabla = new DataTable();
-            tabla = localidades.ConsultarLocalidades();
+            tabla = localidades.ConsultarAuxiliares("Localidad");
             cargar_grilla(tabla);
         }
 
@@ -70,15 +70,18 @@ namespace ProyectoPAV.Formularios.Auxiliares
         {
             if (dataGridLocalidades.CurrentRow != null)
             {
-                CodigoABM localidad = new CodigoABM();
+                if (MessageBox.Show("Seguro que desea eliminarlo?", "Confirmar Cancelar", MessageBoxButtons.OKCancel) == DialogResult.OK)
+                {
+                    CodigoABM localidad = new CodigoABM();
                 string Nombre = dataGridLocalidades.CurrentRow.Cells["ColumnaNombre"].Value.ToString();
-                localidad.EliminarLocalidad(Nombre);
+                localidad.EliminarAuxiliares(Nombre, "Localidad");
                 consulta();
+                }               
             }
             else
             {
-                MessageBox.Show("Seleccione primero una fila de la grilla, para modificar"
-                    , "Importante", MessageBoxButtons.OK
+                MessageBox.Show("Seleccione primero una fila de la grilla, para eliminar"
+                    , "IMPORTANTE", MessageBoxButtons.OK
                     , MessageBoxIcon.Exclamation);
             }
         }

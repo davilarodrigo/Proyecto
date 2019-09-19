@@ -34,14 +34,17 @@
             this.lblNuevaMarca = new System.Windows.Forms.Label();
             this.textBoxNuevaMarca = new System.Windows.Forms.TextBox();
             this.btnSalir = new System.Windows.Forms.Button();
-            this.btnAceptar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
+            this.ColumnaNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridMarcas)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridMarcas
             // 
+            this.dataGridMarcas.AllowUserToAddRows = false;
             this.dataGridMarcas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridMarcas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ColumnaNombre});
             this.dataGridMarcas.Location = new System.Drawing.Point(48, 93);
             this.dataGridMarcas.Name = "dataGridMarcas";
             this.dataGridMarcas.Size = new System.Drawing.Size(416, 213);
@@ -56,6 +59,7 @@
             this.btnAgregar.Size = new System.Drawing.Size(50, 50);
             this.btnAgregar.TabIndex = 1;
             this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // lblNuevaMarca
             // 
@@ -85,27 +89,22 @@
             this.btnSalir.UseVisualStyleBackColor = true;
             this.btnSalir.Click += new System.EventHandler(this.BtnSalir_Click);
             // 
-            // btnAceptar
-            // 
-            this.btnAceptar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAceptar.BackgroundImage = global::ProyectoPAV.Properties.Resources.Check_256x256;
-            this.btnAceptar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnAceptar.Location = new System.Drawing.Point(379, 329);
-            this.btnAceptar.Name = "btnAceptar";
-            this.btnAceptar.Size = new System.Drawing.Size(50, 50);
-            this.btnAceptar.TabIndex = 22;
-            this.btnAceptar.UseVisualStyleBackColor = true;
-            // 
             // btnEliminar
             // 
             this.btnEliminar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnEliminar.BackgroundImage = global::ProyectoPAV.Properties.Resources.Delete_256x256;
             this.btnEliminar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnEliminar.Location = new System.Drawing.Point(323, 329);
+            this.btnEliminar.Location = new System.Drawing.Point(379, 329);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(50, 50);
             this.btnEliminar.TabIndex = 24;
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
+            // 
+            // ColumnaNombre
+            // 
+            this.ColumnaNombre.HeaderText = "Nombre";
+            this.ColumnaNombre.Name = "ColumnaNombre";
             // 
             // FrmMarcas
             // 
@@ -114,7 +113,6 @@
             this.ClientSize = new System.Drawing.Size(497, 391);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnSalir);
-            this.Controls.Add(this.btnAceptar);
             this.Controls.Add(this.textBoxNuevaMarca);
             this.Controls.Add(this.lblNuevaMarca);
             this.Controls.Add(this.btnAgregar);
@@ -122,6 +120,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmMarcas";
             this.Text = "Marca";
+            this.Load += new System.EventHandler(this.FrmMarcas_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridMarcas)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -135,7 +134,7 @@
         private System.Windows.Forms.Label lblNuevaMarca;
         private System.Windows.Forms.TextBox textBoxNuevaMarca;
         private System.Windows.Forms.Button btnSalir;
-        private System.Windows.Forms.Button btnAceptar;
         private System.Windows.Forms.Button btnEliminar;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnaNombre;
     }
 }

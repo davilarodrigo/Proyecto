@@ -31,11 +31,11 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmCategorias));
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
-            this.btnAceptar = new System.Windows.Forms.Button();
             this.textBoxNuevaCategoria = new System.Windows.Forms.TextBox();
             this.lblNuevaCategorias = new System.Windows.Forms.Label();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.dataGridCategorias = new System.Windows.Forms.DataGridView();
+            this.ColumnaNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridCategorias)).BeginInit();
             this.SuspendLayout();
             // 
@@ -44,11 +44,12 @@
             this.btnEliminar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnEliminar.BackgroundImage = global::ProyectoPAV.Properties.Resources.Delete_256x256;
             this.btnEliminar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnEliminar.Location = new System.Drawing.Point(315, 289);
+            this.btnEliminar.Location = new System.Drawing.Point(371, 289);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(50, 50);
             this.btnEliminar.TabIndex = 38;
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btnSalir
             // 
@@ -60,17 +61,6 @@
             this.btnSalir.Size = new System.Drawing.Size(50, 50);
             this.btnSalir.TabIndex = 37;
             this.btnSalir.UseVisualStyleBackColor = true;
-            // 
-            // btnAceptar
-            // 
-            this.btnAceptar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAceptar.BackgroundImage = global::ProyectoPAV.Properties.Resources.Check_256x256;
-            this.btnAceptar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnAceptar.Location = new System.Drawing.Point(371, 289);
-            this.btnAceptar.Name = "btnAceptar";
-            this.btnAceptar.Size = new System.Drawing.Size(50, 50);
-            this.btnAceptar.TabIndex = 36;
-            this.btnAceptar.UseVisualStyleBackColor = true;
             // 
             // textBoxNuevaCategoria
             // 
@@ -97,14 +87,23 @@
             this.btnAgregar.Size = new System.Drawing.Size(50, 50);
             this.btnAgregar.TabIndex = 33;
             this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // dataGridCategorias
             // 
+            this.dataGridCategorias.AllowUserToAddRows = false;
             this.dataGridCategorias.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridCategorias.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ColumnaNombre});
             this.dataGridCategorias.Location = new System.Drawing.Point(15, 61);
             this.dataGridCategorias.Name = "dataGridCategorias";
             this.dataGridCategorias.Size = new System.Drawing.Size(416, 213);
             this.dataGridCategorias.TabIndex = 32;
+            // 
+            // ColumnaNombre
+            // 
+            this.ColumnaNombre.HeaderText = "Nombre";
+            this.ColumnaNombre.Name = "ColumnaNombre";
             // 
             // FrmCategorias
             // 
@@ -113,7 +112,6 @@
             this.ClientSize = new System.Drawing.Size(489, 351);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnSalir);
-            this.Controls.Add(this.btnAceptar);
             this.Controls.Add(this.textBoxNuevaCategoria);
             this.Controls.Add(this.lblNuevaCategorias);
             this.Controls.Add(this.btnAgregar);
@@ -121,6 +119,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmCategorias";
             this.Text = "Categorias";
+            this.Load += new System.EventHandler(this.FrmCategorias_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridCategorias)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -131,10 +130,10 @@
 
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Button btnSalir;
-        private System.Windows.Forms.Button btnAceptar;
         private System.Windows.Forms.TextBox textBoxNuevaCategoria;
         private System.Windows.Forms.Label lblNuevaCategorias;
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.DataGridView dataGridCategorias;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnaNombre;
     }
 }
