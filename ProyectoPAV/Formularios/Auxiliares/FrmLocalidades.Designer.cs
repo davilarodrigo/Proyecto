@@ -95,7 +95,7 @@
             this.dataGridLocalidades.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridLocalidades.Location = new System.Drawing.Point(15, 65);
             this.dataGridLocalidades.Name = "dataGridLocalidades";
-            this.dataGridLocalidades.Size = new System.Drawing.Size(201, 154);
+            this.dataGridLocalidades.Size = new System.Drawing.Size(313, 154);
             this.dataGridLocalidades.TabIndex = 25;
             // 
             // FrmLocalidades

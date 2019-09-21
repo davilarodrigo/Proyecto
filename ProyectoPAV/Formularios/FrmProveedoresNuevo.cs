@@ -39,6 +39,7 @@ namespace ProyectoPAV.Formularios
                             , 2
                             , this.textBoxEmail.Text
                             , Int32.Parse(this.textBoxTelefono.Text));
+            this.Dispose();
         }
     }
     

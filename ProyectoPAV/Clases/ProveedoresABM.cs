@@ -36,8 +36,8 @@ namespace ProyectoPAV.Clases
                                                         " " + idLocalidad + "," +
                                                         " '" + email + "'," +
                                                         " " + telefono + ")";
-            BEConexionBaseDatos _BD = new BEConexionBaseDatos();
-            if (_BD.insertar(sql_insert) ==
+            BEConexionBaseDatos BD = new BEConexionBaseDatos();
+            if (BD.insertar(sql_insert) ==
                 BEConexionBaseDatos.estado_BE.correcto)
             {
                 MessageBox.Show("Se cargó correctamente los datos");
@@ -48,5 +48,49 @@ namespace ProyectoPAV.Clases
             }
         }
 
+        public void EliminarProveedores(int IdProveedor)
+        {
+            string sql_delete = "";
+            sql_delete = @"DELETE FROM Proveedor WHERE IdProveedor = " + IdProveedor;
+            BEConexionBaseDatos _BD = new BEConexionBaseDatos();
+            if (_BD.eliminar(sql_delete) ==
+                BEConexionBaseDatos.estado_BE.correcto)
+            {
+                MessageBox.Show("Se elimino correctamente los datos");
+            }
+            else
+            {
+                MessageBox.Show("No se elimino correctamente los datos");
+            }
+        }
+
+        public DataTable recuperarDatos(string id)
+        {
+            BEConexionBaseDatos BD = new BEConexionBaseDatos();
+            return BD.ejecutar_consulta("SELECT * FROM Proveedor WHERE IdProveedor = " + id);
+
+        }
+
+        public void ModificarProveedor(string idProveedor,  string razonSocial, string calle, int numeroCalle, int idLocalidad, string email, int telefono)
+        {
+            string sql_modificar = "";
+            sql_modificar = @"UPDATE Proveedor SET RazonSocial = '" + razonSocial + "'," +
+                                                        "Calle = '" + calle + "'," +
+                                                        "NumeroCalle = " + numeroCalle + "," +
+                                                        "IdLocalidad = " + idLocalidad + "," +
+                                                        "Email = '" + email + "'," +
+                                                        "Telefono = " + telefono +
+                                                        " WHERE IdProveedor = " + idProveedor;
+            BEConexionBaseDatos BD = new BEConexionBaseDatos();
+            if (BD.insertar(sql_modificar) ==
+                BEConexionBaseDatos.estado_BE.correcto)
+            {
+                MessageBox.Show("Se cargó correctamente los datos");
+            }
+            else
+            {
+                MessageBox.Show("No se cargó correctamente los datos");
+            }
+        }
     }
 }

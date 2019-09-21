@@ -101,6 +101,7 @@
             this.btnGuardar.Size = new System.Drawing.Size(50, 50);
             this.btnGuardar.TabIndex = 58;
             this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // lblNumeroCalle
             // 
@@ -203,6 +204,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmProveedoresModificar";
             this.Text = "Modificar Proveedor";
+            this.Load += new System.EventHandler(this.FrmProveedoresModificar_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

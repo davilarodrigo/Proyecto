@@ -28,8 +28,20 @@ namespace ProyectoPAV.Formularios
 
         private void BtnModificar_Click(object sender, EventArgs e)
         {
-            FrmProveedoresModificar _modificarProveedor = new FrmProveedoresModificar();
-            _modificarProveedor.ShowDialog();
+            if (dataGridProveedores.CurrentRow != null)
+            {
+                FrmProveedoresModificar _modificarProveedor = new FrmProveedoresModificar();
+                _modificarProveedor.IdProveedor = dataGridProveedores.CurrentRow.Cells[0].Value.ToString();
+                _modificarProveedor.ShowDialog();
+                consulta();
+            }
+            else
+            {
+                MessageBox.Show("Seleccione primero una fila de la grilla, para modificar"
+                    , "Importante", MessageBoxButtons.OK
+                    , MessageBoxIcon.Exclamation);
+            }
+            
 
         }
 
@@ -78,6 +90,27 @@ namespace ProyectoPAV.Formularios
             dataGridProveedores.Columns[6].HeaderText = "Teléfono";
             dataGridProveedores.Columns[7].HeaderText = "Localidad";
 
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            if (dataGridProveedores.CurrentRow != null)
+            {
+                if (MessageBox.Show("Seguro que desea eliminarlo?", "Confirmar Cancelar",
+                    MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
+                {
+                    ProveedoresABM proveedor = new ProveedoresABM();
+                    int ID = Int32.Parse(dataGridProveedores.CurrentRow.Cells[0].Value.ToString());
+                    proveedor.EliminarProveedores(ID);
+                    consulta();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Seleccione primero una fila de la grilla, para eliminar"
+                    , "IMPORTANTE", MessageBoxButtons.OK
+                    , MessageBoxIcon.Exclamation);
+            }
         }
     }
 }
