@@ -47,35 +47,25 @@ namespace ProyectoPAV.Formularios.Auxiliares
             consulta();
         }
 
-        private void cargar_grilla(DataTable tabla)
-        {
-            dataGridLocalidades.Rows.Clear();
-            for (int i = 0; i < tabla.Rows.Count; i++)
-            {
-                dataGridLocalidades.Rows.Add();
-                dataGridLocalidades.Rows[i].Cells[0].Value = tabla.Rows[i]["Nombre"].ToString();
-            }
-
-        }
-
         public void consulta()
         {
             CodigoABM localidades = new CodigoABM();
             DataTable tabla = new DataTable();
             tabla = localidades.ConsultarAuxiliares("Localidad");
-            cargar_grilla(tabla);
+            localidades.cargarGrillaAuxiliares(tabla, dataGridLocalidades);
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
             if (dataGridLocalidades.CurrentRow != null)
             {
-                if (MessageBox.Show("Seguro que desea eliminarlo?", "Confirmar Cancelar", MessageBoxButtons.OKCancel) == DialogResult.OK)
+                if (MessageBox.Show("Seguro que desea eliminarlo?", "Confirmar Cancelar",
+                    MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
                 {
                     CodigoABM localidad = new CodigoABM();
-                string Nombre = dataGridLocalidades.CurrentRow.Cells["ColumnaNombre"].Value.ToString();
-                localidad.EliminarAuxiliares(Nombre, "Localidad");
-                consulta();
+                    string Nombre = dataGridLocalidades.CurrentRow.Cells[1].Value.ToString();
+                    localidad.EliminarAuxiliares(Nombre, "Localidad");
+                    consulta();
                 }               
             }
             else

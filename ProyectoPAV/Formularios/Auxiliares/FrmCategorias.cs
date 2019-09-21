@@ -33,17 +33,7 @@ namespace ProyectoPAV.Formularios.Auxiliares
             CodigoABM categorias = new CodigoABM();
             DataTable tabla = new DataTable();
             tabla = categorias.ConsultarAuxiliares("Categoria");
-            cargar_grilla(tabla);
-        }
-
-        private void cargar_grilla(DataTable tabla)
-        {
-            dataGridCategorias.Rows.Clear();
-            for (int i = 0; i < tabla.Rows.Count; i++)
-            {
-                dataGridCategorias.Rows.Add();
-                dataGridCategorias.Rows[i].Cells[0].Value = tabla.Rows[i]["Nombre"].ToString();
-            }
+            categorias.cargarGrillaAuxiliares(tabla, dataGridCategorias);
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
@@ -69,10 +59,11 @@ namespace ProyectoPAV.Formularios.Auxiliares
         {
             if (dataGridCategorias.CurrentRow != null)
             {
-                if (MessageBox.Show("Seguro que desea eliminarlo?", "Confirmar Cancelar", MessageBoxButtons.OKCancel) == DialogResult.OK)
+                if (MessageBox.Show("Seguro que desea eliminarlo?", "Confirmar Cancelar",
+                    MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
                 {
                     CodigoABM categoria = new CodigoABM();
-                    string Nombre = dataGridCategorias.CurrentRow.Cells["ColumnaNombre"].Value.ToString();
+                    string Nombre = dataGridCategorias.CurrentRow.Cells[1].Value.ToString();
                     categoria.EliminarAuxiliares(Nombre, "Categoria");
                     consulta();
                 }

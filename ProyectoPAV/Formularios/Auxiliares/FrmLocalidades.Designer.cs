@@ -35,7 +35,6 @@
             this.lblNuevaLocalidad = new System.Windows.Forms.Label();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.dataGridLocalidades = new System.Windows.Forms.DataGridView();
-            this.columnaNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridLocalidades)).BeginInit();
             this.SuspendLayout();
             // 
@@ -94,17 +93,10 @@
             // 
             this.dataGridLocalidades.AllowUserToAddRows = false;
             this.dataGridLocalidades.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridLocalidades.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.columnaNombre});
             this.dataGridLocalidades.Location = new System.Drawing.Point(15, 65);
             this.dataGridLocalidades.Name = "dataGridLocalidades";
             this.dataGridLocalidades.Size = new System.Drawing.Size(201, 154);
             this.dataGridLocalidades.TabIndex = 25;
-            // 
-            // columnaNombre
-            // 
-            this.columnaNombre.HeaderText = "Nombre";
-            this.columnaNombre.Name = "columnaNombre";
             // 
             // FrmLocalidades
             // 
@@ -135,6 +127,5 @@
         private System.Windows.Forms.Label lblNuevaLocalidad;
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.DataGridView dataGridLocalidades;
-        private System.Windows.Forms.DataGridViewTextBoxColumn columnaNombre;
     }
 }

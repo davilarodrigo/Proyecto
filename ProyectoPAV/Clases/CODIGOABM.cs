@@ -67,5 +67,13 @@ namespace ProyectoPAV.Clases
                 MessageBox.Show("No se elimino correctamente los datos");
             }
         }
+
+        public void cargarGrillaAuxiliares(DataTable tabla, DataGridView grilla)
+        {
+            grilla.DataSource = tabla;
+            grilla.Columns[0].Visible = false;
+            grilla.Columns[1].HeaderText = "Nombre";
+
+        }
     }
 }

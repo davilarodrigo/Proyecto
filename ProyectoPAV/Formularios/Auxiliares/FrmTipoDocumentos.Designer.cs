@@ -35,7 +35,6 @@
             this.lblNuevoTipoDoc = new System.Windows.Forms.Label();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.dataGridTipoDoc = new System.Windows.Forms.DataGridView();
-            this.ColumnaNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridTipoDoc)).BeginInit();
             this.SuspendLayout();
             // 
@@ -94,17 +93,10 @@
             // 
             this.dataGridTipoDoc.AllowUserToAddRows = false;
             this.dataGridTipoDoc.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridTipoDoc.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ColumnaNombre});
             this.dataGridTipoDoc.Location = new System.Drawing.Point(28, 67);
             this.dataGridTipoDoc.Name = "dataGridTipoDoc";
             this.dataGridTipoDoc.Size = new System.Drawing.Size(416, 213);
             this.dataGridTipoDoc.TabIndex = 32;
-            // 
-            // ColumnaNombre
-            // 
-            this.ColumnaNombre.HeaderText = "Nombre";
-            this.ColumnaNombre.Name = "ColumnaNombre";
             // 
             // FrmTipoDocumentos
             // 
@@ -135,6 +127,5 @@
         private System.Windows.Forms.Label lblNuevoTipoDoc;
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.DataGridView dataGridTipoDoc;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnaNombre;
     }
 }

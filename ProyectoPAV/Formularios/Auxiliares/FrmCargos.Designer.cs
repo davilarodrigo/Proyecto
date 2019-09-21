@@ -35,7 +35,6 @@
             this.lblNuevoCargo = new System.Windows.Forms.Label();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.dataGridCargos = new System.Windows.Forms.DataGridView();
-            this.ColumnaNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridCargos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -94,17 +93,10 @@
             // 
             this.dataGridCargos.AllowUserToAddRows = false;
             this.dataGridCargos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridCargos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ColumnaNombre});
             this.dataGridCargos.Location = new System.Drawing.Point(23, 65);
             this.dataGridCargos.Name = "dataGridCargos";
             this.dataGridCargos.Size = new System.Drawing.Size(416, 213);
             this.dataGridCargos.TabIndex = 39;
-            // 
-            // ColumnaNombre
-            // 
-            this.ColumnaNombre.HeaderText = "Nombre";
-            this.ColumnaNombre.Name = "ColumnaNombre";
             // 
             // FrmCargos
             // 
@@ -135,6 +127,5 @@
         private System.Windows.Forms.Label lblNuevoCargo;
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.DataGridView dataGridCargos;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnaNombre;
     }
 }

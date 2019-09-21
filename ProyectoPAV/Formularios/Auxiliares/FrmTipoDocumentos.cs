@@ -33,17 +33,7 @@ namespace ProyectoPAV.Formularios.Auxiliares
             CodigoABM tiposdocumento = new CodigoABM();
             DataTable tabla = new DataTable();
             tabla = tiposdocumento.ConsultarAuxiliares("TipoDocumento");
-            cargar_grilla(tabla);
-        }
-
-        private void cargar_grilla(DataTable tabla)
-        {
-            dataGridTipoDoc.Rows.Clear();
-            for (int i = 0; i < tabla.Rows.Count; i++)
-            {
-                dataGridTipoDoc.Rows.Add();
-                dataGridTipoDoc.Rows[i].Cells[0].Value = tabla.Rows[i]["Nombre"].ToString();
-            }
+            tiposdocumento.cargarGrillaAuxiliares(tabla, dataGridTipoDoc);
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
@@ -69,10 +59,11 @@ namespace ProyectoPAV.Formularios.Auxiliares
         {
             if (dataGridTipoDoc.CurrentRow != null)
             {
-                if (MessageBox.Show("Seguro que desea eliminarlo?", "Confirmar Cancelar", MessageBoxButtons.OKCancel) == DialogResult.OK)
+                if (MessageBox.Show("Seguro que desea eliminarlo?", "Confirmar Cancelar",
+                    MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
                 {
                     CodigoABM tipodocumento = new CodigoABM();
-                    string Nombre = dataGridTipoDoc.CurrentRow.Cells["ColumnaNombre"].Value.ToString();
+                    string Nombre = dataGridTipoDoc.CurrentRow.Cells[1].Value.ToString();
                     tipodocumento.EliminarAuxiliares(Nombre, "TipoDocumento");
                     consulta();
                 }

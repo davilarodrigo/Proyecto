@@ -35,7 +35,6 @@
             this.textBoxNuevaMarca = new System.Windows.Forms.TextBox();
             this.btnSalir = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
-            this.ColumnaNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridMarcas)).BeginInit();
             this.SuspendLayout();
             // 
@@ -43,8 +42,6 @@
             // 
             this.dataGridMarcas.AllowUserToAddRows = false;
             this.dataGridMarcas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridMarcas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ColumnaNombre});
             this.dataGridMarcas.Location = new System.Drawing.Point(48, 93);
             this.dataGridMarcas.Name = "dataGridMarcas";
             this.dataGridMarcas.Size = new System.Drawing.Size(416, 213);
@@ -101,11 +98,6 @@
             this.btnEliminar.UseVisualStyleBackColor = true;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
-            // ColumnaNombre
-            // 
-            this.ColumnaNombre.HeaderText = "Nombre";
-            this.ColumnaNombre.Name = "ColumnaNombre";
-            // 
             // FrmMarcas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -135,6 +127,5 @@
         private System.Windows.Forms.TextBox textBoxNuevaMarca;
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.Button btnEliminar;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnaNombre;
     }
 }

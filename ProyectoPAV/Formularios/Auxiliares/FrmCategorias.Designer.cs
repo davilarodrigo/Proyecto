@@ -35,7 +35,6 @@
             this.lblNuevaCategorias = new System.Windows.Forms.Label();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.dataGridCategorias = new System.Windows.Forms.DataGridView();
-            this.ColumnaNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridCategorias)).BeginInit();
             this.SuspendLayout();
             // 
@@ -93,17 +92,10 @@
             // 
             this.dataGridCategorias.AllowUserToAddRows = false;
             this.dataGridCategorias.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridCategorias.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ColumnaNombre});
             this.dataGridCategorias.Location = new System.Drawing.Point(15, 61);
             this.dataGridCategorias.Name = "dataGridCategorias";
             this.dataGridCategorias.Size = new System.Drawing.Size(416, 213);
             this.dataGridCategorias.TabIndex = 32;
-            // 
-            // ColumnaNombre
-            // 
-            this.ColumnaNombre.HeaderText = "Nombre";
-            this.ColumnaNombre.Name = "ColumnaNombre";
             // 
             // FrmCategorias
             // 
@@ -134,6 +126,5 @@
         private System.Windows.Forms.Label lblNuevaCategorias;
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.DataGridView dataGridCategorias;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnaNombre;
     }
 }
