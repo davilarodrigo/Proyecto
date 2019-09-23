@@ -62,6 +62,7 @@ namespace ProyectoPAV.Formularios
                             , 2
                             , this.textBoxEmail.Text
                             , Int32.Parse(this.textBoxTelefono.Text));
+            MessageBox.Show(proveedor.mensajeRetorno, "Importante!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             this.Dispose();
         }
 

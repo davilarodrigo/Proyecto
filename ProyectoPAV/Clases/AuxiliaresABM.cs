@@ -24,7 +24,7 @@ namespace ProyectoPAV.Clases
             else
             {
                 MessageBox.Show("NO se cargaron correctamente los datos debido a: " + 
-                    gestor.mensajeError, "Importante!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    gestor.mensajeErrorTransaccion, "Importante!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -44,7 +44,7 @@ namespace ProyectoPAV.Clases
             else
             {
                 MessageBox.Show("No se consultaron correctamente los datos debido a: " + 
-                    gestor.mensajeError, "Importante!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    gestor.mensajeErrorTransaccion, "Importante!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
             return dt;
@@ -63,7 +63,7 @@ namespace ProyectoPAV.Clases
             else
             {
                 MessageBox.Show("NO se eliminaron correctamente los datos debido a: " + 
-                    gestor.mensajeError, "Importante!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    gestor.mensajeErrorTransaccion, "Importante!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

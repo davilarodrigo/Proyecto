@@ -32,13 +32,15 @@ namespace ProyectoPAV.Formularios
 
         private void BtnAceptar_Click(object sender, EventArgs e)
         {
+            string cadenaResultado;
             ProveedoresABM proveedor = new ProveedoresABM();
-            proveedor.InsertarProveedor(this.textBoxRazonSocial.Text
+            cadenaResultado = proveedor.InsertarProveedor(this.textBoxRazonSocial.Text
                             , this.textBoxCalle.Text
                             , Int32.Parse(this.textBoxNumeroCalle.Text)
                             , 2
                             , this.textBoxEmail.Text
-                            , Int32.Parse(this.textBoxTelefono.Text));
+                            , Int32.Parse(this.textBoxTelefono.Text)).ToString();
+            MessageBox.Show(proveedor.mensajeRetorno, "Importante!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             this.Dispose();
         }
     }

@@ -48,9 +48,18 @@ namespace ProyectoPAV
         private void Consulta()
         {
             EmpleadosABM empleados = new EmpleadosABM();
+            string cadenaResultado;
             DataTable tabla = new DataTable();
-            tabla = empleados.ConsultarEmpleados();
-            this.CargarGrilla(tabla);
+            cadenaResultado = empleados.ConsultarEmpleados().ToString();
+            if (cadenaResultado == "correcto")
+            {
+                this.CargarGrilla(tabla);
+            }
+            else
+            {
+                MessageBox.Show(empleados.mensajeRetorno, "Importante!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
         }
 
         private void BtnSalir_Click(object sender, EventArgs e)
@@ -61,13 +70,22 @@ namespace ProyectoPAV
         private void BtnBuscar_Click(object sender, EventArgs e)
         {
             EmpleadosABM empleados = new EmpleadosABM();
+            string cadenaResultado;
             DataTable tabla = new DataTable();
-            if (this.textBoxNombre.Text != "" && this.textBoxApellido.Text != "" 
-                && /*this.comboTipoDocumento.SelectedIndex == -1 &&*/ this.textBoxDocumento.Text != "")
+            if (this.textBoxNombre.Text != "" || this.textBoxApellido.Text != "" 
+                || /*this.comboTipoDocumento.SelectedIndex == -1 ||*/ this.textBoxDocumento.Text != "")
             {
-                tabla = empleados.ConsultarEmpleadosFiltros(this.textBoxNombre.Text, this.textBoxApellido.Text, 
-                    this.comboTipoDocumento.SelectedValue.ToString(), Int32.Parse(this.textBoxDocumento.Text));
-                this.CargarGrilla(tabla);
+                cadenaResultado = empleados.ConsultarEmpleadosFiltros(this.textBoxNombre.Text, this.textBoxApellido.Text, 
+                    /*this.comboTipoDocumento.SelectedValue.ToString()*/1.ToString(), this.textBoxDocumento.Text).ToString();
+                if (cadenaResultado == "correcto")
+                {
+                    tabla = empleados.tablaEmpleado;
+                    this.CargarGrilla(tabla);
+                }
+                else
+                {
+                    MessageBox.Show(empleados.mensajeRetorno, "Importante!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
             else
             {
@@ -93,9 +111,6 @@ namespace ProyectoPAV
             dataGridEmpleados.Columns[13].HeaderText = "Cargo";
             dataGridEmpleados.Columns[14].HeaderText = "Sexo";
             dataGridEmpleados.Columns[12].DisplayIndex = 0;
-
-            //dataGridEmpleados.Columns[7].DisplayIndex = 4;          ESTO FUNCIONA???
-
         }
 
         private void FrmEmpleadosConsultar_Load(object sender, EventArgs e)

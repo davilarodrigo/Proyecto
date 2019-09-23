@@ -10,51 +10,59 @@ namespace ProyectoPAV.Clases
 {
     class ProveedoresABM
     {
-        public DataTable ConsultarProveedoresFiltros(string razonsocial)
+        public enum ResultadoProveedores { correcto, error }
+        public DataTable tablaProveedor;
+        public string mensajeRetorno;
+        public ResultadoProveedores ConsultarProveedoresFiltros(string razonsocial)
         {
+            ResultadoProveedores resultado = new ResultadoProveedores();
             GestorTransaccionesSQL gestor = new GestorTransaccionesSQL();
             string sql = @"SELECT P.*, L.Nombre
                              FROM Proveedor P JOIN Localidad L ON P.IdLocalidad = L.IdLocalidad
-                            WHERE P.RazonSocial = '" + razonsocial + "'";
-            DataTable dt = new DataTable();
+                            WHERE P.RazonSocial LIKE '%" + razonsocial + "%'";
 
             if (gestor.EjecutarConsulta(sql) ==
                 GestorTransaccionesSQL.ResultadoTransaccion.correcto)
             {
-                dt = gestor.TablaResultado;
+                tablaProveedor = gestor.TablaResultado;
+                resultado = ResultadoProveedores.correcto;
             }
             else
             {
-                MessageBox.Show("No se consultaron correctamente los datos debido a: " +
-                    gestor.mensajeError, "Importante!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                mensajeRetorno = "No se consultaron correctamente los datos debido a: " + gestor.mensajeErrorTransaccion;
+                resultado = ResultadoProveedores.error;
+
             }
 
-            return dt;
+            return resultado;
         }
 
-        public DataTable ConsultarProveedores()
+        public ResultadoProveedores ConsultarProveedores()
         {
+            ResultadoProveedores resultado = new ResultadoProveedores();
             GestorTransaccionesSQL gestor = new GestorTransaccionesSQL();
-            string sql = @"SELECT P.*, L.Nombre
-                             FROM Proveedor P JOIN Localidad L ON P.IdLocalidad = L.IdLocalidad";
-            DataTable dt = new DataTable();
+            string sql = "SELECT P.*, L.Nombre FROM Proveedor P JOIN Localidad L ON P.IdLocalidad = L.IdLocalidad";
 
             if (gestor.EjecutarConsulta(sql) ==
                 GestorTransaccionesSQL.ResultadoTransaccion.correcto)
             {
-                dt = gestor.TablaResultado;
+                tablaProveedor = gestor.TablaResultado;
+                resultado = ResultadoProveedores.correcto;
             }
             else
             {
-                MessageBox.Show("No se consultaron correctamente los datos debido a: " +
-                    gestor.mensajeError, "Importante!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                mensajeRetorno = "No se consultaron correctamente los datos debido a: " + gestor.mensajeErrorTransaccion;
+                resultado = ResultadoProveedores.error;
+
             }
 
-            return dt;
+            return resultado;
         }
 
-        public void InsertarProveedor(string razonSocial, string calle, int numeroCalle, int idLocalidad, string email, int telefono)
+        public ResultadoProveedores InsertarProveedor(string razonSocial, string calle, int numeroCalle, int idLocalidad, string email, int telefono)
         {
+            ResultadoProveedores resultado = new ResultadoProveedores();
+            GestorTransaccionesSQL gestor = new GestorTransaccionesSQL();
             string sql_insert = "";
             sql_insert = @"INSERT INTO Proveedor VALUES ('" + razonSocial + "'," +
                                                         " '" + calle + "'," +
@@ -62,60 +70,65 @@ namespace ProyectoPAV.Clases
                                                         " " + idLocalidad + "," +
                                                         " '" + email + "'," +
                                                         " " + telefono + ")";
-            GestorTransaccionesSQL gestor = new GestorTransaccionesSQL();
             if (gestor.Insertar(sql_insert) ==
                 GestorTransaccionesSQL.ResultadoTransaccion.correcto)
             {
-                MessageBox.Show("Se cargaron correctamente los datos", "Importante", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                mensajeRetorno = "Se cargaron correctamente los datos";
+                resultado = ResultadoProveedores.correcto;
             }
             else
             {
-                MessageBox.Show("NO se cargaron correctamente los datos debido a: " +
-                    gestor.mensajeError, "Importante!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                mensajeRetorno = "NO se cargaron correctamente los datos debido a: " + gestor.mensajeErrorTransaccion;
+                resultado = ResultadoProveedores.error;
             }
+
+            return resultado;
         }
 
-        public void EliminarProveedor(int IdProveedor)
+        public ResultadoProveedores EliminarProveedor(int IdProveedor)
         {
             string sql_delete = "";
             sql_delete = @"DELETE FROM Proveedor WHERE IdProveedor = " + IdProveedor;
             GestorTransaccionesSQL gestor = new GestorTransaccionesSQL();
+            ResultadoProveedores resultado = new ResultadoProveedores();
             if (gestor.Eliminar(sql_delete) ==
                 GestorTransaccionesSQL.ResultadoTransaccion.correcto)
             {
-                MessageBox.Show("Se eliminaron correctamente los datos", "Importante", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                mensajeRetorno = "Se eliminaron correctamente los datos";
+                resultado = ResultadoProveedores.correcto;
             }
             else
             {
-                MessageBox.Show("NO se eliminaron correctamente los datos debido a: " +
-                    gestor.mensajeError, "Importante!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                mensajeRetorno = "NO se eliminaron correctamente los datos debido a: " + gestor.mensajeErrorTransaccion;
+                resultado = ResultadoProveedores.error;
             }
+            return resultado;
         }
 
         public DataTable RecuperarDatos(string id)
         {
             GestorTransaccionesSQL gestor = new GestorTransaccionesSQL();
             string sql = "SELECT * FROM Proveedor WHERE IdProveedor = " + id;
-            DataTable dt = new DataTable();
+            tablaProveedor = gestor.TablaResultado;
+            gestor.EjecutarConsulta(sql);
+            //if (gestor.EjecutarConsulta(sql) ==
+            //    GestorTransaccionesSQL.ResultadoTransaccion.correcto)
+            //{
+            //    dt = gestor.TablaResultado;
+            //}
+            //else
+            //{
+            //    MessageBox.Show("No se consultaron correctamente los datos debido a: " +
+            //        gestor.mensajeErrorTransaccion, "Importante!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //}
 
-            if (gestor.EjecutarConsulta(sql) ==
-                GestorTransaccionesSQL.ResultadoTransaccion.correcto)
-            {
-                dt = gestor.TablaResultado;
-            }
-            else
-            {
-                MessageBox.Show("No se consultaron correctamente los datos debido a: " +
-                    gestor.mensajeError, "Importante!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-
-            return dt;
+            return tablaProveedor;
             //GestorTransaccionesSQL gestor = new GestorTransaccionesSQL();
             //return gestor.EjecutarConsulta("SELECT * FROM Proveedor WHERE IdProveedor = " + id);
 
         }
 
-        public void ModificarProveedor(int idProveedor,  string razonSocial, string calle, int numeroCalle, int idLocalidad, string email, int telefono)
+        public ResultadoProveedores ModificarProveedor(int idProveedor,  string razonSocial, string calle, int numeroCalle, int idLocalidad, string email, int telefono)
         {
             string sql_modificar = "";
             sql_modificar = @"UPDATE Proveedor SET RazonSocial = '" + razonSocial + "'," +
@@ -126,16 +139,20 @@ namespace ProyectoPAV.Clases
                                                         "Telefono = " + telefono +
                                                         " WHERE IdProveedor = " + idProveedor;
             GestorTransaccionesSQL gestor = new GestorTransaccionesSQL();
+            ResultadoProveedores resultado = new ResultadoProveedores();
             if (gestor.Insertar(sql_modificar) ==
                 GestorTransaccionesSQL.ResultadoTransaccion.correcto)
             {
-                MessageBox.Show("Se cargaron correctamente los datos", "Importante", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                mensajeRetorno = "Se cargaron correctamente los datos";
+                resultado = ResultadoProveedores.correcto;
             }
             else
             {
-                MessageBox.Show("NO se cargaron correctamente los datos debido a: " +
-                    gestor.mensajeError, "Importante!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                mensajeRetorno = "NO se cargaron correctamente los datos debido a: " + gestor.mensajeErrorTransaccion;
+                resultado = ResultadoProveedores.error;
             }
+
+            return resultado;
         }
     }
 }

@@ -10,50 +10,83 @@ namespace ProyectoPAV.Clases
 {
     class EmpleadosABM
     {
-        public DataTable ConsultarEmpleadosFiltros(string nombre, string apellido, string tipoDoc, int numeroDoc)
+        public enum ResultadoEmpleados { correcto, error }
+        public DataTable tablaEmpleado;
+        public string mensajeRetorno;
+        public ResultadoEmpleados ConsultarEmpleadosFiltros(string nombre, string apellido, string tipoDoc, string numeroDoc)
         {
             GestorTransaccionesSQL gestor = new GestorTransaccionesSQL();
+            ResultadoEmpleados resultado = new ResultadoEmpleados();
             string sql = @"SELECT E.*, TD.Nombre, C.Nombre, S.Nombre
                              FROM Empleado E JOIN TipoDocumento TD ON E.IdTipoDocumento = TD.IdTipoDocumento
-                                JOIN Cargo C ON E.IdCargo = C.IdCargo JOIN Sexo S ON E.IdSexo = S.IdSexo
-                            WHERE E.Nombre = '" + nombre + "' AND E.Apellido = '" + apellido + "' AND TD.Nombre = '" + 
-                            tipoDoc + "' AND E.NumeroDocumento = " + numeroDoc;
-            DataTable dt = new DataTable();
+                                JOIN Cargo C ON E.IdCargo = C.IdCargo JOIN Sexo S ON E.IdSexo = S.IdSexo ";
+                            //"WHERE E.Nombre like '%" + nombre + "%' AND E.Apellido like '%" + apellido + "%' AND TD.Nombre = '" +
+                            //tipoDoc + "' AND E.NumeroDocumento = " + numeroDoc;
+            string where = @"WHERE ";
+            if (nombre != "")
+            {
+                where =  where + "E.Nombre like '%" + nombre + "%' AND ";
+            }
 
+            if (apellido != "")
+            {
+                where = where + "E.Apellido like '%" + apellido + "%' AND ";
+            }
+
+            if (tipoDoc != "" && tipoDoc != "1")     //HAY QUE ARREGLAR ESTA VERGA
+            {
+                where = where + "TD.Nombre = '" + tipoDoc + "' AND ";
+            }
+
+            if (numeroDoc != "")
+            {
+                where = where + "E.NumeroDocumento = " + numeroDoc + " AND ";
+            }
+
+            int largoCadena = where.Length -5;
+            string whereFinal = "";
+
+            whereFinal = where.Substring(0, largoCadena);
+
+            sql = sql + whereFinal;
+
+            DataTable dt = new DataTable();
             if (gestor.EjecutarConsulta(sql) ==
                 GestorTransaccionesSQL.ResultadoTransaccion.correcto)
             {
-                dt = gestor.TablaResultado;
+                tablaEmpleado = gestor.TablaResultado;
+                resultado = ResultadoEmpleados.correcto;
             }
             else
             {
-                MessageBox.Show("No se consultaron correctamente los datos debido a: " +
-                    gestor.mensajeError, "Importante!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                mensajeRetorno = "No se consultaron correctamente los datos debido a: " + gestor.mensajeErrorTransaccion;
+                resultado = ResultadoEmpleados.error;
             }
 
-            return dt;
+            return resultado;
         }
 
-        public DataTable ConsultarEmpleados()
+        public ResultadoEmpleados ConsultarEmpleados()
         {
             GestorTransaccionesSQL gestor = new GestorTransaccionesSQL();
+            ResultadoEmpleados resultado = new ResultadoEmpleados();
             string sql = @"SELECT E.*, TD.Nombre, C.Nombre, S.Nombre
                              FROM Empleado E JOIN TipoDocumento TD ON E.IdTipoDocumento = TD.IdTipoDocumento
                                 JOIN Cargo C ON E.IdCargo = C.IdCargo JOIN Sexo S ON E.IdSexo = S.IdSexo";
-            DataTable dt = new DataTable();
-
+            
             if (gestor.EjecutarConsulta(sql) ==
                 GestorTransaccionesSQL.ResultadoTransaccion.correcto)
             {
-                dt = gestor.TablaResultado;
+                tablaEmpleado = gestor.TablaResultado;
+                resultado = ResultadoEmpleados.correcto;
             }
             else
             {
-                MessageBox.Show("No se consultaron correctamente los datos debido a: " +
-                    gestor.mensajeError, "Importante!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                mensajeRetorno = "No se consultaron correctamente los datos debido a: " + gestor.mensajeErrorTransaccion;
+                resultado = ResultadoEmpleados.error;
             }
 
-            return dt;
+            return resultado;
         }
 
         public void InsertarEmpleado(int idTipoDoc, int numeroDoc, string apellido, string nombre, 
@@ -76,7 +109,7 @@ namespace ProyectoPAV.Clases
             else
             {
                 MessageBox.Show("NO se cargaron correctamente los datos debido a: " +
-                    gestor.mensajeError, "Importante!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    gestor.mensajeErrorTransaccion, "Importante!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -93,7 +126,7 @@ namespace ProyectoPAV.Clases
             else
             {
                 MessageBox.Show("NO se eliminaron correctamente los datos debido a: " +
-                    gestor.mensajeError, "Importante!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    gestor.mensajeErrorTransaccion, "Importante!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -111,7 +144,7 @@ namespace ProyectoPAV.Clases
             else
             {
                 MessageBox.Show("No se consultaron correctamente los datos debido a: " +
-                    gestor.mensajeError, "Importante!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    gestor.mensajeErrorTransaccion, "Importante!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
             return dt;
@@ -144,7 +177,7 @@ namespace ProyectoPAV.Clases
             else
             {
                 MessageBox.Show("NO se cargaron correctamente los datos debido a: " +
-                    gestor.mensajeError, "Importante!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    gestor.mensajeErrorTransaccion, "Importante!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

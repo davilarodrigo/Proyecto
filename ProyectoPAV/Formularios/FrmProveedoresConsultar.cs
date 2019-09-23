@@ -58,18 +58,37 @@ namespace ProyectoPAV.Formularios
         {
             ProveedoresABM proveedores = new ProveedoresABM();
             DataTable tabla = new DataTable();
-            tabla = proveedores.ConsultarProveedores();
-            this.CargarGrilla(tabla);
+            string cadenaResultado;
+            cadenaResultado = proveedores.ConsultarProveedores().ToString();
+            tabla = proveedores.tablaProveedor;
+            if (cadenaResultado == "correcto")
+            {
+                this.CargarGrilla(tabla);
+            }
+            else
+            {
+                MessageBox.Show(proveedores.mensajeRetorno, "Importante!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
         }
 
         private void BtnBuscar_Click(object sender, EventArgs e)
         {
             ProveedoresABM proveedores = new ProveedoresABM();
             DataTable tabla = new DataTable();
+            string cadenaResultado;
             if (this.textBoxRazonSocial.Text != "")
             {
-                tabla = proveedores.ConsultarProveedoresFiltros(this.textBoxRazonSocial.Text);
-                this.CargarGrilla(tabla);
+                cadenaResultado = proveedores.ConsultarProveedoresFiltros(this.textBoxRazonSocial.Text).ToString();
+                tabla = proveedores.tablaProveedor;
+                if (cadenaResultado == "correcto")
+                {
+                    this.CargarGrilla(tabla);
+                }
+                else
+                {
+                    MessageBox.Show(proveedores.mensajeRetorno, "Importante!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
             else
             {
@@ -88,7 +107,7 @@ namespace ProyectoPAV.Formularios
             dataGridProveedores.Columns[5].HeaderText = "Email";
             dataGridProveedores.Columns[6].HeaderText = "Teléfono";
             dataGridProveedores.Columns[7].HeaderText = "Localidad";
-            //dataGridProveedores.Columns[7].DisplayIndex = 4;          ESTO FUNCIONA???
+            //dataGridProveedores.Columns[7].DisplayIndex = 4;
 
         }
 
@@ -102,6 +121,7 @@ namespace ProyectoPAV.Formularios
                     ProveedoresABM proveedor = new ProveedoresABM();
                     int ID = Int32.Parse(dataGridProveedores.CurrentRow.Cells[0].Value.ToString());
                     proveedor.EliminarProveedor(ID);
+                    MessageBox.Show(proveedor.mensajeRetorno, "Importante!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     Consulta();
                 }
             }
