@@ -26,11 +26,11 @@ namespace ProyectoPAV.Formularios
 
         private void BtnNuevaLocalidad_Click(object sender, EventArgs e)
         {
-            FrmLocalidades _localidades = new FrmLocalidades();
-            _localidades.ShowDialog();
+            FrmLocalidades localidades = new FrmLocalidades();
+            localidades.ShowDialog();
         }
 
-        private void btnAceptar_Click(object sender, EventArgs e)
+        private void BtnAceptar_Click(object sender, EventArgs e)
         {
             ProveedoresABM proveedor = new ProveedoresABM();
             proveedor.InsertarProveedor(this.textBoxRazonSocial.Text

@@ -25,25 +25,25 @@ namespace ProyectoPAV.Formularios.Auxiliares
 
         private void FrmCargos_Load(object sender, EventArgs e)
         {
-            consulta();
+            Consulta();
         }
 
-        public void consulta()
+        public void Consulta()
         {
             AuxiliaresABM cargos = new AuxiliaresABM();
             DataTable tabla = new DataTable();
             tabla = cargos.ConsultarAuxiliares("Cargo");
-            cargos.cargarGrillaAuxiliares(tabla, dataGridCargos);
+            cargos.CargarGrillaAuxiliares(tabla, dataGridCargos);
         }
 
-        private void btnAgregar_Click(object sender, EventArgs e)
+        private void BtnAgregar_Click(object sender, EventArgs e)
         {
 
             if (this.textBoxNuevoCargo.Text == "")
             {
                 MessageBox.Show("No cargó datos"
-                    , "IMPORTANTE"
-                    , MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                    , "Importante!"
+                    , MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 textBoxNuevoCargo.Focus();
                 return;
             }
@@ -52,7 +52,7 @@ namespace ProyectoPAV.Formularios.Auxiliares
                 AuxiliaresABM cargo = new AuxiliaresABM();
                 cargo.InsertarAuxiliares(this.textBoxNuevoCargo.Text, "Cargo");
 
-                consulta();
+                Consulta();
             }
         }
 
@@ -60,19 +60,19 @@ namespace ProyectoPAV.Formularios.Auxiliares
         {
             if (dataGridCargos.CurrentRow != null)
             {
-                if (MessageBox.Show("Seguro que desea eliminarlo?", "Confirmar Cancelar",
+                if (MessageBox.Show("Seguro que desea eliminarlo?", "Importante!",
                     MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
                 {
                     AuxiliaresABM cargo = new AuxiliaresABM();
                     string Nombre = dataGridCargos.CurrentRow.Cells[1].Value.ToString();
                     cargo.EliminarAuxiliares(Nombre, "Cargo");
-                    consulta();
+                    Consulta();
                 }
             }
             else
             {
-                MessageBox.Show("Seleccione primero una fila de la grilla, para eliminar"
-                    , "IMPORTANTE", MessageBoxButtons.OK
+                MessageBox.Show("Para eliminar primero seleccione una fila de la grilla"
+                    , "Importante!", MessageBoxButtons.OK
                     , MessageBoxIcon.Exclamation);
             }
         }

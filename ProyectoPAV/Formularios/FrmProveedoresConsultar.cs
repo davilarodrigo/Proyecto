@@ -21,24 +21,24 @@ namespace ProyectoPAV.Formularios
 
         private void BtnNuevo_Click(object sender, EventArgs e)
         {
-            FrmProveedoresNuevo _nuevoProveedor = new FrmProveedoresNuevo();
-            _nuevoProveedor.ShowDialog();
-            consulta();
+            FrmProveedoresNuevo nuevoProveedor = new FrmProveedoresNuevo();
+            nuevoProveedor.ShowDialog();
+            Consulta();
         }
 
         private void BtnModificar_Click(object sender, EventArgs e)
         {
             if (dataGridProveedores.CurrentRow != null)
             {
-                FrmProveedoresModificar _modificarProveedor = new FrmProveedoresModificar();
-                _modificarProveedor.IdProveedor = dataGridProveedores.CurrentRow.Cells[0].Value.ToString();
-                _modificarProveedor.ShowDialog();
-                consulta();
+                FrmProveedoresModificar modificarProveedor = new FrmProveedoresModificar();
+                modificarProveedor.IdProveedor = dataGridProveedores.CurrentRow.Cells[0].Value.ToString();
+                modificarProveedor.ShowDialog();
+                Consulta();
             }
             else
             {
-                MessageBox.Show("Seleccione primero una fila de la grilla, para modificar"
-                    , "Importante", MessageBoxButtons.OK
+                MessageBox.Show("Para modificar primero seleccione una fila de la grilla"
+                    , "Importante!", MessageBoxButtons.OK
                     , MessageBoxIcon.Exclamation);
             }
             
@@ -48,19 +48,18 @@ namespace ProyectoPAV.Formularios
         private void BtnSalir_Click(object sender, EventArgs e)
         {
             this.Dispose();
-
         }
 
         private void FrmProveedoresConsultar_Load(object sender, EventArgs e)
         {
-            this.consulta();
+            this.Consulta();
         }
-        public void consulta()
+        private void Consulta()
         {
             ProveedoresABM proveedores = new ProveedoresABM();
             DataTable tabla = new DataTable();
             tabla = proveedores.ConsultarProveedores();
-            this.cargarGrilla(tabla);
+            this.CargarGrilla(tabla);
         }
 
         private void BtnBuscar_Click(object sender, EventArgs e)
@@ -69,16 +68,16 @@ namespace ProyectoPAV.Formularios
             DataTable tabla = new DataTable();
             if (this.textBoxRazonSocial.Text != "")
             {
-                tabla = proveedores.ConsultarProveedoresRazonSocial(this.textBoxRazonSocial.Text);
-                this.cargarGrilla(tabla);
+                tabla = proveedores.ConsultarProveedoresFiltros(this.textBoxRazonSocial.Text);
+                this.CargarGrilla(tabla);
             }
             else
             {
-                this.consulta();
+                this.Consulta();
             }
         }
 
-       private void cargarGrilla(DataTable tabla)
+       private void CargarGrilla(DataTable tabla)
         {
             dataGridProveedores.DataSource = tabla;
             dataGridProveedores.Columns[0].Visible = false;
@@ -89,26 +88,27 @@ namespace ProyectoPAV.Formularios
             dataGridProveedores.Columns[5].HeaderText = "Email";
             dataGridProveedores.Columns[6].HeaderText = "Teléfono";
             dataGridProveedores.Columns[7].HeaderText = "Localidad";
+            //dataGridProveedores.Columns[7].DisplayIndex = 4;          ESTO FUNCIONA???
 
         }
 
-        private void btnEliminar_Click(object sender, EventArgs e)
+        private void BtnEliminar_Click(object sender, EventArgs e)
         {
             if (dataGridProveedores.CurrentRow != null)
             {
-                if (MessageBox.Show("Seguro que desea eliminarlo?", "Confirmar Cancelar",
+                if (MessageBox.Show("¿Seguro que desea eliminar el Proveedor?","Importante!",
                     MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
                 {
                     ProveedoresABM proveedor = new ProveedoresABM();
                     int ID = Int32.Parse(dataGridProveedores.CurrentRow.Cells[0].Value.ToString());
-                    proveedor.EliminarProveedores(ID);
-                    consulta();
+                    proveedor.EliminarProveedor(ID);
+                    Consulta();
                 }
             }
             else
             {
                 MessageBox.Show("Seleccione primero una fila de la grilla, para eliminar"
-                    , "IMPORTANTE", MessageBoxButtons.OK
+                    , "Importante!", MessageBoxButtons.OK
                     , MessageBoxIcon.Exclamation);
             }
         }

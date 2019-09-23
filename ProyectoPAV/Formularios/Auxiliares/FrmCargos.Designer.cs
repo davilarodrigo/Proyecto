@@ -43,7 +43,7 @@
             this.btnEliminar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnEliminar.BackgroundImage = global::ProyectoPAV.Properties.Resources.Delete_256x256;
             this.btnEliminar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnEliminar.Location = new System.Drawing.Point(389, 291);
+            this.btnEliminar.Location = new System.Drawing.Point(399, 310);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(50, 50);
             this.btnEliminar.TabIndex = 45;
@@ -55,7 +55,7 @@
             this.btnSalir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSalir.BackgroundImage = global::ProyectoPAV.Properties.Resources.Log_Out_256x256;
             this.btnSalir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnSalir.Location = new System.Drawing.Point(444, 291);
+            this.btnSalir.Location = new System.Drawing.Point(454, 310);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(50, 50);
             this.btnSalir.TabIndex = 44;
@@ -87,7 +87,7 @@
             this.btnAgregar.Size = new System.Drawing.Size(50, 50);
             this.btnAgregar.TabIndex = 40;
             this.btnAgregar.UseVisualStyleBackColor = true;
-            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
+            this.btnAgregar.Click += new System.EventHandler(this.BtnAgregar_Click);
             // 
             // dataGridCargos
             // 
@@ -102,7 +102,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(506, 353);
+            this.ClientSize = new System.Drawing.Size(516, 372);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.textBoxNuevoCargo);

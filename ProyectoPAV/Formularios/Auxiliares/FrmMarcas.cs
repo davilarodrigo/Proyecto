@@ -33,7 +33,7 @@ namespace ProyectoPAV.Formularios.Auxiliares
             AuxiliaresABM marcas = new AuxiliaresABM();
             DataTable tabla = new DataTable();
             tabla = marcas.ConsultarAuxiliares("Marca");
-            marcas.cargarGrillaAuxiliares(tabla, dataGridMarcas);
+            marcas.CargarGrillaAuxiliares(tabla, dataGridMarcas);
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)

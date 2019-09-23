@@ -38,14 +38,6 @@ namespace ProyectoPAV
             this.textBoxDocumento = new System.Windows.Forms.TextBox();
             this.comboTipoDocumento = new System.Windows.Forms.ComboBox();
             this.dataGridEmpleados = new System.Windows.Forms.DataGridView();
-            this.clmTipoDocumento = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clmNroDocumento = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clmApellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clmNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clmCargo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clmTelefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clmSexo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clmEmail = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblDocumento = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
             this.textBoxNombre = new System.Windows.Forms.TextBox();
@@ -87,6 +79,7 @@ namespace ProyectoPAV
             this.btnBuscar.Size = new System.Drawing.Size(48, 48);
             this.btnBuscar.TabIndex = 9;
             this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.BtnBuscar_Click);
             // 
             // lblApellido
             // 
@@ -127,68 +120,11 @@ namespace ProyectoPAV
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridEmpleados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridEmpleados.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.clmTipoDocumento,
-            this.clmNroDocumento,
-            this.clmApellido,
-            this.clmNombre,
-            this.clmCargo,
-            this.clmTelefono,
-            this.clmSexo,
-            this.clmEmail});
             this.dataGridEmpleados.Location = new System.Drawing.Point(6, 100);
             this.dataGridEmpleados.Name = "dataGridEmpleados";
             this.dataGridEmpleados.ReadOnly = true;
             this.dataGridEmpleados.Size = new System.Drawing.Size(699, 313);
             this.dataGridEmpleados.TabIndex = 5;
-            // 
-            // clmTipoDocumento
-            // 
-            this.clmTipoDocumento.HeaderText = "Tipo Documento";
-            this.clmTipoDocumento.Name = "clmTipoDocumento";
-            this.clmTipoDocumento.ReadOnly = true;
-            // 
-            // clmNroDocumento
-            // 
-            this.clmNroDocumento.HeaderText = "Numero Documento";
-            this.clmNroDocumento.Name = "clmNroDocumento";
-            this.clmNroDocumento.ReadOnly = true;
-            // 
-            // clmApellido
-            // 
-            this.clmApellido.HeaderText = "Apellido";
-            this.clmApellido.Name = "clmApellido";
-            this.clmApellido.ReadOnly = true;
-            // 
-            // clmNombre
-            // 
-            this.clmNombre.HeaderText = "Nombre";
-            this.clmNombre.Name = "clmNombre";
-            this.clmNombre.ReadOnly = true;
-            // 
-            // clmCargo
-            // 
-            this.clmCargo.HeaderText = "Cargo";
-            this.clmCargo.Name = "clmCargo";
-            this.clmCargo.ReadOnly = true;
-            // 
-            // clmTelefono
-            // 
-            this.clmTelefono.HeaderText = "Telefono";
-            this.clmTelefono.Name = "clmTelefono";
-            this.clmTelefono.ReadOnly = true;
-            // 
-            // clmSexo
-            // 
-            this.clmSexo.HeaderText = "Sexo";
-            this.clmSexo.Name = "clmSexo";
-            this.clmSexo.ReadOnly = true;
-            // 
-            // clmEmail
-            // 
-            this.clmEmail.HeaderText = "Email";
-            this.clmEmail.Name = "clmEmail";
-            this.clmEmail.ReadOnly = true;
             // 
             // lblDocumento
             // 
@@ -283,10 +219,6 @@ namespace ProyectoPAV
 
         }
 
-        private void FrmEmpleadosConsultar_Load(object sender, EventArgs e)
-        {
-            //throw new NotImplementedException();
-        }
 
         #endregion
 
@@ -307,13 +239,5 @@ namespace ProyectoPAV
         private System.Windows.Forms.DataGridViewTextBoxColumn clmFechaNaciminto;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmFechaAlta;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmFechaBaja;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clmTipoDocumento;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clmNroDocumento;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clmApellido;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clmNombre;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clmCargo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clmTelefono;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clmSexo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clmEmail;
     }
 }

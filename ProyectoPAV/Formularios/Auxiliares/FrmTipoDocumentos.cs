@@ -33,7 +33,7 @@ namespace ProyectoPAV.Formularios.Auxiliares
             AuxiliaresABM tiposdocumento = new AuxiliaresABM();
             DataTable tabla = new DataTable();
             tabla = tiposdocumento.ConsultarAuxiliares("TipoDocumento");
-            tiposdocumento.cargarGrillaAuxiliares(tabla, dataGridTipoDoc);
+            tiposdocumento.CargarGrillaAuxiliares(tabla, dataGridTipoDoc);
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)

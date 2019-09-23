@@ -8,14 +8,16 @@ using System.Windows.Forms;
 
 namespace ProyectoPAV.Clases
 {
-    class ProveedoresABM
+    class EmpleadosABM
     {
-        public DataTable ConsultarProveedoresFiltros(string razonsocial)
+        public DataTable ConsultarEmpleadosFiltros(string nombre, string apellido, string tipoDoc, int numeroDoc)
         {
             GestorTransaccionesSQL gestor = new GestorTransaccionesSQL();
-            string sql = @"SELECT P.*, L.Nombre
-                             FROM Proveedor P JOIN Localidad L ON P.IdLocalidad = L.IdLocalidad
-                            WHERE P.RazonSocial = '" + razonsocial + "'";
+            string sql = @"SELECT E.*, TD.Nombre, C.Nombre, S.Nombre
+                             FROM Empleado E JOIN TipoDocumento TD ON E.IdTipoDocumento = TD.IdTipoDocumento
+                                JOIN Cargo C ON E.IdCargo = C.IdCargo JOIN Sexo S ON E.IdSexo = S.IdSexo
+                            WHERE E.Nombre = '" + nombre + "' AND E.Apellido = '" + apellido + "' AND TD.Nombre = '" + 
+                            tipoDoc + "' AND E.NumeroDocumento = " + numeroDoc;
             DataTable dt = new DataTable();
 
             if (gestor.EjecutarConsulta(sql) ==
@@ -32,11 +34,12 @@ namespace ProyectoPAV.Clases
             return dt;
         }
 
-        public DataTable ConsultarProveedores()
+        public DataTable ConsultarEmpleados()
         {
             GestorTransaccionesSQL gestor = new GestorTransaccionesSQL();
-            string sql = @"SELECT P.*, L.Nombre
-                             FROM Proveedor P JOIN Localidad L ON P.IdLocalidad = L.IdLocalidad";
+            string sql = @"SELECT E.*, TD.Nombre, C.Nombre, S.Nombre
+                             FROM Empleado E JOIN TipoDocumento TD ON E.IdTipoDocumento = TD.IdTipoDocumento
+                                JOIN Cargo C ON E.IdCargo = C.IdCargo JOIN Sexo S ON E.IdSexo = S.IdSexo";
             DataTable dt = new DataTable();
 
             if (gestor.EjecutarConsulta(sql) ==
@@ -53,15 +56,17 @@ namespace ProyectoPAV.Clases
             return dt;
         }
 
-        public void InsertarProveedor(string razonSocial, string calle, int numeroCalle, int idLocalidad, string email, int telefono)
+        public void InsertarEmpleado(int idTipoDoc, int numeroDoc, string apellido, string nombre, 
+                                    int idSexo, DateTime fechaNacimiento, string email, int telefono, 
+                                    int idCargo)
         {
             string sql_insert = "";
-            sql_insert = @"INSERT INTO Proveedor VALUES ('" + razonSocial + "'," +
-                                                        " '" + calle + "'," +
-                                                        " " + numeroCalle + "," +
-                                                        " " + idLocalidad + "," +
-                                                        " '" + email + "'," +
-                                                        " " + telefono + ")";
+            DateTime fechaAlta = DateTime.Now;
+            sql_insert = @"INSERT INTO Empleado VALUES (" + idTipoDoc + "," + " " + numeroDoc + "," +
+                                                        " '" + apellido + "'," + " '" + nombre + "'," +
+                                                        " " + idSexo + "," + " " + fechaNacimiento + "," +
+                                                        " '" + email + "'," + " " + telefono + "," +
+                                                        " " + idCargo + ", "+ fechaAlta + ", NULL)";
             GestorTransaccionesSQL gestor = new GestorTransaccionesSQL();
             if (gestor.Insertar(sql_insert) ==
                 GestorTransaccionesSQL.ResultadoTransaccion.correcto)
@@ -75,10 +80,10 @@ namespace ProyectoPAV.Clases
             }
         }
 
-        public void EliminarProveedor(int IdProveedor)
+        public void EliminarEmpleado(int IdEmpleado)
         {
             string sql_delete = "";
-            sql_delete = @"DELETE FROM Proveedor WHERE IdProveedor = " + IdProveedor;
+            sql_delete = @"DELETE FROM Empleado WHERE IdEmpleado = " + IdEmpleado;
             GestorTransaccionesSQL gestor = new GestorTransaccionesSQL();
             if (gestor.Eliminar(sql_delete) ==
                 GestorTransaccionesSQL.ResultadoTransaccion.correcto)
@@ -95,7 +100,7 @@ namespace ProyectoPAV.Clases
         public DataTable RecuperarDatos(string id)
         {
             GestorTransaccionesSQL gestor = new GestorTransaccionesSQL();
-            string sql = "SELECT * FROM Proveedor WHERE IdProveedor = " + id;
+            string sql = "SELECT * FROM Empleado WHERE IdEmpleado = " + id;
             DataTable dt = new DataTable();
 
             if (gestor.EjecutarConsulta(sql) ==
@@ -115,16 +120,21 @@ namespace ProyectoPAV.Clases
 
         }
 
-        public void ModificarProveedor(int idProveedor,  string razonSocial, string calle, int numeroCalle, int idLocalidad, string email, int telefono)
+        public void ModificarEmpleado(int idEmpleado,int idTipoDoc, int numeroDoc, string apellido, string nombre,
+                                    int idSexo, DateTime fechaNacimiento, string email, int telefono,
+                                    int idCargo)
         {
             string sql_modificar = "";
-            sql_modificar = @"UPDATE Proveedor SET RazonSocial = '" + razonSocial + "'," +
-                                                        "Calle = '" + calle + "'," +
-                                                        "NumeroCalle = " + numeroCalle + "," +
-                                                        "IdLocalidad = " + idLocalidad + "," +
+            sql_modificar = @"UPDATE Proveedor SET IdTipoDocumento = " + idTipoDoc + "," +
+                                                        "NumeroDocumento = " + numeroDoc + "," +
+                                                        "Apellido = '" + apellido + "'," +
+                                                        "Nombre = '" + nombre + "'," +
+                                                        "IdSexo = " + idSexo + "," +
+                                                        "FechaNacimiento = " + fechaNacimiento +
                                                         "Email = '" + email + "'," +
                                                         "Telefono = " + telefono +
-                                                        " WHERE IdProveedor = " + idProveedor;
+                                                        "IdCargo = " + idCargo +
+                                                        " WHERE IdEmpleado = " + idEmpleado;
             GestorTransaccionesSQL gestor = new GestorTransaccionesSQL();
             if (gestor.Insertar(sql_modificar) ==
                 GestorTransaccionesSQL.ResultadoTransaccion.correcto)

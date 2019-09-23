@@ -33,7 +33,7 @@ namespace ProyectoPAV.Formularios.Auxiliares
             AuxiliaresABM categorias = new AuxiliaresABM();
             DataTable tabla = new DataTable();
             tabla = categorias.ConsultarAuxiliares("Categoria");
-            categorias.cargarGrillaAuxiliares(tabla, dataGridCategorias);
+            categorias.CargarGrillaAuxiliares(tabla, dataGridCategorias);
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
@@ -41,8 +41,8 @@ namespace ProyectoPAV.Formularios.Auxiliares
             if (this.textBoxNuevaCategoria.Text == "")
             {
                 MessageBox.Show("No cargó datos"
-                    , "IMPORTANTE"
-                    , MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                    , "Importante!"
+                    , MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 textBoxNuevaCategoria.Focus();
                 return;
             }
@@ -59,7 +59,7 @@ namespace ProyectoPAV.Formularios.Auxiliares
         {
             if (dataGridCategorias.CurrentRow != null)
             {
-                if (MessageBox.Show("Seguro que desea eliminarlo?", "Confirmar Cancelar",
+                if (MessageBox.Show("Seguro que desea eliminarlo?", "Importante!",
                     MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
                 {
                     AuxiliaresABM categoria = new AuxiliaresABM();
@@ -70,8 +70,8 @@ namespace ProyectoPAV.Formularios.Auxiliares
             }
             else
             {
-                MessageBox.Show("Seleccione primero una fila de la grilla, para eliminar"
-                    , "IMPORTANTE", MessageBoxButtons.OK
+                MessageBox.Show("Para eliminar primero seleccione una fila de la grilla"
+                    , "Importante!", MessageBoxButtons.OK
                     , MessageBoxIcon.Exclamation);
             }
         }

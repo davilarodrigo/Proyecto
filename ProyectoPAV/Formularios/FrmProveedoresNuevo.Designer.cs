@@ -68,7 +68,7 @@
             this.btnAceptar.Size = new System.Drawing.Size(50, 50);
             this.btnAceptar.TabIndex = 44;
             this.btnAceptar.UseVisualStyleBackColor = true;
-            this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
+            this.btnAceptar.Click += new System.EventHandler(this.BtnAceptar_Click);
             // 
             // lblNumeroCalle
             // 

@@ -101,7 +101,7 @@
             this.btnGuardar.Size = new System.Drawing.Size(50, 50);
             this.btnGuardar.TabIndex = 58;
             this.btnGuardar.UseVisualStyleBackColor = true;
-            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
+            this.btnGuardar.Click += new System.EventHandler(this.BtnGuardar_Click);
             // 
             // lblNumeroCalle
             // 

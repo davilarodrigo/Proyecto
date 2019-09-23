@@ -52,7 +52,7 @@ namespace ProyectoPAV.Formularios.Auxiliares
             AuxiliaresABM localidades = new AuxiliaresABM();
             DataTable tabla = new DataTable();
             tabla = localidades.ConsultarAuxiliares("Localidad");
-            localidades.cargarGrillaAuxiliares(tabla, dataGridLocalidades);
+            localidades.CargarGrillaAuxiliares(tabla, dataGridLocalidades);
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)

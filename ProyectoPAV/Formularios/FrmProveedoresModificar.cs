@@ -24,7 +24,7 @@ namespace ProyectoPAV.Formularios
 
         private void FrmProveedoresModificar_Load(object sender, EventArgs e)
         {
-            recuperar_datos(IdProveedor);
+            RecuperarDatos(IdProveedor);
         }
 
         private void BtnSalir_Click(object sender, EventArgs e)
@@ -34,14 +34,14 @@ namespace ProyectoPAV.Formularios
 
         private void BtnNuevaLocalidad_Click(object sender, EventArgs e)
         {
-            FrmLocalidades _localidades = new FrmLocalidades();
-            _localidades.ShowDialog();
+            FrmLocalidades localidades = new FrmLocalidades();
+            localidades.ShowDialog();
         }
 
-        private void recuperar_datos(string id_usuario)
+        private void RecuperarDatos(string id_usuario)
         {
             DataTable tabla = new DataTable();
-            tabla = proveedor.recuperarDatos(id_usuario);
+            tabla = proveedor.RecuperarDatos(id_usuario);
             this.textBoxRazonSocial.Text = tabla.Rows[0]["RazonSocial"].ToString();
             this.textBoxCalle.Text = tabla.Rows[0]["Calle"].ToString();
             this.textBoxNumeroCalle.Text = tabla.Rows[0]["NumeroCalle"].ToString();
@@ -52,10 +52,10 @@ namespace ProyectoPAV.Formularios
             
         }
 
-        private void btnGuardar_Click(object sender, EventArgs e)
+        private void BtnGuardar_Click(object sender, EventArgs e)
         {
             ProveedoresABM proveedor = new ProveedoresABM();
-            proveedor.ModificarProveedor(this.IdProveedor
+            proveedor.ModificarProveedor(Int32.Parse(this.IdProveedor)
                             , this.textBoxRazonSocial.Text
                             , this.textBoxCalle.Text
                             , Int32.Parse(this.textBoxNumeroCalle.Text)
