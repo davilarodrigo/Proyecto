@@ -38,7 +38,7 @@
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // btnSalir
+            // BtnSalir
             // 
             this.BtnSalir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.BtnSalir.BackgroundImage = global::ProyectoPAV.Properties.Resources.Log_Out_256x256;
@@ -46,10 +46,10 @@
             this.BtnSalir.Location = new System.Drawing.Point(566, 372);
             this.BtnSalir.Name = "BtnSalir";
             this.BtnSalir.Size = new System.Drawing.Size(50, 50);
-            this.BtnSalir.TabIndex = 45;
+            this.BtnSalir.TabIndex = 1;
             this.BtnSalir.UseVisualStyleBackColor = true;
             // 
-            // btnAceptar
+            // BtnAceptar
             // 
             this.BtnAceptar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.BtnAceptar.BackgroundImage = global::ProyectoPAV.Properties.Resources.Check_256x256;
@@ -57,7 +57,7 @@
             this.BtnAceptar.Location = new System.Drawing.Point(510, 372);
             this.BtnAceptar.Name = "BtnAceptar";
             this.BtnAceptar.Size = new System.Drawing.Size(50, 50);
-            this.BtnAceptar.TabIndex = 44;
+            this.BtnAceptar.TabIndex = 0;
             this.BtnAceptar.UseVisualStyleBackColor = true;
             // 
             // LblNacimiento
@@ -75,7 +75,7 @@
             this.ComboTipoDoc.Location = new System.Drawing.Point(78, 34);
             this.ComboTipoDoc.Name = "ComboTipoDoc";
             this.ComboTipoDoc.Size = new System.Drawing.Size(206, 21);
-            this.ComboTipoDoc.TabIndex = 30;
+            this.ComboTipoDoc.TabIndex = 0;
             // 
             // LblDocumento
             // 
@@ -91,7 +91,7 @@
             this.dateTimePicker1.Location = new System.Drawing.Point(78, 61);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(206, 20);
-            this.dateTimePicker1.TabIndex = 46;
+            this.dateTimePicker1.TabIndex = 1;
             // 
             // groupBox1
             // 

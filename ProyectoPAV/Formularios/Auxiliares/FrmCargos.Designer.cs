@@ -46,7 +46,7 @@
             this.btnEliminar.Location = new System.Drawing.Point(489, 318);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(50, 50);
-            this.btnEliminar.TabIndex = 45;
+            this.btnEliminar.TabIndex = 2;
             this.btnEliminar.UseVisualStyleBackColor = true;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
@@ -58,7 +58,7 @@
             this.btnSalir.Location = new System.Drawing.Point(544, 318);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(50, 50);
-            this.btnSalir.TabIndex = 44;
+            this.btnSalir.TabIndex = 3;
             this.btnSalir.UseVisualStyleBackColor = true;
             this.btnSalir.Click += new System.EventHandler(this.BtnSalir_Click);
             // 
@@ -67,7 +67,7 @@
             this.textBoxNuevoCargo.Location = new System.Drawing.Point(114, 25);
             this.textBoxNuevoCargo.Name = "textBoxNuevoCargo";
             this.textBoxNuevoCargo.Size = new System.Drawing.Size(164, 20);
-            this.textBoxNuevoCargo.TabIndex = 42;
+            this.textBoxNuevoCargo.TabIndex = 0;
             // 
             // lblNuevoCargo
             // 
@@ -85,7 +85,7 @@
             this.btnAgregar.Location = new System.Drawing.Point(284, 9);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(50, 50);
-            this.btnAgregar.TabIndex = 40;
+            this.btnAgregar.TabIndex = 1;
             this.btnAgregar.UseVisualStyleBackColor = true;
             this.btnAgregar.Click += new System.EventHandler(this.BtnAgregar_Click);
             // 
