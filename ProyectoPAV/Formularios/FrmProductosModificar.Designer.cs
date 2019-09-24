@@ -61,6 +61,7 @@
             this.textBoxTalle.Name = "textBoxTalle";
             this.textBoxTalle.Size = new System.Drawing.Size(85, 20);
             this.textBoxTalle.TabIndex = 4;
+            this.textBoxTalle.Tag = "Talle";
             // 
             // comboCategoria
             // 
@@ -69,6 +70,7 @@
             this.comboCategoria.Name = "comboCategoria";
             this.comboCategoria.Size = new System.Drawing.Size(206, 21);
             this.comboCategoria.TabIndex = 3;
+            this.comboCategoria.Tag = "Categoria";
             // 
             // textBoxNombre
             // 
@@ -76,6 +78,7 @@
             this.textBoxNombre.Name = "textBoxNombre";
             this.textBoxNombre.Size = new System.Drawing.Size(206, 20);
             this.textBoxNombre.TabIndex = 1;
+            this.textBoxNombre.Tag = "Nombre";
             // 
             // lblCategoria
             // 
@@ -102,6 +105,7 @@
             this.comboMarca.Name = "comboMarca";
             this.comboMarca.Size = new System.Drawing.Size(206, 21);
             this.comboMarca.TabIndex = 2;
+            this.comboMarca.Tag = "Marca";
             // 
             // lblMarca
             // 
@@ -156,6 +160,7 @@
             this.textBoxCodigo.Name = "textBoxCodigo";
             this.textBoxCodigo.Size = new System.Drawing.Size(206, 20);
             this.textBoxCodigo.TabIndex = 0;
+            this.textBoxCodigo.Tag = "Codigo";
             // 
             // lblCodigoProducto
             // 
@@ -181,6 +186,7 @@
             this.textBoxCantidad.Name = "textBoxCantidad";
             this.textBoxCantidad.Size = new System.Drawing.Size(85, 20);
             this.textBoxCantidad.TabIndex = 5;
+            this.textBoxCantidad.Tag = "Cantidad";
             // 
             // FrmProductosModificar
             // 

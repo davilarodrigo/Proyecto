@@ -91,33 +91,41 @@ namespace ProyectoPAV.Formularios
 
         private void BtnGardar_Click(object sender, EventArgs e)
         {
-
+            ControlDatos control = new ControlDatos();
+            DateTime fechaElegida = Convert.ToDateTime(dateTimePickerNacimiento.Value);
             EmpleadosABM empleado = new EmpleadosABM();
 
-            int ValorRadioButton;
-            if (radioHombre.Checked)
+            if (control.validarIngresoTextBox(textBoxApellido) && control.validarIngresoTextBox(textBoxNombre)
+                && control.validarIngresoTextBox(textBoxDocumento) && control.validarIngresoTextBox(textBoxEmail)
+                && control.validarIngresoTextBox(textBoxTelefono) && control.validarIngresoComboBox(comboCargo)
+                && control.validarIngresoComboBox(comboTipoDoc) && control.validarIngresoRadioButton(radioMujer, radioHombre)
+                && control.validarIngresoFecha(fechaElegida))
             {
-                ValorRadioButton = 1;
+              
+                int ValorRadioButton;
+                if (radioHombre.Checked)
+                {
+                    ValorRadioButton = 1;
 
+                }
+                else
+                {
+                    ValorRadioButton = 2;
+                }
+                DateTime fecha_Elegida = Convert.ToDateTime(dateTimePickerNacimiento.Value);
+                empleado.ModificarEmpleado(Int32.Parse(this.IdEmpleado)
+                                , Int32.Parse(this.comboTipoDoc.SelectedValue.ToString())
+                                , Int32.Parse(this.textBoxDocumento.Text)
+                                , this.textBoxApellido.Text
+                                , this.textBoxNombre.Text
+                                , ValorRadioButton
+                                , fecha_Elegida.ToString("MM-dd-yyyy")
+                                , this.textBoxEmail.Text
+                                , Int32.Parse(this.textBoxTelefono.Text)
+                                , Int32.Parse(this.comboCargo.SelectedValue.ToString()));
+                MessageBox.Show(empleado.mensajeRetorno, "Importante!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.Dispose();
             }
-            else
-            {
-                ValorRadioButton = 2;
-            }
-            DateTime fecha_Elegida = Convert.ToDateTime(dateTimePickerNacimiento.Value);
-            empleado.ModificarEmpleado(Int32.Parse(this.IdEmpleado)
-                            , Int32.Parse(this.comboTipoDoc.SelectedValue.ToString())
-                            , Int32.Parse(this.textBoxDocumento.Text)
-                            , this.textBoxApellido.Text
-                            , this.textBoxNombre.Text
-                            , ValorRadioButton
-                            , fecha_Elegida.ToString("MM-dd-yyyy")
-                            , this.textBoxEmail.Text
-                            , Int32.Parse(this.textBoxTelefono.Text)
-                            , Int32.Parse(this.comboCargo.SelectedValue.ToString()));
-            MessageBox.Show(empleado.mensajeRetorno, "Importante!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            this.Dispose();
-            
         }
     }
 }

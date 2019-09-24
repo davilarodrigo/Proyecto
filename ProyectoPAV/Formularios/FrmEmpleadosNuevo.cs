@@ -42,29 +42,35 @@ namespace ProyectoPAV.Formularios
 
         private void BtnAceptar_Click(object sender, EventArgs e)
         {
-
-            int ValorRadioButton;
-            string cadenaResultado;
-            if (RadioHombre.Checked)
-            {
-                ValorRadioButton = 1;
-
-            }
-            else
-            {
-                ValorRadioButton = 2;
-            }
-
-            DateTime fecha_Elegida = Convert.ToDateTime(dateTimePickerNacimiento.Value);
-            //nacimiento = dateTimePickerNacimiento.Value.ToShortDateString();
-
+            ControlDatos control = new ControlDatos();
+            DateTime fechaElegida = Convert.ToDateTime(dateTimePickerNacimiento.Value);
             EmpleadosABM empleados = new EmpleadosABM();
-            cadenaResultado = empleados.InsertarEmpleado(Int32.Parse(this.comboTipoDoc.SelectedValue.ToString())
-                            , Int32.Parse(this.TextBoxDocumento.Text), this.TextBoxApellido.Text, this.TextBoxNombre.Text
-                            , ValorRadioButton, fecha_Elegida.ToString("MM-dd-yyyy"), this.TextBoxEmail.Text
-                            , Int32.Parse(this.TextBoxTelefono.Text), Int32.Parse(comboCargo.SelectedValue.ToString())).ToString();
-            MessageBox.Show(empleados.mensajeRetorno, "Importante!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            this.Dispose();
+
+            if (control.validarIngresoTextBox(TextBoxApellido) && control.validarIngresoTextBox(TextBoxNombre)
+                && control.validarIngresoTextBox(TextBoxDocumento) && control.validarIngresoTextBox(TextBoxEmail)
+                && control.validarIngresoTextBox(TextBoxTelefono) &&  control.validarIngresoComboBox(comboCargo)
+                && control.validarIngresoComboBox(comboTipoDoc) && control.validarIngresoRadioButton(RadioMujer, RadioHombre)
+                && control.validarIngresoFecha(fechaElegida))
+            {
+                int ValorRadioButton;
+                string cadenaResultado;
+                if (RadioHombre.Checked)
+                {
+                    ValorRadioButton = 1;
+
+                }
+                else
+                {
+                    ValorRadioButton = 2;
+                }
+
+                cadenaResultado = empleados.InsertarEmpleado(Int32.Parse(this.comboTipoDoc.SelectedValue.ToString())
+                                , Int32.Parse(this.TextBoxDocumento.Text), this.TextBoxApellido.Text, this.TextBoxNombre.Text
+                                , ValorRadioButton, fechaElegida.ToString("MM-dd-yyyy"), this.TextBoxEmail.Text
+                                , Int32.Parse(this.TextBoxTelefono.Text), Int32.Parse(comboCargo.SelectedValue.ToString())).ToString();
+                MessageBox.Show(empleados.mensajeRetorno, "Importante!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.Dispose();
+            }
         }
 
         private void FrmEmpleadosNuevo_Load(object sender, EventArgs e)

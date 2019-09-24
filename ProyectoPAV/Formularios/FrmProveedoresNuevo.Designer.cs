@@ -104,6 +104,7 @@
             this.textBoxNumeroCalle.Name = "textBoxNumeroCalle";
             this.textBoxNumeroCalle.Size = new System.Drawing.Size(85, 20);
             this.textBoxNumeroCalle.TabIndex = 4;
+            this.textBoxNumeroCalle.Tag = "Numero de Calle";
             // 
             // textBoxCalle
             // 
@@ -111,6 +112,7 @@
             this.textBoxCalle.Name = "textBoxCalle";
             this.textBoxCalle.Size = new System.Drawing.Size(206, 20);
             this.textBoxCalle.TabIndex = 3;
+            this.textBoxCalle.Tag = "Calle";
             // 
             // textBoxTelefono
             // 
@@ -118,6 +120,7 @@
             this.textBoxTelefono.Name = "textBoxTelefono";
             this.textBoxTelefono.Size = new System.Drawing.Size(155, 20);
             this.textBoxTelefono.TabIndex = 2;
+            this.textBoxTelefono.Tag = "Telefono";
             // 
             // lblEmail
             // 
@@ -134,6 +137,7 @@
             this.textBoxEmail.Name = "textBoxEmail";
             this.textBoxEmail.Size = new System.Drawing.Size(206, 20);
             this.textBoxEmail.TabIndex = 1;
+            this.textBoxEmail.Tag = "Email";
             // 
             // lblLocalidad
             // 
@@ -151,6 +155,7 @@
             this.comboLocalidad.Name = "comboLocalidad";
             this.comboLocalidad.Size = new System.Drawing.Size(206, 21);
             this.comboLocalidad.TabIndex = 5;
+            this.comboLocalidad.Tag = "Localidad";
             // 
             // lblRazonSocial
             // 
@@ -167,6 +172,7 @@
             this.textBoxRazonSocial.Name = "textBoxRazonSocial";
             this.textBoxRazonSocial.Size = new System.Drawing.Size(206, 20);
             this.textBoxRazonSocial.TabIndex = 0;
+            this.textBoxRazonSocial.Tag = "Razon Social";
             // 
             // btnNuevaLocalidad
             // 

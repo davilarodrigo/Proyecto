@@ -89,6 +89,7 @@
             this.textBoxNumeroCalle.Name = "textBoxNumeroCalle";
             this.textBoxNumeroCalle.Size = new System.Drawing.Size(85, 20);
             this.textBoxNumeroCalle.TabIndex = 10;
+            this.textBoxNumeroCalle.Tag = "Numero";
             // 
             // textBoxCalle
             // 
@@ -96,6 +97,7 @@
             this.textBoxCalle.Name = "textBoxCalle";
             this.textBoxCalle.Size = new System.Drawing.Size(206, 20);
             this.textBoxCalle.TabIndex = 9;
+            this.textBoxCalle.Tag = "Calle";
             // 
             // textBoxTelefono
             // 
@@ -103,6 +105,7 @@
             this.textBoxTelefono.Name = "textBoxTelefono";
             this.textBoxTelefono.Size = new System.Drawing.Size(155, 20);
             this.textBoxTelefono.TabIndex = 8;
+            this.textBoxTelefono.Tag = "Telefono";
             // 
             // lblEmail
             // 
@@ -139,6 +142,7 @@
             this.radioMujer.Size = new System.Drawing.Size(51, 17);
             this.radioMujer.TabIndex = 5;
             this.radioMujer.TabStop = true;
+            this.radioMujer.Tag = "Sexo";
             this.radioMujer.Text = "Mujer";
             this.radioMujer.UseVisualStyleBackColor = true;
             // 
@@ -150,6 +154,7 @@
             this.radioHombre.Size = new System.Drawing.Size(62, 17);
             this.radioHombre.TabIndex = 4;
             this.radioHombre.TabStop = true;
+            this.radioHombre.Tag = "Sexo";
             this.radioHombre.Text = "Hombre";
             this.radioHombre.UseVisualStyleBackColor = true;
             // 
@@ -159,6 +164,7 @@
             this.textBoxEmail.Name = "textBoxEmail";
             this.textBoxEmail.Size = new System.Drawing.Size(206, 20);
             this.textBoxEmail.TabIndex = 7;
+            this.textBoxEmail.Tag = "Email";
             // 
             // textBoxDocumento
             // 
@@ -166,6 +172,7 @@
             this.textBoxDocumento.Name = "textBoxDocumento";
             this.textBoxDocumento.Size = new System.Drawing.Size(206, 20);
             this.textBoxDocumento.TabIndex = 3;
+            this.textBoxDocumento.Tag = "Numero Documento";
             // 
             // comboTipoDoc
             // 
@@ -174,6 +181,7 @@
             this.comboTipoDoc.Name = "comboTipoDoc";
             this.comboTipoDoc.Size = new System.Drawing.Size(206, 21);
             this.comboTipoDoc.TabIndex = 2;
+            this.comboTipoDoc.Tag = "Tipo Documento";
             // 
             // textBoxNombre
             // 
@@ -181,6 +189,7 @@
             this.textBoxNombre.Name = "textBoxNombre";
             this.textBoxNombre.Size = new System.Drawing.Size(206, 20);
             this.textBoxNombre.TabIndex = 1;
+            this.textBoxNombre.Tag = "Nombre";
             // 
             // textBoxApellido
             // 
@@ -188,6 +197,7 @@
             this.textBoxApellido.Name = "textBoxApellido";
             this.textBoxApellido.Size = new System.Drawing.Size(206, 20);
             this.textBoxApellido.TabIndex = 0;
+            this.textBoxApellido.Tag = "Apellido";
             // 
             // lblDocumento
             // 
@@ -238,6 +248,7 @@
             this.btnGuardar.Size = new System.Drawing.Size(50, 50);
             this.btnGuardar.TabIndex = 12;
             this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.BtnGuardar_Click);
             // 
             // lblLocalidad
             // 
@@ -255,6 +266,7 @@
             this.comboLocalidad.Name = "comboLocalidad";
             this.comboLocalidad.Size = new System.Drawing.Size(206, 21);
             this.comboLocalidad.TabIndex = 11;
+            this.comboLocalidad.Tag = "Localidad";
             // 
             // btnNuevaLocalidad
             // 
@@ -312,6 +324,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmClientesModificar";
             this.Text = "Modificar Cliente";
+            this.Load += new System.EventHandler(this.FrmClientesModificar_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

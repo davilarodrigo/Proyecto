@@ -83,16 +83,25 @@ namespace ProyectoPAV.Formularios
 
         private void BtnGuardar_Click(object sender, EventArgs e)
         {
+            ControlDatos control = new ControlDatos();
             ProductosABM producto = new ProductosABM();
-            producto.ModificarProducto(Int32.Parse(this.IdProducto)
-                            , this.textBoxCodigo.Text
-                            , Int32.Parse(this.textBoxTalle.Text.ToString())
-                            , this.textBoxNombre.Text
-                            , Int32.Parse(this.comboMarca.SelectedValue.ToString())
-                            , Int32.Parse(this.comboCategoria.SelectedValue.ToString())
-                            , Int32.Parse(this.textBoxCantidad.Text));
-            MessageBox.Show(producto.mensajeRetorno, "Importante!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            this.Dispose();
+
+            if (control.validarIngresoTextBox(textBoxCodigo) && control.validarIngresoTextBox(textBoxNombre)
+                && control.validarIngresoTextBox(textBoxCantidad) && control.validarIngresoTextBox(textBoxTalle)
+                && control.validarIngresoComboBox(comboMarca) && control.validarIngresoComboBox(comboCategoria))
+            {
+
+               
+                producto.ModificarProducto(Int32.Parse(this.IdProducto)
+                                , this.textBoxCodigo.Text
+                                , Int32.Parse(this.textBoxTalle.Text.ToString())
+                                , this.textBoxNombre.Text
+                                , Int32.Parse(this.comboMarca.SelectedValue.ToString())
+                                , Int32.Parse(this.comboCategoria.SelectedValue.ToString())
+                                , Int32.Parse(this.textBoxCantidad.Text));
+                MessageBox.Show(producto.mensajeRetorno, "Importante!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.Dispose();
+            }
         }
     }
 }

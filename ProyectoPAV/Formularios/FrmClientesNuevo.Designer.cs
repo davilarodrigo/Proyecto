@@ -90,6 +90,8 @@
             this.textBoxApellido.Name = "textBoxApellido";
             this.textBoxApellido.Size = new System.Drawing.Size(206, 20);
             this.textBoxApellido.TabIndex = 0;
+            this.textBoxApellido.Tag = "Apellido";
+            this.textBoxApellido.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxApellido_KeyPress);
             // 
             // textBoxNombre
             // 
@@ -97,6 +99,8 @@
             this.textBoxNombre.Name = "textBoxNombre";
             this.textBoxNombre.Size = new System.Drawing.Size(206, 20);
             this.textBoxNombre.TabIndex = 1;
+            this.textBoxNombre.Tag = "Nombre";
+            this.textBoxNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxNombre_KeyPress);
             // 
             // comboTipoDoc
             // 
@@ -105,6 +109,7 @@
             this.comboTipoDoc.Name = "comboTipoDoc";
             this.comboTipoDoc.Size = new System.Drawing.Size(206, 21);
             this.comboTipoDoc.TabIndex = 2;
+            this.comboTipoDoc.Tag = "Tipo de Documento";
             // 
             // textBoxDocumento
             // 
@@ -112,6 +117,8 @@
             this.textBoxDocumento.Name = "textBoxDocumento";
             this.textBoxDocumento.Size = new System.Drawing.Size(206, 20);
             this.textBoxDocumento.TabIndex = 3;
+            this.textBoxDocumento.Tag = "Numero de Documento";
+            this.textBoxDocumento.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxDocumento_KeyPress);
             // 
             // textBoxEmail
             // 
@@ -119,6 +126,7 @@
             this.textBoxEmail.Name = "textBoxEmail";
             this.textBoxEmail.Size = new System.Drawing.Size(206, 20);
             this.textBoxEmail.TabIndex = 7;
+            this.textBoxEmail.Tag = "Email";
             // 
             // radioHombre
             // 
@@ -128,6 +136,7 @@
             this.radioHombre.Size = new System.Drawing.Size(62, 17);
             this.radioHombre.TabIndex = 4;
             this.radioHombre.TabStop = true;
+            this.radioHombre.Tag = "Sexo";
             this.radioHombre.Text = "Hombre";
             this.radioHombre.UseVisualStyleBackColor = true;
             // 
@@ -139,6 +148,7 @@
             this.radioMujer.Size = new System.Drawing.Size(51, 17);
             this.radioMujer.TabIndex = 5;
             this.radioMujer.TabStop = true;
+            this.radioMujer.Tag = "Sexo";
             this.radioMujer.Text = "Mujer";
             this.radioMujer.UseVisualStyleBackColor = true;
             // 
@@ -175,6 +185,8 @@
             this.textBoxTelefono.Name = "textBoxTelefono";
             this.textBoxTelefono.Size = new System.Drawing.Size(155, 20);
             this.textBoxTelefono.TabIndex = 8;
+            this.textBoxTelefono.Tag = "Telefono";
+            this.textBoxTelefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxTelefono_KeyPress);
             // 
             // textBoxCalle
             // 
@@ -182,6 +194,8 @@
             this.textBoxCalle.Name = "textBoxCalle";
             this.textBoxCalle.Size = new System.Drawing.Size(206, 20);
             this.textBoxCalle.TabIndex = 9;
+            this.textBoxCalle.Tag = "Calle";
+            this.textBoxCalle.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxCalle_KeyPress);
             // 
             // textBoxNumeroCalle
             // 
@@ -189,6 +203,8 @@
             this.textBoxNumeroCalle.Name = "textBoxNumeroCalle";
             this.textBoxNumeroCalle.Size = new System.Drawing.Size(85, 20);
             this.textBoxNumeroCalle.TabIndex = 10;
+            this.textBoxNumeroCalle.Tag = "Número de Calle";
+            this.textBoxNumeroCalle.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxNumeroCalle_KeyPress);
             // 
             // lblTelefono
             // 
@@ -239,6 +255,7 @@
             this.btnAceptar.Size = new System.Drawing.Size(50, 50);
             this.btnAceptar.TabIndex = 12;
             this.btnAceptar.UseVisualStyleBackColor = true;
+            this.btnAceptar.Click += new System.EventHandler(this.BtnAceptar_Click);
             // 
             // comboLocalidad
             // 
@@ -247,6 +264,7 @@
             this.comboLocalidad.Name = "comboLocalidad";
             this.comboLocalidad.Size = new System.Drawing.Size(197, 21);
             this.comboLocalidad.TabIndex = 11;
+            this.comboLocalidad.Tag = "Localidad";
             // 
             // lblLocalidad
             // 
@@ -281,7 +299,7 @@
             this.btnRecargar.Size = new System.Drawing.Size(40, 40);
             this.btnRecargar.TabIndex = 15;
             this.btnRecargar.UseVisualStyleBackColor = true;
-            this.btnRecargar.Click += new System.EventHandler(this.btnRecargar_Click);
+            this.btnRecargar.Click += new System.EventHandler(this.BtnRecargar_Click);
             // 
             // dateTimePickerNacimiento
             // 
@@ -291,6 +309,7 @@
             this.dateTimePickerNacimiento.Name = "dateTimePickerNacimiento";
             this.dateTimePickerNacimiento.Size = new System.Drawing.Size(200, 20);
             this.dateTimePickerNacimiento.TabIndex = 6;
+            this.dateTimePickerNacimiento.Tag = "Fecha Nacimiento";
             // 
             // FrmClientesNuevo
             // 
@@ -326,6 +345,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmClientesNuevo";
             this.Text = "Nuevo Cliente";
+            this.Load += new System.EventHandler(this.FrmClientesNuevo_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

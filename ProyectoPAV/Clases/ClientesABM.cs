@@ -68,7 +68,7 @@ namespace ProyectoPAV.Clases
             GestorTransaccionesSQL gestor = new GestorTransaccionesSQL();
             ResultadoClientes resultado = new ResultadoClientes();
             string sql = @"SELECT C.*, TD.Nombre, L.Nombre, S.Nombre
-                           FROM Cliente C JOIN TipoDocumento TD ON E.IdTipoDocumento = TD.IdTipoDocumento
+                           FROM Cliente C JOIN TipoDocumento TD ON C.IdTipoDocumento = TD.IdTipoDocumento
                            JOIN Localidad L ON C.IdLocalidad = L.IdLocalidad JOIN Sexo S ON C.IdSexo = S.IdSexo";
 
             if (gestor.EjecutarConsulta(sql) ==

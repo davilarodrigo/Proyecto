@@ -128,7 +128,6 @@ namespace ProyectoPAV
         private void FrmEmpleadosConsultar_Load(object sender, EventArgs e)
         {
             this.MinimumSize = new Size(600, 400);
-            this.Consulta();
 
             CargadorCombos cargador = new CargadorCombos();
             DataTable tablaTipoDocumento = new DataTable();
@@ -139,6 +138,7 @@ namespace ProyectoPAV
             comboTipoDocumento.DisplayMember = "Nombre";
             comboTipoDocumento.ValueMember = "IdTipoDocumento";
             comboTipoDocumento.SelectedIndex = -1;
+            this.Consulta();
 
         }
 

@@ -65,13 +65,21 @@ namespace ProyectoPAV.Formularios
 
         private void BtnAceptar_Click(object sender, EventArgs e)
         {
-            string cadenaResultado;
+            ControlDatos control = new ControlDatos();
             ProductosABM productos = new ProductosABM();
-            cadenaResultado = productos.InsertarProducto(this.textBoxCodigo.Text, Int32.Parse(this.textBoxTalle.Text), 
-                this.textBoxNombre.Text, Int32.Parse(this.comboMarca.SelectedValue.ToString()), 
-                Int32.Parse(this.comboCategoria.SelectedValue.ToString()), Int32.Parse(this.textBoxCantidad.Text)).ToString();
-            MessageBox.Show(productos.mensajeRetorno, "Importante!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            this.Dispose();
+
+            if (control.validarIngresoTextBox(textBoxCodigo) && control.validarIngresoTextBox(textBoxNombre)
+                && control.validarIngresoTextBox(textBoxCantidad) && control.validarIngresoTextBox(textBoxTalle)
+                && control.validarIngresoComboBox(comboMarca)&& control.validarIngresoComboBox(comboCategoria))
+            {
+                string cadenaResultado;
+            
+                cadenaResultado = productos.InsertarProducto(this.textBoxCodigo.Text, Int32.Parse(this.textBoxTalle.Text), 
+                    this.textBoxNombre.Text, Int32.Parse(this.comboMarca.SelectedValue.ToString()), 
+                    Int32.Parse(this.comboCategoria.SelectedValue.ToString()), Int32.Parse(this.textBoxCantidad.Text)).ToString();
+                MessageBox.Show(productos.mensajeRetorno, "Importante!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.Dispose();
+            }
         }
 
         private void btnRecargar_Click(object sender, EventArgs e)

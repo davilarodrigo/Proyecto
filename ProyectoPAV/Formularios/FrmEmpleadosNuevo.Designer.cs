@@ -92,6 +92,7 @@
             this.TextBoxTelefono.Name = "TextBoxTelefono";
             this.TextBoxTelefono.Size = new System.Drawing.Size(155, 20);
             this.TextBoxTelefono.TabIndex = 9;
+            this.TextBoxTelefono.Tag = "Telefono";
             // 
             // LblEmail
             // 
@@ -128,6 +129,7 @@
             this.RadioMujer.Size = new System.Drawing.Size(51, 17);
             this.RadioMujer.TabIndex = 6;
             this.RadioMujer.TabStop = true;
+            this.RadioMujer.Tag = "Sexo";
             this.RadioMujer.Text = "Mujer";
             this.RadioMujer.UseVisualStyleBackColor = true;
             // 
@@ -139,6 +141,7 @@
             this.RadioHombre.Size = new System.Drawing.Size(62, 17);
             this.RadioHombre.TabIndex = 5;
             this.RadioHombre.TabStop = true;
+            this.RadioHombre.Tag = "Sexo";
             this.RadioHombre.Text = "Hombre";
             this.RadioHombre.UseVisualStyleBackColor = true;
             // 
@@ -148,6 +151,7 @@
             this.TextBoxEmail.Name = "TextBoxEmail";
             this.TextBoxEmail.Size = new System.Drawing.Size(206, 20);
             this.TextBoxEmail.TabIndex = 8;
+            this.TextBoxEmail.Tag = "Email";
             // 
             // TextBoxDocumento
             // 
@@ -155,6 +159,7 @@
             this.TextBoxDocumento.Name = "TextBoxDocumento";
             this.TextBoxDocumento.Size = new System.Drawing.Size(206, 20);
             this.TextBoxDocumento.TabIndex = 3;
+            this.TextBoxDocumento.Tag = "Documento";
             // 
             // TextBoxNombre
             // 
@@ -162,6 +167,7 @@
             this.TextBoxNombre.Name = "TextBoxNombre";
             this.TextBoxNombre.Size = new System.Drawing.Size(206, 20);
             this.TextBoxNombre.TabIndex = 1;
+            this.TextBoxNombre.Tag = "Nombre";
             // 
             // TextBoxApellido
             // 
@@ -169,6 +175,7 @@
             this.TextBoxApellido.Name = "TextBoxApellido";
             this.TextBoxApellido.Size = new System.Drawing.Size(206, 20);
             this.TextBoxApellido.TabIndex = 0;
+            this.TextBoxApellido.Tag = "Apellido";
             // 
             // LblDocumento
             // 
@@ -204,6 +211,7 @@
             this.comboCargo.Name = "comboCargo";
             this.comboCargo.Size = new System.Drawing.Size(207, 21);
             this.comboCargo.TabIndex = 4;
+            this.comboCargo.Tag = "Cargo";
             // 
             // lblCargo
             // 
@@ -246,6 +254,7 @@
             this.comboTipoDoc.Name = "comboTipoDoc";
             this.comboTipoDoc.Size = new System.Drawing.Size(206, 21);
             this.comboTipoDoc.TabIndex = 2;
+            this.comboTipoDoc.Tag = "Tipo De Documento";
             // 
             // btnRecargar
             // 

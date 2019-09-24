@@ -81,6 +81,7 @@
             this.btnRecargar.Size = new System.Drawing.Size(40, 40);
             this.btnRecargar.TabIndex = 5;
             this.btnRecargar.UseVisualStyleBackColor = true;
+            this.btnRecargar.Click += new System.EventHandler(this.BtnRecargar_Click);
             // 
             // btnBuscar
             // 
@@ -197,6 +198,7 @@
             this.btnEliminar.Size = new System.Drawing.Size(50, 50);
             this.btnEliminar.TabIndex = 3;
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.BtnEliminar_Click);
             // 
             // btnModificar
             // 

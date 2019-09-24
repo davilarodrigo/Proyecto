@@ -72,18 +72,26 @@ namespace ProyectoPAV.Formularios
 
         private void BtnGuardar_Click(object sender, EventArgs e)
         {
+
+            ControlDatos control = new ControlDatos();
             ProveedoresABM proveedor = new ProveedoresABM();
-            proveedor.ModificarProveedor(Int32.Parse(this.IdProveedor)
-                            , this.textBoxRazonSocial.Text
-                            , this.textBoxCalle.Text
-                            , Int32.Parse(this.textBoxNumeroCalle.Text)
-                            , Int32.Parse(this.comboLocalidad.SelectedValue.ToString())
-                            , this.textBoxEmail.Text
-                            , Int32.Parse(this.textBoxTelefono.Text));
-            MessageBox.Show(proveedor.mensajeRetorno, "Importante!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            this.Dispose();
+
+            if (control.validarIngresoTextBox(textBoxRazonSocial) && control.validarIngresoTextBox(textBoxEmail)
+                && control.validarIngresoTextBox(textBoxNumeroCalle) && control.validarIngresoTextBox(textBoxCalle)
+                && control.validarIngresoComboBox(comboLocalidad) && control.validarIngresoTextBox(textBoxTelefono))
+            {
+                proveedor.ModificarProveedor(Int32.Parse(this.IdProveedor)
+                                , this.textBoxRazonSocial.Text
+                                , this.textBoxCalle.Text
+                                , Int32.Parse(this.textBoxNumeroCalle.Text)
+                                , Int32.Parse(this.comboLocalidad.SelectedValue.ToString())
+                                , this.textBoxEmail.Text
+                                , Int32.Parse(this.textBoxTelefono.Text));
+                MessageBox.Show(proveedor.mensajeRetorno, "Importante!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.Dispose();
+            }
         }
 
-       
+
     }
 }
