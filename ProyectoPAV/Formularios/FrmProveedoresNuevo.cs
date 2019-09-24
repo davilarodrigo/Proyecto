@@ -37,11 +37,24 @@ namespace ProyectoPAV.Formularios
             cadenaResultado = proveedor.InsertarProveedor(this.textBoxRazonSocial.Text
                             , this.textBoxCalle.Text
                             , Int32.Parse(this.textBoxNumeroCalle.Text)
-                            , 2
+                            , Int32.Parse(this.comboLocalidad.SelectedValue.ToString())
                             , this.textBoxEmail.Text
                             , Int32.Parse(this.textBoxTelefono.Text)).ToString();
             MessageBox.Show(proveedor.mensajeRetorno, "Importante!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             this.Dispose();
+        }
+
+        private void FrmProveedoresNuevo_Load(object sender, EventArgs e)
+        {
+            CargadorCombos cargador5 = new CargadorCombos();
+            DataTable tablaTipoDocumentos = new DataTable();
+
+            tablaTipoDocumentos = cargador5.CargarComboLocalidades();
+
+            comboLocalidad.DataSource = tablaTipoDocumentos;
+            comboLocalidad.DisplayMember = "Nombre";
+            comboLocalidad.ValueMember = "IdLocalidad";
+            comboLocalidad.SelectedIndex = -1;
         }
     }
     

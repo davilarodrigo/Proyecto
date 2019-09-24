@@ -41,6 +41,7 @@ namespace ProyectoPAV.Clases
         public ResultadoTransaccion EjecutarConsulta(string sql)
         {
             this.Conectar();
+            TablaResultado.Clear();
             this.comando.CommandText = sql;
             ResultadoTransaccion resultado = ResultadoTransaccion.correcto;
 

@@ -204,6 +204,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmProveedoresNuevo";
             this.Text = "Nuevo Proveedor";
+            this.Load += new System.EventHandler(this.FrmProveedoresNuevo_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -51,6 +51,7 @@ namespace ProyectoPAV
             string cadenaResultado;
             DataTable tabla = new DataTable();
             cadenaResultado = empleados.ConsultarEmpleados().ToString();
+            tabla = empleados.tablaEmpleado;
             if (cadenaResultado == "correcto")
             {
                 this.CargarGrilla(tabla);
@@ -72,11 +73,11 @@ namespace ProyectoPAV
             EmpleadosABM empleados = new EmpleadosABM();
             string cadenaResultado;
             DataTable tabla = new DataTable();
-            if (this.textBoxNombre.Text != "" || this.textBoxApellido.Text != "" 
-                || /*this.comboTipoDocumento.SelectedIndex == -1 ||*/ this.textBoxDocumento.Text != "")
+            if (this.textBoxNombre.Text != "" || this.textBoxApellido.Text != ""
+                || this.comboTipoDocumento.SelectedIndex == -1 || this.textBoxDocumento.Text != "")
             {
-                cadenaResultado = empleados.ConsultarEmpleadosFiltros(this.textBoxNombre.Text, this.textBoxApellido.Text, 
-                    /*this.comboTipoDocumento.SelectedValue.ToString()*/1.ToString(), this.textBoxDocumento.Text).ToString();
+                cadenaResultado = empleados.ConsultarEmpleadosFiltros(this.textBoxNombre.Text, this.textBoxApellido.Text,
+                    this.comboTipoDocumento.SelectedValue.ToString().ToString(), this.textBoxDocumento.Text).ToString();
                 if (cadenaResultado == "correcto")
                 {
                     tabla = empleados.tablaEmpleado;
@@ -117,6 +118,39 @@ namespace ProyectoPAV
         {
             this.MinimumSize = new Size(600, 400);
             this.Consulta();
+
+            CargadorCombos cargador = new CargadorCombos();
+            DataTable tablaTipoDocumento = new DataTable();
+
+            tablaTipoDocumento = cargador.CargarComboTiposDocumentos();
+
+            comboTipoDocumento.DataSource = tablaTipoDocumento;
+            comboTipoDocumento.DisplayMember = "Nombre";
+            comboTipoDocumento.ValueMember = "IdTipoDocumento";
+            comboTipoDocumento.SelectedIndex = -1;
+
+        }
+
+        private void BtnEliminar_Click(object sender, EventArgs e)
+        {
+            if (dataGridEmpleados.CurrentRow != null)
+            {
+                if (MessageBox.Show("¿Seguro que desea eliminar el Empleado?", "Importante!",
+                    MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
+                {
+                    EmpleadosABM empleado = new EmpleadosABM();
+                    int ID = Int32.Parse(dataGridEmpleados.CurrentRow.Cells[0].Value.ToString());
+                    empleado.EliminarEmpleado(ID);
+                    MessageBox.Show(empleado.mensajeRetorno, "Importante!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    Consulta();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Seleccione primero una fila de la grilla, para eliminar"
+                    , "Importante!", MessageBoxButtons.OK
+                    , MessageBoxIcon.Exclamation);
+            }
         }
     }
 }

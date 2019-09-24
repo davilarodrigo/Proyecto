@@ -25,6 +25,15 @@ namespace ProyectoPAV.Formularios
         private void FrmProveedoresModificar_Load(object sender, EventArgs e)
         {
             RecuperarDatos(IdProveedor);
+            CargadorCombos cargador = new CargadorCombos();
+            DataTable tablaLocalidades = new DataTable();
+
+            tablaLocalidades = cargador.CargarComboLocalidades();
+
+            comboLocalidad.DataSource = tablaLocalidades;
+            comboLocalidad.DisplayMember = "Nombre";
+            comboLocalidad.ValueMember = "IdLocalidad";
+            comboLocalidad.SelectedIndex = -1;
         }
 
         private void BtnSalir_Click(object sender, EventArgs e)
@@ -45,7 +54,7 @@ namespace ProyectoPAV.Formularios
             this.textBoxRazonSocial.Text = tabla.Rows[0]["RazonSocial"].ToString();
             this.textBoxCalle.Text = tabla.Rows[0]["Calle"].ToString();
             this.textBoxNumeroCalle.Text = tabla.Rows[0]["NumeroCalle"].ToString();
-            this.comboLocalidad.SelectedValue = int.Parse(tabla.Rows[0]["IdLocalidad"].ToString());
+            this.comboLocalidad.SelectedValue = Int32.Parse(tabla.Rows[0]["IdLocalidad"].ToString());
             this.textBoxEmail.Text = tabla.Rows[0]["Email"].ToString();
             this.textBoxTelefono.Text = tabla.Rows[0]["Telefono"].ToString();
             
@@ -59,7 +68,7 @@ namespace ProyectoPAV.Formularios
                             , this.textBoxRazonSocial.Text
                             , this.textBoxCalle.Text
                             , Int32.Parse(this.textBoxNumeroCalle.Text)
-                            , 2
+                            , Int32.Parse(this.comboLocalidad.SelectedValue.ToString())
                             , this.textBoxEmail.Text
                             , Int32.Parse(this.textBoxTelefono.Text));
             MessageBox.Show(proveedor.mensajeRetorno, "Importante!", MessageBoxButtons.OK, MessageBoxIcon.Error);

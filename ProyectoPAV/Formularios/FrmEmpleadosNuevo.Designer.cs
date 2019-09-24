@@ -29,9 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmEmpleadosNuevo));
-            this.TextBoxAnio = new System.Windows.Forms.TextBox();
-            this.TextBoxMes = new System.Windows.Forms.TextBox();
-            this.TextBoxDia = new System.Windows.Forms.TextBox();
             this.BtnSalir = new System.Windows.Forms.Button();
             this.BtnAceptar = new System.Windows.Forms.Button();
             this.LblTelefono = new System.Windows.Forms.Label();
@@ -43,7 +40,6 @@
             this.RadioHombre = new System.Windows.Forms.RadioButton();
             this.TextBoxEmail = new System.Windows.Forms.TextBox();
             this.TextBoxDocumento = new System.Windows.Forms.TextBox();
-            this.ComboTipoDoc = new System.Windows.Forms.ComboBox();
             this.TextBoxNombre = new System.Windows.Forms.TextBox();
             this.TextBoxApellido = new System.Windows.Forms.TextBox();
             this.LblDocumento = new System.Windows.Forms.Label();
@@ -52,28 +48,9 @@
             this.comboCargo = new System.Windows.Forms.ComboBox();
             this.lblCargo = new System.Windows.Forms.Label();
             this.btnNuevoCargo = new System.Windows.Forms.Button();
+            this.dateTimePickerNacimiento = new System.Windows.Forms.DateTimePicker();
+            this.comboTipoDoc = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
-            // 
-            // TextBoxAnio
-            // 
-            this.TextBoxAnio.Location = new System.Drawing.Point(247, 159);
-            this.TextBoxAnio.Name = "TextBoxAnio";
-            this.TextBoxAnio.Size = new System.Drawing.Size(94, 20);
-            this.TextBoxAnio.TabIndex = 72;
-            // 
-            // TextBoxMes
-            // 
-            this.TextBoxMes.Location = new System.Drawing.Point(191, 159);
-            this.TextBoxMes.Name = "TextBoxMes";
-            this.TextBoxMes.Size = new System.Drawing.Size(50, 20);
-            this.TextBoxMes.TabIndex = 71;
-            // 
-            // TextBoxDia
-            // 
-            this.TextBoxDia.Location = new System.Drawing.Point(135, 159);
-            this.TextBoxDia.Name = "TextBoxDia";
-            this.TextBoxDia.Size = new System.Drawing.Size(50, 20);
-            this.TextBoxDia.TabIndex = 70;
             // 
             // BtnSalir
             // 
@@ -97,6 +74,7 @@
             this.BtnAceptar.Size = new System.Drawing.Size(50, 50);
             this.BtnAceptar.TabIndex = 68;
             this.BtnAceptar.UseVisualStyleBackColor = true;
+            this.BtnAceptar.Click += new System.EventHandler(this.BtnAceptar_Click);
             // 
             // LblTelefono
             // 
@@ -177,14 +155,6 @@
             this.TextBoxDocumento.Size = new System.Drawing.Size(114, 20);
             this.TextBoxDocumento.TabIndex = 55;
             // 
-            // ComboTipoDoc
-            // 
-            this.ComboTipoDoc.FormattingEnabled = true;
-            this.ComboTipoDoc.Location = new System.Drawing.Point(135, 84);
-            this.ComboTipoDoc.Name = "ComboTipoDoc";
-            this.ComboTipoDoc.Size = new System.Drawing.Size(85, 21);
-            this.ComboTipoDoc.TabIndex = 54;
-            // 
             // TextBoxNombre
             // 
             this.TextBoxNombre.Location = new System.Drawing.Point(135, 58);
@@ -257,17 +227,35 @@
             this.btnNuevoCargo.UseVisualStyleBackColor = true;
             this.btnNuevoCargo.Click += new System.EventHandler(this.BtnNuevoCargo_Click);
             // 
+            // dateTimePickerNacimiento
+            // 
+            this.dateTimePickerNacimiento.CustomFormat = "";
+            this.dateTimePickerNacimiento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePickerNacimiento.Location = new System.Drawing.Point(135, 159);
+            this.dateTimePickerNacimiento.MaxDate = new System.DateTime(2101, 12, 31, 0, 0, 0, 0);
+            this.dateTimePickerNacimiento.Name = "dateTimePickerNacimiento";
+            this.dateTimePickerNacimiento.Size = new System.Drawing.Size(206, 20);
+            this.dateTimePickerNacimiento.TabIndex = 98;
+            this.dateTimePickerNacimiento.Value = new System.DateTime(2019, 9, 23, 0, 0, 0, 0);
+            // 
+            // comboTipoDoc
+            // 
+            this.comboTipoDoc.FormattingEnabled = true;
+            this.comboTipoDoc.Location = new System.Drawing.Point(135, 84);
+            this.comboTipoDoc.Name = "comboTipoDoc";
+            this.comboTipoDoc.Size = new System.Drawing.Size(86, 21);
+            this.comboTipoDoc.TabIndex = 99;
+            // 
             // FrmEmpleadosNuevo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(476, 291);
+            this.Controls.Add(this.comboTipoDoc);
+            this.Controls.Add(this.dateTimePickerNacimiento);
             this.Controls.Add(this.btnNuevoCargo);
             this.Controls.Add(this.comboCargo);
             this.Controls.Add(this.lblCargo);
-            this.Controls.Add(this.TextBoxAnio);
-            this.Controls.Add(this.TextBoxMes);
-            this.Controls.Add(this.TextBoxDia);
             this.Controls.Add(this.BtnSalir);
             this.Controls.Add(this.BtnAceptar);
             this.Controls.Add(this.LblTelefono);
@@ -279,7 +267,6 @@
             this.Controls.Add(this.RadioHombre);
             this.Controls.Add(this.TextBoxEmail);
             this.Controls.Add(this.TextBoxDocumento);
-            this.Controls.Add(this.ComboTipoDoc);
             this.Controls.Add(this.TextBoxNombre);
             this.Controls.Add(this.TextBoxApellido);
             this.Controls.Add(this.LblDocumento);
@@ -288,16 +275,13 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmEmpleadosNuevo";
             this.Text = "Nuevo Empleado";
+            this.Load += new System.EventHandler(this.FrmEmpleadosNuevo_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox TextBoxAnio;
-        private System.Windows.Forms.TextBox TextBoxMes;
-        private System.Windows.Forms.TextBox TextBoxDia;
         private System.Windows.Forms.Button BtnSalir;
         private System.Windows.Forms.Button BtnAceptar;
         private System.Windows.Forms.Label LblTelefono;
@@ -309,7 +293,6 @@
         private System.Windows.Forms.RadioButton RadioHombre;
         private System.Windows.Forms.TextBox TextBoxEmail;
         private System.Windows.Forms.TextBox TextBoxDocumento;
-        private System.Windows.Forms.ComboBox ComboTipoDoc;
         private System.Windows.Forms.TextBox TextBoxNombre;
         private System.Windows.Forms.TextBox TextBoxApellido;
         private System.Windows.Forms.Label LblDocumento;
@@ -318,5 +301,7 @@
         private System.Windows.Forms.ComboBox comboCargo;
         private System.Windows.Forms.Label lblCargo;
         private System.Windows.Forms.Button btnNuevoCargo;
+        private System.Windows.Forms.DateTimePicker dateTimePickerNacimiento;
+        private System.Windows.Forms.ComboBox comboTipoDoc;
     }
 }

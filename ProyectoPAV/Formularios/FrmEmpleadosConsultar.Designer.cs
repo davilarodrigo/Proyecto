@@ -173,6 +173,7 @@ namespace ProyectoPAV
             this.btnEliminar.Size = new System.Drawing.Size(50, 50);
             this.btnEliminar.TabIndex = 7;
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.BtnEliminar_Click);
             // 
             // btnModificar
             // 

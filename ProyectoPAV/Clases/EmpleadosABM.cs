@@ -89,76 +89,84 @@ namespace ProyectoPAV.Clases
             return resultado;
         }
 
-        public void InsertarEmpleado(int idTipoDoc, int numeroDoc, string apellido, string nombre, 
+        public ResultadoEmpleados InsertarEmpleado(int idTipoDoc, int numeroDoc, string apellido, string nombre, 
                                     int idSexo, DateTime fechaNacimiento, string email, int telefono, 
                                     int idCargo)
         {
             string sql_insert = "";
-            DateTime fechaAlta = DateTime.Now;
+            GestorTransaccionesSQL gestor = new GestorTransaccionesSQL();
+            ResultadoEmpleados resultado = new ResultadoEmpleados();
+            //DateTime fechaAlta = DateTime.Now;
+            fechaNacimiento = Convert.ToDateTime(fechaNacimiento.Date.ToString("yyyy-MM-dd HH:mm:ss.000"));
+
             sql_insert = @"INSERT INTO Empleado VALUES (" + idTipoDoc + "," + " " + numeroDoc + "," +
                                                         " '" + apellido + "'," + " '" + nombre + "'," +
-                                                        " " + idSexo + "," + " " + fechaNacimiento + "," +
+                                                        " " + idSexo + "," + " " + "GETDATE()" + "," +
                                                         " '" + email + "'," + " " + telefono + "," +
-                                                        " " + idCargo + ", "+ fechaAlta + ", NULL)";
-            GestorTransaccionesSQL gestor = new GestorTransaccionesSQL();
+                                                        " " + idCargo + ", "+ "GETDATE()" + ", NULL)";
             if (gestor.Insertar(sql_insert) ==
                 GestorTransaccionesSQL.ResultadoTransaccion.correcto)
             {
-                MessageBox.Show("Se cargaron correctamente los datos", "Importante", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                mensajeRetorno = "Se cargaron correctamente los datos";
+                resultado = ResultadoEmpleados.correcto;
             }
             else
             {
-                MessageBox.Show("NO se cargaron correctamente los datos debido a: " +
-                    gestor.mensajeErrorTransaccion, "Importante!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                mensajeRetorno = "NO se cargaron correctamente los datos debido a: " + gestor.mensajeErrorTransaccion;
+                resultado = ResultadoEmpleados.error;
             }
+            return resultado;
         }
 
-        public void EliminarEmpleado(int IdEmpleado)
+        public ResultadoEmpleados EliminarEmpleado(int IdEmpleado)
         {
             string sql_delete = "";
             sql_delete = @"DELETE FROM Empleado WHERE IdEmpleado = " + IdEmpleado;
             GestorTransaccionesSQL gestor = new GestorTransaccionesSQL();
+            ResultadoEmpleados resultado = new ResultadoEmpleados();
             if (gestor.Eliminar(sql_delete) ==
                 GestorTransaccionesSQL.ResultadoTransaccion.correcto)
             {
-                MessageBox.Show("Se eliminaron correctamente los datos", "Importante", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                mensajeRetorno = "Se eliminaron correctamente los datos";
+                resultado = ResultadoEmpleados.correcto;
             }
             else
             {
-                MessageBox.Show("NO se eliminaron correctamente los datos debido a: " +
-                    gestor.mensajeErrorTransaccion, "Importante!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                mensajeRetorno = "NO se eliminaron correctamente los datos debido a: " + gestor.mensajeErrorTransaccion;
+                resultado = ResultadoEmpleados.error;
             }
+            return resultado;
         }
 
         public DataTable RecuperarDatos(string id)
         {
             GestorTransaccionesSQL gestor = new GestorTransaccionesSQL();
             string sql = "SELECT * FROM Empleado WHERE IdEmpleado = " + id;
-            DataTable dt = new DataTable();
+            tablaEmpleado = gestor.TablaResultado;
+            gestor.EjecutarConsulta(sql);
+            //if (gestor.EjecutarConsulta(sql) ==
+            //    GestorTransaccionesSQL.ResultadoTransaccion.correcto)
+            //{
+            //    dt = gestor.TablaResultado;
+            //}
+            //else
+            //{
+            //    MessageBox.Show("No se consultaron correctamente los datos debido a: " +
+            //        gestor.mensajeErrorTransaccion, "Importante!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //}
 
-            if (gestor.EjecutarConsulta(sql) ==
-                GestorTransaccionesSQL.ResultadoTransaccion.correcto)
-            {
-                dt = gestor.TablaResultado;
-            }
-            else
-            {
-                MessageBox.Show("No se consultaron correctamente los datos debido a: " +
-                    gestor.mensajeErrorTransaccion, "Importante!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-
-            return dt;
+            return tablaEmpleado;
             //GestorTransaccionesSQL gestor = new GestorTransaccionesSQL();
             //return gestor.EjecutarConsulta("SELECT * FROM Proveedor WHERE IdProveedor = " + id);
 
         }
 
-        public void ModificarEmpleado(int idEmpleado,int idTipoDoc, int numeroDoc, string apellido, string nombre,
-                                    int idSexo, DateTime fechaNacimiento, string email, int telefono,
+        public ResultadoEmpleados ModificarEmpleado(int idEmpleado,int idTipoDoc, int numeroDoc, string apellido, string nombre,
+                                    int idSexo, string fechaNacimiento, string email, int telefono,
                                     int idCargo)
         {
             string sql_modificar = "";
-            sql_modificar = @"UPDATE Proveedor SET IdTipoDocumento = " + idTipoDoc + "," +
+            sql_modificar = @"UPDATE Empleado SET IdTipoDocumento = " + idTipoDoc + "," +
                                                         "NumeroDocumento = " + numeroDoc + "," +
                                                         "Apellido = '" + apellido + "'," +
                                                         "Nombre = '" + nombre + "'," +
@@ -166,19 +174,23 @@ namespace ProyectoPAV.Clases
                                                         "FechaNacimiento = " + fechaNacimiento +
                                                         "Email = '" + email + "'," +
                                                         "Telefono = " + telefono +
-                                                        "IdCargo = " + idCargo +
+                                                        ", IdCargo = " + idCargo +
                                                         " WHERE IdEmpleado = " + idEmpleado;
             GestorTransaccionesSQL gestor = new GestorTransaccionesSQL();
+            ResultadoEmpleados resultado = new ResultadoEmpleados();
             if (gestor.Insertar(sql_modificar) ==
                 GestorTransaccionesSQL.ResultadoTransaccion.correcto)
             {
-                MessageBox.Show("Se cargaron correctamente los datos", "Importante", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                mensajeRetorno = "Se cargaron correctamente los datos";
+                resultado = ResultadoEmpleados.correcto;
             }
             else
             {
-                MessageBox.Show("NO se cargaron correctamente los datos debido a: " +
-                    gestor.mensajeErrorTransaccion, "Importante!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                mensajeRetorno = "NO se cargaron correctamente los datos debido a: " + gestor.mensajeErrorTransaccion;
+                resultado = ResultadoEmpleados.error;
             }
+
+            return resultado;
         }
     }
 }
