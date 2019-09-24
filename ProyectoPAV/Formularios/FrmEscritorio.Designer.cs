@@ -32,6 +32,7 @@
             this.menuStripEscritorio = new System.Windows.Forms.MenuStrip();
             this.archivoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cambiarLoginToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aBMToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.clientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.productosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -58,7 +59,6 @@
             this.btnVentas = new System.Windows.Forms.Button();
             this.tableMenuSecundario = new System.Windows.Forms.TableLayoutPanel();
             this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
-            this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStripEscritorio.SuspendLayout();
             this.toolStripEscritorio.SuspendLayout();
             this.tableEstructura.SuspendLayout();
@@ -91,8 +91,15 @@
             // cambiarLoginToolStripMenuItem
             // 
             this.cambiarLoginToolStripMenuItem.Name = "cambiarLoginToolStripMenuItem";
-            this.cambiarLoginToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.cambiarLoginToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.cambiarLoginToolStripMenuItem.Text = "Cambiar Login";
+            // 
+            // salirToolStripMenuItem
+            // 
+            this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.salirToolStripMenuItem.Text = "Salir";
+            this.salirToolStripMenuItem.Click += new System.EventHandler(this.SalirToolStripMenuItem_Click);
             // 
             // aBMToolStripMenuItem
             // 
@@ -320,7 +327,7 @@
             this.btnProveedores.Location = new System.Drawing.Point(331, 3);
             this.btnProveedores.Name = "btnProveedores";
             this.btnProveedores.Size = new System.Drawing.Size(160, 118);
-            this.btnProveedores.TabIndex = 3;
+            this.btnProveedores.TabIndex = 2;
             this.btnProveedores.Text = "Proveedores";
             this.btnProveedores.UseVisualStyleBackColor = true;
             this.btnProveedores.Click += new System.EventHandler(this.BtnProveedores_Click);
@@ -333,7 +340,7 @@
             this.btnEmpleados.Location = new System.Drawing.Point(3, 127);
             this.btnEmpleados.Name = "btnEmpleados";
             this.btnEmpleados.Size = new System.Drawing.Size(158, 118);
-            this.btnEmpleados.TabIndex = 5;
+            this.btnEmpleados.TabIndex = 3;
             this.btnEmpleados.Text = "Empleados";
             this.btnEmpleados.UseVisualStyleBackColor = true;
             this.btnEmpleados.Click += new System.EventHandler(this.BtnEmpleados_Click);
@@ -346,7 +353,7 @@
             this.btnCompras.Location = new System.Drawing.Point(331, 127);
             this.btnCompras.Name = "btnCompras";
             this.btnCompras.Size = new System.Drawing.Size(160, 118);
-            this.btnCompras.TabIndex = 4;
+            this.btnCompras.TabIndex = 5;
             this.btnCompras.Text = "Compras a Proveedores";
             this.btnCompras.UseVisualStyleBackColor = true;
             // 
@@ -358,7 +365,7 @@
             this.btnVentas.Location = new System.Drawing.Point(167, 127);
             this.btnVentas.Name = "btnVentas";
             this.btnVentas.Size = new System.Drawing.Size(158, 118);
-            this.btnVentas.TabIndex = 2;
+            this.btnVentas.TabIndex = 4;
             this.btnVentas.Text = "Ventas";
             this.btnVentas.UseVisualStyleBackColor = true;
             // 
@@ -390,13 +397,6 @@
             this.pictureBoxLogo.Size = new System.Drawing.Size(162, 215);
             this.pictureBoxLogo.TabIndex = 0;
             this.pictureBoxLogo.TabStop = false;
-            // 
-            // salirToolStripMenuItem
-            // 
-            this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.salirToolStripMenuItem.Text = "Salir";
-            this.salirToolStripMenuItem.Click += new System.EventHandler(this.SalirToolStripMenuItem_Click);
             // 
             // FrmEscritorio
             // 

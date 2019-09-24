@@ -161,6 +161,7 @@
             this.btnRecargar.Size = new System.Drawing.Size(40, 40);
             this.btnRecargar.TabIndex = 83;
             this.btnRecargar.UseVisualStyleBackColor = true;
+            this.btnRecargar.Click += new System.EventHandler(this.btnRecargar_Click);
             // 
             // lblCodigoProducto
             // 

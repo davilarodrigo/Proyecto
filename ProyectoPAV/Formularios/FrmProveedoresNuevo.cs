@@ -64,6 +64,18 @@ namespace ProyectoPAV.Formularios
             comboLocalidad.ValueMember = "IdLocalidad";
             comboLocalidad.SelectedIndex = -1;
         }
+
+        private void btnRecargar_Click(object sender, EventArgs e)
+        {
+            comboLocalidad.SelectedIndex = -1;
+            textBoxTelefono.Clear();
+            textBoxRazonSocial.Clear();
+            textBoxCalle.Clear();
+            textBoxNumeroCalle.Clear();
+            textBoxEmail.Clear();
+            
+        }
+    }
     }
     
 }

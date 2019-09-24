@@ -28,5 +28,10 @@ namespace ProyectoPAV.Formularios
             FrmLocalidades _localidades = new FrmLocalidades();
             _localidades.ShowDialog();
         }
+
+        private void btnRecargar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

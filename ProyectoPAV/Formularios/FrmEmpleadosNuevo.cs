@@ -90,5 +90,18 @@ namespace ProyectoPAV.Formularios
             comboCargo.SelectedIndex = -1;
 
         }
+
+        private void btnRecargar_Click(object sender, EventArgs e)
+        {
+            comboTipoDoc.SelectedIndex = -1;
+            comboCargo.SelectedIndex = -1;
+            TextBoxTelefono.Clear();
+            TextBoxApellido.Clear();
+            TextBoxNombre.Clear();
+            TextBoxDocumento.Clear();
+            TextBoxEmail.Clear();
+            RadioHombre.Checked = false;
+            RadioMujer.Checked = false;
+        }
     }
 }

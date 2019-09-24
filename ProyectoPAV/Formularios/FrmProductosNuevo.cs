@@ -73,5 +73,16 @@ namespace ProyectoPAV.Formularios
             MessageBox.Show(productos.mensajeRetorno, "Importante!", MessageBoxButtons.OK, MessageBoxIcon.Information);
             this.Dispose();
         }
+
+        private void btnRecargar_Click(object sender, EventArgs e)
+        {
+            comboMarca.SelectedIndex = -1;
+            comboCategoria.SelectedIndex = -1;
+            textBoxCodigo.Clear();
+            textBoxNombre.Clear();
+            textBoxCantidad.Clear();
+            textBoxTalle.Clear();
+        }
+    }
     }
 }
