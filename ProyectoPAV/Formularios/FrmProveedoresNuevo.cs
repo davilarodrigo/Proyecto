@@ -75,7 +75,5 @@ namespace ProyectoPAV.Formularios
             textBoxEmail.Clear();
             
         }
-    }
-    }
-    
+    }  
 }

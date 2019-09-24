@@ -83,6 +83,6 @@ namespace ProyectoPAV.Formularios
             textBoxCantidad.Clear();
             textBoxTalle.Clear();
         }
-    }
+    
     }
 }

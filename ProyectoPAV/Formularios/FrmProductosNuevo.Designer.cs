@@ -53,7 +53,7 @@
             this.comboMarca.Location = new System.Drawing.Point(91, 94);
             this.comboMarca.Name = "comboMarca";
             this.comboMarca.Size = new System.Drawing.Size(206, 21);
-            this.comboMarca.TabIndex = 81;
+            this.comboMarca.TabIndex = 2;
             // 
             // lblMarca
             // 
@@ -78,7 +78,7 @@
             this.textBoxTalle.Location = new System.Drawing.Point(91, 148);
             this.textBoxTalle.Name = "textBoxTalle";
             this.textBoxTalle.Size = new System.Drawing.Size(85, 20);
-            this.textBoxTalle.TabIndex = 76;
+            this.textBoxTalle.TabIndex = 4;
             // 
             // comboCategoria
             // 
@@ -86,14 +86,14 @@
             this.comboCategoria.Location = new System.Drawing.Point(91, 121);
             this.comboCategoria.Name = "comboCategoria";
             this.comboCategoria.Size = new System.Drawing.Size(206, 21);
-            this.comboCategoria.TabIndex = 75;
+            this.comboCategoria.TabIndex = 3;
             // 
             // textBoxNombre
             // 
             this.textBoxNombre.Location = new System.Drawing.Point(91, 68);
             this.textBoxNombre.Name = "textBoxNombre";
             this.textBoxNombre.Size = new System.Drawing.Size(206, 20);
-            this.textBoxNombre.TabIndex = 74;
+            this.textBoxNombre.TabIndex = 1;
             // 
             // lblCategoria
             // 
@@ -121,7 +121,7 @@
             this.btnSalir.Location = new System.Drawing.Point(401, 173);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(50, 50);
-            this.btnSalir.TabIndex = 79;
+            this.btnSalir.TabIndex = 7;
             this.btnSalir.UseVisualStyleBackColor = true;
             this.btnSalir.Click += new System.EventHandler(this.BtnSalir_Click);
             // 
@@ -133,7 +133,7 @@
             this.btnAceptar.Location = new System.Drawing.Point(345, 173);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(50, 50);
-            this.btnAceptar.TabIndex = 78;
+            this.btnAceptar.TabIndex = 6;
             this.btnAceptar.UseVisualStyleBackColor = true;
             this.btnAceptar.Click += new System.EventHandler(this.BtnAceptar_Click);
             // 
@@ -145,7 +145,7 @@
             this.btnNuevaMarca.Location = new System.Drawing.Point(303, 91);
             this.btnNuevaMarca.Name = "btnNuevaMarca";
             this.btnNuevaMarca.Size = new System.Drawing.Size(100, 27);
-            this.btnNuevaMarca.TabIndex = 82;
+            this.btnNuevaMarca.TabIndex = 8;
             this.btnNuevaMarca.Text = "Nueva Marca";
             this.btnNuevaMarca.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnNuevaMarca.UseVisualStyleBackColor = true;
@@ -159,7 +159,7 @@
             this.btnRecargar.Location = new System.Drawing.Point(411, 12);
             this.btnRecargar.Name = "btnRecargar";
             this.btnRecargar.Size = new System.Drawing.Size(40, 40);
-            this.btnRecargar.TabIndex = 83;
+            this.btnRecargar.TabIndex = 9;
             this.btnRecargar.UseVisualStyleBackColor = true;
             this.btnRecargar.Click += new System.EventHandler(this.btnRecargar_Click);
             // 
@@ -177,7 +177,7 @@
             this.textBoxCodigo.Location = new System.Drawing.Point(91, 40);
             this.textBoxCodigo.Name = "textBoxCodigo";
             this.textBoxCodigo.Size = new System.Drawing.Size(206, 20);
-            this.textBoxCodigo.TabIndex = 85;
+            this.textBoxCodigo.TabIndex = 0;
             // 
             // labelCantidad
             // 
@@ -193,7 +193,7 @@
             this.textBoxCantidad.Location = new System.Drawing.Point(91, 174);
             this.textBoxCantidad.Name = "textBoxCantidad";
             this.textBoxCantidad.Size = new System.Drawing.Size(85, 20);
-            this.textBoxCantidad.TabIndex = 86;
+            this.textBoxCantidad.TabIndex = 5;
             // 
             // FrmProductosNuevo
             // 

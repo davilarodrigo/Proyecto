@@ -55,7 +55,7 @@
             this.btnSalir.Location = new System.Drawing.Point(435, 231);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(50, 50);
-            this.btnSalir.TabIndex = 45;
+            this.btnSalir.TabIndex = 7;
             this.btnSalir.UseVisualStyleBackColor = true;
             this.btnSalir.Click += new System.EventHandler(this.BtnSalir_Click);
             // 
@@ -67,7 +67,7 @@
             this.btnAceptar.Location = new System.Drawing.Point(379, 231);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(50, 50);
-            this.btnAceptar.TabIndex = 44;
+            this.btnAceptar.TabIndex = 6;
             this.btnAceptar.UseVisualStyleBackColor = true;
             this.btnAceptar.Click += new System.EventHandler(this.BtnAceptar_Click);
             // 
@@ -103,21 +103,21 @@
             this.textBoxNumeroCalle.Location = new System.Drawing.Point(123, 151);
             this.textBoxNumeroCalle.Name = "textBoxNumeroCalle";
             this.textBoxNumeroCalle.Size = new System.Drawing.Size(85, 20);
-            this.textBoxNumeroCalle.TabIndex = 40;
+            this.textBoxNumeroCalle.TabIndex = 4;
             // 
             // textBoxCalle
             // 
             this.textBoxCalle.Location = new System.Drawing.Point(123, 125);
             this.textBoxCalle.Name = "textBoxCalle";
             this.textBoxCalle.Size = new System.Drawing.Size(206, 20);
-            this.textBoxCalle.TabIndex = 39;
+            this.textBoxCalle.TabIndex = 3;
             // 
             // textBoxTelefono
             // 
             this.textBoxTelefono.Location = new System.Drawing.Point(123, 99);
             this.textBoxTelefono.Name = "textBoxTelefono";
             this.textBoxTelefono.Size = new System.Drawing.Size(155, 20);
-            this.textBoxTelefono.TabIndex = 38;
+            this.textBoxTelefono.TabIndex = 2;
             // 
             // lblEmail
             // 
@@ -133,7 +133,7 @@
             this.textBoxEmail.Location = new System.Drawing.Point(123, 73);
             this.textBoxEmail.Name = "textBoxEmail";
             this.textBoxEmail.Size = new System.Drawing.Size(206, 20);
-            this.textBoxEmail.TabIndex = 32;
+            this.textBoxEmail.TabIndex = 1;
             // 
             // lblLocalidad
             // 
@@ -150,7 +150,7 @@
             this.comboLocalidad.Location = new System.Drawing.Point(123, 177);
             this.comboLocalidad.Name = "comboLocalidad";
             this.comboLocalidad.Size = new System.Drawing.Size(206, 21);
-            this.comboLocalidad.TabIndex = 46;
+            this.comboLocalidad.TabIndex = 5;
             // 
             // lblRazonSocial
             // 
@@ -166,7 +166,7 @@
             this.textBoxRazonSocial.Location = new System.Drawing.Point(123, 47);
             this.textBoxRazonSocial.Name = "textBoxRazonSocial";
             this.textBoxRazonSocial.Size = new System.Drawing.Size(206, 20);
-            this.textBoxRazonSocial.TabIndex = 48;
+            this.textBoxRazonSocial.TabIndex = 0;
             // 
             // btnNuevaLocalidad
             // 
@@ -176,7 +176,7 @@
             this.btnNuevaLocalidad.Location = new System.Drawing.Point(335, 173);
             this.btnNuevaLocalidad.Name = "btnNuevaLocalidad";
             this.btnNuevaLocalidad.Size = new System.Drawing.Size(117, 27);
-            this.btnNuevaLocalidad.TabIndex = 84;
+            this.btnNuevaLocalidad.TabIndex = 8;
             this.btnNuevaLocalidad.Text = "Nueva Localidad";
             this.btnNuevaLocalidad.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnNuevaLocalidad.UseVisualStyleBackColor = true;
@@ -190,7 +190,7 @@
             this.btnRecargar.Location = new System.Drawing.Point(445, 12);
             this.btnRecargar.Name = "btnRecargar";
             this.btnRecargar.Size = new System.Drawing.Size(40, 40);
-            this.btnRecargar.TabIndex = 85;
+            this.btnRecargar.TabIndex = 9;
             this.btnRecargar.UseVisualStyleBackColor = true;
             this.btnRecargar.Click += new System.EventHandler(this.btnRecargar_Click);
             // 

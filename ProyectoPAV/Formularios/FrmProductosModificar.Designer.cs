@@ -60,7 +60,7 @@
             this.textBoxTalle.Location = new System.Drawing.Point(88, 136);
             this.textBoxTalle.Name = "textBoxTalle";
             this.textBoxTalle.Size = new System.Drawing.Size(85, 20);
-            this.textBoxTalle.TabIndex = 64;
+            this.textBoxTalle.TabIndex = 4;
             // 
             // comboCategoria
             // 
@@ -68,14 +68,14 @@
             this.comboCategoria.Location = new System.Drawing.Point(88, 109);
             this.comboCategoria.Name = "comboCategoria";
             this.comboCategoria.Size = new System.Drawing.Size(206, 21);
-            this.comboCategoria.TabIndex = 54;
+            this.comboCategoria.TabIndex = 3;
             // 
             // textBoxNombre
             // 
             this.textBoxNombre.Location = new System.Drawing.Point(88, 56);
             this.textBoxNombre.Name = "textBoxNombre";
             this.textBoxNombre.Size = new System.Drawing.Size(206, 20);
-            this.textBoxNombre.TabIndex = 53;
+            this.textBoxNombre.TabIndex = 1;
             // 
             // lblCategoria
             // 
@@ -101,7 +101,7 @@
             this.comboMarca.Location = new System.Drawing.Point(88, 82);
             this.comboMarca.Name = "comboMarca";
             this.comboMarca.Size = new System.Drawing.Size(206, 21);
-            this.comboMarca.TabIndex = 71;
+            this.comboMarca.TabIndex = 2;
             // 
             // lblMarca
             // 
@@ -120,7 +120,7 @@
             this.btnSalir.Location = new System.Drawing.Point(369, 153);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(50, 50);
-            this.btnSalir.TabIndex = 69;
+            this.btnSalir.TabIndex = 7;
             this.btnSalir.UseVisualStyleBackColor = true;
             this.btnSalir.Click += new System.EventHandler(this.BtnSalir_Click);
             // 
@@ -132,7 +132,7 @@
             this.btnGuardar.Location = new System.Drawing.Point(313, 153);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(50, 50);
-            this.btnGuardar.TabIndex = 68;
+            this.btnGuardar.TabIndex = 6;
             this.btnGuardar.UseVisualStyleBackColor = true;
             this.btnGuardar.Click += new System.EventHandler(this.BtnGuardar_Click);
             // 
@@ -144,7 +144,7 @@
             this.btnNuevaMarca.Location = new System.Drawing.Point(300, 78);
             this.btnNuevaMarca.Name = "btnNuevaMarca";
             this.btnNuevaMarca.Size = new System.Drawing.Size(100, 27);
-            this.btnNuevaMarca.TabIndex = 83;
+            this.btnNuevaMarca.TabIndex = 8;
             this.btnNuevaMarca.Text = "Nueva Marca";
             this.btnNuevaMarca.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnNuevaMarca.UseVisualStyleBackColor = true;
@@ -155,7 +155,7 @@
             this.textBoxCodigo.Location = new System.Drawing.Point(88, 30);
             this.textBoxCodigo.Name = "textBoxCodigo";
             this.textBoxCodigo.Size = new System.Drawing.Size(206, 20);
-            this.textBoxCodigo.TabIndex = 87;
+            this.textBoxCodigo.TabIndex = 0;
             // 
             // lblCodigoProducto
             // 
@@ -180,7 +180,7 @@
             this.textBoxCantidad.Location = new System.Drawing.Point(88, 162);
             this.textBoxCantidad.Name = "textBoxCantidad";
             this.textBoxCantidad.Size = new System.Drawing.Size(85, 20);
-            this.textBoxCantidad.TabIndex = 88;
+            this.textBoxCantidad.TabIndex = 5;
             // 
             // FrmProductosModificar
             // 

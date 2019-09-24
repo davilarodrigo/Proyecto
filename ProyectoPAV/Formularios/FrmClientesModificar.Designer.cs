@@ -88,21 +88,21 @@
             this.textBoxNumeroCalle.Location = new System.Drawing.Point(135, 267);
             this.textBoxNumeroCalle.Name = "textBoxNumeroCalle";
             this.textBoxNumeroCalle.Size = new System.Drawing.Size(85, 20);
-            this.textBoxNumeroCalle.TabIndex = 40;
+            this.textBoxNumeroCalle.TabIndex = 10;
             // 
             // textBoxCalle
             // 
             this.textBoxCalle.Location = new System.Drawing.Point(135, 241);
             this.textBoxCalle.Name = "textBoxCalle";
             this.textBoxCalle.Size = new System.Drawing.Size(206, 20);
-            this.textBoxCalle.TabIndex = 39;
+            this.textBoxCalle.TabIndex = 9;
             // 
             // textBoxTelefono
             // 
             this.textBoxTelefono.Location = new System.Drawing.Point(135, 215);
             this.textBoxTelefono.Name = "textBoxTelefono";
             this.textBoxTelefono.Size = new System.Drawing.Size(155, 20);
-            this.textBoxTelefono.TabIndex = 38;
+            this.textBoxTelefono.TabIndex = 8;
             // 
             // lblEmail
             // 
@@ -137,7 +137,7 @@
             this.radioMujer.Location = new System.Drawing.Point(203, 141);
             this.radioMujer.Name = "radioMujer";
             this.radioMujer.Size = new System.Drawing.Size(51, 17);
-            this.radioMujer.TabIndex = 34;
+            this.radioMujer.TabIndex = 5;
             this.radioMujer.TabStop = true;
             this.radioMujer.Text = "Mujer";
             this.radioMujer.UseVisualStyleBackColor = true;
@@ -148,7 +148,7 @@
             this.radioHombre.Location = new System.Drawing.Point(135, 141);
             this.radioHombre.Name = "radioHombre";
             this.radioHombre.Size = new System.Drawing.Size(62, 17);
-            this.radioHombre.TabIndex = 33;
+            this.radioHombre.TabIndex = 4;
             this.radioHombre.TabStop = true;
             this.radioHombre.Text = "Hombre";
             this.radioHombre.UseVisualStyleBackColor = true;
@@ -158,14 +158,14 @@
             this.textBoxEmail.Location = new System.Drawing.Point(135, 189);
             this.textBoxEmail.Name = "textBoxEmail";
             this.textBoxEmail.Size = new System.Drawing.Size(206, 20);
-            this.textBoxEmail.TabIndex = 32;
+            this.textBoxEmail.TabIndex = 7;
             // 
             // textBoxDocumento
             // 
             this.textBoxDocumento.Location = new System.Drawing.Point(135, 115);
             this.textBoxDocumento.Name = "textBoxDocumento";
             this.textBoxDocumento.Size = new System.Drawing.Size(206, 20);
-            this.textBoxDocumento.TabIndex = 31;
+            this.textBoxDocumento.TabIndex = 3;
             // 
             // comboTipoDoc
             // 
@@ -173,21 +173,21 @@
             this.comboTipoDoc.Location = new System.Drawing.Point(135, 88);
             this.comboTipoDoc.Name = "comboTipoDoc";
             this.comboTipoDoc.Size = new System.Drawing.Size(206, 21);
-            this.comboTipoDoc.TabIndex = 30;
+            this.comboTipoDoc.TabIndex = 2;
             // 
             // textBoxNombre
             // 
             this.textBoxNombre.Location = new System.Drawing.Point(135, 62);
             this.textBoxNombre.Name = "textBoxNombre";
             this.textBoxNombre.Size = new System.Drawing.Size(206, 20);
-            this.textBoxNombre.TabIndex = 29;
+            this.textBoxNombre.TabIndex = 1;
             // 
             // textBoxApellido
             // 
             this.textBoxApellido.Location = new System.Drawing.Point(135, 36);
             this.textBoxApellido.Name = "textBoxApellido";
             this.textBoxApellido.Size = new System.Drawing.Size(206, 20);
-            this.textBoxApellido.TabIndex = 28;
+            this.textBoxApellido.TabIndex = 0;
             // 
             // lblDocumento
             // 
@@ -224,7 +224,7 @@
             this.btnSalir.Location = new System.Drawing.Point(450, 336);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(50, 50);
-            this.btnSalir.TabIndex = 45;
+            this.btnSalir.TabIndex = 13;
             this.btnSalir.UseVisualStyleBackColor = true;
             this.btnSalir.Click += new System.EventHandler(this.BtnSalir_Click);
             // 
@@ -236,7 +236,7 @@
             this.btnGuardar.Location = new System.Drawing.Point(394, 336);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(50, 50);
-            this.btnGuardar.TabIndex = 44;
+            this.btnGuardar.TabIndex = 12;
             this.btnGuardar.UseVisualStyleBackColor = true;
             // 
             // lblLocalidad
@@ -254,7 +254,7 @@
             this.comboLocalidad.Location = new System.Drawing.Point(135, 293);
             this.comboLocalidad.Name = "comboLocalidad";
             this.comboLocalidad.Size = new System.Drawing.Size(206, 21);
-            this.comboLocalidad.TabIndex = 49;
+            this.comboLocalidad.TabIndex = 11;
             // 
             // btnNuevaLocalidad
             // 
@@ -264,7 +264,7 @@
             this.btnNuevaLocalidad.Location = new System.Drawing.Point(347, 289);
             this.btnNuevaLocalidad.Name = "btnNuevaLocalidad";
             this.btnNuevaLocalidad.Size = new System.Drawing.Size(117, 27);
-            this.btnNuevaLocalidad.TabIndex = 85;
+            this.btnNuevaLocalidad.TabIndex = 14;
             this.btnNuevaLocalidad.Text = "Nueva Localidad";
             this.btnNuevaLocalidad.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnNuevaLocalidad.UseVisualStyleBackColor = true;
@@ -277,7 +277,7 @@
             this.dateTimePickerNacimiento.Location = new System.Drawing.Point(135, 164);
             this.dateTimePickerNacimiento.Name = "dateTimePickerNacimiento";
             this.dateTimePickerNacimiento.Size = new System.Drawing.Size(206, 20);
-            this.dateTimePickerNacimiento.TabIndex = 86;
+            this.dateTimePickerNacimiento.TabIndex = 6;
             // 
             // FrmClientesModificar
             // 

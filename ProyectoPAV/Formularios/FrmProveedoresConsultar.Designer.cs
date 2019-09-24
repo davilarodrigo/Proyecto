@@ -51,7 +51,7 @@
             this.btnNuevo.Location = new System.Drawing.Point(12, 451);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(50, 50);
-            this.btnNuevo.TabIndex = 14;
+            this.btnNuevo.TabIndex = 1;
             this.btnNuevo.UseVisualStyleBackColor = true;
             this.btnNuevo.Click += new System.EventHandler(this.BtnNuevo_Click);
             // 
@@ -63,7 +63,7 @@
             this.btnSalir.Location = new System.Drawing.Point(699, 451);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(50, 50);
-            this.btnSalir.TabIndex = 13;
+            this.btnSalir.TabIndex = 4;
             this.btnSalir.UseVisualStyleBackColor = true;
             this.btnSalir.Click += new System.EventHandler(this.BtnSalir_Click);
             // 
@@ -75,7 +75,7 @@
             this.btnEliminar.Location = new System.Drawing.Point(124, 451);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(50, 50);
-            this.btnEliminar.TabIndex = 12;
+            this.btnEliminar.TabIndex = 3;
             this.btnEliminar.UseVisualStyleBackColor = true;
             this.btnEliminar.Click += new System.EventHandler(this.BtnEliminar_Click);
             // 
@@ -87,7 +87,7 @@
             this.btnModificar.Location = new System.Drawing.Point(68, 451);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(50, 50);
-            this.btnModificar.TabIndex = 11;
+            this.btnModificar.TabIndex = 2;
             this.btnModificar.UseVisualStyleBackColor = true;
             this.btnModificar.Click += new System.EventHandler(this.BtnModificar_Click);
             // 
@@ -104,7 +104,7 @@
             this.groupBoxFiltros.Location = new System.Drawing.Point(12, 12);
             this.groupBoxFiltros.Name = "groupBoxFiltros";
             this.groupBoxFiltros.Size = new System.Drawing.Size(737, 408);
-            this.groupBoxFiltros.TabIndex = 10;
+            this.groupBoxFiltros.TabIndex = 0;
             this.groupBoxFiltros.TabStop = false;
             this.groupBoxFiltros.Text = "Filtros";
             // 
@@ -116,7 +116,7 @@
             this.btnRecargar.Location = new System.Drawing.Point(691, 19);
             this.btnRecargar.Name = "btnRecargar";
             this.btnRecargar.Size = new System.Drawing.Size(40, 40);
-            this.btnRecargar.TabIndex = 48;
+            this.btnRecargar.TabIndex = 3;
             this.btnRecargar.UseVisualStyleBackColor = true;
             this.btnRecargar.Click += new System.EventHandler(this.BtnRecargar_Click);
             // 
@@ -127,7 +127,7 @@
             this.btnBuscar.Location = new System.Drawing.Point(445, 19);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(48, 48);
-            this.btnBuscar.TabIndex = 9;
+            this.btnBuscar.TabIndex = 2;
             this.btnBuscar.UseVisualStyleBackColor = true;
             this.btnBuscar.Click += new System.EventHandler(this.BtnBuscar_Click);
             // 
@@ -143,7 +143,7 @@
             this.dataGridProveedores.Name = "dataGridProveedores";
             this.dataGridProveedores.ReadOnly = true;
             this.dataGridProveedores.Size = new System.Drawing.Size(725, 329);
-            this.dataGridProveedores.TabIndex = 5;
+            this.dataGridProveedores.TabIndex = 3;
             // 
             // lblNombre
             // 
@@ -159,7 +159,7 @@
             this.textBoxRazonSocial.Location = new System.Drawing.Point(127, 34);
             this.textBoxRazonSocial.Name = "textBoxRazonSocial";
             this.textBoxRazonSocial.Size = new System.Drawing.Size(312, 20);
-            this.textBoxRazonSocial.TabIndex = 0;
+            this.textBoxRazonSocial.TabIndex = 1;
             // 
             // FrmProveedoresConsultar
             // 
@@ -173,7 +173,6 @@
             this.Controls.Add(this.groupBoxFiltros);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmProveedoresConsultar";
-            this.Text = "Consultar Proveedores";
             this.Load += new System.EventHandler(this.FrmProveedoresConsultar_Load);
             this.groupBoxFiltros.ResumeLayout(false);
             this.groupBoxFiltros.PerformLayout();

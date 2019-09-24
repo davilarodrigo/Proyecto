@@ -60,7 +60,7 @@
             this.btnSalir.Location = new System.Drawing.Point(444, 316);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(50, 50);
-            this.btnSalir.TabIndex = 89;
+            this.btnSalir.TabIndex = 11;
             this.btnSalir.UseVisualStyleBackColor = true;
             this.btnSalir.Click += new System.EventHandler(this.BtnSalir_Click);
             // 
@@ -72,7 +72,7 @@
             this.btnGardar.Location = new System.Drawing.Point(388, 316);
             this.btnGardar.Name = "btnGardar";
             this.btnGardar.Size = new System.Drawing.Size(50, 50);
-            this.btnGardar.TabIndex = 88;
+            this.btnGardar.TabIndex = 10;
             this.btnGardar.UseVisualStyleBackColor = true;
             this.btnGardar.Click += new System.EventHandler(this.BtnGardar_Click);
             // 
@@ -90,7 +90,7 @@
             this.textBoxTelefono.Location = new System.Drawing.Point(138, 247);
             this.textBoxTelefono.Name = "textBoxTelefono";
             this.textBoxTelefono.Size = new System.Drawing.Size(155, 20);
-            this.textBoxTelefono.TabIndex = 86;
+            this.textBoxTelefono.TabIndex = 9;
             // 
             // lblEmail
             // 
@@ -125,7 +125,7 @@
             this.radioMujer.Location = new System.Drawing.Point(205, 172);
             this.radioMujer.Name = "radioMujer";
             this.radioMujer.Size = new System.Drawing.Size(51, 17);
-            this.radioMujer.TabIndex = 82;
+            this.radioMujer.TabIndex = 6;
             this.radioMujer.TabStop = true;
             this.radioMujer.Text = "Mujer";
             this.radioMujer.UseVisualStyleBackColor = true;
@@ -136,7 +136,7 @@
             this.radioHombre.Location = new System.Drawing.Point(137, 172);
             this.radioHombre.Name = "radioHombre";
             this.radioHombre.Size = new System.Drawing.Size(62, 17);
-            this.radioHombre.TabIndex = 81;
+            this.radioHombre.TabIndex = 5;
             this.radioHombre.TabStop = true;
             this.radioHombre.Text = "Hombre";
             this.radioHombre.UseVisualStyleBackColor = true;
@@ -146,14 +146,14 @@
             this.textBoxEmail.Location = new System.Drawing.Point(138, 221);
             this.textBoxEmail.Name = "textBoxEmail";
             this.textBoxEmail.Size = new System.Drawing.Size(206, 20);
-            this.textBoxEmail.TabIndex = 80;
+            this.textBoxEmail.TabIndex = 8;
             // 
             // textBoxDocumento
             // 
             this.textBoxDocumento.Location = new System.Drawing.Point(138, 118);
             this.textBoxDocumento.Name = "textBoxDocumento";
             this.textBoxDocumento.Size = new System.Drawing.Size(206, 20);
-            this.textBoxDocumento.TabIndex = 79;
+            this.textBoxDocumento.TabIndex = 3;
             // 
             // comboTipoDoc
             // 
@@ -161,21 +161,21 @@
             this.comboTipoDoc.Location = new System.Drawing.Point(138, 91);
             this.comboTipoDoc.Name = "comboTipoDoc";
             this.comboTipoDoc.Size = new System.Drawing.Size(206, 21);
-            this.comboTipoDoc.TabIndex = 78;
+            this.comboTipoDoc.TabIndex = 2;
             // 
             // textBoxNombre
             // 
             this.textBoxNombre.Location = new System.Drawing.Point(138, 65);
             this.textBoxNombre.Name = "textBoxNombre";
             this.textBoxNombre.Size = new System.Drawing.Size(206, 20);
-            this.textBoxNombre.TabIndex = 77;
+            this.textBoxNombre.TabIndex = 1;
             // 
             // textBoxApellido
             // 
             this.textBoxApellido.Location = new System.Drawing.Point(138, 39);
             this.textBoxApellido.Name = "textBoxApellido";
             this.textBoxApellido.Size = new System.Drawing.Size(206, 20);
-            this.textBoxApellido.TabIndex = 76;
+            this.textBoxApellido.TabIndex = 0;
             // 
             // lblDocumento
             // 
@@ -211,7 +211,7 @@
             this.comboCargo.Location = new System.Drawing.Point(138, 144);
             this.comboCargo.Name = "comboCargo";
             this.comboCargo.Size = new System.Drawing.Size(206, 21);
-            this.comboCargo.TabIndex = 94;
+            this.comboCargo.TabIndex = 4;
             this.comboCargo.ValueMember = "IdCargo";
             // 
             // lblCargo
@@ -231,7 +231,7 @@
             this.btnNuevoCargo.Location = new System.Drawing.Point(350, 140);
             this.btnNuevoCargo.Name = "btnNuevoCargo";
             this.btnNuevoCargo.Size = new System.Drawing.Size(100, 27);
-            this.btnNuevoCargo.TabIndex = 95;
+            this.btnNuevoCargo.TabIndex = 12;
             this.btnNuevoCargo.Text = "Nuevo Cargo";
             this.btnNuevoCargo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnNuevoCargo.UseVisualStyleBackColor = true;
@@ -244,7 +244,7 @@
             this.dateTimePickerNacimiento.Location = new System.Drawing.Point(138, 195);
             this.dateTimePickerNacimiento.Name = "dateTimePickerNacimiento";
             this.dateTimePickerNacimiento.Size = new System.Drawing.Size(206, 20);
-            this.dateTimePickerNacimiento.TabIndex = 96;
+            this.dateTimePickerNacimiento.TabIndex = 7;
             // 
             // FrmEmpleadosModificar
             // 

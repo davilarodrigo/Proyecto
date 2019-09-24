@@ -64,7 +64,7 @@
             this.gropuBoxFiltros.Location = new System.Drawing.Point(12, 12);
             this.gropuBoxFiltros.Name = "gropuBoxFiltros";
             this.gropuBoxFiltros.Size = new System.Drawing.Size(775, 432);
-            this.gropuBoxFiltros.TabIndex = 9;
+            this.gropuBoxFiltros.TabIndex = 0;
             this.gropuBoxFiltros.TabStop = false;
             this.gropuBoxFiltros.Text = "Filtros";
             // 
@@ -76,7 +76,7 @@
             this.btnRecargar.Location = new System.Drawing.Point(729, 19);
             this.btnRecargar.Name = "btnRecargar";
             this.btnRecargar.Size = new System.Drawing.Size(40, 40);
-            this.btnRecargar.TabIndex = 48;
+            this.btnRecargar.TabIndex = 5;
             this.btnRecargar.UseVisualStyleBackColor = true;
             this.btnRecargar.Click += new System.EventHandler(this.BtnRecargar_Click);
             // 
@@ -87,7 +87,7 @@
             this.btnBuscar.Location = new System.Drawing.Point(408, 57);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(48, 48);
-            this.btnBuscar.TabIndex = 9;
+            this.btnBuscar.TabIndex = 4;
             this.btnBuscar.UseVisualStyleBackColor = true;
             this.btnBuscar.Click += new System.EventHandler(this.BtnBuscar_Click);
             // 
@@ -105,7 +105,7 @@
             this.textBoxMarca.Location = new System.Drawing.Point(101, 46);
             this.textBoxMarca.Name = "textBoxMarca";
             this.textBoxMarca.Size = new System.Drawing.Size(291, 20);
-            this.textBoxMarca.TabIndex = 8;
+            this.textBoxMarca.TabIndex = 2;
             // 
             // comboCategorias
             // 
@@ -113,7 +113,7 @@
             this.comboCategorias.Location = new System.Drawing.Point(101, 72);
             this.comboCategorias.Name = "comboCategorias";
             this.comboCategorias.Size = new System.Drawing.Size(291, 21);
-            this.comboCategorias.TabIndex = 6;
+            this.comboCategorias.TabIndex = 3;
             // 
             // dataGridProductos
             // 
@@ -152,7 +152,7 @@
             this.textBoxNombreProducto.Location = new System.Drawing.Point(101, 20);
             this.textBoxNombreProducto.Name = "textBoxNombreProducto";
             this.textBoxNombreProducto.Size = new System.Drawing.Size(291, 20);
-            this.textBoxNombreProducto.TabIndex = 0;
+            this.textBoxNombreProducto.TabIndex = 1;
             // 
             // btnNuevo
             // 
@@ -162,7 +162,7 @@
             this.btnNuevo.Location = new System.Drawing.Point(12, 459);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(50, 50);
-            this.btnNuevo.TabIndex = 14;
+            this.btnNuevo.TabIndex = 1;
             this.btnNuevo.UseVisualStyleBackColor = true;
             this.btnNuevo.Click += new System.EventHandler(this.BtnNuevo_Click);
             // 
@@ -174,7 +174,7 @@
             this.btnSalir.Location = new System.Drawing.Point(737, 459);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(50, 50);
-            this.btnSalir.TabIndex = 13;
+            this.btnSalir.TabIndex = 4;
             this.btnSalir.UseVisualStyleBackColor = true;
             this.btnSalir.Click += new System.EventHandler(this.BtnSalir_Click);
             // 
@@ -186,7 +186,7 @@
             this.btnEliminar.Location = new System.Drawing.Point(124, 459);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(50, 50);
-            this.btnEliminar.TabIndex = 12;
+            this.btnEliminar.TabIndex = 3;
             this.btnEliminar.UseVisualStyleBackColor = true;
             this.btnEliminar.Click += new System.EventHandler(this.BtnEliminar_Click);
             // 
@@ -198,7 +198,7 @@
             this.btnModificar.Location = new System.Drawing.Point(68, 459);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(50, 50);
-            this.btnModificar.TabIndex = 11;
+            this.btnModificar.TabIndex = 2;
             this.btnModificar.UseVisualStyleBackColor = true;
             this.btnModificar.Click += new System.EventHandler(this.BtnModificar_Click);
             // 

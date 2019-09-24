@@ -89,14 +89,14 @@
             this.textBoxApellido.Location = new System.Drawing.Point(130, 32);
             this.textBoxApellido.Name = "textBoxApellido";
             this.textBoxApellido.Size = new System.Drawing.Size(206, 20);
-            this.textBoxApellido.TabIndex = 3;
+            this.textBoxApellido.TabIndex = 0;
             // 
             // textBoxNombre
             // 
             this.textBoxNombre.Location = new System.Drawing.Point(130, 58);
             this.textBoxNombre.Name = "textBoxNombre";
             this.textBoxNombre.Size = new System.Drawing.Size(206, 20);
-            this.textBoxNombre.TabIndex = 4;
+            this.textBoxNombre.TabIndex = 1;
             // 
             // comboTipoDoc
             // 
@@ -104,14 +104,14 @@
             this.comboTipoDoc.Location = new System.Drawing.Point(130, 84);
             this.comboTipoDoc.Name = "comboTipoDoc";
             this.comboTipoDoc.Size = new System.Drawing.Size(206, 21);
-            this.comboTipoDoc.TabIndex = 5;
+            this.comboTipoDoc.TabIndex = 2;
             // 
             // textBoxDocumento
             // 
             this.textBoxDocumento.Location = new System.Drawing.Point(130, 111);
             this.textBoxDocumento.Name = "textBoxDocumento";
             this.textBoxDocumento.Size = new System.Drawing.Size(206, 20);
-            this.textBoxDocumento.TabIndex = 6;
+            this.textBoxDocumento.TabIndex = 3;
             // 
             // textBoxEmail
             // 
@@ -126,7 +126,7 @@
             this.radioHombre.Location = new System.Drawing.Point(130, 137);
             this.radioHombre.Name = "radioHombre";
             this.radioHombre.Size = new System.Drawing.Size(62, 17);
-            this.radioHombre.TabIndex = 8;
+            this.radioHombre.TabIndex = 4;
             this.radioHombre.TabStop = true;
             this.radioHombre.Text = "Hombre";
             this.radioHombre.UseVisualStyleBackColor = true;
@@ -137,7 +137,7 @@
             this.radioMujer.Location = new System.Drawing.Point(198, 137);
             this.radioMujer.Name = "radioMujer";
             this.radioMujer.Size = new System.Drawing.Size(51, 17);
-            this.radioMujer.TabIndex = 9;
+            this.radioMujer.TabIndex = 5;
             this.radioMujer.TabStop = true;
             this.radioMujer.Text = "Mujer";
             this.radioMujer.UseVisualStyleBackColor = true;
@@ -174,21 +174,21 @@
             this.textBoxTelefono.Location = new System.Drawing.Point(130, 212);
             this.textBoxTelefono.Name = "textBoxTelefono";
             this.textBoxTelefono.Size = new System.Drawing.Size(155, 20);
-            this.textBoxTelefono.TabIndex = 14;
+            this.textBoxTelefono.TabIndex = 8;
             // 
             // textBoxCalle
             // 
             this.textBoxCalle.Location = new System.Drawing.Point(130, 238);
             this.textBoxCalle.Name = "textBoxCalle";
             this.textBoxCalle.Size = new System.Drawing.Size(206, 20);
-            this.textBoxCalle.TabIndex = 15;
+            this.textBoxCalle.TabIndex = 9;
             // 
             // textBoxNumeroCalle
             // 
             this.textBoxNumeroCalle.Location = new System.Drawing.Point(130, 264);
             this.textBoxNumeroCalle.Name = "textBoxNumeroCalle";
             this.textBoxNumeroCalle.Size = new System.Drawing.Size(85, 20);
-            this.textBoxNumeroCalle.TabIndex = 16;
+            this.textBoxNumeroCalle.TabIndex = 10;
             // 
             // lblTelefono
             // 
@@ -225,7 +225,7 @@
             this.btnSalir.Location = new System.Drawing.Point(441, 337);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(50, 50);
-            this.btnSalir.TabIndex = 21;
+            this.btnSalir.TabIndex = 13;
             this.btnSalir.UseVisualStyleBackColor = true;
             this.btnSalir.Click += new System.EventHandler(this.BtnSalir_Click);
             // 
@@ -237,7 +237,7 @@
             this.btnAceptar.Location = new System.Drawing.Point(385, 337);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(50, 50);
-            this.btnAceptar.TabIndex = 20;
+            this.btnAceptar.TabIndex = 12;
             this.btnAceptar.UseVisualStyleBackColor = true;
             // 
             // comboLocalidad
@@ -246,7 +246,7 @@
             this.comboLocalidad.Location = new System.Drawing.Point(130, 290);
             this.comboLocalidad.Name = "comboLocalidad";
             this.comboLocalidad.Size = new System.Drawing.Size(197, 21);
-            this.comboLocalidad.TabIndex = 25;
+            this.comboLocalidad.TabIndex = 11;
             // 
             // lblLocalidad
             // 
@@ -265,7 +265,7 @@
             this.btnNuevaLocalidad.Location = new System.Drawing.Point(333, 286);
             this.btnNuevaLocalidad.Name = "btnNuevaLocalidad";
             this.btnNuevaLocalidad.Size = new System.Drawing.Size(117, 27);
-            this.btnNuevaLocalidad.TabIndex = 85;
+            this.btnNuevaLocalidad.TabIndex = 14;
             this.btnNuevaLocalidad.Text = "Nueva Localidad";
             this.btnNuevaLocalidad.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnNuevaLocalidad.UseVisualStyleBackColor = true;
@@ -279,7 +279,7 @@
             this.btnRecargar.Location = new System.Drawing.Point(451, 12);
             this.btnRecargar.Name = "btnRecargar";
             this.btnRecargar.Size = new System.Drawing.Size(40, 40);
-            this.btnRecargar.TabIndex = 86;
+            this.btnRecargar.TabIndex = 15;
             this.btnRecargar.UseVisualStyleBackColor = true;
             this.btnRecargar.Click += new System.EventHandler(this.btnRecargar_Click);
             // 
@@ -290,7 +290,7 @@
             this.dateTimePickerNacimiento.Location = new System.Drawing.Point(130, 160);
             this.dateTimePickerNacimiento.Name = "dateTimePickerNacimiento";
             this.dateTimePickerNacimiento.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePickerNacimiento.TabIndex = 87;
+            this.dateTimePickerNacimiento.TabIndex = 6;
             // 
             // FrmClientesNuevo
             // 

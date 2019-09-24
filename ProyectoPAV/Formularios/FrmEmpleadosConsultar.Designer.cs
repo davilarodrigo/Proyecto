@@ -80,7 +80,7 @@ namespace ProyectoPAV
             this.btnRecargar.Location = new System.Drawing.Point(665, 19);
             this.btnRecargar.Name = "btnRecargar";
             this.btnRecargar.Size = new System.Drawing.Size(40, 40);
-            this.btnRecargar.TabIndex = 48;
+            this.btnRecargar.TabIndex = 6;
             this.btnRecargar.UseVisualStyleBackColor = true;
             this.btnRecargar.Click += new System.EventHandler(this.BtnRecargar_Click);
             // 
@@ -91,7 +91,7 @@ namespace ProyectoPAV
             this.btnBuscar.Location = new System.Drawing.Point(445, 46);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(48, 48);
-            this.btnBuscar.TabIndex = 9;
+            this.btnBuscar.TabIndex = 5;
             this.btnBuscar.UseVisualStyleBackColor = true;
             this.btnBuscar.Click += new System.EventHandler(this.BtnBuscar_Click);
             // 
@@ -109,14 +109,14 @@ namespace ProyectoPAV
             this.textBoxApellido.Location = new System.Drawing.Point(101, 46);
             this.textBoxApellido.Name = "textBoxApellido";
             this.textBoxApellido.Size = new System.Drawing.Size(338, 20);
-            this.textBoxApellido.TabIndex = 8;
+            this.textBoxApellido.TabIndex = 2;
             // 
             // textBoxDocumento
             // 
             this.textBoxDocumento.Location = new System.Drawing.Point(264, 72);
             this.textBoxDocumento.Name = "textBoxDocumento";
             this.textBoxDocumento.Size = new System.Drawing.Size(175, 20);
-            this.textBoxDocumento.TabIndex = 7;
+            this.textBoxDocumento.TabIndex = 4;
             // 
             // comboTipoDocumento
             // 
@@ -124,7 +124,7 @@ namespace ProyectoPAV
             this.comboTipoDocumento.Location = new System.Drawing.Point(101, 72);
             this.comboTipoDocumento.Name = "comboTipoDocumento";
             this.comboTipoDocumento.Size = new System.Drawing.Size(157, 21);
-            this.comboTipoDocumento.TabIndex = 6;
+            this.comboTipoDocumento.TabIndex = 3;
             // 
             // dataGridEmpleados
             // 
@@ -138,7 +138,7 @@ namespace ProyectoPAV
             this.dataGridEmpleados.Name = "dataGridEmpleados";
             this.dataGridEmpleados.ReadOnly = true;
             this.dataGridEmpleados.Size = new System.Drawing.Size(699, 313);
-            this.dataGridEmpleados.TabIndex = 5;
+            this.dataGridEmpleados.TabIndex = 6;
             // 
             // lblDocumento
             // 
@@ -163,7 +163,7 @@ namespace ProyectoPAV
             this.textBoxNombre.Location = new System.Drawing.Point(101, 20);
             this.textBoxNombre.Name = "textBoxNombre";
             this.textBoxNombre.Size = new System.Drawing.Size(338, 20);
-            this.textBoxNombre.TabIndex = 0;
+            this.textBoxNombre.TabIndex = 1;
             // 
             // btnSalir
             // 
@@ -173,7 +173,7 @@ namespace ProyectoPAV
             this.btnSalir.Location = new System.Drawing.Point(673, 437);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(50, 50);
-            this.btnSalir.TabIndex = 8;
+            this.btnSalir.TabIndex = 4;
             this.btnSalir.UseVisualStyleBackColor = true;
             this.btnSalir.Click += new System.EventHandler(this.BtnSalir_Click);
             // 
@@ -185,7 +185,7 @@ namespace ProyectoPAV
             this.btnEliminar.Location = new System.Drawing.Point(124, 437);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(50, 50);
-            this.btnEliminar.TabIndex = 7;
+            this.btnEliminar.TabIndex = 3;
             this.btnEliminar.UseVisualStyleBackColor = true;
             this.btnEliminar.Click += new System.EventHandler(this.BtnEliminar_Click);
             // 
@@ -197,7 +197,7 @@ namespace ProyectoPAV
             this.btnModificar.Location = new System.Drawing.Point(68, 437);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(50, 50);
-            this.btnModificar.TabIndex = 6;
+            this.btnModificar.TabIndex = 2;
             this.btnModificar.UseVisualStyleBackColor = true;
             this.btnModificar.Click += new System.EventHandler(this.BtnModificar_Click);
             // 
@@ -209,7 +209,7 @@ namespace ProyectoPAV
             this.btnNuevo.Location = new System.Drawing.Point(12, 437);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(50, 50);
-            this.btnNuevo.TabIndex = 9;
+            this.btnNuevo.TabIndex = 1;
             this.btnNuevo.UseVisualStyleBackColor = true;
             this.btnNuevo.Click += new System.EventHandler(this.BtnNuevo_Click);
             // 

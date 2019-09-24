@@ -60,7 +60,7 @@
             this.textBoxRazonSocial.Location = new System.Drawing.Point(120, 49);
             this.textBoxRazonSocial.Name = "textBoxRazonSocial";
             this.textBoxRazonSocial.Size = new System.Drawing.Size(206, 20);
-            this.textBoxRazonSocial.TabIndex = 62;
+            this.textBoxRazonSocial.TabIndex = 0;
             // 
             // lblLocalidad
             // 
@@ -77,7 +77,7 @@
             this.comboLocalidad.Location = new System.Drawing.Point(120, 179);
             this.comboLocalidad.Name = "comboLocalidad";
             this.comboLocalidad.Size = new System.Drawing.Size(206, 21);
-            this.comboLocalidad.TabIndex = 60;
+            this.comboLocalidad.TabIndex = 5;
             // 
             // btnSalir
             // 
@@ -87,7 +87,7 @@
             this.btnSalir.Location = new System.Drawing.Point(417, 223);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(50, 50);
-            this.btnSalir.TabIndex = 59;
+            this.btnSalir.TabIndex = 7;
             this.btnSalir.UseVisualStyleBackColor = true;
             this.btnSalir.Click += new System.EventHandler(this.BtnSalir_Click);
             // 
@@ -99,7 +99,7 @@
             this.btnGuardar.Location = new System.Drawing.Point(361, 223);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(50, 50);
-            this.btnGuardar.TabIndex = 58;
+            this.btnGuardar.TabIndex = 6;
             this.btnGuardar.UseVisualStyleBackColor = true;
             this.btnGuardar.Click += new System.EventHandler(this.BtnGuardar_Click);
             // 
@@ -135,21 +135,21 @@
             this.textBoxNumeroCalle.Location = new System.Drawing.Point(120, 153);
             this.textBoxNumeroCalle.Name = "textBoxNumeroCalle";
             this.textBoxNumeroCalle.Size = new System.Drawing.Size(85, 20);
-            this.textBoxNumeroCalle.TabIndex = 54;
+            this.textBoxNumeroCalle.TabIndex = 4;
             // 
             // textBoxCalle
             // 
             this.textBoxCalle.Location = new System.Drawing.Point(120, 127);
             this.textBoxCalle.Name = "textBoxCalle";
             this.textBoxCalle.Size = new System.Drawing.Size(206, 20);
-            this.textBoxCalle.TabIndex = 53;
+            this.textBoxCalle.TabIndex = 3;
             // 
             // textBoxTelefono
             // 
             this.textBoxTelefono.Location = new System.Drawing.Point(120, 101);
             this.textBoxTelefono.Name = "textBoxTelefono";
             this.textBoxTelefono.Size = new System.Drawing.Size(155, 20);
-            this.textBoxTelefono.TabIndex = 52;
+            this.textBoxTelefono.TabIndex = 2;
             // 
             // lblEmail
             // 
@@ -165,7 +165,7 @@
             this.textBoxEmail.Location = new System.Drawing.Point(120, 75);
             this.textBoxEmail.Name = "textBoxEmail";
             this.textBoxEmail.Size = new System.Drawing.Size(206, 20);
-            this.textBoxEmail.TabIndex = 50;
+            this.textBoxEmail.TabIndex = 1;
             // 
             // btnNuevaLocalidad
             // 
@@ -175,7 +175,7 @@
             this.btnNuevaLocalidad.Location = new System.Drawing.Point(332, 175);
             this.btnNuevaLocalidad.Name = "btnNuevaLocalidad";
             this.btnNuevaLocalidad.Size = new System.Drawing.Size(117, 27);
-            this.btnNuevaLocalidad.TabIndex = 85;
+            this.btnNuevaLocalidad.TabIndex = 8;
             this.btnNuevaLocalidad.Text = "Nueva Localidad";
             this.btnNuevaLocalidad.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnNuevaLocalidad.UseVisualStyleBackColor = true;
