@@ -35,7 +35,7 @@ namespace ProyectoPAV.Formularios
             this.textBoxEmail.Text = tabla.Rows[0]["Email"].ToString();
             this.textBoxDocumento.Text = tabla.Rows[0]["NumeroDocumento"].ToString();
             this.textBoxTelefono.Text = tabla.Rows[0]["Telefono"].ToString();
-            //this.dateTimePickerNacimiento.Value = tabla.Rows[0][6];
+            this.dateTimePickerNacimiento.Value = Convert.ToDateTime(tabla.Rows[0]["FechaNacimiento"].ToString());
             this.comboCargo.SelectedValue = int.Parse(tabla.Rows[0]["IdCargo"].ToString());
             this.comboTipoDoc.SelectedValue = int.Parse(tabla.Rows[0]["IdTipoDocumento"].ToString());
             if (int.Parse(tabla.Rows[0]["IdSexo"].ToString()) == 1)
@@ -52,8 +52,6 @@ namespace ProyectoPAV.Formularios
 
         private void FrmEmpleadosModificar_Load(object sender, EventArgs e)
         {
-            
-
             CargadorCombos cargador = new CargadorCombos();
             DataTable tablaTipoDocumento = new DataTable();
 
@@ -106,13 +104,14 @@ namespace ProyectoPAV.Formularios
             {
                 ValorRadioButton = 2;
             }
+            DateTime fecha_Elegida = Convert.ToDateTime(dateTimePickerNacimiento.Value);
             empleado.ModificarEmpleado(Int32.Parse(this.IdEmpleado)
                             , Int32.Parse(this.comboTipoDoc.SelectedValue.ToString())
                             , Int32.Parse(this.textBoxDocumento.Text)
                             , this.textBoxApellido.Text
                             , this.textBoxNombre.Text
                             , ValorRadioButton
-                            , "GETDATE(), "
+                            , fecha_Elegida.ToString("MM-dd-yyyy")
                             , this.textBoxEmail.Text
                             , Int32.Parse(this.textBoxTelefono.Text)
                             , Int32.Parse(this.comboCargo.SelectedValue.ToString()));

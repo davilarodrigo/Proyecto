@@ -41,8 +41,8 @@ namespace ProyectoPAV.Formularios.Auxiliares
             if (this.textBoxNuevoTipoDoc.Text == "")
             {
                 MessageBox.Show("No cargó datos"
-                    , "IMPORTANTE"
-                    , MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                    , "Importante!"
+                    , MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 textBoxNuevoTipoDoc.Focus();
                 return;
             }

@@ -43,7 +43,7 @@
             this.btnEliminar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnEliminar.BackgroundImage = global::ProyectoPAV.Properties.Resources.Delete_256x256;
             this.btnEliminar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnEliminar.Location = new System.Drawing.Point(371, 289);
+            this.btnEliminar.Location = new System.Drawing.Point(454, 338);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(50, 50);
             this.btnEliminar.TabIndex = 38;
@@ -55,11 +55,12 @@
             this.btnSalir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSalir.BackgroundImage = global::ProyectoPAV.Properties.Resources.Log_Out_256x256;
             this.btnSalir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnSalir.Location = new System.Drawing.Point(427, 289);
+            this.btnSalir.Location = new System.Drawing.Point(510, 338);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(50, 50);
             this.btnSalir.TabIndex = 37;
             this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.BtnSalir_Click_1);
             // 
             // textBoxNuevaCategoria
             // 
@@ -92,16 +93,16 @@
             // 
             this.dataGridCategorias.AllowUserToAddRows = false;
             this.dataGridCategorias.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridCategorias.Location = new System.Drawing.Point(15, 61);
+            this.dataGridCategorias.Location = new System.Drawing.Point(12, 61);
             this.dataGridCategorias.Name = "dataGridCategorias";
-            this.dataGridCategorias.Size = new System.Drawing.Size(416, 213);
+            this.dataGridCategorias.Size = new System.Drawing.Size(548, 253);
             this.dataGridCategorias.TabIndex = 32;
             // 
             // FrmCategorias
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(489, 351);
+            this.ClientSize = new System.Drawing.Size(572, 400);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.textBoxNuevaCategoria);

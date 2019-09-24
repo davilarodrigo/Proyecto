@@ -32,7 +32,7 @@ namespace ProyectoPAV.Clases
                 where = where + "E.Apellido like '%" + apellido + "%' AND ";
             }
 
-            if (tipoDoc != "-1")     
+            if (tipoDoc != "0")     
             {
                 where = where + "E.IdTipoDocumento = " + tipoDoc + " AND ";
             }
@@ -87,18 +87,16 @@ namespace ProyectoPAV.Clases
         }
 
         public ResultadoEmpleados InsertarEmpleado(int idTipoDoc, int numeroDoc, string apellido, string nombre, 
-                                    int idSexo, DateTime fechaNacimiento, string email, int telefono, 
+                                    int idSexo, string fechaNacimiento, string email, int telefono, 
                                     int idCargo)
         {
             string sql_insert = "";
             GestorTransaccionesSQL gestor = new GestorTransaccionesSQL();
             ResultadoEmpleados resultado = new ResultadoEmpleados();
-            //DateTime fechaAlta = DateTime.Now;
-            fechaNacimiento = Convert.ToDateTime(fechaNacimiento.Date.ToString("yyyy-MM-dd HH:mm:ss.000"));
-
+            
             sql_insert = @"INSERT INTO Empleado VALUES (" + idTipoDoc + "," + " " + numeroDoc + "," +
                                                         " '" + apellido + "'," + " '" + nombre + "'," +
-                                                        " " + idSexo + "," + " " + "GETDATE()" + "," +
+                                                        " " + idSexo + "," + " '" + fechaNacimiento + "'," +
                                                         " '" + email + "'," + " " + telefono + "," +
                                                         " " + idCargo + ", "+ "GETDATE()" + ", NULL)";
             if (gestor.Insertar(sql_insert) ==
@@ -141,21 +139,9 @@ namespace ProyectoPAV.Clases
             string sql = "SELECT * FROM Empleado WHERE IdEmpleado = " + id;
             tablaEmpleado = gestor.TablaResultado;
             gestor.EjecutarConsulta(sql);
-            //if (gestor.EjecutarConsulta(sql) ==
-            //    GestorTransaccionesSQL.ResultadoTransaccion.correcto)
-            //{
-            //    dt = gestor.TablaResultado;
-            //}
-            //else
-            //{
-            //    MessageBox.Show("No se consultaron correctamente los datos debido a: " +
-            //        gestor.mensajeErrorTransaccion, "Importante!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //}
-
+            
             return tablaEmpleado;
-            //GestorTransaccionesSQL gestor = new GestorTransaccionesSQL();
-            //return gestor.EjecutarConsulta("SELECT * FROM Proveedor WHERE IdProveedor = " + id);
-
+           
         }
 
         public ResultadoEmpleados ModificarEmpleado(int idEmpleado,int idTipoDoc, int numeroDoc, string apellido, string nombre,
@@ -164,14 +150,14 @@ namespace ProyectoPAV.Clases
         {
             string sql_modificar = "";
             sql_modificar = @"UPDATE Empleado SET IdTipoDocumento = " + idTipoDoc + "," +
-                                                        "NumeroDocumento = " + numeroDoc + "," +
-                                                        "Apellido = '" + apellido + "'," +
-                                                        "Nombre = '" + nombre + "'," +
-                                                        "IdSexo = " + idSexo + "," +
-                                                        "FechaNacimiento = " + fechaNacimiento +
-                                                        "Email = '" + email + "'," +
-                                                        "Telefono = " + telefono +
-                                                        ", IdCargo = " + idCargo +
+                                                        " NumeroDocumento = " + numeroDoc + "," +
+                                                        " Apellido = '" + apellido + "'," +
+                                                        " Nombre = '" + nombre + "'," +
+                                                        " IdSexo = " + idSexo + "," +
+                                                        " FechaNacimiento = '" + fechaNacimiento + "'," +
+                                                        " Email = '" + email + "'," +
+                                                        " Telefono = " + telefono + "," +
+                                                        " IdCargo = " + idCargo +
                                                         " WHERE IdEmpleado = " + idEmpleado;
             GestorTransaccionesSQL gestor = new GestorTransaccionesSQL();
             ResultadoEmpleados resultado = new ResultadoEmpleados();

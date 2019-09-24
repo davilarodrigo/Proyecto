@@ -38,8 +38,7 @@ namespace ProyectoPAV.Formularios
             else
             {
                 MessageBox.Show("Para modificar primero seleccione una fila de la grilla"
-                    , "Importante!", MessageBoxButtons.OK
-                    , MessageBoxIcon.Exclamation);
+                    , "Importante!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
             
 
@@ -126,10 +125,16 @@ namespace ProyectoPAV.Formularios
             }
             else
             {
-                MessageBox.Show("Seleccione primero una fila de la grilla, para eliminar"
+                MessageBox.Show("Para eliminar primero seleccione una fila de la grilla"
                     , "Importante!", MessageBoxButtons.OK
                     , MessageBoxIcon.Exclamation);
             }
+        }
+
+        private void BtnRecargar_Click(object sender, EventArgs e)
+        {
+            this.textBoxRazonSocial.Clear();
+            this.Consulta();
         }
     }
 }

@@ -9,7 +9,6 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using ProyectoPAV.Formularios.Auxiliares;
 using ProyectoPAV.Clases;
-using System.Data;
 
 namespace ProyectoPAV.Formularios
 {
@@ -56,15 +55,13 @@ namespace ProyectoPAV.Formularios
                 ValorRadioButton = 2;
             }
 
-            DateTime nacimiento = new DateTime();
-            nacimiento = dateTimePickerNacimiento.Value;
+            DateTime fecha_Elegida = Convert.ToDateTime(dateTimePickerNacimiento.Value);
             //nacimiento = dateTimePickerNacimiento.Value.ToShortDateString();
 
             EmpleadosABM empleados = new EmpleadosABM();
             cadenaResultado = empleados.InsertarEmpleado(Int32.Parse(this.comboTipoDoc.SelectedValue.ToString())
                             , Int32.Parse(this.TextBoxDocumento.Text), this.TextBoxApellido.Text, this.TextBoxNombre.Text
-                            , ValorRadioButton, nacimiento
-                            , this.TextBoxEmail.Text
+                            , ValorRadioButton, fecha_Elegida.ToString("MM-dd-yyyy"), this.TextBoxEmail.Text
                             , Int32.Parse(this.TextBoxTelefono.Text), Int32.Parse(comboCargo.SelectedValue.ToString())).ToString();
             MessageBox.Show(empleados.mensajeRetorno, "Importante!", MessageBoxButtons.OK, MessageBoxIcon.Information);
             this.Dispose();

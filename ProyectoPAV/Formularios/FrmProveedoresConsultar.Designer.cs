@@ -34,6 +34,7 @@
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
             this.groupBoxFiltros = new System.Windows.Forms.GroupBox();
+            this.btnRecargar = new System.Windows.Forms.Button();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.dataGridProveedores = new System.Windows.Forms.DataGridView();
             this.lblNombre = new System.Windows.Forms.Label();
@@ -95,6 +96,7 @@
             this.groupBoxFiltros.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBoxFiltros.Controls.Add(this.btnRecargar);
             this.groupBoxFiltros.Controls.Add(this.btnBuscar);
             this.groupBoxFiltros.Controls.Add(this.dataGridProveedores);
             this.groupBoxFiltros.Controls.Add(this.lblNombre);
@@ -105,6 +107,18 @@
             this.groupBoxFiltros.TabIndex = 10;
             this.groupBoxFiltros.TabStop = false;
             this.groupBoxFiltros.Text = "Filtros";
+            // 
+            // btnRecargar
+            // 
+            this.btnRecargar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnRecargar.BackgroundImage = global::ProyectoPAV.Properties.Resources.Refresh_256x256;
+            this.btnRecargar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnRecargar.Location = new System.Drawing.Point(691, 19);
+            this.btnRecargar.Name = "btnRecargar";
+            this.btnRecargar.Size = new System.Drawing.Size(40, 40);
+            this.btnRecargar.TabIndex = 48;
+            this.btnRecargar.UseVisualStyleBackColor = true;
+            this.btnRecargar.Click += new System.EventHandler(this.BtnRecargar_Click);
             // 
             // btnBuscar
             // 
@@ -180,5 +194,6 @@
         private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.TextBox textBoxRazonSocial;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmRazonSocial;
+        private System.Windows.Forms.Button btnRecargar;
     }
 }

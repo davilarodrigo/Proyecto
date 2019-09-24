@@ -43,7 +43,7 @@
             this.btnEliminar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnEliminar.BackgroundImage = global::ProyectoPAV.Properties.Resources.Delete_256x256;
             this.btnEliminar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnEliminar.Location = new System.Drawing.Point(399, 310);
+            this.btnEliminar.Location = new System.Drawing.Point(489, 318);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(50, 50);
             this.btnEliminar.TabIndex = 45;
@@ -55,7 +55,7 @@
             this.btnSalir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSalir.BackgroundImage = global::ProyectoPAV.Properties.Resources.Log_Out_256x256;
             this.btnSalir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnSalir.Location = new System.Drawing.Point(454, 310);
+            this.btnSalir.Location = new System.Drawing.Point(544, 318);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(50, 50);
             this.btnSalir.TabIndex = 44;
@@ -93,16 +93,16 @@
             // 
             this.dataGridCargos.AllowUserToAddRows = false;
             this.dataGridCargos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridCargos.Location = new System.Drawing.Point(23, 65);
+            this.dataGridCargos.Location = new System.Drawing.Point(12, 65);
             this.dataGridCargos.Name = "dataGridCargos";
-            this.dataGridCargos.Size = new System.Drawing.Size(416, 213);
+            this.dataGridCargos.Size = new System.Drawing.Size(582, 222);
             this.dataGridCargos.TabIndex = 39;
             // 
             // FrmCargos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(516, 372);
+            this.ClientSize = new System.Drawing.Size(606, 380);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.textBoxNuevoCargo);

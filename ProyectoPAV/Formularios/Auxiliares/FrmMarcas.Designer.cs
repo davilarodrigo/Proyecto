@@ -42,9 +42,9 @@
             // 
             this.dataGridMarcas.AllowUserToAddRows = false;
             this.dataGridMarcas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridMarcas.Location = new System.Drawing.Point(48, 93);
+            this.dataGridMarcas.Location = new System.Drawing.Point(12, 93);
             this.dataGridMarcas.Name = "dataGridMarcas";
-            this.dataGridMarcas.Size = new System.Drawing.Size(416, 213);
+            this.dataGridMarcas.Size = new System.Drawing.Size(559, 213);
             this.dataGridMarcas.TabIndex = 0;
             // 
             // btnAgregar
@@ -79,7 +79,7 @@
             this.btnSalir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSalir.BackgroundImage = global::ProyectoPAV.Properties.Resources.Log_Out_256x256;
             this.btnSalir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnSalir.Location = new System.Drawing.Point(435, 329);
+            this.btnSalir.Location = new System.Drawing.Point(521, 337);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(50, 50);
             this.btnSalir.TabIndex = 23;
@@ -91,7 +91,7 @@
             this.btnEliminar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnEliminar.BackgroundImage = global::ProyectoPAV.Properties.Resources.Delete_256x256;
             this.btnEliminar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnEliminar.Location = new System.Drawing.Point(379, 329);
+            this.btnEliminar.Location = new System.Drawing.Point(465, 337);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(50, 50);
             this.btnEliminar.TabIndex = 24;
@@ -102,7 +102,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(497, 391);
+            this.ClientSize = new System.Drawing.Size(583, 399);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.textBoxNuevaMarca);

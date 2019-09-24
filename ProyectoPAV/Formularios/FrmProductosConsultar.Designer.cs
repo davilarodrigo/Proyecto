@@ -30,16 +30,12 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmProductosConsultar));
             this.gropuBoxFiltros = new System.Windows.Forms.GroupBox();
+            this.btnRecargar = new System.Windows.Forms.Button();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.lblMarca = new System.Windows.Forms.Label();
             this.textBoxMarca = new System.Windows.Forms.TextBox();
             this.comboCategorias = new System.Windows.Forms.ComboBox();
             this.dataGridProductos = new System.Windows.Forms.DataGridView();
-            this.ClmNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ClmMarca = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ClmCategoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ClmTalle = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ClmStockDisponible = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblCategoria = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
             this.textBoxNombreProducto = new System.Windows.Forms.TextBox();
@@ -56,6 +52,7 @@
             this.gropuBoxFiltros.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.gropuBoxFiltros.Controls.Add(this.btnRecargar);
             this.gropuBoxFiltros.Controls.Add(this.btnBuscar);
             this.gropuBoxFiltros.Controls.Add(this.lblMarca);
             this.gropuBoxFiltros.Controls.Add(this.textBoxMarca);
@@ -66,10 +63,22 @@
             this.gropuBoxFiltros.Controls.Add(this.textBoxNombreProducto);
             this.gropuBoxFiltros.Location = new System.Drawing.Point(12, 12);
             this.gropuBoxFiltros.Name = "gropuBoxFiltros";
-            this.gropuBoxFiltros.Size = new System.Drawing.Size(770, 432);
+            this.gropuBoxFiltros.Size = new System.Drawing.Size(775, 432);
             this.gropuBoxFiltros.TabIndex = 9;
             this.gropuBoxFiltros.TabStop = false;
             this.gropuBoxFiltros.Text = "Filtros";
+            // 
+            // btnRecargar
+            // 
+            this.btnRecargar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnRecargar.BackgroundImage = global::ProyectoPAV.Properties.Resources.Refresh_256x256;
+            this.btnRecargar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnRecargar.Location = new System.Drawing.Point(729, 19);
+            this.btnRecargar.Name = "btnRecargar";
+            this.btnRecargar.Size = new System.Drawing.Size(40, 40);
+            this.btnRecargar.TabIndex = 48;
+            this.btnRecargar.UseVisualStyleBackColor = true;
+            this.btnRecargar.Click += new System.EventHandler(this.BtnRecargar_Click);
             // 
             // btnBuscar
             // 
@@ -80,6 +89,7 @@
             this.btnBuscar.Size = new System.Drawing.Size(48, 48);
             this.btnBuscar.TabIndex = 9;
             this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.BtnBuscar_Click);
             // 
             // lblMarca
             // 
@@ -113,50 +123,11 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridProductos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ClmNombre,
-            this.ClmMarca,
-            this.ClmCategoria,
-            this.ClmTalle,
-            this.ClmStockDisponible});
             this.dataGridProductos.Location = new System.Drawing.Point(6, 111);
             this.dataGridProductos.Name = "dataGridProductos";
             this.dataGridProductos.ReadOnly = true;
-            this.dataGridProductos.Size = new System.Drawing.Size(758, 315);
+            this.dataGridProductos.Size = new System.Drawing.Size(763, 315);
             this.dataGridProductos.TabIndex = 5;
-            // 
-            // ClmNombre
-            // 
-            this.ClmNombre.HeaderText = "Nombre";
-            this.ClmNombre.Name = "ClmNombre";
-            this.ClmNombre.ReadOnly = true;
-            this.ClmNombre.Width = 200;
-            // 
-            // ClmMarca
-            // 
-            this.ClmMarca.HeaderText = "Marca";
-            this.ClmMarca.Name = "ClmMarca";
-            this.ClmMarca.ReadOnly = true;
-            this.ClmMarca.Width = 150;
-            // 
-            // ClmCategoria
-            // 
-            this.ClmCategoria.HeaderText = "Categoría";
-            this.ClmCategoria.Name = "ClmCategoria";
-            this.ClmCategoria.ReadOnly = true;
-            this.ClmCategoria.Width = 150;
-            // 
-            // ClmTalle
-            // 
-            this.ClmTalle.HeaderText = "Talle";
-            this.ClmTalle.Name = "ClmTalle";
-            this.ClmTalle.ReadOnly = true;
-            // 
-            // ClmStockDisponible
-            // 
-            this.ClmStockDisponible.HeaderText = "Stock Disponible";
-            this.ClmStockDisponible.Name = "ClmStockDisponible";
-            this.ClmStockDisponible.ReadOnly = true;
             // 
             // lblCategoria
             // 
@@ -200,7 +171,7 @@
             this.btnSalir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSalir.BackgroundImage = global::ProyectoPAV.Properties.Resources.Log_Out_256x256;
             this.btnSalir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnSalir.Location = new System.Drawing.Point(732, 459);
+            this.btnSalir.Location = new System.Drawing.Point(737, 459);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(50, 50);
             this.btnSalir.TabIndex = 13;
@@ -217,6 +188,7 @@
             this.btnEliminar.Size = new System.Drawing.Size(50, 50);
             this.btnEliminar.TabIndex = 12;
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.BtnEliminar_Click);
             // 
             // btnModificar
             // 
@@ -234,7 +206,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(794, 521);
+            this.ClientSize = new System.Drawing.Size(799, 521);
             this.Controls.Add(this.btnNuevo);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnEliminar);
@@ -243,6 +215,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmProductosConsultar";
             this.Text = "Consultar Productos";
+            this.Load += new System.EventHandler(this.FrmProductosConsultar_Load);
             this.gropuBoxFiltros.ResumeLayout(false);
             this.gropuBoxFiltros.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridProductos)).EndInit();
@@ -270,10 +243,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn clmCategoria;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmTalle;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmStockDisponible;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ClmNombre;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ClmMarca;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ClmCategoria;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ClmTalle;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ClmStockDisponible;
+        private System.Windows.Forms.Button btnRecargar;
     }
 }

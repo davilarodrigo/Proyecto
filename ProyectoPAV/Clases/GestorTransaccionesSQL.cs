@@ -14,14 +14,14 @@ namespace ProyectoPAV.Clases
         public enum ResultadoTransaccion { correcto, error }
         //+ "\u005C" +
         //RODO
-        //static string cadenaConexion = "Provider=SQLNCLI11;Data Source=DESKTOP-FHCPBI9" + "\u005C" + "SQLEXPRESS01;Integrated Security=SSPI;Initial Catalog=ProyectoPAV";
-        //OleDbConnection conexion = new OleDbConnection(cadenaConexion);
-        //OleDbCommand comando = new OleDbCommand();
+        static string cadenaConexion = "Provider=SQLNCLI11;Data Source=DESKTOP-FHCPBI9" + "\u005C" + "SQLEXPRESS01;Integrated Security=SSPI;Initial Catalog=ProyectoPAV";
+        OleDbConnection conexion = new OleDbConnection(cadenaConexion);
+        OleDbCommand comando = new OleDbCommand();
 
         // LUCAS 
-        static string cadenaConexion = "server = DESKTOP-0B3JQNF\\SQLEXPRESS; database = TP PAV; integrated security = true";
-        SqlConnection conexion = new SqlConnection(cadenaConexion);
-        SqlCommand comando = new SqlCommand();
+        //static string cadenaConexion = "server = DESKTOP-0B3JQNF\\SQLEXPRESS; database = TP PAV; integrated security = true";
+        //SqlConnection conexion = new SqlConnection(cadenaConexion);
+        //SqlCommand comando = new SqlCommand();
 
         public string mensajeErrorTransaccion;
         public DataTable TablaResultado = new DataTable();

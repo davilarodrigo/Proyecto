@@ -40,8 +40,7 @@ namespace ProyectoPAV
             else
             {
                 MessageBox.Show("Para modificar primero seleccione una fila de la grilla"
-                    , "Importante!", MessageBoxButtons.OK
-                    , MessageBoxIcon.Exclamation);
+                    , "Importante!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
         }
 
@@ -72,12 +71,24 @@ namespace ProyectoPAV
         {
             EmpleadosABM empleados = new EmpleadosABM();
             string cadenaResultado;
+            string selectedValue = "";
             DataTable tabla = new DataTable();
-            if (this.textBoxNombre.Text != "" || this.textBoxApellido.Text != ""
-                || this.comboTipoDocumento.SelectedIndex != -1 || this.textBoxDocumento.Text != "")
+
+            if (comboTipoDocumento.SelectedValue == null)
             {
+                selectedValue = "0";
+            }
+            else
+            {
+                selectedValue = this.comboTipoDocumento.SelectedValue.ToString();
+            }
+
+            if (this.textBoxNombre.Text != "" || this.textBoxApellido.Text != ""
+                || selectedValue != "0" || this.textBoxDocumento.Text != "")
+            {
+                
                 cadenaResultado = empleados.ConsultarEmpleadosFiltros(this.textBoxNombre.Text, this.textBoxApellido.Text,
-                this.comboTipoDocumento.SelectedIndex.ToString(), this.textBoxDocumento.Text).ToString();
+                selectedValue, this.textBoxDocumento.Text).ToString();
                 if (cadenaResultado == "correcto")
                 {
                     tabla = empleados.tablaEmpleado;
@@ -147,10 +158,19 @@ namespace ProyectoPAV
             }
             else
             {
-                MessageBox.Show("Seleccione primero una fila de la grilla, para eliminar"
+                MessageBox.Show("Para eliminar primero seleccione una fila de la grilla"
                     , "Importante!", MessageBoxButtons.OK
                     , MessageBoxIcon.Exclamation);
             }
+        }
+
+        private void BtnRecargar_Click(object sender, EventArgs e)
+        {
+            this.textBoxNombre.Clear();
+            this.textBoxApellido.Clear();
+            this.comboTipoDocumento.SelectedIndex = -1;
+            this.textBoxDocumento.Clear();
+            this.Consulta();
         }
     }
 }

@@ -44,6 +44,7 @@
             this.lblRazonSocial = new System.Windows.Forms.Label();
             this.textBoxRazonSocial = new System.Windows.Forms.TextBox();
             this.btnNuevaLocalidad = new System.Windows.Forms.Button();
+            this.btnRecargar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnSalir
@@ -181,11 +182,23 @@
             this.btnNuevaLocalidad.UseVisualStyleBackColor = true;
             this.btnNuevaLocalidad.Click += new System.EventHandler(this.BtnNuevaLocalidad_Click);
             // 
+            // btnRecargar
+            // 
+            this.btnRecargar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnRecargar.BackgroundImage = global::ProyectoPAV.Properties.Resources.Refresh_256x256;
+            this.btnRecargar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnRecargar.Location = new System.Drawing.Point(445, 12);
+            this.btnRecargar.Name = "btnRecargar";
+            this.btnRecargar.Size = new System.Drawing.Size(40, 40);
+            this.btnRecargar.TabIndex = 85;
+            this.btnRecargar.UseVisualStyleBackColor = true;
+            // 
             // FrmProveedoresNuevo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(497, 293);
+            this.Controls.Add(this.btnRecargar);
             this.Controls.Add(this.btnNuevaLocalidad);
             this.Controls.Add(this.lblRazonSocial);
             this.Controls.Add(this.textBoxRazonSocial);
@@ -226,5 +239,6 @@
         private System.Windows.Forms.Label lblRazonSocial;
         private System.Windows.Forms.TextBox textBoxRazonSocial;
         private System.Windows.Forms.Button btnNuevaLocalidad;
+        private System.Windows.Forms.Button btnRecargar;
     }
 }

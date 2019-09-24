@@ -57,7 +57,7 @@
             this.btnSalir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSalir.BackgroundImage = global::ProyectoPAV.Properties.Resources.Log_Out_256x256;
             this.btnSalir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnSalir.Location = new System.Drawing.Point(441, 287);
+            this.btnSalir.Location = new System.Drawing.Point(444, 316);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(50, 50);
             this.btnSalir.TabIndex = 89;
@@ -69,7 +69,7 @@
             this.btnGardar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnGardar.BackgroundImage = global::ProyectoPAV.Properties.Resources.Save_256x256;
             this.btnGardar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnGardar.Location = new System.Drawing.Point(385, 287);
+            this.btnGardar.Location = new System.Drawing.Point(388, 316);
             this.btnGardar.Name = "btnGardar";
             this.btnGardar.Size = new System.Drawing.Size(50, 50);
             this.btnGardar.TabIndex = 88;
@@ -79,7 +79,7 @@
             // lblTelefono
             // 
             this.lblTelefono.AutoSize = true;
-            this.lblTelefono.Location = new System.Drawing.Point(84, 223);
+            this.lblTelefono.Location = new System.Drawing.Point(83, 250);
             this.lblTelefono.Name = "lblTelefono";
             this.lblTelefono.Size = new System.Drawing.Size(49, 13);
             this.lblTelefono.TabIndex = 87;
@@ -87,7 +87,7 @@
             // 
             // textBoxTelefono
             // 
-            this.textBoxTelefono.Location = new System.Drawing.Point(139, 220);
+            this.textBoxTelefono.Location = new System.Drawing.Point(138, 247);
             this.textBoxTelefono.Name = "textBoxTelefono";
             this.textBoxTelefono.Size = new System.Drawing.Size(155, 20);
             this.textBoxTelefono.TabIndex = 86;
@@ -95,7 +95,7 @@
             // lblEmail
             // 
             this.lblEmail.AutoSize = true;
-            this.lblEmail.Location = new System.Drawing.Point(101, 197);
+            this.lblEmail.Location = new System.Drawing.Point(100, 224);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(32, 13);
             this.lblEmail.TabIndex = 85;
@@ -104,7 +104,7 @@
             // lblNacimiento
             // 
             this.lblNacimiento.AutoSize = true;
-            this.lblNacimiento.Location = new System.Drawing.Point(40, 171);
+            this.lblNacimiento.Location = new System.Drawing.Point(39, 198);
             this.lblNacimiento.Name = "lblNacimiento";
             this.lblNacimiento.Size = new System.Drawing.Size(93, 13);
             this.lblNacimiento.TabIndex = 84;
@@ -113,7 +113,7 @@
             // lblSexo
             // 
             this.lblSexo.AutoSize = true;
-            this.lblSexo.Location = new System.Drawing.Point(101, 147);
+            this.lblSexo.Location = new System.Drawing.Point(100, 174);
             this.lblSexo.Name = "lblSexo";
             this.lblSexo.Size = new System.Drawing.Size(31, 13);
             this.lblSexo.TabIndex = 83;
@@ -122,7 +122,7 @@
             // radioMujer
             // 
             this.radioMujer.AutoSize = true;
-            this.radioMujer.Location = new System.Drawing.Point(206, 145);
+            this.radioMujer.Location = new System.Drawing.Point(205, 172);
             this.radioMujer.Name = "radioMujer";
             this.radioMujer.Size = new System.Drawing.Size(51, 17);
             this.radioMujer.TabIndex = 82;
@@ -133,7 +133,7 @@
             // radioHombre
             // 
             this.radioHombre.AutoSize = true;
-            this.radioHombre.Location = new System.Drawing.Point(138, 145);
+            this.radioHombre.Location = new System.Drawing.Point(137, 172);
             this.radioHombre.Name = "radioHombre";
             this.radioHombre.Size = new System.Drawing.Size(62, 17);
             this.radioHombre.TabIndex = 81;
@@ -143,16 +143,16 @@
             // 
             // textBoxEmail
             // 
-            this.textBoxEmail.Location = new System.Drawing.Point(139, 194);
+            this.textBoxEmail.Location = new System.Drawing.Point(138, 221);
             this.textBoxEmail.Name = "textBoxEmail";
             this.textBoxEmail.Size = new System.Drawing.Size(206, 20);
             this.textBoxEmail.TabIndex = 80;
             // 
             // textBoxDocumento
             // 
-            this.textBoxDocumento.Location = new System.Drawing.Point(230, 91);
+            this.textBoxDocumento.Location = new System.Drawing.Point(138, 118);
             this.textBoxDocumento.Name = "textBoxDocumento";
-            this.textBoxDocumento.Size = new System.Drawing.Size(114, 20);
+            this.textBoxDocumento.Size = new System.Drawing.Size(206, 20);
             this.textBoxDocumento.TabIndex = 79;
             // 
             // comboTipoDoc
@@ -160,7 +160,7 @@
             this.comboTipoDoc.FormattingEnabled = true;
             this.comboTipoDoc.Location = new System.Drawing.Point(138, 91);
             this.comboTipoDoc.Name = "comboTipoDoc";
-            this.comboTipoDoc.Size = new System.Drawing.Size(85, 21);
+            this.comboTipoDoc.Size = new System.Drawing.Size(206, 21);
             this.comboTipoDoc.TabIndex = 78;
             // 
             // textBoxNombre
@@ -180,7 +180,7 @@
             // lblDocumento
             // 
             this.lblDocumento.AutoSize = true;
-            this.lblDocumento.Location = new System.Drawing.Point(70, 94);
+            this.lblDocumento.Location = new System.Drawing.Point(70, 109);
             this.lblDocumento.Name = "lblDocumento";
             this.lblDocumento.Size = new System.Drawing.Size(62, 13);
             this.lblDocumento.TabIndex = 75;
@@ -208,16 +208,16 @@
             // 
             this.comboCargo.DisplayMember = "IdCargo";
             this.comboCargo.FormattingEnabled = true;
-            this.comboCargo.Location = new System.Drawing.Point(138, 118);
+            this.comboCargo.Location = new System.Drawing.Point(138, 144);
             this.comboCargo.Name = "comboCargo";
-            this.comboCargo.Size = new System.Drawing.Size(207, 21);
+            this.comboCargo.Size = new System.Drawing.Size(206, 21);
             this.comboCargo.TabIndex = 94;
             this.comboCargo.ValueMember = "IdCargo";
             // 
             // lblCargo
             // 
             this.lblCargo.AutoSize = true;
-            this.lblCargo.Location = new System.Drawing.Point(97, 121);
+            this.lblCargo.Location = new System.Drawing.Point(97, 147);
             this.lblCargo.Name = "lblCargo";
             this.lblCargo.Size = new System.Drawing.Size(35, 13);
             this.lblCargo.TabIndex = 93;
@@ -228,7 +228,7 @@
             this.btnNuevoCargo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnNuevoCargo.Image = global::ProyectoPAV.Properties.Resources.Add_16x16;
             this.btnNuevoCargo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNuevoCargo.Location = new System.Drawing.Point(351, 114);
+            this.btnNuevoCargo.Location = new System.Drawing.Point(350, 140);
             this.btnNuevoCargo.Name = "btnNuevoCargo";
             this.btnNuevoCargo.Size = new System.Drawing.Size(100, 27);
             this.btnNuevoCargo.TabIndex = 95;
@@ -239,7 +239,9 @@
             // 
             // dateTimePickerNacimiento
             // 
-            this.dateTimePickerNacimiento.Location = new System.Drawing.Point(139, 168);
+            this.dateTimePickerNacimiento.CustomFormat = "yyyy-MM-dd";
+            this.dateTimePickerNacimiento.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePickerNacimiento.Location = new System.Drawing.Point(138, 195);
             this.dateTimePickerNacimiento.Name = "dateTimePickerNacimiento";
             this.dateTimePickerNacimiento.Size = new System.Drawing.Size(206, 20);
             this.dateTimePickerNacimiento.TabIndex = 96;
@@ -248,7 +250,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(503, 349);
+            this.ClientSize = new System.Drawing.Size(506, 378);
             this.Controls.Add(this.dateTimePickerNacimiento);
             this.Controls.Add(this.btnNuevoCargo);
             this.Controls.Add(this.comboCargo);

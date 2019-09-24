@@ -124,6 +124,11 @@ namespace ProyectoPAV
             _cargos.ShowDialog();
             this.Show();
         }
+
+        private void SalirToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+        }
     }
     
 }

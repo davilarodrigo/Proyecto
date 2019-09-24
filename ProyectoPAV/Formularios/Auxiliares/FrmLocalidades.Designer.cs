@@ -43,7 +43,7 @@
             this.btnEliminar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnEliminar.BackgroundImage = global::ProyectoPAV.Properties.Resources.Delete_256x256;
             this.btnEliminar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnEliminar.Location = new System.Drawing.Point(220, 231);
+            this.btnEliminar.Location = new System.Drawing.Point(389, 287);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(50, 50);
             this.btnEliminar.TabIndex = 31;
@@ -55,7 +55,7 @@
             this.btnSalir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSalir.BackgroundImage = global::ProyectoPAV.Properties.Resources.Log_Out_256x256;
             this.btnSalir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnSalir.Location = new System.Drawing.Point(278, 231);
+            this.btnSalir.Location = new System.Drawing.Point(447, 287);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(50, 50);
             this.btnSalir.TabIndex = 30;
@@ -93,16 +93,16 @@
             // 
             this.dataGridLocalidades.AllowUserToAddRows = false;
             this.dataGridLocalidades.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridLocalidades.Location = new System.Drawing.Point(15, 65);
+            this.dataGridLocalidades.Location = new System.Drawing.Point(12, 65);
             this.dataGridLocalidades.Name = "dataGridLocalidades";
-            this.dataGridLocalidades.Size = new System.Drawing.Size(313, 154);
+            this.dataGridLocalidades.Size = new System.Drawing.Size(485, 198);
             this.dataGridLocalidades.TabIndex = 25;
             // 
             // FrmLocalidades
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(340, 293);
+            this.ClientSize = new System.Drawing.Size(509, 349);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.textBoxNuevaLocalidad);

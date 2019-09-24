@@ -43,7 +43,7 @@
             this.btnEliminar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnEliminar.BackgroundImage = global::ProyectoPAV.Properties.Resources.Delete_256x256;
             this.btnEliminar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnEliminar.Location = new System.Drawing.Point(368, 299);
+            this.btnEliminar.Location = new System.Drawing.Point(431, 319);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(50, 50);
             this.btnEliminar.TabIndex = 38;
@@ -55,7 +55,7 @@
             this.btnSalir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSalir.BackgroundImage = global::ProyectoPAV.Properties.Resources.Log_Out_256x256;
             this.btnSalir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnSalir.Location = new System.Drawing.Point(424, 299);
+            this.btnSalir.Location = new System.Drawing.Point(487, 319);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(50, 50);
             this.btnSalir.TabIndex = 37;
@@ -93,16 +93,16 @@
             // 
             this.dataGridTipoDoc.AllowUserToAddRows = false;
             this.dataGridTipoDoc.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridTipoDoc.Location = new System.Drawing.Point(28, 67);
+            this.dataGridTipoDoc.Location = new System.Drawing.Point(12, 68);
             this.dataGridTipoDoc.Name = "dataGridTipoDoc";
-            this.dataGridTipoDoc.Size = new System.Drawing.Size(416, 213);
+            this.dataGridTipoDoc.Size = new System.Drawing.Size(525, 230);
             this.dataGridTipoDoc.TabIndex = 32;
             // 
             // FrmTipoDocumentos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(486, 361);
+            this.ClientSize = new System.Drawing.Size(549, 381);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.textBoxNuevoTipoDoc);

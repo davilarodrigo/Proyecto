@@ -50,12 +50,11 @@
             this.lblNumeroCalle = new System.Windows.Forms.Label();
             this.btnSalir = new System.Windows.Forms.Button();
             this.btnAceptar = new System.Windows.Forms.Button();
-            this.textBoxDia = new System.Windows.Forms.TextBox();
-            this.textBoxMes = new System.Windows.Forms.TextBox();
-            this.textBoxAnio = new System.Windows.Forms.TextBox();
             this.comboLocalidad = new System.Windows.Forms.ComboBox();
             this.lblLocalidad = new System.Windows.Forms.Label();
             this.btnNuevaLocalidad = new System.Windows.Forms.Button();
+            this.btnRecargar = new System.Windows.Forms.Button();
+            this.dateTimePickerNacimiento = new System.Windows.Forms.DateTimePicker();
             this.SuspendLayout();
             // 
             // lblApellido
@@ -79,7 +78,7 @@
             // lblDocumento
             // 
             this.lblDocumento.AutoSize = true;
-            this.lblDocumento.Location = new System.Drawing.Point(62, 87);
+            this.lblDocumento.Location = new System.Drawing.Point(62, 102);
             this.lblDocumento.Name = "lblDocumento";
             this.lblDocumento.Size = new System.Drawing.Size(62, 13);
             this.lblDocumento.TabIndex = 2;
@@ -104,19 +103,19 @@
             this.comboTipoDoc.FormattingEnabled = true;
             this.comboTipoDoc.Location = new System.Drawing.Point(130, 84);
             this.comboTipoDoc.Name = "comboTipoDoc";
-            this.comboTipoDoc.Size = new System.Drawing.Size(85, 21);
+            this.comboTipoDoc.Size = new System.Drawing.Size(206, 21);
             this.comboTipoDoc.TabIndex = 5;
             // 
             // textBoxDocumento
             // 
-            this.textBoxDocumento.Location = new System.Drawing.Point(222, 84);
+            this.textBoxDocumento.Location = new System.Drawing.Point(130, 111);
             this.textBoxDocumento.Name = "textBoxDocumento";
-            this.textBoxDocumento.Size = new System.Drawing.Size(114, 20);
+            this.textBoxDocumento.Size = new System.Drawing.Size(206, 20);
             this.textBoxDocumento.TabIndex = 6;
             // 
             // textBoxEmail
             // 
-            this.textBoxEmail.Location = new System.Drawing.Point(130, 161);
+            this.textBoxEmail.Location = new System.Drawing.Point(130, 186);
             this.textBoxEmail.Name = "textBoxEmail";
             this.textBoxEmail.Size = new System.Drawing.Size(206, 20);
             this.textBoxEmail.TabIndex = 7;
@@ -124,7 +123,7 @@
             // radioHombre
             // 
             this.radioHombre.AutoSize = true;
-            this.radioHombre.Location = new System.Drawing.Point(130, 112);
+            this.radioHombre.Location = new System.Drawing.Point(130, 137);
             this.radioHombre.Name = "radioHombre";
             this.radioHombre.Size = new System.Drawing.Size(62, 17);
             this.radioHombre.TabIndex = 8;
@@ -135,7 +134,7 @@
             // radioMujer
             // 
             this.radioMujer.AutoSize = true;
-            this.radioMujer.Location = new System.Drawing.Point(198, 112);
+            this.radioMujer.Location = new System.Drawing.Point(198, 137);
             this.radioMujer.Name = "radioMujer";
             this.radioMujer.Size = new System.Drawing.Size(51, 17);
             this.radioMujer.TabIndex = 9;
@@ -146,7 +145,7 @@
             // lblSexo
             // 
             this.lblSexo.AutoSize = true;
-            this.lblSexo.Location = new System.Drawing.Point(93, 114);
+            this.lblSexo.Location = new System.Drawing.Point(93, 139);
             this.lblSexo.Name = "lblSexo";
             this.lblSexo.Size = new System.Drawing.Size(31, 13);
             this.lblSexo.TabIndex = 11;
@@ -155,7 +154,7 @@
             // lblNacimiento
             // 
             this.lblNacimiento.AutoSize = true;
-            this.lblNacimiento.Location = new System.Drawing.Point(31, 141);
+            this.lblNacimiento.Location = new System.Drawing.Point(31, 165);
             this.lblNacimiento.Name = "lblNacimiento";
             this.lblNacimiento.Size = new System.Drawing.Size(93, 13);
             this.lblNacimiento.TabIndex = 12;
@@ -164,7 +163,7 @@
             // lblEmail
             // 
             this.lblEmail.AutoSize = true;
-            this.lblEmail.Location = new System.Drawing.Point(92, 164);
+            this.lblEmail.Location = new System.Drawing.Point(92, 189);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(32, 13);
             this.lblEmail.TabIndex = 13;
@@ -172,21 +171,21 @@
             // 
             // textBoxTelefono
             // 
-            this.textBoxTelefono.Location = new System.Drawing.Point(130, 187);
+            this.textBoxTelefono.Location = new System.Drawing.Point(130, 212);
             this.textBoxTelefono.Name = "textBoxTelefono";
             this.textBoxTelefono.Size = new System.Drawing.Size(155, 20);
             this.textBoxTelefono.TabIndex = 14;
             // 
             // textBoxCalle
             // 
-            this.textBoxCalle.Location = new System.Drawing.Point(130, 213);
+            this.textBoxCalle.Location = new System.Drawing.Point(130, 238);
             this.textBoxCalle.Name = "textBoxCalle";
             this.textBoxCalle.Size = new System.Drawing.Size(206, 20);
             this.textBoxCalle.TabIndex = 15;
             // 
             // textBoxNumeroCalle
             // 
-            this.textBoxNumeroCalle.Location = new System.Drawing.Point(130, 239);
+            this.textBoxNumeroCalle.Location = new System.Drawing.Point(130, 264);
             this.textBoxNumeroCalle.Name = "textBoxNumeroCalle";
             this.textBoxNumeroCalle.Size = new System.Drawing.Size(85, 20);
             this.textBoxNumeroCalle.TabIndex = 16;
@@ -194,7 +193,7 @@
             // lblTelefono
             // 
             this.lblTelefono.AutoSize = true;
-            this.lblTelefono.Location = new System.Drawing.Point(75, 190);
+            this.lblTelefono.Location = new System.Drawing.Point(75, 215);
             this.lblTelefono.Name = "lblTelefono";
             this.lblTelefono.Size = new System.Drawing.Size(49, 13);
             this.lblTelefono.TabIndex = 17;
@@ -203,7 +202,7 @@
             // lblCalle
             // 
             this.lblCalle.AutoSize = true;
-            this.lblCalle.Location = new System.Drawing.Point(94, 216);
+            this.lblCalle.Location = new System.Drawing.Point(94, 241);
             this.lblCalle.Name = "lblCalle";
             this.lblCalle.Size = new System.Drawing.Size(30, 13);
             this.lblCalle.TabIndex = 18;
@@ -212,7 +211,7 @@
             // lblNumeroCalle
             // 
             this.lblNumeroCalle.AutoSize = true;
-            this.lblNumeroCalle.Location = new System.Drawing.Point(80, 242);
+            this.lblNumeroCalle.Location = new System.Drawing.Point(80, 267);
             this.lblNumeroCalle.Name = "lblNumeroCalle";
             this.lblNumeroCalle.Size = new System.Drawing.Size(44, 13);
             this.lblNumeroCalle.TabIndex = 19;
@@ -223,7 +222,7 @@
             this.btnSalir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSalir.BackgroundImage = global::ProyectoPAV.Properties.Resources.Log_Out_256x256;
             this.btnSalir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnSalir.Location = new System.Drawing.Point(415, 301);
+            this.btnSalir.Location = new System.Drawing.Point(441, 337);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(50, 50);
             this.btnSalir.TabIndex = 21;
@@ -235,37 +234,16 @@
             this.btnAceptar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnAceptar.BackgroundImage = global::ProyectoPAV.Properties.Resources.Check_256x256;
             this.btnAceptar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnAceptar.Location = new System.Drawing.Point(359, 301);
+            this.btnAceptar.Location = new System.Drawing.Point(385, 337);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(50, 50);
             this.btnAceptar.TabIndex = 20;
             this.btnAceptar.UseVisualStyleBackColor = true;
             // 
-            // textBoxDia
-            // 
-            this.textBoxDia.Location = new System.Drawing.Point(130, 138);
-            this.textBoxDia.Name = "textBoxDia";
-            this.textBoxDia.Size = new System.Drawing.Size(50, 20);
-            this.textBoxDia.TabIndex = 22;
-            // 
-            // textBoxMes
-            // 
-            this.textBoxMes.Location = new System.Drawing.Point(186, 138);
-            this.textBoxMes.Name = "textBoxMes";
-            this.textBoxMes.Size = new System.Drawing.Size(50, 20);
-            this.textBoxMes.TabIndex = 23;
-            // 
-            // textBoxAnio
-            // 
-            this.textBoxAnio.Location = new System.Drawing.Point(242, 138);
-            this.textBoxAnio.Name = "textBoxAnio";
-            this.textBoxAnio.Size = new System.Drawing.Size(94, 20);
-            this.textBoxAnio.TabIndex = 24;
-            // 
             // comboLocalidad
             // 
             this.comboLocalidad.FormattingEnabled = true;
-            this.comboLocalidad.Location = new System.Drawing.Point(130, 265);
+            this.comboLocalidad.Location = new System.Drawing.Point(130, 290);
             this.comboLocalidad.Name = "comboLocalidad";
             this.comboLocalidad.Size = new System.Drawing.Size(197, 21);
             this.comboLocalidad.TabIndex = 25;
@@ -273,7 +251,7 @@
             // lblLocalidad
             // 
             this.lblLocalidad.AutoSize = true;
-            this.lblLocalidad.Location = new System.Drawing.Point(71, 268);
+            this.lblLocalidad.Location = new System.Drawing.Point(71, 293);
             this.lblLocalidad.Name = "lblLocalidad";
             this.lblLocalidad.Size = new System.Drawing.Size(53, 13);
             this.lblLocalidad.TabIndex = 26;
@@ -284,7 +262,7 @@
             this.btnNuevaLocalidad.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnNuevaLocalidad.Image = global::ProyectoPAV.Properties.Resources.Add_16x16;
             this.btnNuevaLocalidad.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNuevaLocalidad.Location = new System.Drawing.Point(333, 261);
+            this.btnNuevaLocalidad.Location = new System.Drawing.Point(333, 286);
             this.btnNuevaLocalidad.Name = "btnNuevaLocalidad";
             this.btnNuevaLocalidad.Size = new System.Drawing.Size(117, 27);
             this.btnNuevaLocalidad.TabIndex = 85;
@@ -293,17 +271,36 @@
             this.btnNuevaLocalidad.UseVisualStyleBackColor = true;
             this.btnNuevaLocalidad.Click += new System.EventHandler(this.BtnNuevaLocalidad_Click);
             // 
+            // btnRecargar
+            // 
+            this.btnRecargar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnRecargar.BackgroundImage = global::ProyectoPAV.Properties.Resources.Refresh_256x256;
+            this.btnRecargar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnRecargar.Location = new System.Drawing.Point(451, 12);
+            this.btnRecargar.Name = "btnRecargar";
+            this.btnRecargar.Size = new System.Drawing.Size(40, 40);
+            this.btnRecargar.TabIndex = 86;
+            this.btnRecargar.UseVisualStyleBackColor = true;
+            // 
+            // dateTimePickerNacimiento
+            // 
+            this.dateTimePickerNacimiento.CustomFormat = "yyyy-MM-dd";
+            this.dateTimePickerNacimiento.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePickerNacimiento.Location = new System.Drawing.Point(130, 160);
+            this.dateTimePickerNacimiento.Name = "dateTimePickerNacimiento";
+            this.dateTimePickerNacimiento.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePickerNacimiento.TabIndex = 87;
+            // 
             // FrmClientesNuevo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(477, 363);
+            this.ClientSize = new System.Drawing.Size(503, 399);
+            this.Controls.Add(this.dateTimePickerNacimiento);
+            this.Controls.Add(this.btnRecargar);
             this.Controls.Add(this.btnNuevaLocalidad);
             this.Controls.Add(this.lblLocalidad);
             this.Controls.Add(this.comboLocalidad);
-            this.Controls.Add(this.textBoxAnio);
-            this.Controls.Add(this.textBoxMes);
-            this.Controls.Add(this.textBoxDia);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnAceptar);
             this.Controls.Add(this.lblNumeroCalle);
@@ -356,11 +353,10 @@
         private System.Windows.Forms.Label lblNumeroCalle;
         private System.Windows.Forms.Button btnAceptar;
         private System.Windows.Forms.Button btnSalir;
-        private System.Windows.Forms.TextBox textBoxDia;
-        private System.Windows.Forms.TextBox textBoxMes;
-        private System.Windows.Forms.TextBox textBoxAnio;
         private System.Windows.Forms.ComboBox comboLocalidad;
         private System.Windows.Forms.Label lblLocalidad;
         private System.Windows.Forms.Button btnNuevaLocalidad;
+        private System.Windows.Forms.Button btnRecargar;
+        private System.Windows.Forms.DateTimePicker dateTimePickerNacimiento;
     }
 }

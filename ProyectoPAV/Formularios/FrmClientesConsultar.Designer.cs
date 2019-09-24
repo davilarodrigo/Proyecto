@@ -31,6 +31,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmClientesConsultar));
             this.groupBoxFiltros = new System.Windows.Forms.GroupBox();
+            this.btnRecargar = new System.Windows.Forms.Button();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.lblApellido = new System.Windows.Forms.Label();
             this.textBoxApellido = new System.Windows.Forms.TextBox();
@@ -64,6 +65,7 @@
             this.groupBoxFiltros.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBoxFiltros.Controls.Add(this.btnRecargar);
             this.groupBoxFiltros.Controls.Add(this.btnBuscar);
             this.groupBoxFiltros.Controls.Add(this.lblApellido);
             this.groupBoxFiltros.Controls.Add(this.textBoxApellido);
@@ -79,6 +81,17 @@
             this.groupBoxFiltros.TabIndex = 0;
             this.groupBoxFiltros.TabStop = false;
             this.groupBoxFiltros.Text = "Filtros";
+            // 
+            // btnRecargar
+            // 
+            this.btnRecargar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnRecargar.BackgroundImage = global::ProyectoPAV.Properties.Resources.Refresh_256x256;
+            this.btnRecargar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnRecargar.Location = new System.Drawing.Point(665, 19);
+            this.btnRecargar.Name = "btnRecargar";
+            this.btnRecargar.Size = new System.Drawing.Size(40, 40);
+            this.btnRecargar.TabIndex = 47;
+            this.btnRecargar.UseVisualStyleBackColor = true;
             // 
             // btnBuscar
             // 
@@ -109,9 +122,9 @@
             // 
             // textBoxDocumento
             // 
-            this.textBoxDocumento.Location = new System.Drawing.Point(185, 72);
+            this.textBoxDocumento.Location = new System.Drawing.Point(273, 72);
             this.textBoxDocumento.Name = "textBoxDocumento";
-            this.textBoxDocumento.Size = new System.Drawing.Size(254, 20);
+            this.textBoxDocumento.Size = new System.Drawing.Size(166, 20);
             this.textBoxDocumento.TabIndex = 7;
             // 
             // comboTipoDocumento
@@ -119,7 +132,7 @@
             this.comboTipoDocumento.FormattingEnabled = true;
             this.comboTipoDocumento.Location = new System.Drawing.Point(101, 72);
             this.comboTipoDocumento.Name = "comboTipoDocumento";
-            this.comboTipoDocumento.Size = new System.Drawing.Size(78, 21);
+            this.comboTipoDocumento.Size = new System.Drawing.Size(166, 21);
             this.comboTipoDocumento.TabIndex = 6;
             // 
             // dataGridClientes
@@ -335,5 +348,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn clmNumeroCalle;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmLocalidad;
         private System.Windows.Forms.DataGridViewTextBoxColumn ClmFechaNacimiento;
+        private System.Windows.Forms.Button btnRecargar;
     }
 }

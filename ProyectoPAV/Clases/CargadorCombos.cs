@@ -24,7 +24,6 @@ namespace ProyectoPAV.Clases
             }
                         
             return tabla;
-
         }
 
         public DataTable CargarComboTiposDocumentos()

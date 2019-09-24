@@ -32,6 +32,7 @@ namespace ProyectoPAV
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmEmpleadosConsultar));
             this.groupBoxFiltros = new System.Windows.Forms.GroupBox();
+            this.btnRecargar = new System.Windows.Forms.Button();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.lblApellido = new System.Windows.Forms.Label();
             this.textBoxApellido = new System.Windows.Forms.TextBox();
@@ -54,6 +55,7 @@ namespace ProyectoPAV
             this.groupBoxFiltros.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBoxFiltros.Controls.Add(this.btnRecargar);
             this.groupBoxFiltros.Controls.Add(this.btnBuscar);
             this.groupBoxFiltros.Controls.Add(this.lblApellido);
             this.groupBoxFiltros.Controls.Add(this.textBoxApellido);
@@ -69,6 +71,18 @@ namespace ProyectoPAV
             this.groupBoxFiltros.TabIndex = 0;
             this.groupBoxFiltros.TabStop = false;
             this.groupBoxFiltros.Text = "Filtros";
+            // 
+            // btnRecargar
+            // 
+            this.btnRecargar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnRecargar.BackgroundImage = global::ProyectoPAV.Properties.Resources.Refresh_256x256;
+            this.btnRecargar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnRecargar.Location = new System.Drawing.Point(665, 19);
+            this.btnRecargar.Name = "btnRecargar";
+            this.btnRecargar.Size = new System.Drawing.Size(40, 40);
+            this.btnRecargar.TabIndex = 48;
+            this.btnRecargar.UseVisualStyleBackColor = true;
+            this.btnRecargar.Click += new System.EventHandler(this.BtnRecargar_Click);
             // 
             // btnBuscar
             // 
@@ -99,9 +113,9 @@ namespace ProyectoPAV
             // 
             // textBoxDocumento
             // 
-            this.textBoxDocumento.Location = new System.Drawing.Point(185, 72);
+            this.textBoxDocumento.Location = new System.Drawing.Point(264, 72);
             this.textBoxDocumento.Name = "textBoxDocumento";
-            this.textBoxDocumento.Size = new System.Drawing.Size(254, 20);
+            this.textBoxDocumento.Size = new System.Drawing.Size(175, 20);
             this.textBoxDocumento.TabIndex = 7;
             // 
             // comboTipoDocumento
@@ -109,7 +123,7 @@ namespace ProyectoPAV
             this.comboTipoDocumento.FormattingEnabled = true;
             this.comboTipoDocumento.Location = new System.Drawing.Point(101, 72);
             this.comboTipoDocumento.Name = "comboTipoDocumento";
-            this.comboTipoDocumento.Size = new System.Drawing.Size(78, 21);
+            this.comboTipoDocumento.Size = new System.Drawing.Size(157, 21);
             this.comboTipoDocumento.TabIndex = 6;
             // 
             // dataGridEmpleados
@@ -240,5 +254,6 @@ namespace ProyectoPAV
         private System.Windows.Forms.DataGridViewTextBoxColumn clmFechaNaciminto;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmFechaAlta;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmFechaBaja;
+        private System.Windows.Forms.Button btnRecargar;
     }
 }

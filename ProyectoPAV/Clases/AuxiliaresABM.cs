@@ -72,6 +72,7 @@ namespace ProyectoPAV.Clases
             grilla.DataSource = tabla;
             grilla.Columns[0].Visible = false;
             grilla.Columns[1].HeaderText = "Nombre";
+            grilla.Columns[1].Width = 350;
 
         }
     }

@@ -28,8 +28,8 @@ namespace ProyectoPAV.Formularios.Auxiliares
             if (this.textBoxNuevaLocalidad.Text == "")
             {
                 MessageBox.Show("No cargó datos"
-                    , "IMPORTANTE"
-                    , MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                    , "Impoerante!"
+                    , MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 textBoxNuevaLocalidad.Focus();
                 return;
             }

@@ -58,6 +58,7 @@
             this.btnVentas = new System.Windows.Forms.Button();
             this.tableMenuSecundario = new System.Windows.Forms.TableLayoutPanel();
             this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
+            this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStripEscritorio.SuspendLayout();
             this.toolStripEscritorio.SuspendLayout();
             this.tableEstructura.SuspendLayout();
@@ -81,7 +82,8 @@
             // archivoToolStripMenuItem
             // 
             this.archivoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.cambiarLoginToolStripMenuItem});
+            this.cambiarLoginToolStripMenuItem,
+            this.salirToolStripMenuItem});
             this.archivoToolStripMenuItem.Name = "archivoToolStripMenuItem";
             this.archivoToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
             this.archivoToolStripMenuItem.Text = "Archivo";
@@ -89,7 +91,7 @@
             // cambiarLoginToolStripMenuItem
             // 
             this.cambiarLoginToolStripMenuItem.Name = "cambiarLoginToolStripMenuItem";
-            this.cambiarLoginToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.cambiarLoginToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.cambiarLoginToolStripMenuItem.Text = "Cambiar Login";
             // 
             // aBMToolStripMenuItem
@@ -389,6 +391,13 @@
             this.pictureBoxLogo.TabIndex = 0;
             this.pictureBoxLogo.TabStop = false;
             // 
+            // salirToolStripMenuItem
+            // 
+            this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.salirToolStripMenuItem.Text = "Salir";
+            this.salirToolStripMenuItem.Click += new System.EventHandler(this.SalirToolStripMenuItem_Click);
+            // 
             // FrmEscritorio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -448,6 +457,7 @@
         private System.Windows.Forms.ToolStripMenuItem tiposDeDocumentoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cargosToolStripMenuItem;
         private System.Windows.Forms.PictureBox pictureBoxLogo;
+        private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
     }
 }
 
