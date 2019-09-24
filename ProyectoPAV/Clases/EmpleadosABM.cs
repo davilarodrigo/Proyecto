@@ -18,10 +18,9 @@ namespace ProyectoPAV.Clases
             GestorTransaccionesSQL gestor = new GestorTransaccionesSQL();
             ResultadoEmpleados resultado = new ResultadoEmpleados();
             string sql = @"SELECT E.*, TD.Nombre, C.Nombre, S.Nombre
-                             FROM Empleado E JOIN TipoDocumento TD ON E.IdTipoDocumento = TD.IdTipoDocumento
-                                JOIN Cargo C ON E.IdCargo = C.IdCargo JOIN Sexo S ON E.IdSexo = S.IdSexo ";
-                            //"WHERE E.Nombre like '%" + nombre + "%' AND E.Apellido like '%" + apellido + "%' AND TD.Nombre = '" +
-                            //tipoDoc + "' AND E.NumeroDocumento = " + numeroDoc;
+                           FROM Empleado E JOIN TipoDocumento TD ON E.IdTipoDocumento = TD.IdTipoDocumento
+                           JOIN Cargo C ON E.IdCargo = C.IdCargo JOIN Sexo S ON E.IdSexo = S.IdSexo ";
+                            
             string where = @"WHERE ";
             if (nombre != "")
             {
@@ -33,9 +32,9 @@ namespace ProyectoPAV.Clases
                 where = where + "E.Apellido like '%" + apellido + "%' AND ";
             }
 
-            if (tipoDoc != "" && tipoDoc != "1")     //HAY QUE ARREGLAR ESTA VERGA
+            if (tipoDoc != "-1")     
             {
-                where = where + "TD.Nombre = '" + tipoDoc + "' AND ";
+                where = where + "E.IdTipoDocumento = " + tipoDoc + " AND ";
             }
 
             if (numeroDoc != "")
@@ -45,9 +44,7 @@ namespace ProyectoPAV.Clases
 
             int largoCadena = where.Length -5;
             string whereFinal = "";
-
             whereFinal = where.Substring(0, largoCadena);
-
             sql = sql + whereFinal;
 
             DataTable dt = new DataTable();

@@ -28,6 +28,14 @@ namespace ProyectoPAV.Formularios
         {
             FrmLocalidades localidades = new FrmLocalidades();
             localidades.ShowDialog();
+            CargadorCombos cargador5 = new CargadorCombos();
+            DataTable tablaTipoDocumentos = new DataTable();
+
+            tablaTipoDocumentos = cargador5.CargarComboLocalidades();
+
+            comboLocalidad.DataSource = tablaTipoDocumentos;
+            comboLocalidad.DisplayMember = "Nombre";
+            comboLocalidad.ValueMember = "IdLocalidad";
         }
 
         private void BtnAceptar_Click(object sender, EventArgs e)
@@ -40,7 +48,7 @@ namespace ProyectoPAV.Formularios
                             , Int32.Parse(this.comboLocalidad.SelectedValue.ToString())
                             , this.textBoxEmail.Text
                             , Int32.Parse(this.textBoxTelefono.Text)).ToString();
-            MessageBox.Show(proveedor.mensajeRetorno, "Importante!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            MessageBox.Show(proveedor.mensajeRetorno, "Importante!", MessageBoxButtons.OK, MessageBoxIcon.Information);
             this.Dispose();
         }
 
@@ -58,4 +66,4 @@ namespace ProyectoPAV.Formularios
         }
     }
     
-}//Int32.Parse(this.comboLocalidad.SelectedValue.ToString())
+}

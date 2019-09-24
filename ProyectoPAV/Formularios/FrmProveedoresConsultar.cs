@@ -107,7 +107,6 @@ namespace ProyectoPAV.Formularios
             dataGridProveedores.Columns[5].HeaderText = "Email";
             dataGridProveedores.Columns[6].HeaderText = "Teléfono";
             dataGridProveedores.Columns[7].HeaderText = "Localidad";
-            //dataGridProveedores.Columns[7].DisplayIndex = 4;
 
         }
 
@@ -121,7 +120,7 @@ namespace ProyectoPAV.Formularios
                     ProveedoresABM proveedor = new ProveedoresABM();
                     int ID = Int32.Parse(dataGridProveedores.CurrentRow.Cells[0].Value.ToString());
                     proveedor.EliminarProveedor(ID);
-                    MessageBox.Show(proveedor.mensajeRetorno, "Importante!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show(proveedor.mensajeRetorno, "Importante!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     Consulta();
                 }
             }

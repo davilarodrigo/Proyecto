@@ -206,11 +206,13 @@
             // 
             // comboCargo
             // 
+            this.comboCargo.DisplayMember = "IdCargo";
             this.comboCargo.FormattingEnabled = true;
             this.comboCargo.Location = new System.Drawing.Point(138, 118);
             this.comboCargo.Name = "comboCargo";
             this.comboCargo.Size = new System.Drawing.Size(207, 21);
             this.comboCargo.TabIndex = 94;
+            this.comboCargo.ValueMember = "IdCargo";
             // 
             // lblCargo
             // 

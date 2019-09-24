@@ -24,7 +24,7 @@ namespace ProyectoPAV.Formularios
 
         private void FrmProveedoresModificar_Load(object sender, EventArgs e)
         {
-            RecuperarDatos(IdProveedor);
+            
             CargadorCombos cargador = new CargadorCombos();
             DataTable tablaLocalidades = new DataTable();
 
@@ -34,6 +34,7 @@ namespace ProyectoPAV.Formularios
             comboLocalidad.DisplayMember = "Nombre";
             comboLocalidad.ValueMember = "IdLocalidad";
             comboLocalidad.SelectedIndex = -1;
+            RecuperarDatos(IdProveedor);
         }
 
         private void BtnSalir_Click(object sender, EventArgs e)
@@ -45,6 +46,14 @@ namespace ProyectoPAV.Formularios
         {
             FrmLocalidades localidades = new FrmLocalidades();
             localidades.ShowDialog();
+            CargadorCombos cargador = new CargadorCombos();
+            DataTable tablaLocalidades = new DataTable();
+
+            tablaLocalidades = cargador.CargarComboLocalidades();
+
+            comboLocalidad.DataSource = tablaLocalidades;
+            comboLocalidad.DisplayMember = "Nombre";
+            comboLocalidad.ValueMember = "IdLocalidad";
         }
 
         private void RecuperarDatos(string id_usuario)
@@ -71,10 +80,10 @@ namespace ProyectoPAV.Formularios
                             , Int32.Parse(this.comboLocalidad.SelectedValue.ToString())
                             , this.textBoxEmail.Text
                             , Int32.Parse(this.textBoxTelefono.Text));
-            MessageBox.Show(proveedor.mensajeRetorno, "Importante!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            MessageBox.Show(proveedor.mensajeRetorno, "Importante!", MessageBoxButtons.OK, MessageBoxIcon.Information);
             this.Dispose();
         }
 
        
     }
-}//Int32.Parse(this.comboLocalidad.SelectedValue.ToString())
+}

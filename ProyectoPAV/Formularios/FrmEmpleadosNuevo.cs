@@ -29,6 +29,16 @@ namespace ProyectoPAV.Formularios
         {
             FrmCargos _cargos = new FrmCargos();
             _cargos.ShowDialog();
+
+            CargadorCombos cargador2 = new CargadorCombos();
+            DataTable tablaCargos = new DataTable();
+
+            tablaCargos = cargador2.CargarComboCargos();
+
+            comboCargo.DataSource = tablaCargos;
+            comboCargo.DisplayMember = "Nombre";
+            comboCargo.ValueMember = "IdCargo";
+            comboCargo.SelectedIndex = -1;
         }
 
         private void BtnAceptar_Click(object sender, EventArgs e)
@@ -56,7 +66,7 @@ namespace ProyectoPAV.Formularios
                             , ValorRadioButton, nacimiento
                             , this.TextBoxEmail.Text
                             , Int32.Parse(this.TextBoxTelefono.Text), Int32.Parse(comboCargo.SelectedValue.ToString())).ToString();
-            MessageBox.Show(empleados.mensajeRetorno, "Importante!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            MessageBox.Show(empleados.mensajeRetorno, "Importante!", MessageBoxButtons.OK, MessageBoxIcon.Information);
             this.Dispose();
         }
 
@@ -71,6 +81,7 @@ namespace ProyectoPAV.Formularios
             comboTipoDoc.DataSource = tablaTipoDocumento;
             comboTipoDoc.DisplayMember = "Nombre";
             comboTipoDoc.ValueMember = "IdTipoDocumento";
+            comboTipoDoc.SelectedIndex = -1;
 
             CargadorCombos cargador2 = new CargadorCombos();
 
@@ -79,6 +90,7 @@ namespace ProyectoPAV.Formularios
             comboCargo.DataSource = tablaCargos;
             comboCargo.DisplayMember = "Nombre";
             comboCargo.ValueMember = "IdCargo";
+            comboCargo.SelectedIndex = -1;
 
         }
     }

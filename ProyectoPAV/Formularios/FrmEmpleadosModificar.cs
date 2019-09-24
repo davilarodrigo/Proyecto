@@ -52,7 +52,7 @@ namespace ProyectoPAV.Formularios
 
         private void FrmEmpleadosModificar_Load(object sender, EventArgs e)
         {
-            this.RecuperarDatos(IdEmpleado);
+            
 
             CargadorCombos cargador = new CargadorCombos();
             DataTable tablaTipoDocumento = new DataTable();
@@ -69,16 +69,26 @@ namespace ProyectoPAV.Formularios
 
             tablaCargos = cargador2.CargarComboCargos();
 
-            comboCargo.DataSource = tablaTipoDocumento;
+            comboCargo.DataSource = tablaCargos;
             comboCargo.DisplayMember = "Nombre";
-            comboCargo.ValueMember = "IdTipoDocumento";
+            comboCargo.ValueMember= "IdCargo";
             comboCargo.SelectedIndex = -1;
+
+            this.RecuperarDatos(IdEmpleado);
         }
 
         private void BtnNuevoCargo_Click(object sender, EventArgs e)
         {
             FrmCargos _cargos = new FrmCargos();
             _cargos.ShowDialog();
+            CargadorCombos cargador2 = new CargadorCombos();
+            DataTable tablaCargos = new DataTable();
+
+            tablaCargos = cargador2.CargarComboCargos();
+
+            comboCargo.DataSource = tablaCargos;
+            comboCargo.DisplayMember = "Nombre";
+            comboCargo.ValueMember = "IdCargo";
         }
 
         private void BtnGardar_Click(object sender, EventArgs e)
@@ -106,11 +116,9 @@ namespace ProyectoPAV.Formularios
                             , this.textBoxEmail.Text
                             , Int32.Parse(this.textBoxTelefono.Text)
                             , Int32.Parse(this.comboCargo.SelectedValue.ToString()));
-            MessageBox.Show(empleado.mensajeRetorno, "Importante!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            MessageBox.Show(empleado.mensajeRetorno, "Importante!", MessageBoxButtons.OK, MessageBoxIcon.Information);
             this.Dispose();
             
         }
     }
-    //Int32.Parse(this.comboTipoDoc.SelectedValue.ToString())
-    //Int32.Parse(this.comboCargo.SelectedValue.ToString())
 }

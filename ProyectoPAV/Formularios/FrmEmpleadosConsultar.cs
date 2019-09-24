@@ -74,10 +74,10 @@ namespace ProyectoPAV
             string cadenaResultado;
             DataTable tabla = new DataTable();
             if (this.textBoxNombre.Text != "" || this.textBoxApellido.Text != ""
-                || this.comboTipoDocumento.SelectedIndex == -1 || this.textBoxDocumento.Text != "")
+                || this.comboTipoDocumento.SelectedIndex != -1 || this.textBoxDocumento.Text != "")
             {
                 cadenaResultado = empleados.ConsultarEmpleadosFiltros(this.textBoxNombre.Text, this.textBoxApellido.Text,
-                    this.comboTipoDocumento.SelectedValue.ToString().ToString(), this.textBoxDocumento.Text).ToString();
+                this.comboTipoDocumento.SelectedIndex.ToString(), this.textBoxDocumento.Text).ToString();
                 if (cadenaResultado == "correcto")
                 {
                     tabla = empleados.tablaEmpleado;
@@ -141,7 +141,7 @@ namespace ProyectoPAV
                     EmpleadosABM empleado = new EmpleadosABM();
                     int ID = Int32.Parse(dataGridEmpleados.CurrentRow.Cells[0].Value.ToString());
                     empleado.EliminarEmpleado(ID);
-                    MessageBox.Show(empleado.mensajeRetorno, "Importante!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show(empleado.mensajeRetorno, "Importante!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     Consulta();
                 }
             }
