@@ -72,7 +72,7 @@
             this.textBoxNuevaMarca.Location = new System.Drawing.Point(123, 53);
             this.textBoxNuevaMarca.Name = "textBoxNuevaMarca";
             this.textBoxNuevaMarca.Size = new System.Drawing.Size(180, 20);
-            this.textBoxNuevaMarca.TabIndex = 3;
+            this.textBoxNuevaMarca.TabIndex = 0;
             // 
             // btnSalir
             // 
@@ -82,7 +82,7 @@
             this.btnSalir.Location = new System.Drawing.Point(521, 337);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(50, 50);
-            this.btnSalir.TabIndex = 23;
+            this.btnSalir.TabIndex = 3;
             this.btnSalir.UseVisualStyleBackColor = true;
             this.btnSalir.Click += new System.EventHandler(this.BtnSalir_Click);
             // 
@@ -94,7 +94,7 @@
             this.btnEliminar.Location = new System.Drawing.Point(465, 337);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(50, 50);
-            this.btnEliminar.TabIndex = 24;
+            this.btnEliminar.TabIndex = 2;
             this.btnEliminar.UseVisualStyleBackColor = true;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
