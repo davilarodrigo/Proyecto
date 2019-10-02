@@ -47,6 +47,7 @@ namespace ProyectoPAV.Formularios
                 && control.validarIngresoTextBox(textBoxNumeroCalle) && control.validarIngresoTextBox(textBoxCalle)
                 && control.validarIngresoComboBox(comboLocalidad) && control.validarIngresoTextBox(textBoxTelefono))
                 
+
             {
                 string cadenaResultado;
                 cadenaResultado = proveedor.InsertarProveedor(this.textBoxRazonSocial.Text

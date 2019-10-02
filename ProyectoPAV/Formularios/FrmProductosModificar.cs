@@ -101,6 +101,7 @@ namespace ProyectoPAV.Formularios
                                 , Int32.Parse(this.textBoxCantidad.Text));
                 MessageBox.Show(producto.mensajeRetorno, "Importante!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Dispose();
+
             }
         }
     }

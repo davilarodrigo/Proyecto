@@ -11,6 +11,8 @@ namespace ProyectoPAV.Clases
     {
         public static void SoloTexto(System.Windows.Forms.KeyPressEventArgs L)
         {
+
+
             if (Char.IsLetter(L.KeyChar))
             {
                 L.Handled = false;
