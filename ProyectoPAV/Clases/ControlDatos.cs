@@ -28,6 +28,7 @@ namespace ProyectoPAV.Clases
                 L.Handled = true;
                 MessageBox.Show("Solo ingrese letras", "Tipo de dato no valido", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+
         }
         public static void SoloNumero(KeyPressEventArgs N)
         {
