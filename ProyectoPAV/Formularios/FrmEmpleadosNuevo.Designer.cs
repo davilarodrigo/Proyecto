@@ -160,6 +160,7 @@
             this.TextBoxDocumento.Size = new System.Drawing.Size(206, 20);
             this.TextBoxDocumento.TabIndex = 3;
             this.TextBoxDocumento.Tag = "Documento";
+            this.TextBoxDocumento.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TextBoxDocumento_KeyPress);
             // 
             // TextBoxNombre
             // 
@@ -168,6 +169,8 @@
             this.TextBoxNombre.Size = new System.Drawing.Size(206, 20);
             this.TextBoxNombre.TabIndex = 1;
             this.TextBoxNombre.Tag = "Nombre";
+            this.TextBoxNombre.TextChanged += new System.EventHandler(this.TextBoxNombre_TextChanged);
+            this.TextBoxNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TextBoxNombre_KeyPress);
             // 
             // TextBoxApellido
             // 
@@ -176,6 +179,7 @@
             this.TextBoxApellido.Size = new System.Drawing.Size(206, 20);
             this.TextBoxApellido.TabIndex = 0;
             this.TextBoxApellido.Tag = "Apellido";
+            this.TextBoxApellido.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TextBoxApellido_KeyPress);
             // 
             // LblDocumento
             // 

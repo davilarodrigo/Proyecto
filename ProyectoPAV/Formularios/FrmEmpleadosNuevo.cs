@@ -109,5 +109,25 @@ namespace ProyectoPAV.Formularios
             RadioHombre.Checked = false;
             RadioMujer.Checked = false;
         }
+
+        private void TextBoxApellido_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsLetter(e.KeyChar)) e.Handled = true;
+        }
+
+        private void TextBoxNombre_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TextBoxNombre_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsLetter(e.KeyChar)) e.Handled = true;
+        }
+
+        private void TextBoxDocumento_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar)) e.Handled = true;
+        }
     }
 }

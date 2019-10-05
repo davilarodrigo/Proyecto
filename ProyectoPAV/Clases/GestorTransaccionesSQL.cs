@@ -17,6 +17,7 @@ namespace ProyectoPAV.Clases
         static string cadenaConexion = "Provider=SQLNCLI11;Data Source=DESKTOP-FHCPBI9" + "\u005C" + "SQLEXPRESS01;Integrated Security=SSPI;Initial Catalog=ProyectoPAV";
         OleDbConnection conexion = new OleDbConnection(cadenaConexion);
         OleDbCommand comando = new OleDbCommand();
+        OleDbTransaction transaccion;
 
         // LUCAS 
         //static string cadenaConexion = "server = DESKTOP-0B3JQNF\\SQLEXPRESS; database = TP PAV; integrated security = true";
@@ -25,7 +26,7 @@ namespace ProyectoPAV.Clases
 
         public string mensajeErrorTransaccion;
         public DataTable TablaResultado = new DataTable();
-        private void Conectar()
+        private void Conectar(bool modoTransaccion = false)
         {
             conexion.ConnectionString = cadenaConexion;
             conexion.Open();
@@ -64,13 +65,13 @@ namespace ProyectoPAV.Clases
             this.Conectar();
             this.comando.CommandText = sql;
             ResultadoTransaccion resultado = ResultadoTransaccion.correcto;
-
             try
             {
                 this.comando.ExecuteNonQuery();
             }
             catch (Exception excepcion)
-            {
+            {   
+
                 mensajeErrorTransaccion = excepcion.Message;
                 resultado = ResultadoTransaccion.error;
             }
@@ -97,5 +98,6 @@ namespace ProyectoPAV.Clases
             this.Desconectar();
             return resultado;
         }
+
     }
 }

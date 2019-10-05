@@ -368,6 +368,7 @@
             this.btnVentas.TabIndex = 4;
             this.btnVentas.Text = "Ventas";
             this.btnVentas.UseVisualStyleBackColor = true;
+            this.btnVentas.Click += new System.EventHandler(this.BtnVentas_Click);
             // 
             // tableMenuSecundario
             // 

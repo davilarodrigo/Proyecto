@@ -129,6 +129,12 @@ namespace ProyectoPAV
         {
             this.Dispose();
         }
+
+        private void BtnVentas_Click(object sender, EventArgs e)
+        {
+            FrmVentasConsultar frmVentas = new FrmVentasConsultar();
+            frmVentas.ShowDialog();
+        }
     }
     
 }

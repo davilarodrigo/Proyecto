@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using ProyectoPAV.Formularios;
 using ProyectoPAV.Clases;
+using System.Data.SqlClient;
 
 namespace ProyectoPAV
 {
@@ -20,7 +21,7 @@ namespace ProyectoPAV
             string cadenaResultado;
             DataTable tabla = new DataTable();
             cadenaResultado = clientes.ConsultarClientes().ToString();
-            tabla = clientes.tablaCliente;
+            tabla = clientes.tablaCliente; //aca se llena una tabla 
             if (cadenaResultado == "correcto")
             {
                 this.CargarGrilla(tabla);
@@ -31,6 +32,34 @@ namespace ProyectoPAV
             }
 
         }
+
+       /* public static DataTable select(string comando, bool informe = true)
+        {//ejecuta comandos solo de tipo select, porque devuelve una tabla, que es el resultado de la consulta select
+
+            DataTable dataTable = new DataTable();
+            SqlDataAdapter sqlDataAdapter;
+            SqlCommand sqlCommand;
+
+            if (conectar(informe))
+            {
+                sqlDataAdapter = new SqlDataAdapter();
+                sqlCommand = new SqlCommand(comando, conexion);
+
+                try
+                {
+                    sqlDataAdapter.SelectCommand = sqlCommand;
+                    sqlDataAdapter.Fill(dataTable);
+
+                }
+                catch (Exception ex)
+                {
+                    if (informe) MessageBox.Show("No se pudo realizar la consulta a la base de datos. Mas informacion: " + ex.ToString());
+                }
+            }
+
+            return dataTable;
+        }
+        */
 
         private void CargarGrilla(DataTable tabla)
         {

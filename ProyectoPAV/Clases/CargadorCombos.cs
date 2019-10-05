@@ -100,5 +100,17 @@ namespace ProyectoPAV.Clases
             return tabla;
 
         }
+        public DataTable CargarComboEmpleados()
+        {
+            string sql = "SELECT * FROM Empleado";
+            DataTable tabla = new DataTable();
+            string resultadoTransaccion;
+            resultadoTransaccion = gestor.EjecutarConsulta(sql).ToString();
+            if (resultadoTransaccion == "correcto")
+            {
+                tabla = gestor.TablaResultado;
+            }
+            return tabla;
+        }
     }
 }

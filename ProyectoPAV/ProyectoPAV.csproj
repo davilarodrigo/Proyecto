@@ -52,6 +52,7 @@
     <Compile Include="Clases\EmpleadosABM.cs" />
     <Compile Include="Clases\GestorTransaccionesSQL.cs" />
     <Compile Include="Clases\AuxiliaresABM.cs" />
+    <Compile Include="Clases\GestorVentas.cs" />
     <Compile Include="Clases\ProductosABM.cs" />
     <Compile Include="Clases\ProveedoresABM.cs" />
     <Compile Include="Formularios\Auxiliares\FrmCargos.cs">
