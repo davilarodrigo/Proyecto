@@ -14,7 +14,11 @@ namespace ProyectoPAV.Clases
         public enum ResultadoTransaccion { correcto, error }
         //+ "\u005C" +
         //RODO
-        static string cadenaConexion = "Provider=SQLNCLI11;Data Source=DESKTOP-FHCPBI9" + "\u005C" + "SQLEXPRESS01;Integrated Security=SSPI;Initial Catalog=ProyectoPAV";
+        //static string cadenaConexion = "Provider=SQLNCLI11;Data Source=DESKTOP-FHCPBI9" + "\u005C" + "SQLEXPRESS01;Integrated Security=SSPI;Initial Catalog=ProyectoPAV";
+        //intento de rama universal
+          static string cadenaConexion = "Provider=SQLNCLI11;Data Source=.;Integrated Security=SSPI;Initial Catalog=ProyectoPAV";
+
+
         OleDbConnection conexion = new OleDbConnection(cadenaConexion);
         OleDbCommand comando = new OleDbCommand();
         OleDbTransaction transaccion;
