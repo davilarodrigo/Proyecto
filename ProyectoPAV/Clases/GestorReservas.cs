@@ -14,7 +14,8 @@ namespace ProyectoPAV.Clases
         public DataTable tablaReservas;
         public string mensajeRetorno;
 
-        public ResultadoReservas ConsultarReservasFiltros(string nombre, string apellido, string fechaDesde, string fechaHasta, bool venceHoy)
+        public ResultadoReservas ConsultarReservasFiltros(string nombre, string apellido, string fechaDesde,
+                                string fechaHasta, bool venceHoy, bool vencido)
         {
             GestorTransaccionesSQL gestor = new GestorTransaccionesSQL();
             ResultadoReservas resultado = new ResultadoReservas();
@@ -47,6 +48,11 @@ namespace ProyectoPAV.Clases
             if (venceHoy)
             {
                 where = where + " r.FechaVencimiento = GETDATE() AND ";
+            }
+
+            if (vencido)
+            {
+                where = where + " r.FechaVencimiento > GETDATE() AND ";
             }
 
             int largoCadena = where.Length - 5;

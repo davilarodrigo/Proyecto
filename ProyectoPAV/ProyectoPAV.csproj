@@ -171,6 +171,12 @@
     <Compile Include="Formularios\Transacciones\FrmComprasConsultar.Designer.cs">
       <DependentUpon>FrmComprasConsultar.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\Transacciones\FrmReservaNueva.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Transacciones\FrmReservaNueva.Designer.cs">
+      <DependentUpon>FrmReservaNueva.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Transacciones\FrmReservasConsultar.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -183,11 +189,11 @@
     <Compile Include="Formularios\Transacciones\FrmVentasConsultar.Designer.cs">
       <DependentUpon>FrmVentasConsultar.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\Transacciones\FrmVentasDetalle.cs">
+    <Compile Include="Formularios\Transacciones\FrmClienteTransaccion.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\Transacciones\FrmVentasDetalle.Designer.cs">
-      <DependentUpon>FrmVentasDetalle.cs</DependentUpon>
+    <Compile Include="Formularios\Transacciones\FrmClienteTransaccion.Designer.cs">
+      <DependentUpon>FrmClienteTransaccion.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\Transacciones\FrmVentasNueva.cs">
       <SubType>Form</SubType>
@@ -259,8 +265,14 @@
     <EmbeddedResource Include="Formularios\Transacciones\FrmComprasConsultar.resx">
       <DependentUpon>FrmComprasConsultar.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Transacciones\FrmReservaNueva.resx">
+      <DependentUpon>FrmReservaNueva.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Transacciones\FrmReservasConsultar.resx">
       <DependentUpon>FrmReservasConsultar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Transacciones\FrmClienteTransaccion.resx">
+      <DependentUpon>FrmClienteTransaccion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Transacciones\FrmVentasConsultar.resx">
       <DependentUpon>FrmVentasConsultar.cs</DependentUpon>

@@ -44,6 +44,7 @@
             this.TextBoxApellido = new System.Windows.Forms.TextBox();
             this.BtnEliminar = new System.Windows.Forms.Button();
             this.GroupBoxFiltros = new System.Windows.Forms.GroupBox();
+            this.checkVencido = new System.Windows.Forms.CheckBox();
             this.checkVencimientoHoy = new System.Windows.Forms.CheckBox();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridReservas)).BeginInit();
@@ -98,6 +99,7 @@
             this.BtnNuevo.Size = new System.Drawing.Size(50, 50);
             this.BtnNuevo.TabIndex = 19;
             this.BtnNuevo.UseVisualStyleBackColor = true;
+            this.BtnNuevo.Click += new System.EventHandler(this.BtnNuevo_Click);
             // 
             // BtnSalir
             // 
@@ -206,6 +208,7 @@
             this.GroupBoxFiltros.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.GroupBoxFiltros.Controls.Add(this.checkVencido);
             this.GroupBoxFiltros.Controls.Add(this.checkVencimientoHoy);
             this.GroupBoxFiltros.Controls.Add(this.tableLayoutPanel1);
             this.GroupBoxFiltros.Controls.Add(this.label1);
@@ -224,15 +227,27 @@
             this.GroupBoxFiltros.TabStop = false;
             this.GroupBoxFiltros.Text = "Filtros";
             // 
+            // checkVencido
+            // 
+            this.checkVencido.AutoSize = true;
+            this.checkVencido.Location = new System.Drawing.Point(742, 50);
+            this.checkVencido.Name = "checkVencido";
+            this.checkVencido.Size = new System.Drawing.Size(70, 17);
+            this.checkVencido.TabIndex = 18;
+            this.checkVencido.Text = "Vencidos";
+            this.checkVencido.UseVisualStyleBackColor = true;
+            this.checkVencido.Click += new System.EventHandler(this.checkVencido_Click);
+            // 
             // checkVencimientoHoy
             // 
             this.checkVencimientoHoy.AutoSize = true;
-            this.checkVencimientoHoy.Location = new System.Drawing.Point(739, 37);
+            this.checkVencimientoHoy.Location = new System.Drawing.Point(742, 19);
             this.checkVencimientoHoy.Name = "checkVencimientoHoy";
             this.checkVencimientoHoy.Size = new System.Drawing.Size(136, 17);
             this.checkVencimientoHoy.TabIndex = 17;
             this.checkVencimientoHoy.Text = "Vencimiento Dia Actual";
             this.checkVencimientoHoy.UseVisualStyleBackColor = true;
+            this.checkVencimientoHoy.Click += new System.EventHandler(this.checkVencimientoHoy_Click);
             // 
             // FrmReservasConsultar
             // 
@@ -274,5 +289,6 @@
         private System.Windows.Forms.Button BtnEliminar;
         private System.Windows.Forms.GroupBox GroupBoxFiltros;
         private System.Windows.Forms.CheckBox checkVencimientoHoy;
+        private System.Windows.Forms.CheckBox checkVencido;
     }
 }
