@@ -9,39 +9,36 @@ namespace ProyectoPAV.Clases
 {
     class GestorVentas
     {
-        public enum ResultadoClientes { correcto, error }
-        public DataTable tablaCliente;
+        public enum ResultadoVentas { correcto, error }
+        public DataTable tablaVentas;
+        public DataTable tablaDetallesVentas;
         public string mensajeRetorno;
-        public ResultadoClientes ConsultarVentas(string nombre="", string apellido = "", string tipoDoc = "", string numeroDoc = "")
+
+        public ResultadoVentas ConsultarVentasFiltros(string nombre, string apellido, string fechaDesde, string fechaHasta)
         {
             GestorTransaccionesSQL gestor = new GestorTransaccionesSQL();
-            ResultadoClientes resultado = new ResultadoClientes();
-            string sql = @"select v.FechaVenta as Fecha,
+            ResultadoVentas resultado = new ResultadoVentas();
+            string sql = @"SELECT v.IdVenta
+                           v.FechaVenta as Fecha,
                            concat(e.Nombre, ' ', e.Apellido) as Empleado,
                            concat(c.Nombre, ' ', c.Apellido) as Cliente,
                            v.MontoTotal as 'Monto Total'  
-                           from Venta v join Empleado e on v.IdEmpleado = e.IdEmpleado 
-                           join Cliente c on c.IdCliente = v.IdCliente;";
+                           FROM Venta v JOIN Empleado e on v.IdEmpleado = e.IdEmpleado 
+                           JOIN Cliente c on c.IdCliente = v.IdCliente ";
 
             string where = @"WHERE ";
             if (nombre != "")
             {
-                where = where + "C.Nombre like '%" + nombre + "%' AND ";
+                where = where + "c.Nombre like '%" + nombre + "%' AND ";
             }
 
             if (apellido != "")
             {
-                where = where + "C.Apellido like '%" + apellido + "%' AND ";
+                where = where + "c.Apellido like '%" + apellido + "%' AND ";
             }
-
-            if (tipoDoc != "0")
+            if (fechaDesde != fechaHasta)
             {
-                where = where + "C.IdTipoDocumento = " + tipoDoc + " AND ";
-            }
-
-            if (numeroDoc != "")
-            {
-                where = where + "C.NumeroDocumento = " + numeroDoc + " AND ";
+                where = where + "v.FechaVenta BETWEEN '" + fechaDesde + "' AND '" + fechaHasta + "' AND ";
             }
 
             int largoCadena = where.Length - 5;
@@ -53,132 +50,70 @@ namespace ProyectoPAV.Clases
             if (gestor.EjecutarConsulta(sql) ==
                 GestorTransaccionesSQL.ResultadoTransaccion.correcto)
             {
-                tablaCliente = gestor.TablaResultado;
-                resultado = ResultadoClientes.correcto;
+                tablaVentas = gestor.TablaResultado;
+                resultado = ResultadoVentas.correcto;
             }
             else
             {
                 mensajeRetorno = "No se consultaron correctamente los datos debido a: " + gestor.mensajeErrorTransaccion;
-                resultado = ResultadoClientes.error;
+                resultado = ResultadoVentas.error;
             }
 
             return resultado;
         }
 
-        public ResultadoClientes ConsultarClientes()
+        public ResultadoVentas ConsultarVentas()
         {
             GestorTransaccionesSQL gestor = new GestorTransaccionesSQL();
-            ResultadoClientes resultado = new ResultadoClientes();
-            string sql = @"SELECT C.*, TD.Nombre, L.Nombre, S.Nombre
-                           FROM Cliente C JOIN TipoDocumento TD ON C.IdTipoDocumento = TD.IdTipoDocumento
-                           JOIN Localidad L ON C.IdLocalidad = L.IdLocalidad JOIN Sexo S ON C.IdSexo = S.IdSexo";
-
+            ResultadoVentas resultado = new ResultadoVentas();
+            string sql = @"SELECT v.IdVenta,
+                           v.FechaVenta as Fecha,
+                           concat(e.Nombre, ' ', e.Apellido) as Empleado,
+                           concat(c.Nombre, ' ', c.Apellido) as Cliente,
+                           v.MontoTotal as 'Monto Total'  
+                           FROM Venta v JOIN Empleado e on v.IdEmpleado = e.IdEmpleado 
+                           JOIN Cliente c on c.IdCliente = v.IdCliente ";
             if (gestor.EjecutarConsulta(sql) ==
                 GestorTransaccionesSQL.ResultadoTransaccion.correcto)
             {
-                tablaCliente = gestor.TablaResultado;
-                resultado = ResultadoClientes.correcto;
+                tablaVentas = gestor.TablaResultado;
+                resultado = ResultadoVentas.correcto;
             }
             else
             {
                 mensajeRetorno = "No se consultaron correctamente los datos debido a: " + gestor.mensajeErrorTransaccion;
-                resultado = ResultadoClientes.error;
+                resultado = ResultadoVentas.error;
             }
 
             return resultado;
         }
 
-        public ResultadoClientes InsertarCliente(string apellido, string nombre, int idTipoDoc, int numeroDoc,
-                                    int idSexo, string fechaNacimiento, string email, int telefono,
-                                    string calle, int numeroCalle, int idLocalidad)
+        public ResultadoVentas ConsultarDetallesVenta(int idVenta)
         {
-            string sql_insert = "";
             GestorTransaccionesSQL gestor = new GestorTransaccionesSQL();
-            ResultadoClientes resultado = new ResultadoClientes();
-
-            sql_insert = @"INSERT INTO Cliente VALUES ('" + apellido + "'," + " '" + nombre + "'," +
-                                                        " " + idTipoDoc + "," + " " + numeroDoc + "," +
-                                                        " " + idSexo + "," + " '" + fechaNacimiento + "'," +
-                                                        " '" + email + "'," + " " + telefono + "," +
-                                                        " '" + calle + "', " + " " + numeroCalle + "," +
-                                                        " " + idLocalidad + ")";
-            if (gestor.Insertar(sql_insert) ==
+            ResultadoVentas resultado = new ResultadoVentas();
+            string sql = @"SELECT v.IdVenta,
+                           p.Nombre as Producto,
+                           p.NumeroTalle as 'Numero Talle',
+                           dv.Monto as 'Monto'  
+                           FROM Venta v JOIN DetalleVenta dv on v.IdVenta = dv.IdVenta 
+                           JOIN Producto p on db.IdProducto = dv.IdProducto
+                           GROUP BY v.IdVenta
+                           WHERE dv.IdVenta = " + idVenta;
+            if (gestor.EjecutarConsulta(sql) ==
                 GestorTransaccionesSQL.ResultadoTransaccion.correcto)
             {
-                mensajeRetorno = "Se cargaron correctamente los datos";
-                resultado = ResultadoClientes.correcto;
+                tablaDetallesVentas = gestor.TablaResultado;
+                resultado = ResultadoVentas.correcto;
             }
             else
             {
-                mensajeRetorno = "NO se cargaron correctamente los datos debido a: " + gestor.mensajeErrorTransaccion;
-                resultado = ResultadoClientes.error;
-            }
-            return resultado;
-        }
-
-        public ResultadoClientes EliminarCliente(int IdCliente)
-        {
-            string sql_delete = "";
-            sql_delete = @"DELETE FROM Cliente WHERE IdCliente = " + IdCliente;
-            GestorTransaccionesSQL gestor = new GestorTransaccionesSQL();
-            ResultadoClientes resultado = new ResultadoClientes();
-            if (gestor.Eliminar(sql_delete) ==
-                GestorTransaccionesSQL.ResultadoTransaccion.correcto)
-            {
-                mensajeRetorno = "Se eliminaron correctamente los datos";
-                resultado = ResultadoClientes.correcto;
-            }
-            else
-            {
-                mensajeRetorno = "NO se eliminaron correctamente los datos debido a: " + gestor.mensajeErrorTransaccion;
-                resultado = ResultadoClientes.error;
-            }
-            return resultado;
-        }
-
-        public DataTable RecuperarDatos(string id)
-        {
-            GestorTransaccionesSQL gestor = new GestorTransaccionesSQL();
-            string sql = "SELECT * FROM Cliente WHERE IdCliente = " + id;
-            tablaCliente = gestor.TablaResultado;
-            gestor.EjecutarConsulta(sql);
-
-            return tablaCliente;
-
-        }
-
-        public ResultadoClientes ModificarCliente(int idCliente, string apellido, string nombre, int idTipoDoc, int numeroDoc,
-                                    int idSexo, string fechaNacimiento, string email, int telefono,
-                                    string calle, int numeroCalle, int idLocalidad)
-        {
-            string sql_modificar = "";
-            sql_modificar = @"UPDATE Cliente SET Apellido = '" + apellido + "'," +
-                                                        " Nombre = '" + nombre + "'," +
-                                                        " IdTipoDocumento = " + idTipoDoc + "," +
-                                                        " NumeroDocumento = " + numeroDoc + "," +
-                                                        " IdSexo = " + idSexo + "," +
-                                                        " FechaNacimiento = '" + fechaNacimiento + "'," +
-                                                        " Email = '" + email + "'," +
-                                                        " Telefono = " + telefono + "," +
-                                                        " Calle = '" + calle + "'," +
-                                                        " NumeroCalle = " + numeroCalle + "," +
-                                                        " IdLocalidad = " + idLocalidad +
-                                                        " WHERE IdCliente = " + idCliente;
-            GestorTransaccionesSQL gestor = new GestorTransaccionesSQL();
-            ResultadoClientes resultado = new ResultadoClientes();
-            if (gestor.Insertar(sql_modificar) ==
-                GestorTransaccionesSQL.ResultadoTransaccion.correcto)
-            {
-                mensajeRetorno = "Se cargaron correctamente los datos";
-                resultado = ResultadoClientes.correcto;
-            }
-            else
-            {
-                mensajeRetorno = "NO se cargaron correctamente los datos debido a: " + gestor.mensajeErrorTransaccion;
-                resultado = ResultadoClientes.error;
+                mensajeRetorno = "No se consultaron correctamente los datos debido a: " + gestor.mensajeErrorTransaccion;
+                resultado = ResultadoVentas.error;
             }
 
             return resultado;
         }
+
     }
 }
