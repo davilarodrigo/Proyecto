@@ -16,18 +16,18 @@ namespace ProyectoPAV.Clases
         //+ "\u005C" +
         //RODO
         //static string cadenaConexion = "Provider=SQLNCLI11;Data Source=DESKTOP-FHCPBI9" + "\u005C" + "SQLEXPRESS01;Integrated Security=SSPI;Initial Catalog=ProyectoPAV";
-        //intento de rama universal
-        //static string cadenaConexion = "Provider=SQLNCLI11;Data Source=.;Integrated Security=SSPI;Initial Catalog=ProyectoPAV";
-
-
-        //OleDbConnection conexion = new OleDbConnection(cadenaConexion);
-        //OleDbCommand comando = new OleDbCommand();
-        //OleDbTransaction transaccion;
+      
+            
+        //intento de cadena de conexion universal (a lucas no le funciona)
+        static string cadenaConexion = "Provider=SQLNCLI11;Data Source=.;Integrated Security=SSPI;Initial Catalog=ProyectoPAV";
+        OleDbConnection conexion = new OleDbConnection(cadenaConexion);
+        OleDbCommand comando = new OleDbCommand();
+        OleDbTransaction transaccion;
 
         // LUCAS 
-        static string cadenaConexion = "server = DESKTOP-0B3JQNF\\SQLEXPRESS; database = TP PAV; integrated security = true";
-        SqlConnection conexion = new SqlConnection(cadenaConexion);
-        SqlCommand comando = new SqlCommand();
+        //static string cadenaConexion = "server = DESKTOP-0B3JQNF\\SQLEXPRESS; database = TP PAV; integrated security = true";
+        //SqlConnection conexion = new SqlConnection(cadenaConexion);
+        //SqlCommand comando = new SqlCommand();
 
         public string mensajeErrorTransaccion;
         public DataTable TablaResultado = new DataTable();
