@@ -249,7 +249,7 @@
             this.Controls.Add(this.BtnModificar);
             this.Controls.Add(this.GroupBoxFiltros);
             this.Name = "FrmVentasConsultar";
-            this.Text = "FrmVentasConsultar";
+            this.Text = "Consultar Ventas";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FrmVentasConsultar_Load);
             this.GroupBoxFiltros.ResumeLayout(false);

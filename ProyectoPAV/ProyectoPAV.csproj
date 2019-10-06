@@ -50,6 +50,8 @@
     <Compile Include="Clases\ClientesABM.cs" />
     <Compile Include="Clases\ControlDatos.cs" />
     <Compile Include="Clases\EmpleadosABM.cs" />
+    <Compile Include="Clases\GestorCompras.cs" />
+    <Compile Include="Clases\GestorReservas.cs" />
     <Compile Include="Clases\GestorTransaccionesSQL.cs" />
     <Compile Include="Clases\AuxiliaresABM.cs" />
     <Compile Include="Clases\GestorVentas.cs" />
@@ -163,22 +165,34 @@
     <Compile Include="Formularios\FrmProveedoresNuevo.Designer.cs">
       <DependentUpon>FrmProveedoresNuevo.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\Ventas %28NO es ABM%29\FrmVentasConsultar.cs">
+    <Compile Include="Formularios\Transacciones\FrmComprasConsultar.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\Ventas %28NO es ABM%29\FrmVentasConsultar.Designer.cs">
+    <Compile Include="Formularios\Transacciones\FrmComprasConsultar.Designer.cs">
+      <DependentUpon>FrmComprasConsultar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Transacciones\FrmReservasConsultar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Transacciones\FrmReservasConsultar.Designer.cs">
+      <DependentUpon>FrmReservasConsultar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Transacciones\FrmVentasConsultar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Transacciones\FrmVentasConsultar.Designer.cs">
       <DependentUpon>FrmVentasConsultar.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\Ventas %28NO es ABM%29\FrmVentasDetalle.cs">
+    <Compile Include="Formularios\Transacciones\FrmVentasDetalle.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\Ventas %28NO es ABM%29\FrmVentasDetalle.Designer.cs">
+    <Compile Include="Formularios\Transacciones\FrmVentasDetalle.Designer.cs">
       <DependentUpon>FrmVentasDetalle.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\Ventas %28NO es ABM%29\FrmVentasNueva.cs">
+    <Compile Include="Formularios\Transacciones\FrmVentasNueva.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\Ventas %28NO es ABM%29\FrmVentasNueva.Designer.cs">
+    <Compile Include="Formularios\Transacciones\FrmVentasNueva.Designer.cs">
       <DependentUpon>FrmVentasNueva.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
@@ -242,10 +256,16 @@
     <EmbeddedResource Include="Formularios\FrmProveedoresNuevo.resx">
       <DependentUpon>FrmProveedoresNuevo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Ventas %28NO es ABM%29\FrmVentasConsultar.resx">
+    <EmbeddedResource Include="Formularios\Transacciones\FrmComprasConsultar.resx">
+      <DependentUpon>FrmComprasConsultar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Transacciones\FrmReservasConsultar.resx">
+      <DependentUpon>FrmReservasConsultar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Transacciones\FrmVentasConsultar.resx">
       <DependentUpon>FrmVentasConsultar.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Ventas %28NO es ABM%29\FrmVentasNueva.resx">
+    <EmbeddedResource Include="Formularios\Transacciones\FrmVentasNueva.resx">
       <DependentUpon>FrmVentasNueva.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">

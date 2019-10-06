@@ -75,6 +75,7 @@ namespace ProyectoPAV.Formularios
 
         private void BtnBuscar_Click(object sender, EventArgs e)
         {
+            dataGridDetallesVenta.Columns.Clear();
             GestorVentas ventas = new GestorVentas();
             string cadenaResultado;
             DataTable tabla = new DataTable();

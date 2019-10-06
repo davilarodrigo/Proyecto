@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using ProyectoPAV.Formularios;
 using ProyectoPAV.Formularios.Auxiliares;
+using ProyectoPAV.Formularios.Transacciones;
 
 namespace ProyectoPAV
 {
@@ -134,6 +135,18 @@ namespace ProyectoPAV
         {
             FrmVentasConsultar frmVentas = new FrmVentasConsultar();
             frmVentas.ShowDialog();
+        }
+
+        private void btnCompras_Click(object sender, EventArgs e)
+        {
+            FrmComprasConsultar frmCompras = new FrmComprasConsultar();
+            frmCompras.ShowDialog();
+        }
+
+        private void btnReservas_Click(object sender, EventArgs e)
+        {
+            FrmReservasConsultar frmReservas = new FrmReservasConsultar();
+            frmReservas.ShowDialog();
         }
     }
     

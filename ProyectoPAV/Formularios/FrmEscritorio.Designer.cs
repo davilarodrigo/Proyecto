@@ -306,6 +306,7 @@
             this.btnReservas.TabIndex = 6;
             this.btnReservas.Text = "Reservas";
             this.btnReservas.UseVisualStyleBackColor = true;
+            this.btnReservas.Click += new System.EventHandler(this.btnReservas_Click);
             // 
             // btnEstadisticas
             // 
@@ -356,6 +357,7 @@
             this.btnCompras.TabIndex = 5;
             this.btnCompras.Text = "Compras a Proveedores";
             this.btnCompras.UseVisualStyleBackColor = true;
+            this.btnCompras.Click += new System.EventHandler(this.btnCompras_Click);
             // 
             // btnVentas
             // 
