@@ -81,7 +81,7 @@ namespace ProyectoPAV.Formularios
             DateTime fechadesde = Convert.ToDateTime(TimePickerDesde.Value);
             DateTime fechahasta = Convert.ToDateTime(TimePickerHasta.Value);
             if (this.TextBoxNombre.Text != "" || this.TextBoxApellido.Text != ""
-                || fechadesde != fechahasta)
+                || (fechadesde.ToString("MM-dd-yyyy") != fechahasta.ToString("MM-dd-yyyy")))
             {
 
                 cadenaResultado = ventas.ConsultarVentasFiltros(this.TextBoxNombre.Text, this.TextBoxApellido.Text,

@@ -18,7 +18,7 @@ namespace ProyectoPAV.Clases
         {
             GestorTransaccionesSQL gestor = new GestorTransaccionesSQL();
             ResultadoVentas resultado = new ResultadoVentas();
-            string sql = @"SELECT v.IdVenta
+            string sql = @"SELECT v.IdVenta,
                            v.FechaVenta as Fecha,
                            concat(e.Nombre, ' ', e.Apellido) as Empleado,
                            concat(c.Nombre, ' ', c.Apellido) as Cliente,
@@ -26,19 +26,19 @@ namespace ProyectoPAV.Clases
                            FROM Venta v JOIN Empleado e on v.IdEmpleado = e.IdEmpleado 
                            JOIN Cliente c on c.IdCliente = v.IdCliente ";
 
-            string where = @"WHERE ";
+            string where = @"WHERE";
             if (nombre != "")
             {
-                where = where + "c.Nombre like '%" + nombre + "%' AND ";
+                where = where + " c.Nombre like '%" + nombre + "%' AND ";
             }
 
             if (apellido != "")
             {
-                where = where + "c.Apellido like '%" + apellido + "%' AND ";
+                where = where + " c.Apellido like '%" + apellido + "%' AND ";
             }
             if (fechaDesde != fechaHasta)
             {
-                where = where + "v.FechaVenta BETWEEN '" + fechaDesde + "' AND '" + fechaHasta + "' AND ";
+                where = where + " v.FechaVenta BETWEEN '" + fechaDesde + "' AND '" + fechaHasta + "' AND ";
             }
 
             int largoCadena = where.Length - 5;

@@ -124,6 +124,8 @@
             // 
             // TimePickerHasta
             // 
+            this.TimePickerHasta.CustomFormat = "yyyy-MM-dd";
+            this.TimePickerHasta.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.TimePickerHasta.Location = new System.Drawing.Point(341, 50);
             this.TimePickerHasta.Name = "TimePickerHasta";
             this.TimePickerHasta.Size = new System.Drawing.Size(253, 20);
@@ -140,6 +142,8 @@
             // 
             // TimePickerDesde
             // 
+            this.TimePickerDesde.CustomFormat = "yyyy-MM-dd";
+            this.TimePickerDesde.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.TimePickerDesde.Location = new System.Drawing.Point(341, 20);
             this.TimePickerDesde.Name = "TimePickerDesde";
             this.TimePickerDesde.Size = new System.Drawing.Size(253, 20);
