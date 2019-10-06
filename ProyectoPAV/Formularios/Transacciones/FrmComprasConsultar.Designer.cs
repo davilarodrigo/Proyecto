@@ -85,7 +85,7 @@
             this.dataGridCompras.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridCompras.Location = new System.Drawing.Point(3, 3);
             this.dataGridCompras.Name = "dataGridCompras";
-            this.dataGridCompras.Size = new System.Drawing.Size(351, 351);
+            this.dataGridCompras.Size = new System.Drawing.Size(350, 351);
             this.dataGridCompras.TabIndex = 0;
             this.dataGridCompras.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridCompras_CellClick);
             // 
@@ -95,9 +95,9 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridDetallesCompra.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridDetallesCompra.Location = new System.Drawing.Point(360, 3);
+            this.dataGridDetallesCompra.Location = new System.Drawing.Point(359, 3);
             this.dataGridDetallesCompra.Name = "dataGridDetallesCompra";
-            this.dataGridDetallesCompra.Size = new System.Drawing.Size(456, 351);
+            this.dataGridDetallesCompra.Size = new System.Drawing.Size(457, 351);
             this.dataGridDetallesCompra.TabIndex = 1;
             // 
             // BtnNuevo
@@ -110,6 +110,7 @@
             this.BtnNuevo.Size = new System.Drawing.Size(50, 50);
             this.BtnNuevo.TabIndex = 19;
             this.BtnNuevo.UseVisualStyleBackColor = true;
+            this.BtnNuevo.Click += new System.EventHandler(this.BtnNuevo_Click);
             // 
             // BtnSalir
             // 

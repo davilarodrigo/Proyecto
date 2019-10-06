@@ -112,5 +112,19 @@ namespace ProyectoPAV.Clases
             }
             return tabla;
         }
+        public DataTable CargarComboProveedores()
+        {
+            string sql = "SELECT * FROM Proveedor";
+            DataTable tabla = new DataTable();
+            string resultadoTransaccion;
+            resultadoTransaccion = gestor.EjecutarConsulta(sql).ToString();
+            if (resultadoTransaccion == "correcto")
+            {
+                tabla = gestor.TablaResultado;
+            }
+
+            return tabla;
+
+        }
     }
 }

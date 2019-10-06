@@ -99,6 +99,10 @@ namespace ProyectoPAV.Formularios.Transacciones
             }
         }
 
-        
+        private void BtnNuevo_Click(object sender, EventArgs e)
+        {
+            FrmCompraNueva nuevaCompra = new FrmCompraNueva();
+            nuevaCompra.ShowDialog();
+        }
     }
 }
