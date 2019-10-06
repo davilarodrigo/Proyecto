@@ -92,14 +92,12 @@ namespace ProyectoPAV.Clases
         {
             GestorTransaccionesSQL gestor = new GestorTransaccionesSQL();
             ResultadoVentas resultado = new ResultadoVentas();
-            string sql = @"SELECT v.IdVenta,
-                           p.Nombre as Producto,
+            string sql = @"SELECT v.IdVenta, p.Nombre as Producto,
                            p.NumeroTalle as 'Numero Talle',
                            dv.Monto as 'Monto'  
                            FROM Venta v JOIN DetalleVenta dv on v.IdVenta = dv.IdVenta 
-                           JOIN Producto p on db.IdProducto = dv.IdProducto
-                           GROUP BY v.IdVenta
-                           WHERE dv.IdVenta = " + idVenta;
+                           JOIN Producto p on p.IdProducto = dv.IdProducto
+                           WHERE dv.IdVenta = " + idVenta+";";
             if (gestor.EjecutarConsulta(sql) ==
                 GestorTransaccionesSQL.ResultadoTransaccion.correcto)
             {
