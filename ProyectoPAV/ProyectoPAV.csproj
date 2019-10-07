@@ -177,6 +177,12 @@
     <Compile Include="Formularios\Transacciones\FrmComprasConsultar.Designer.cs">
       <DependentUpon>FrmComprasConsultar.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\Transacciones\FrmProductosTransacciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Transacciones\FrmProductosTransacciones.Designer.cs">
+      <DependentUpon>FrmProductosTransacciones.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Transacciones\FrmReservaNueva.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -273,6 +279,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Transacciones\FrmComprasConsultar.resx">
       <DependentUpon>FrmComprasConsultar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Transacciones\FrmProductosTransacciones.resx">
+      <DependentUpon>FrmProductosTransacciones.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Transacciones\FrmReservaNueva.resx">
       <DependentUpon>FrmReservaNueva.cs</DependentUpon>

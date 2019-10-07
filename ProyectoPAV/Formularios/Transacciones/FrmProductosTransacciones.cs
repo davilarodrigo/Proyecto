@@ -8,11 +8,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ProyectoPAV.Clases;
+using ProyectoPAV.Formularios.Transacciones;
 
-namespace ProyectoPAV.Formularios
+namespace ProyectoPAV.Formularios.Transacciones
 {
-    public partial class FrmProductosConsultar : Form
+    public partial class FrmProductosTransacciones : Form
     {
+        public string FormularioPadre { get; set; }
+        public FrmProductosTransacciones()
+        {
+            InitializeComponent();
+        }
+
         private void Consulta()
         {
             ProductosABM productos = new ProductosABM();
@@ -30,6 +37,7 @@ namespace ProyectoPAV.Formularios
             }
 
         }
+
         private void CargarGrilla(DataTable tabla)
         {
             dataGridProductos.DataSource = tabla;
@@ -44,47 +52,7 @@ namespace ProyectoPAV.Formularios
             dataGridProductos.Columns[8].HeaderText = "Categoria";
         }
 
-        public FrmProductosConsultar()
-        {
-            InitializeComponent();
-        }
-
-        private void BtnNuevo_Click(object sender, EventArgs e)
-        {
-            FrmProductosNuevo nuevoProducto = new FrmProductosNuevo();
-            nuevoProducto.ShowDialog();
-            Consulta();
-        }
-
-        private void BtnModificar_Click(object sender, EventArgs e)
-        {
-            if (dataGridProductos.CurrentRow != null)
-            {
-                FrmProductosModificar modificarProducto = new FrmProductosModificar();
-                modificarProducto.IdProducto = dataGridProductos.CurrentRow.Cells[0].Value.ToString();
-                modificarProducto.ShowDialog();
-                Consulta();
-            }
-            else
-            {
-                MessageBox.Show("Para modificar primero seleccione una fila de la grilla"
-                    , "Importante!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            }
-        }
-
-        private void BtnSalir_Click(object sender, EventArgs e)
-        {
-            this.Dispose();
-        }
-
-        private void FrmProductosConsultar_Load(object sender, EventArgs e)
-        {
-            this.Consulta();
-
-            comboCategorias = CargadorCombos.CargarComboCategoria(comboCategorias);
-        }
-
-        private void BtnBuscar_Click(object sender, EventArgs e)
+        private void botonBuscarProducto_Click(object sender, EventArgs e)
         {
             ProductosABM productos = new ProductosABM();
             string cadenaResultado;
@@ -122,34 +90,55 @@ namespace ProyectoPAV.Formularios
             }
         }
 
-        private void BtnRecargar_Click(object sender, EventArgs e)
-        {
-            this.textBoxNombreProducto.Clear();
-            this.textBoxMarca.Clear();
-            this.comboCategorias.SelectedIndex = -1;
-            this.Consulta();
-        }
-
-        private void BtnEliminar_Click(object sender, EventArgs e)
+        private void BtnAceptar_Click(object sender, EventArgs e)
         {
             if (dataGridProductos.CurrentRow != null)
             {
-                if (MessageBox.Show("¿Seguro que desea eliminar el Empleado?", "Importante!",
-                    MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
+
+                if (FormularioPadre == "Ventas")
                 {
-                    ProductosABM producto = new ProductosABM();
-                    int ID = Int32.Parse(dataGridProductos.CurrentRow.Cells[0].Value.ToString());
-                    producto.EliminarProducto(ID);
-                    MessageBox.Show(producto.mensajeRetorno, "Importante!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    Consulta();
+                    FrmVentasNueva nuevaVenta = Owner as FrmVentasNueva;
+                    nuevaVenta.IdProducto = dataGridProductos.CurrentRow.Cells[0].Value.ToString();
                 }
+                if (FormularioPadre == "Compras")
+                {
+                    FrmCompraNueva nuevaCompra= Owner as FrmCompraNueva;
+                    nuevaCompra.IdProducto = dataGridProductos.CurrentRow.Cells[0].Value.ToString();
+                }
+                this.Dispose();
             }
             else
             {
-                MessageBox.Show("Para eliminar primero seleccione una fila de la grilla"
-                    , "Importante!", MessageBoxButtons.OK
-                    , MessageBoxIcon.Exclamation);
+                MessageBox.Show("Primero seleccione una fila de la grilla"
+                    , "Importante!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
+        }
+
+        private void BtnSalir_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+        }
+
+        private void FrmProductosTransacciones_Load(object sender, EventArgs e)
+        {
+
+            this.Consulta();
+
+            CargadorCombos cargador = new CargadorCombos();
+            DataTable tablaCategorias = new DataTable();
+
+            tablaCategorias = cargador.CargarComboCategorias();
+
+            comboCategorias.DataSource = tablaCategorias;
+            comboCategorias.DisplayMember = "Nombre";
+            comboCategorias.ValueMember = "IdCategoria";
+            comboCategorias.SelectedIndex = -1;
+        }
+
+        private void botonNuevoProducto_Click(object sender, EventArgs e)
+        {
+            FrmProductosNuevo nuevoProducto = new FrmProductosNuevo();
+            nuevoProducto.ShowDialog();
         }
     }
 }

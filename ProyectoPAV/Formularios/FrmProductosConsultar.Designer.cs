@@ -84,7 +84,7 @@
             // 
             this.btnBuscar.BackgroundImage = global::ProyectoPAV.Properties.Resources.Search_256x256;
             this.btnBuscar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnBuscar.Location = new System.Drawing.Point(408, 57);
+            this.btnBuscar.Location = new System.Drawing.Point(408, 46);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(48, 48);
             this.btnBuscar.TabIndex = 4;
