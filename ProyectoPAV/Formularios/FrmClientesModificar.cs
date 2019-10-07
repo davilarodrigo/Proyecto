@@ -71,6 +71,7 @@ namespace ProyectoPAV.Formularios
 
         private void FrmClientesModificar_Load(object sender, EventArgs e)
         {
+            
             CargadorCombos cargador = new CargadorCombos();
             DataTable tablaTipoDocumento = new DataTable();
 
@@ -90,8 +91,10 @@ namespace ProyectoPAV.Formularios
             comboLocalidad.DisplayMember = "Nombre";
             comboLocalidad.ValueMember = "IdLocalidad";
             comboLocalidad.SelectedIndex = -1;
+            
+            RecuperarDatos(IdCliente);
 
-            this.RecuperarDatos(IdCliente);
+       
         }
 
         private void BtnGuardar_Click(object sender, EventArgs e)
