@@ -16,6 +16,7 @@ namespace ProyectoPAV.Formularios
     {
         public string IdCliente { get; set; }
         public string IdProducto { get; set; }
+        List<string> Productos = new List<string>();
         public FrmVentasNueva()
         {
             InitializeComponent();
@@ -73,8 +74,13 @@ namespace ProyectoPAV.Formularios
             ProductosABM productos = new ProductosABM();
             if (IdProducto != "")
             {
-                tabla = productos.RecuperarDatos(IdProducto);
+                Productos.Add(IdProducto);
+              
+               
+                tabla = productos.RecuperarDatosLista(Productos);
                 CargarGrilla(tabla);
+                
+                
 
 
             }
@@ -90,6 +96,9 @@ namespace ProyectoPAV.Formularios
             dataGridCarrito.Columns[6].HeaderText = "StockDisponible";
             dataGridCarrito.Columns[4].HeaderText = "Marca";
             dataGridCarrito.Columns[5].HeaderText = "Categoria";
+
+            
+            
         }
 
 

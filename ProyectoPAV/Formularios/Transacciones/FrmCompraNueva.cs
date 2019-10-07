@@ -14,6 +14,7 @@ namespace ProyectoPAV.Formularios.Transacciones
     public partial class FrmCompraNueva : Form
     {
         public string IdProducto { get; set; }
+        List<string> Productos = new List<string>();
         public FrmCompraNueva()
         {
             InitializeComponent();
@@ -59,8 +60,12 @@ namespace ProyectoPAV.Formularios.Transacciones
             ProductosABM productos = new ProductosABM();
             if (IdProducto != "")
             {
-                tabla = productos.RecuperarDatos(IdProducto);
+                Productos.Add(IdProducto);
+
+
+                tabla = productos.RecuperarDatosLista(Productos);
                 CargarGrilla(tabla);
+
             }
         }
         private void CargarGrilla(DataTable tabla)

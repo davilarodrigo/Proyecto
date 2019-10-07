@@ -162,5 +162,24 @@ namespace ProyectoPAV.Clases
 
             return resultado;
         }
+
+        public DataTable RecuperarDatosLista(List<string> Productos)
+        {
+            GestorTransaccionesSQL gestor = new GestorTransaccionesSQL();
+            string sql = "SELECT * FROM Producto WHERE    IdProducto =";
+            tablaProducto = gestor.TablaResultado;
+
+            foreach (var IdProducto in Productos)
+            {
+                sql += " " + IdProducto + " OR IdProducto =";
+            }
+
+            int largoCadena = sql.Length - 15;
+            string whereFinal = "";
+            whereFinal = sql.Substring(0, largoCadena);
+            gestor.EjecutarConsulta(whereFinal);
+
+            return tablaProducto;
+        }
     }
 }

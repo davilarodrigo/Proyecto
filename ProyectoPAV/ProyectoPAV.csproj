@@ -49,6 +49,8 @@
     <Compile Include="Clases\CargadorCombos.cs" />
     <Compile Include="Clases\ClientesABM.cs" />
     <Compile Include="Clases\ControlDatos.cs" />
+    <Compile Include="Clases\DetalleVenta.cs" />
+    <Compile Include="Clases\DVenta.cs" />
     <Compile Include="Clases\EmpleadosABM.cs" />
     <Compile Include="Clases\GestorCompras.cs" />
     <Compile Include="Clases\GestorReservas.cs" />
