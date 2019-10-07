@@ -84,8 +84,6 @@ namespace ProyectoPAV.Formularios
         {
             dataGridCarrito.DataSource = tabla;
             dataGridCarrito.Columns[0].Visible = false;
-            dataGridCarrito.Columns[4].Visible = false;
-            dataGridCarrito.Columns[5].Visible = false;
             dataGridCarrito.Columns[1].HeaderText = "Codigo Producto";
             dataGridCarrito.Columns[2].HeaderText = "Numero Talle";
             dataGridCarrito.Columns[3].HeaderText = "Nombre";

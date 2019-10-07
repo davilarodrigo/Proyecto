@@ -67,8 +67,6 @@ namespace ProyectoPAV.Formularios.Transacciones
         {
             dataGridPedido.DataSource = tabla;
             dataGridPedido.Columns[0].Visible = false;
-            dataGridPedido.Columns[4].Visible = false;
-            dataGridPedido.Columns[5].Visible = false;
             dataGridPedido.Columns[1].HeaderText = "Codigo Producto";
             dataGridPedido.Columns[2].HeaderText = "Numero Talle";
             dataGridPedido.Columns[3].HeaderText = "Nombre";
