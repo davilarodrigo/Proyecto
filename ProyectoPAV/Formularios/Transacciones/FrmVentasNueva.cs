@@ -59,6 +59,9 @@ namespace ProyectoPAV.Formularios
             labelNumeroDoc.Text = tabla.Rows[0]["NumeroDocumento"].ToString();
         }
 
-     
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

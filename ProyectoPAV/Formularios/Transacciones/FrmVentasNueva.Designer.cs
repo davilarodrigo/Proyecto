@@ -35,12 +35,12 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.botonAsignarCliente = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.labelNumeroDoc = new System.Windows.Forms.Label();
             this.labeNombre = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.labelApellido = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
@@ -134,6 +134,15 @@
             this.botonAsignarCliente.UseVisualStyleBackColor = true;
             this.botonAsignarCliente.Click += new System.EventHandler(this.botonAsignarCliente_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(22, 25);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(47, 13);
+            this.label1.TabIndex = 37;
+            this.label1.Text = "Nombre:";
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -179,15 +188,6 @@
             this.labelApellido.TabIndex = 48;
             this.labelApellido.Text = "_________";
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(22, 25);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(47, 13);
-            this.label1.TabIndex = 37;
-            this.label1.Text = "Nombre:";
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -207,6 +207,7 @@
             this.button2.Size = new System.Drawing.Size(51, 51);
             this.button2.TabIndex = 45;
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // label3
             // 

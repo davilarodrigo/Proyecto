@@ -28,7 +28,7 @@ namespace ProyectoPAV.Clases
             else
             {
                 L.Handled = true;
-                MessageBox.Show("Solo ingrese letras", "Tipo de dato no valido", MessageBoxButtons.OK, MessageBoxIcon.Error);
+              //  MessageBox.Show("Solo ingrese letras", "Tipo de dato no valido", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
         }
@@ -49,7 +49,7 @@ namespace ProyectoPAV.Clases
             else
             {
                 N.Handled = true;
-                MessageBox.Show("Solo ingrese numeros", "Contenido no valido", MessageBoxButtons.OK, MessageBoxIcon.Error);
+              //  MessageBox.Show("Solo ingrese numeros", "Contenido no valido", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
