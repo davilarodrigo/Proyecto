@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data;
+using System.Windows.Forms;
 
 namespace ProyectoPAV.Clases
 {
@@ -11,6 +12,59 @@ namespace ProyectoPAV.Clases
     {
 
         GestorTransaccionesSQL gestor = new GestorTransaccionesSQL();
+
+        static GestorTransaccionesSQL gestorStatic = new GestorTransaccionesSQL();
+
+
+        public static ComboBox CargarComboGenerico(ComboBox comboBox, string nombreTabla, string valueMember, string displayMember)
+        {
+            DataTable tabla = new DataTable();
+
+            string sql = "select * from " + nombreTabla;
+            string resultadoTransaccion = gestorStatic.EjecutarConsulta(sql).ToString();
+
+            if (resultadoTransaccion == "correcto")
+            {
+                comboBox.DataSource = gestorStatic.TablaResultado;
+                comboBox.DisplayMember = displayMember;
+                comboBox.ValueMember = valueMember;
+                comboBox.SelectedIndex = -1;
+            }
+            return comboBox;
+        }
+
+        public static ComboBox CargarComboCategoria(ComboBox comboBox)
+        {
+            return CargarComboGenerico(comboBox, "Categoria", "IdCategoria", "Nombre");
+        }
+
+        public static ComboBox CargarComboDocumento(ComboBox comboBox)
+        {
+            return CargarComboGenerico(comboBox, "TipoDocumento", "IdTipoDocumento", "Nombre");
+        }
+
+        public static ComboBox CargarComboMarca(ComboBox comboBox)
+        {
+            return CargarComboGenerico(comboBox, "Marca", "IdMarca", "Nombre");
+        }
+
+        public static ComboBox CargarComboLocalidad(ComboBox comboBox)
+        {
+            return CargarComboGenerico(comboBox, "Localidad", "IdLocalidad", "Nombre");
+        }
+
+        public static ComboBox CargarComboSexo(ComboBox comboBox)
+        {
+            return CargarComboGenerico(comboBox, "Sexo", "IdSexo", "Nombre");
+        }
+
+        public static ComboBox CargarComboCargo(ComboBox comboBox)
+        {
+            return CargarComboGenerico(comboBox, "Cargo", "IdCargo", "Nombre");
+        }
+
+        //////////////////////////////////////////////////////////////////////////////////////
+        
 
         public DataTable CargarComboCargos()
         {
