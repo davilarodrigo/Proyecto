@@ -42,12 +42,12 @@
             this.label6 = new System.Windows.Forms.Label();
             this.labelApellido = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
+            this.buttonAgregarProducto = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.dataGridCarrito = new System.Windows.Forms.DataGridView();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridCarrito)).BeginInit();
             this.SuspendLayout();
             // 
             // BtnSalir
@@ -96,9 +96,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.Controls.Add(this.groupBox2);
             this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.button2);
+            this.groupBox1.Controls.Add(this.buttonAgregarProducto);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.dataGridView2);
+            this.groupBox1.Controls.Add(this.dataGridCarrito);
             this.groupBox1.Controls.Add(this.ComboEmpleado);
             this.groupBox1.Controls.Add(this.LblDocumento);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
@@ -198,16 +198,16 @@
             this.label4.TabIndex = 46;
             this.label4.Text = "Agregar\r\nProducto";
             // 
-            // button2
+            // buttonAgregarProducto
             // 
-            this.button2.BackgroundImage = global::ProyectoPAV.Properties.Resources.Add_256x256;
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button2.Location = new System.Drawing.Point(19, 354);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(51, 51);
-            this.button2.TabIndex = 45;
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.buttonAgregarProducto.BackgroundImage = global::ProyectoPAV.Properties.Resources.Add_256x256;
+            this.buttonAgregarProducto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.buttonAgregarProducto.Location = new System.Drawing.Point(19, 354);
+            this.buttonAgregarProducto.Name = "buttonAgregarProducto";
+            this.buttonAgregarProducto.Size = new System.Drawing.Size(51, 51);
+            this.buttonAgregarProducto.TabIndex = 45;
+            this.buttonAgregarProducto.UseVisualStyleBackColor = true;
+            this.buttonAgregarProducto.Click += new System.EventHandler(this.buttonAgregarProducto_Click);
             // 
             // label3
             // 
@@ -219,13 +219,13 @@
             this.label3.TabIndex = 43;
             this.label3.Text = "Carrito";
             // 
-            // dataGridView2
+            // dataGridCarrito
             // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(19, 185);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(690, 163);
-            this.dataGridView2.TabIndex = 42;
+            this.dataGridCarrito.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridCarrito.Location = new System.Drawing.Point(19, 185);
+            this.dataGridCarrito.Name = "dataGridCarrito";
+            this.dataGridCarrito.Size = new System.Drawing.Size(690, 163);
+            this.dataGridCarrito.TabIndex = 42;
             // 
             // FrmVentasNueva
             // 
@@ -242,7 +242,7 @@
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridCarrito)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -255,9 +255,9 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridView dataGridCarrito;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button buttonAgregarProducto;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label labelNumeroDoc;
         private System.Windows.Forms.Label label6;

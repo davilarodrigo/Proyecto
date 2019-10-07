@@ -8,12 +8,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ProyectoPAV.Clases;
+using ProyectoPAV.Formularios.Transacciones;
 
 namespace ProyectoPAV.Formularios
 {
     public partial class FrmVentasNueva : Form
     {
         public string IdCliente { get; set; }
+        public string IdProducto { get; set; }
         public FrmVentasNueva()
         {
             InitializeComponent();
@@ -46,10 +48,10 @@ namespace ProyectoPAV.Formularios
             ventasCliente.FormularioPadre = "Ventas";
             AddOwnedForm(ventasCliente);
             ventasCliente.ShowDialog();
-            if (IdCliente != "") recuperarDatos();
+            if (IdCliente != "") recuperarDatosCliente();
         }
 
-        private void recuperarDatos()
+        private void recuperarDatosCliente()
         {
             ClientesABM cliente = new ClientesABM();
             DataTable tabla = new DataTable();
@@ -59,9 +61,39 @@ namespace ProyectoPAV.Formularios
             labelNumeroDoc.Text = tabla.Rows[0]["NumeroDocumento"].ToString();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void buttonAgregarProducto_Click(object sender, EventArgs e)
         {
+            IdProducto = "";
+            FrmProductosTransacciones ventasProducto = new FrmProductosTransacciones();
+            ventasProducto.FormularioPadre = "Ventas";
+            AddOwnedForm(ventasProducto);
+            ventasProducto.ShowDialog();
 
+            DataTable tabla = new DataTable();
+            ProductosABM productos = new ProductosABM();
+            if (IdProducto != "")
+            {
+                tabla = productos.RecuperarDatos(IdProducto);
+                CargarGrilla(tabla);
+
+
+            }
         }
+
+        private void CargarGrilla(DataTable tabla)
+        {
+            dataGridCarrito.DataSource = tabla;
+            dataGridCarrito.Columns[0].Visible = false;
+            dataGridCarrito.Columns[4].Visible = false;
+            dataGridCarrito.Columns[5].Visible = false;
+            dataGridCarrito.Columns[1].HeaderText = "Codigo Producto";
+            dataGridCarrito.Columns[2].HeaderText = "Numero Talle";
+            dataGridCarrito.Columns[3].HeaderText = "Nombre";
+            dataGridCarrito.Columns[6].HeaderText = "StockDisponible";
+            dataGridCarrito.Columns[4].HeaderText = "Marca";
+            dataGridCarrito.Columns[5].HeaderText = "Categoria";
+        }
+
+
     }
 }
