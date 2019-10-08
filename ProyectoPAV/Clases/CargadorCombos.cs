@@ -10,7 +10,7 @@ namespace ProyectoPAV.Clases
     class CargadorCombos
     {
 
-        GestorTransaccionesSQL gestor = new GestorTransaccionesSQL();
+        GestorSentenciasSimples gestor = new GestorSentenciasSimples();
 
         public DataTable CargarComboCargos()
         {

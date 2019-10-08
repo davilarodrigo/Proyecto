@@ -12,7 +12,7 @@ namespace ProyectoPAV.Clases
     public class DDetalle_Venta
 
     {
-        GestorTransaccionesSQL gestor = new GestorTransaccionesSQL();
+        GestorSentenciasSimples gestor = new GestorSentenciasSimples();
         static string cadenaConexion = "server = DESKTOP-0B3JQNF\\SQLEXPRESS; database = TP PAV; integrated security = true";
         SqlConnection conexion = new SqlConnection(cadenaConexion);
         SqlCommand comando = new SqlCommand();

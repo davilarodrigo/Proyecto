@@ -16,7 +16,7 @@ namespace ProyectoPAV.Clases
 
         public ResultadoVentas ConsultarVentasFiltros(string nombre, string apellido, string fechaDesde, string fechaHasta)
         {
-            GestorTransaccionesSQL gestor = new GestorTransaccionesSQL();
+            GestorSentenciasSimples gestor = new GestorSentenciasSimples();
             ResultadoVentas resultado = new ResultadoVentas();
             string sql = @"SELECT v.IdVenta,
                            v.FechaVenta as Fecha,
@@ -48,7 +48,7 @@ namespace ProyectoPAV.Clases
 
             DataTable dt = new DataTable();
             if (gestor.EjecutarConsulta(sql) ==
-                GestorTransaccionesSQL.ResultadoTransaccion.correcto)
+                GestorSentenciasSimples.ResultadoTransaccion.correcto)
             {
                 tablaVentas = gestor.TablaResultado;
                 resultado = ResultadoVentas.correcto;
@@ -64,7 +64,7 @@ namespace ProyectoPAV.Clases
 
         public ResultadoVentas ConsultarVentas()
         {
-            GestorTransaccionesSQL gestor = new GestorTransaccionesSQL();
+            GestorSentenciasSimples gestor = new GestorSentenciasSimples();
             ResultadoVentas resultado = new ResultadoVentas();
             string sql = @"SELECT v.IdVenta,
                            v.FechaVenta as Fecha,
@@ -74,7 +74,7 @@ namespace ProyectoPAV.Clases
                            FROM Venta v JOIN Empleado e on v.IdEmpleado = e.IdEmpleado 
                            JOIN Cliente c on c.IdCliente = v.IdCliente ";
             if (gestor.EjecutarConsulta(sql) ==
-                GestorTransaccionesSQL.ResultadoTransaccion.correcto)
+                GestorSentenciasSimples.ResultadoTransaccion.correcto)
             {
                 tablaVentas = gestor.TablaResultado;
                 resultado = ResultadoVentas.correcto;
@@ -90,7 +90,7 @@ namespace ProyectoPAV.Clases
 
         public ResultadoVentas ConsultarDetallesVenta(int idVenta)
         {
-            GestorTransaccionesSQL gestor = new GestorTransaccionesSQL();
+            GestorSentenciasSimples gestor = new GestorSentenciasSimples();
             ResultadoVentas resultado = new ResultadoVentas();
             string sql = @"SELECT v.IdVenta, p.Nombre as Producto,
                            p.NumeroTalle as 'Numero Talle',
@@ -99,7 +99,7 @@ namespace ProyectoPAV.Clases
                            JOIN Producto p on p.IdProducto = dv.IdProducto
                            WHERE dv.IdVenta = " + idVenta+";";
             if (gestor.EjecutarConsulta(sql) ==
-                GestorTransaccionesSQL.ResultadoTransaccion.correcto)
+                GestorSentenciasSimples.ResultadoTransaccion.correcto)
             {
                 tablaDetallesVentas = gestor.TablaResultado;
                 resultado = ResultadoVentas.correcto;
