@@ -148,6 +148,12 @@ namespace ProyectoPAV
             FrmReservasConsultar frmReservas = new FrmReservasConsultar();
             frmReservas.ShowDialog();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            FrmProbandoTransaccion prueba = new FrmProbandoTransaccion();
+            prueba.ShowDialog();
+        }
     }
     
 }
