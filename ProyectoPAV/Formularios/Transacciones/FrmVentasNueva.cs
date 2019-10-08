@@ -74,7 +74,11 @@ namespace ProyectoPAV.Formularios
             ventasCliente.FormularioPadre = "Ventas";
             AddOwnedForm(ventasCliente);
             ventasCliente.ShowDialog();
-            if (IdCliente != "") recuperarDatosCliente();
+            if (IdCliente != "")
+            {
+                recuperarDatosCliente();
+                gestor.modificar(@"UPDATE Venta SET IdCliente = " + IdCliente + " WHERE IdVenta = " + idventa + ";");
+            }
         }
 
         private void recuperarDatosCliente()
@@ -174,6 +178,9 @@ namespace ProyectoPAV.Formularios
 
         private void BtnAceptar_Click(object sender, EventArgs e)
         {
+            string idempleado = ComboEmpleado.SelectedValue.ToString();
+            gestor.modificar(@"UPDATE Venta SET IdEmpleado = " + idempleado + " WHERE IdVenta = " + idventa + ";");
+            gestor.modificar(@"UPDATE Venta SET MontoTotal = (SELECT SUM(D.Monto) FROM DetalleVenta D WHERE IdVenta = " + idventa + " GROUP BY IdVenta) WHERE IdVenta = " + idventa);
             gestor.cerrar_transaccion();
             this.Dispose();
         }
