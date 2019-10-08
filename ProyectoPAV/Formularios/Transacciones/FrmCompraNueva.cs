@@ -72,12 +72,60 @@ namespace ProyectoPAV.Formularios.Transacciones
         {
             dataGridPedido.DataSource = tabla;
             dataGridPedido.Columns[0].Visible = false;
+            dataGridPedido.Columns[4].Visible = false;
+            dataGridPedido.Columns[5].Visible = false;
             dataGridPedido.Columns[1].HeaderText = "Codigo Producto";
             dataGridPedido.Columns[2].HeaderText = "Numero Talle";
             dataGridPedido.Columns[3].HeaderText = "Nombre";
             dataGridPedido.Columns[6].HeaderText = "StockDisponible";
-            dataGridPedido.Columns[4].HeaderText = "Marca";
-            dataGridPedido.Columns[5].HeaderText = "Categoria";
+            dataGridPedido.Columns[7].HeaderText = "Marca";
+            dataGridPedido.Columns[8].HeaderText = "Categoria";
+
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            if (dataGridPedido.CurrentRow != null)
+            {
+                if (MessageBox.Show("¿Seguro que desea eliminar este Producto?", "Importante!",
+                    MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
+                {
+
+                    DataTable tabla = new DataTable();
+                    ProductosABM productos = new ProductosABM();
+
+                    string ID;
+                    ID = dataGridPedido.CurrentRow.Cells[0].Value.ToString();
+
+                    string borrar;
+                    borrar = "0";
+
+
+                    foreach (var IdProducto in Productos)
+                    {
+                        if (IdProducto == ID)
+                        {
+                            borrar = IdProducto;
+                        }
+                    }
+                    Productos.Remove(borrar);
+                    if (dataGridPedido.Rows.Count != 2)
+                    {
+                        tabla = productos.RecuperarDatosLista(Productos);
+                        CargarGrilla(tabla);
+                    }
+                    else
+                    {
+                        dataGridPedido.Columns.Clear();
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("Para eliminar primero seleccione una fila de la grilla"
+                    , "Importante!", MessageBoxButtons.OK
+                    , MessageBoxIcon.Exclamation);
+            }
         }
     }
 }

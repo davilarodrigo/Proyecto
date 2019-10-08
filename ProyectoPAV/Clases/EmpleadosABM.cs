@@ -15,7 +15,7 @@ namespace ProyectoPAV.Clases
         public string mensajeRetorno;
         public ResultadoEmpleados ConsultarEmpleadosFiltros(string nombre, string apellido, string tipoDoc, string numeroDoc)
         {
-            GestorSentenciasSimples gestor = new GestorSentenciasSimples();
+            GestorTransaccionesSQL gestor = new GestorTransaccionesSQL();
             ResultadoEmpleados resultado = new ResultadoEmpleados();
             string sql = @"SELECT E.*, TD.Nombre, C.Nombre, S.Nombre
                            FROM Empleado E JOIN TipoDocumento TD ON E.IdTipoDocumento = TD.IdTipoDocumento
@@ -49,7 +49,7 @@ namespace ProyectoPAV.Clases
 
             DataTable dt = new DataTable();
             if (gestor.EjecutarConsulta(sql) ==
-                GestorSentenciasSimples.ResultadoTransaccion.correcto)
+                GestorTransaccionesSQL.ResultadoTransaccion.correcto)
             {
                 tablaEmpleado = gestor.TablaResultado;
                 resultado = ResultadoEmpleados.correcto;
@@ -65,14 +65,14 @@ namespace ProyectoPAV.Clases
 
         public ResultadoEmpleados ConsultarEmpleados()
         {
-            GestorSentenciasSimples gestor = new GestorSentenciasSimples();
+            GestorTransaccionesSQL gestor = new GestorTransaccionesSQL();
             ResultadoEmpleados resultado = new ResultadoEmpleados();
             string sql = @"SELECT E.*, TD.Nombre, C.Nombre, S.Nombre
                              FROM Empleado E JOIN TipoDocumento TD ON E.IdTipoDocumento = TD.IdTipoDocumento
                                 JOIN Cargo C ON E.IdCargo = C.IdCargo JOIN Sexo S ON E.IdSexo = S.IdSexo";
             
             if (gestor.EjecutarConsulta(sql) ==
-                GestorSentenciasSimples.ResultadoTransaccion.correcto)
+                GestorTransaccionesSQL.ResultadoTransaccion.correcto)
             {
                 tablaEmpleado = gestor.TablaResultado;
                 resultado = ResultadoEmpleados.correcto;
@@ -91,7 +91,7 @@ namespace ProyectoPAV.Clases
                                     int idCargo)
         {
             string sql_insert = "";
-            GestorSentenciasSimples gestor = new GestorSentenciasSimples();
+            GestorTransaccionesSQL gestor = new GestorTransaccionesSQL();
             ResultadoEmpleados resultado = new ResultadoEmpleados();
             
             sql_insert = @"INSERT INTO Empleado VALUES (" + idTipoDoc + "," + " " + numeroDoc + "," +
@@ -100,7 +100,7 @@ namespace ProyectoPAV.Clases
                                                         " '" + email + "'," + " " + telefono + "," +
                                                         " " + idCargo + ", "+ "GETDATE()" + ", NULL)";
             if (gestor.Insertar(sql_insert) ==
-                GestorSentenciasSimples.ResultadoTransaccion.correcto)
+                GestorTransaccionesSQL.ResultadoTransaccion.correcto)
             {
                 mensajeRetorno = "Se cargaron correctamente los datos";
                 resultado = ResultadoEmpleados.correcto;
@@ -117,10 +117,10 @@ namespace ProyectoPAV.Clases
         {
             string sql_delete = "";
             sql_delete = @"DELETE FROM Empleado WHERE IdEmpleado = " + IdEmpleado;
-            GestorSentenciasSimples gestor = new GestorSentenciasSimples();
+            GestorTransaccionesSQL gestor = new GestorTransaccionesSQL();
             ResultadoEmpleados resultado = new ResultadoEmpleados();
             if (gestor.Eliminar(sql_delete) ==
-                GestorSentenciasSimples.ResultadoTransaccion.correcto)
+                GestorTransaccionesSQL.ResultadoTransaccion.correcto)
             {
                 mensajeRetorno = "Se eliminaron correctamente los datos";
                 resultado = ResultadoEmpleados.correcto;
@@ -135,7 +135,7 @@ namespace ProyectoPAV.Clases
 
         public DataTable RecuperarDatos(string id)
         {
-            GestorSentenciasSimples gestor = new GestorSentenciasSimples();
+            GestorTransaccionesSQL gestor = new GestorTransaccionesSQL();
             string sql = "SELECT * FROM Empleado WHERE IdEmpleado = " + id;
             tablaEmpleado = gestor.TablaResultado;
             gestor.EjecutarConsulta(sql);
@@ -159,10 +159,10 @@ namespace ProyectoPAV.Clases
                                                         " Telefono = " + telefono + "," +
                                                         " IdCargo = " + idCargo +
                                                         " WHERE IdEmpleado = " + idEmpleado;
-            GestorSentenciasSimples gestor = new GestorSentenciasSimples();
+            GestorTransaccionesSQL gestor = new GestorTransaccionesSQL();
             ResultadoEmpleados resultado = new ResultadoEmpleados();
             if (gestor.Insertar(sql_modificar) ==
-                GestorSentenciasSimples.ResultadoTransaccion.correcto)
+                GestorTransaccionesSQL.ResultadoTransaccion.correcto)
             {
                 mensajeRetorno = "Se cargaron correctamente los datos";
                 resultado = ResultadoEmpleados.correcto;

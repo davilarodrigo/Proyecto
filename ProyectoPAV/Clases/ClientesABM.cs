@@ -15,7 +15,7 @@ namespace ProyectoPAV.Clases
         public string mensajeRetorno;
         public ResultadoClientes ConsultarClientesFiltros(string nombre, string apellido, string tipoDoc, string numeroDoc)
         {
-            GestorSentenciasSimples gestor = new GestorSentenciasSimples();
+            GestorTransaccionesSQL gestor = new GestorTransaccionesSQL();
             ResultadoClientes resultado = new ResultadoClientes();
             string sql = @"SELECT C.*, TD.Nombre, L.Nombre, S.Nombre
                            FROM Cliente C JOIN TipoDocumento TD ON C.IdTipoDocumento = TD.IdTipoDocumento
@@ -49,7 +49,7 @@ namespace ProyectoPAV.Clases
 
             DataTable dt = new DataTable();
             if (gestor.EjecutarConsulta(sql) ==
-                GestorSentenciasSimples.ResultadoTransaccion.correcto)
+                GestorTransaccionesSQL.ResultadoTransaccion.correcto)
             {
                 tablaCliente = gestor.TablaResultado;
                 resultado = ResultadoClientes.correcto;
@@ -65,14 +65,14 @@ namespace ProyectoPAV.Clases
 
         public ResultadoClientes ConsultarClientes()
         {
-            GestorSentenciasSimples gestor = new GestorSentenciasSimples();
+            GestorTransaccionesSQL gestor = new GestorTransaccionesSQL();
             ResultadoClientes resultado = new ResultadoClientes();
             string sql = @"SELECT C.*, TD.Nombre, L.Nombre, S.Nombre
                            FROM Cliente C JOIN TipoDocumento TD ON C.IdTipoDocumento = TD.IdTipoDocumento
                            JOIN Localidad L ON C.IdLocalidad = L.IdLocalidad JOIN Sexo S ON C.IdSexo = S.IdSexo";
 
             if (gestor.EjecutarConsulta(sql) ==
-                GestorSentenciasSimples.ResultadoTransaccion.correcto)
+                GestorTransaccionesSQL.ResultadoTransaccion.correcto)
             {
                 tablaCliente = gestor.TablaResultado;
                 resultado = ResultadoClientes.correcto;
@@ -91,7 +91,7 @@ namespace ProyectoPAV.Clases
                                     string calle, int numeroCalle, int idLocalidad)
         {
             string sql_insert = "";
-            GestorSentenciasSimples gestor = new GestorSentenciasSimples();
+            GestorTransaccionesSQL gestor = new GestorTransaccionesSQL();
             ResultadoClientes resultado = new ResultadoClientes();
 
             sql_insert = @"INSERT INTO Cliente VALUES ('" + apellido + "'," + " '" + nombre + "'," +
@@ -101,7 +101,7 @@ namespace ProyectoPAV.Clases
                                                         " '" + calle + "', " + " " + numeroCalle + "," +
                                                         " " + idLocalidad + ")";
             if (gestor.Insertar(sql_insert) ==
-                GestorSentenciasSimples.ResultadoTransaccion.correcto)
+                GestorTransaccionesSQL.ResultadoTransaccion.correcto)
             {
                 mensajeRetorno = "Se cargaron correctamente los datos";
                 resultado = ResultadoClientes.correcto;
@@ -118,10 +118,10 @@ namespace ProyectoPAV.Clases
         {
             string sql_delete = "";
             sql_delete = @"DELETE FROM Cliente WHERE IdCliente = " + IdCliente;
-            GestorSentenciasSimples gestor = new GestorSentenciasSimples();
+            GestorTransaccionesSQL gestor = new GestorTransaccionesSQL();
             ResultadoClientes resultado = new ResultadoClientes();
             if (gestor.Eliminar(sql_delete) ==
-                GestorSentenciasSimples.ResultadoTransaccion.correcto)
+                GestorTransaccionesSQL.ResultadoTransaccion.correcto)
             {
                 mensajeRetorno = "Se eliminaron correctamente los datos";
                 resultado = ResultadoClientes.correcto;
@@ -136,7 +136,7 @@ namespace ProyectoPAV.Clases
 
         public DataTable RecuperarDatos(string id)
         {
-            GestorSentenciasSimples gestor = new GestorSentenciasSimples();
+            GestorTransaccionesSQL gestor = new GestorTransaccionesSQL();
             string sql = "SELECT * FROM Cliente WHERE IdCliente = " + id;
             tablaCliente = gestor.TablaResultado;
             gestor.EjecutarConsulta(sql);
@@ -162,10 +162,10 @@ namespace ProyectoPAV.Clases
                                                         " NumeroCalle = " + numeroCalle + "," +
                                                         " IdLocalidad = " + idLocalidad +
                                                         " WHERE IdCliente = " + idCliente;
-            GestorSentenciasSimples gestor = new GestorSentenciasSimples();
+            GestorTransaccionesSQL gestor = new GestorTransaccionesSQL();
             ResultadoClientes resultado = new ResultadoClientes();
             if (gestor.Insertar(sql_modificar) ==
-                GestorSentenciasSimples.ResultadoTransaccion.correcto)
+                GestorTransaccionesSQL.ResultadoTransaccion.correcto)
             {
                 mensajeRetorno = "Se cargaron correctamente los datos";
                 resultado = ResultadoClientes.correcto;

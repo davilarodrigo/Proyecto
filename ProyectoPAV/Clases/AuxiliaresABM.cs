@@ -15,9 +15,9 @@ namespace ProyectoPAV.Clases
         {
             string sql_insert = "";
             sql_insert = @"INSERT INTO "+ Tabla +" (Nombre) VALUES ('" + Nombre +"')";
-            GestorSentenciasSimples gestor = new GestorSentenciasSimples();
+            GestorTransaccionesSQL gestor = new GestorTransaccionesSQL();
             if (gestor.Insertar(sql_insert) ==
-                GestorSentenciasSimples.ResultadoTransaccion.correcto)
+                GestorTransaccionesSQL.ResultadoTransaccion.correcto)
             {
                 MessageBox.Show("Se cargaron correctamente los datos", "Importante", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
@@ -30,14 +30,14 @@ namespace ProyectoPAV.Clases
 
         public DataTable ConsultarAuxiliares(string Tabla)
         {
-            GestorSentenciasSimples gestor = new GestorSentenciasSimples();
+            GestorTransaccionesSQL gestor = new GestorTransaccionesSQL();
             string sql = @"SELECT *
                              FROM " + Tabla;
 
             DataTable dt = new DataTable();
 
             if (gestor.EjecutarConsulta(sql) ==
-                GestorSentenciasSimples.ResultadoTransaccion.correcto)
+                GestorTransaccionesSQL.ResultadoTransaccion.correcto)
             {
                 dt = gestor.TablaResultado;
             }
@@ -54,9 +54,9 @@ namespace ProyectoPAV.Clases
         {
             string sql_delete = "";
             sql_delete = @"DELETE FROM "+ Tabla + " WHERE Nombre = '" + Nombre + "'";
-            GestorSentenciasSimples gestor = new GestorSentenciasSimples();
+            GestorTransaccionesSQL gestor = new GestorTransaccionesSQL();
             if (gestor.Eliminar(sql_delete) ==
-                GestorSentenciasSimples.ResultadoTransaccion.correcto)
+                GestorTransaccionesSQL.ResultadoTransaccion.correcto)
             {
                 MessageBox.Show("Se eliminaron correctamente los datos", "Importante", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }

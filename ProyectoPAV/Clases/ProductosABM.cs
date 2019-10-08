@@ -15,7 +15,7 @@ namespace ProyectoPAV.Clases
 
         public ResultadoProductos ConsultarProductosFiltros(string nombre, string marca, string categoria)
         {
-            GestorSentenciasSimples gestor = new GestorSentenciasSimples();
+            GestorTransaccionesSQL gestor = new GestorTransaccionesSQL();
             ResultadoProductos resultado = new ResultadoProductos();
             string sql = @"SELECT P.*, M.Nombre, C.Nombre
                              FROM Producto P JOIN Marca M ON P.IdMarca = M.IdMarca
@@ -44,7 +44,7 @@ namespace ProyectoPAV.Clases
 
             DataTable dt = new DataTable();
             if (gestor.EjecutarConsulta(sql) ==
-                GestorSentenciasSimples.ResultadoTransaccion.correcto)
+                GestorTransaccionesSQL.ResultadoTransaccion.correcto)
             {
                 tablaProducto = gestor.TablaResultado;
                 resultado = ResultadoProductos.correcto;
@@ -60,14 +60,14 @@ namespace ProyectoPAV.Clases
 
         public ResultadoProductos ConsultarProductos()
         {
-            GestorSentenciasSimples gestor = new GestorSentenciasSimples();
+            GestorTransaccionesSQL gestor = new GestorTransaccionesSQL();
             ResultadoProductos resultado = new ResultadoProductos();
             string sql = @"SELECT P.*, M.Nombre, C.Nombre
                              FROM Producto P JOIN Marca M ON P.IdMarca = M.IdMarca
                                 JOIN Categoria C ON P.IdCategoria = C.IdCategoria";
 
             if (gestor.EjecutarConsulta(sql) ==
-                GestorSentenciasSimples.ResultadoTransaccion.correcto)
+                GestorTransaccionesSQL.ResultadoTransaccion.correcto)
             {
                 tablaProducto = gestor.TablaResultado;
                 resultado = ResultadoProductos.correcto;
@@ -85,14 +85,14 @@ namespace ProyectoPAV.Clases
                                     int idCategoria, int stock)
         {
             string sql_insert = "";
-            GestorSentenciasSimples gestor = new GestorSentenciasSimples();
+            GestorTransaccionesSQL gestor = new GestorTransaccionesSQL();
             ResultadoProductos resultado = new ResultadoProductos();
 
             sql_insert = @"INSERT INTO Producto VALUES ('" + codigoProducto + "'," + " " + talle + "," +
                                                         " '" + nombre + "'," + " " + idMarca + "," +
                                                         " " + idCategoria + ", " + stock + ")";
             if (gestor.Insertar(sql_insert) ==
-                GestorSentenciasSimples.ResultadoTransaccion.correcto)
+                GestorTransaccionesSQL.ResultadoTransaccion.correcto)
             {
                 mensajeRetorno = "Se cargaron correctamente los datos";
                 resultado = ResultadoProductos.correcto;
@@ -109,10 +109,10 @@ namespace ProyectoPAV.Clases
         {
             string sql_delete = "";
             sql_delete = @"DELETE FROM Producto WHERE IdProducto = " + IdProducto;
-            GestorSentenciasSimples gestor = new GestorSentenciasSimples();
+            GestorTransaccionesSQL gestor = new GestorTransaccionesSQL();
             ResultadoProductos resultado = new ResultadoProductos();
             if (gestor.Eliminar(sql_delete) ==
-                GestorSentenciasSimples.ResultadoTransaccion.correcto)
+                GestorTransaccionesSQL.ResultadoTransaccion.correcto)
             {
                 mensajeRetorno = "Se eliminaron correctamente los datos";
                 resultado = ResultadoProductos.correcto;
@@ -127,7 +127,7 @@ namespace ProyectoPAV.Clases
 
         public DataTable RecuperarDatos(string id)
         {
-            GestorSentenciasSimples gestor = new GestorSentenciasSimples();
+            GestorTransaccionesSQL gestor = new GestorTransaccionesSQL();
             string sql = "SELECT * FROM Producto WHERE IdProducto = " + id;
             tablaProducto = gestor.TablaResultado;
             gestor.EjecutarConsulta(sql);
@@ -146,10 +146,10 @@ namespace ProyectoPAV.Clases
                                                         " IdCategoria = " + idCategoria + "," +
                                                         " StockDisponible = " + stockDisponible +
                                                         " WHERE IdProducto = " + idProduto;
-            GestorSentenciasSimples gestor = new GestorSentenciasSimples();
+            GestorTransaccionesSQL gestor = new GestorTransaccionesSQL();
             ResultadoProductos resultado = new ResultadoProductos();
             if (gestor.Insertar(sql_modificar) ==
-                GestorSentenciasSimples.ResultadoTransaccion.correcto)
+                GestorTransaccionesSQL.ResultadoTransaccion.correcto)
             {
                 mensajeRetorno = "Se cargaron correctamente los datos";
                 resultado = ResultadoProductos.correcto;
@@ -165,16 +165,18 @@ namespace ProyectoPAV.Clases
 
         public DataTable RecuperarDatosLista(List<string> Productos)
         {
-            GestorSentenciasSimples gestor = new GestorSentenciasSimples();
-            string sql = "SELECT * FROM Producto WHERE    IdProducto =";
+            GestorTransaccionesSQL gestor = new GestorTransaccionesSQL();
+            string sql = @"SELECT P.*, M.Nombre, C.Nombre FROM Producto P
+                JOIN Marca M ON P.IdMarca = M.IdMarca JOIN Categoria C ON
+                P.IdCategoria = C.IdCategoria WHERE    P.IdProducto =";
             tablaProducto = gestor.TablaResultado;
 
             foreach (var IdProducto in Productos)
             {
-                sql += " " + IdProducto + " OR IdProducto =";
+                sql += " " + IdProducto + " OR P.IdProducto =";
             }
 
-            int largoCadena = sql.Length - 15;
+            int largoCadena = sql.Length - 17;
             string whereFinal = "";
             whereFinal = sql.Substring(0, largoCadena);
             gestor.EjecutarConsulta(whereFinal);

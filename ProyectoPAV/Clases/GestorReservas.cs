@@ -17,7 +17,7 @@ namespace ProyectoPAV.Clases
         public ResultadoReservas ConsultarReservasFiltros(string nombre, string apellido, string fechaDesde,
                                 string fechaHasta, bool venceHoy, bool vencido)
         {
-            GestorSentenciasSimples gestor = new GestorSentenciasSimples();
+            GestorTransaccionesSQL gestor = new GestorTransaccionesSQL();
             ResultadoReservas resultado = new ResultadoReservas();
             string sql = @"SELECT r.IdReserva,
                            r.FechaRealizacion as 'Fecha Realizacion',
@@ -62,7 +62,7 @@ namespace ProyectoPAV.Clases
 
             DataTable dt = new DataTable();
             if (gestor.EjecutarConsulta(sql) ==
-                GestorSentenciasSimples.ResultadoTransaccion.correcto)
+                GestorTransaccionesSQL.ResultadoTransaccion.correcto)
             {
                 tablaReservas = gestor.TablaResultado;
                 resultado = ResultadoReservas.correcto;
@@ -78,7 +78,7 @@ namespace ProyectoPAV.Clases
 
         public ResultadoReservas ConsultarReservas()
         {
-            GestorSentenciasSimples gestor = new GestorSentenciasSimples();
+            GestorTransaccionesSQL gestor = new GestorTransaccionesSQL();
             ResultadoReservas resultado = new ResultadoReservas();
             string sql = @"SELECT r.IdReserva,
                            r.FechaRealizacion as 'Fecha Realizacion',
@@ -92,7 +92,7 @@ namespace ProyectoPAV.Clases
                            JOIN Cliente c on c.IdCliente = r.IdCliente ";
 
             if (gestor.EjecutarConsulta(sql) ==
-                GestorSentenciasSimples.ResultadoTransaccion.correcto)
+                GestorTransaccionesSQL.ResultadoTransaccion.correcto)
             {
                 tablaReservas = gestor.TablaResultado;
                 resultado = ResultadoReservas.correcto;

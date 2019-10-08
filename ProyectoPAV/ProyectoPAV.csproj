@@ -54,9 +54,8 @@
     <Compile Include="Clases\EmpleadosABM.cs" />
     <Compile Include="Clases\GestorCompras.cs" />
     <Compile Include="Clases\GestorReservas.cs" />
-    <Compile Include="Clases\GestorSentenciasSimples.cs" />
+    <Compile Include="Clases\GestorTransaccionesSQL.cs" />
     <Compile Include="Clases\AuxiliaresABM.cs" />
-    <Compile Include="Clases\GestorTransacciones.cs" />
     <Compile Include="Clases\GestorVentas.cs" />
     <Compile Include="Clases\ProductosABM.cs" />
     <Compile Include="Clases\ProveedoresABM.cs" />
