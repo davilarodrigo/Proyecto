@@ -15,9 +15,15 @@ namespace ProyectoPAV.Formularios.Transacciones
     public partial class FrmProductosTransacciones : Form
     {
         public string FormularioPadre { get; set; }
-        public FrmProductosTransacciones()
-        {
+
+        PruebaGestorTransacciones gestor;
+
+        string idVenta;
+        public FrmProductosTransacciones(PruebaGestorTransacciones ges, string idVent="1")
+        {            
             InitializeComponent();
+            gestor = ges;
+            idVenta = idVent;
         }
 
         private void Consulta()
@@ -89,12 +95,23 @@ namespace ProyectoPAV.Formularios.Transacciones
                 this.Consulta();
             }
         }
-
+        string IdProducto;
         private void BtnAceptar_Click(object sender, EventArgs e)
         {
             if (dataGridProductos.CurrentRow != null)
             {
+                //aca se obtine la id del producto
+                IdProducto = dataGridProductos.CurrentRow.Cells[0].Value.ToString();
+                //se le reduce en 1 el stock al producto
+                gestor.modificar(@"update Producto set StockDisponible -=1 where IdProducto='"+IdProducto+"';");
 
+                string precio = dataGridProductos.CurrentRow.Cells[7].Value.ToString();
+
+                gestor.insertar(@"insert DetalleVenta values ("+idVenta+","+IdProducto+ ",666," + precio + ");");
+
+                //gestor.cerrar_transaccion();
+                this.Dispose();
+                /*
                 if (FormularioPadre == "Ventas")
                 {
                     FrmVentasNueva nuevaVenta = Owner as FrmVentasNueva;
@@ -104,8 +121,7 @@ namespace ProyectoPAV.Formularios.Transacciones
                 {
                     FrmCompraNueva nuevaCompra= Owner as FrmCompraNueva;
                     nuevaCompra.IdProducto = dataGridProductos.CurrentRow.Cells[0].Value.ToString();
-                }
-                this.Dispose();
+                }*/
             }
             else
             {
@@ -121,9 +137,8 @@ namespace ProyectoPAV.Formularios.Transacciones
 
         private void FrmProductosTransacciones_Load(object sender, EventArgs e)
         {
-
-            this.Consulta();
-
+            dataGridProductos.DataSource = gestor.ejecutar_consulta(@"select p.IdProducto,p.Nombre, p.CodigoProducto, p.NumeroTalle, p.StockDisponible, m.Nombre as Marca,c.Nombre as Categoria,p.PrecioUnitario from Producto p join Marca m on p.IdMarca=m.IdMarca join Categoria c on p.IdCategoria=c.IdCategoria where p.StockDisponible>=1 ;");
+            
             CargadorCombos cargador = new CargadorCombos();
             DataTable tablaCategorias = new DataTable();
 

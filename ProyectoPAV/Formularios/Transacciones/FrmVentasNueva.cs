@@ -22,6 +22,8 @@ namespace ProyectoPAV.Formularios
             InitializeComponent();
         }
 
+        string idventa;
+        PruebaGestorTransacciones gestor;
         private void FrmVentasNueva_Load(object sender, EventArgs e)
         {
             CargadorCombos cargador = new CargadorCombos();
@@ -34,11 +36,34 @@ namespace ProyectoPAV.Formularios
             ComboEmpleado.DisplayMember = "Apellido";
             ComboEmpleado.ValueMember = "IdEmpleado";
             ComboEmpleado.SelectedIndex = -1;
+
+            gestor = new PruebaGestorTransacciones();
+            gestor.inicio_transaccion();
+            string sql = @"insert Venta values (1,1,GETDATE(),0);";
+
+
+            
+
+            //aca se genera una venta
+            gestor.insertar(sql);
+
+            //obtener id d la venta
+
+            DataTable table = new DataTable();
+            table=gestor.ejecutar_consulta(@"select max(IdVenta) from Venta;");
+            labelIdVenta.Text = table.Rows[0][0].ToString();
+
+            idventa = table.Rows[0][0].ToString();
+            actualizarcarrito();
+
+
         }
 
-       
+
+
         private void BtnSalir_Click(object sender, EventArgs e)
         {
+            gestor.CancelarTransaccion();
             this.Dispose();
         }
 
@@ -62,28 +87,25 @@ namespace ProyectoPAV.Formularios
             labelNumeroDoc.Text = tabla.Rows[0]["NumeroDocumento"].ToString();
         }
 
+
+        protected void actualizarcarrito()
+        {
+
+//            dataGridCarrito.DataSource = gestor.ejecutar_consulta(@"select IdProducto,Monto from DetalleVenta where IdVenta=" + idventa + " ;");
+            //            dataGridCarrito.DataSource = gestor.ejecutar_consulta(@"select IdProducto,Monto from DetalleVenta where IdVenta=" + idventa + " ;");
+            dataGridCarrito.DataSource = gestor.ejecutar_consulta(@"select dv.IdProducto,dv.Monto,p.Nombre,p.NumeroTalle,m.Nombre as Marca from DetalleVenta dv left join producto p on dv.IdProducto = p.IdProducto join marca m on p.IdMarca = m.IdMarca where dv.IdVenta =" + idventa + " ;");
+
+            //            dataGridCarrito.DataSource = gestor.ejecutar_consulta(@"select dv.IdProducto,dv.Monto,p.Nombre,p.NumeroTalle,m.Nombre as Marca from DetalleVenta dv join producto p on dv.IdDetalleVenta=p.IdProducto join marca m on p.IdMarca = m.IdMarca where dv.IdVenta=" + idventa + " ;");
+        }
         private void buttonAgregarProducto_Click(object sender, EventArgs e)
         {
-            IdProducto = "";
-            FrmProductosTransacciones ventasProducto = new FrmProductosTransacciones();
-            ventasProducto.FormularioPadre = "Ventas";
-            AddOwnedForm(ventasProducto);
+
+            FrmProductosTransacciones ventasProducto = new FrmProductosTransacciones(gestor,idventa);
             ventasProducto.ShowDialog();
 
-            DataTable tabla = new DataTable();
-            ProductosABM productos = new ProductosABM();
-            if (IdProducto != "")
-            {
-                Productos.Add(IdProducto);
-              
-               
-                tabla = productos.RecuperarDatosLista(Productos);
-                CargarGrilla(tabla);
-                
-                
+            actualizarcarrito();
 
 
-            }
         }
 
         private void CargarGrilla(DataTable tabla)
@@ -148,6 +170,12 @@ namespace ProyectoPAV.Formularios
                     , MessageBoxIcon.Exclamation);
             }
             
+        }
+
+        private void BtnAceptar_Click(object sender, EventArgs e)
+        {
+            gestor.cerrar_transaccion();
+            this.Dispose();
         }
     }
 }

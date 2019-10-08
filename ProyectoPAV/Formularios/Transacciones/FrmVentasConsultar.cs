@@ -21,7 +21,8 @@ namespace ProyectoPAV.Formularios
         private void BtnNuevo_Click(object sender, EventArgs e)
         {
             FrmVentasNueva ventas = new FrmVentasNueva();
-            ventas.ShowDialog(); 
+            ventas.ShowDialog();
+            Consulta();
         }
 
         private void FrmVentasConsultar_Load(object sender, EventArgs e)

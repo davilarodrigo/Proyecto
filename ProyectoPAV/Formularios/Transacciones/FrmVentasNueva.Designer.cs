@@ -33,6 +33,9 @@
             this.ComboEmpleado = new System.Windows.Forms.ComboBox();
             this.LblDocumento = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.labelIdVenta = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.btnEliminar = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.botonAsignarCliente = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -45,8 +48,6 @@
             this.buttonAgregarProducto = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.dataGridCarrito = new System.Windows.Forms.DataGridView();
-            this.label5 = new System.Windows.Forms.Label();
-            this.btnEliminar = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridCarrito)).BeginInit();
@@ -74,6 +75,7 @@
             this.BtnAceptar.Size = new System.Drawing.Size(50, 50);
             this.BtnAceptar.TabIndex = 0;
             this.BtnAceptar.UseVisualStyleBackColor = true;
+            this.BtnAceptar.Click += new System.EventHandler(this.BtnAceptar_Click);
             // 
             // ComboEmpleado
             // 
@@ -96,6 +98,7 @@
             // 
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox1.Controls.Add(this.labelIdVenta);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.btnEliminar);
             this.groupBox1.Controls.Add(this.groupBox2);
@@ -111,6 +114,40 @@
             this.groupBox1.TabIndex = 47;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Venta Nueva";
+            // 
+            // labelIdVenta
+            // 
+            this.labelIdVenta.AutoSize = true;
+            this.labelIdVenta.Location = new System.Drawing.Point(343, 117);
+            this.labelIdVenta.Name = "labelIdVenta";
+            this.labelIdVenta.Size = new System.Drawing.Size(66, 13);
+            this.labelIdVenta.TabIndex = 57;
+            this.labelIdVenta.Text = "labelIdVenta";
+            this.labelIdVenta.Visible = false;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(525, 377);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(119, 17);
+            this.label5.TabIndex = 56;
+            this.label5.Text = "Eliminar Producto";
+            this.label5.Visible = false;
+            // 
+            // btnEliminar
+            // 
+            this.btnEliminar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnEliminar.BackgroundImage = global::ProyectoPAV.Properties.Resources.Delete_256x256;
+            this.btnEliminar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnEliminar.Location = new System.Drawing.Point(650, 360);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(50, 50);
+            this.btnEliminar.TabIndex = 55;
+            this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Visible = false;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // groupBox2
             // 
@@ -231,33 +268,12 @@
             this.dataGridCarrito.Size = new System.Drawing.Size(690, 163);
             this.dataGridCarrito.TabIndex = 42;
             // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(525, 377);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(119, 17);
-            this.label5.TabIndex = 56;
-            this.label5.Text = "Eliminar Producto";
-            // 
-            // btnEliminar
-            // 
-            this.btnEliminar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnEliminar.BackgroundImage = global::ProyectoPAV.Properties.Resources.Delete_256x256;
-            this.btnEliminar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnEliminar.Location = new System.Drawing.Point(650, 360);
-            this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(50, 50);
-            this.btnEliminar.TabIndex = 55;
-            this.btnEliminar.UseVisualStyleBackColor = true;
-            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
-            // 
             // FrmVentasNueva
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(756, 509);
+            this.ControlBox = false;
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.BtnSalir);
             this.Controls.Add(this.BtnAceptar);
@@ -293,5 +309,6 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btnEliminar;
+        private System.Windows.Forms.Label labelIdVenta;
     }
 }

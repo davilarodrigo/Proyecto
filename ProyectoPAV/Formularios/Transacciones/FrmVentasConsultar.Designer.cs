@@ -226,6 +226,7 @@
             this.BtnEliminar.Size = new System.Drawing.Size(50, 50);
             this.BtnEliminar.TabIndex = 12;
             this.BtnEliminar.UseVisualStyleBackColor = true;
+            this.BtnEliminar.Visible = false;
             // 
             // BtnModificar
             // 
@@ -237,6 +238,7 @@
             this.BtnModificar.Size = new System.Drawing.Size(50, 50);
             this.BtnModificar.TabIndex = 11;
             this.BtnModificar.UseVisualStyleBackColor = true;
+            this.BtnModificar.Visible = false;
             // 
             // FrmVentasConsultar
             // 

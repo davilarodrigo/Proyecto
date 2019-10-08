@@ -82,7 +82,7 @@ namespace ProyectoPAV.Clases
         }
 
         public ResultadoProductos InsertarProducto(string codigoProducto, int talle, string nombre, int idMarca,
-                                    int idCategoria, int stock)
+                                    int idCategoria, int stock, int precio=1500)
         {
             string sql_insert = "";
             GestorTransaccionesSQL gestor = new GestorTransaccionesSQL();
@@ -90,7 +90,7 @@ namespace ProyectoPAV.Clases
 
             sql_insert = @"INSERT INTO Producto VALUES ('" + codigoProducto + "'," + " " + talle + "," +
                                                         " '" + nombre + "'," + " " + idMarca + "," +
-                                                        " " + idCategoria + ", " + stock + ")";
+                                                        " " + idCategoria + ", " + stock + ", " + precio + ")";
             if (gestor.Insertar(sql_insert) ==
                 GestorTransaccionesSQL.ResultadoTransaccion.correcto)
             {

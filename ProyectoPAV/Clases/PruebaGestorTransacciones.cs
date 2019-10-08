@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace ProyectoPAV.Clases
 {
-    class PruebaGestorTransacciones
+    public class PruebaGestorTransacciones
     {
         public enum estado_BE { correcto, error }
         public enum forma_conexion { simple, transaccion }
@@ -19,7 +19,8 @@ namespace ProyectoPAV.Clases
         OleDbConnection conexion = new OleDbConnection();
         OleDbCommand cmd = new OleDbCommand();
 
-        string cadena_conexion = "Provider=SQLNCLI11;Data Source=.;Integrated Security=SSPI;Initial Catalog=ProyectoPAV";
+        //string cadena_conexion = "Provider=SQLNCLI11;Data Source=.;Integrated Security=SSPI;Initial Catalog=ProyectoPAV";
+        static string cadena_conexion = "Provider=SQLNCLI11;Data Source=DESKTOP-FHCPBI9" + "\u005C" + "SQLEXPRESS01;Integrated Security=SSPI;Initial Catalog=ProyectoPAV";
 
         OleDbTransaction transaccion;
 

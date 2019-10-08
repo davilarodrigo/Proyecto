@@ -48,7 +48,7 @@
             this.BtnSalir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.BtnSalir.BackgroundImage = global::ProyectoPAV.Properties.Resources.Log_Out_256x256;
             this.BtnSalir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.BtnSalir.Location = new System.Drawing.Point(603, 388);
+            this.BtnSalir.Location = new System.Drawing.Point(786, 498);
             this.BtnSalir.Name = "BtnSalir";
             this.BtnSalir.Size = new System.Drawing.Size(50, 50);
             this.BtnSalir.TabIndex = 63;
@@ -60,7 +60,7 @@
             this.BtnAceptar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.BtnAceptar.BackgroundImage = global::ProyectoPAV.Properties.Resources.Check_256x256;
             this.BtnAceptar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.BtnAceptar.Location = new System.Drawing.Point(547, 388);
+            this.BtnAceptar.Location = new System.Drawing.Point(730, 498);
             this.BtnAceptar.Name = "BtnAceptar";
             this.BtnAceptar.Size = new System.Drawing.Size(50, 50);
             this.BtnAceptar.TabIndex = 62;
@@ -96,7 +96,7 @@
             this.dataGridProductos.Location = new System.Drawing.Point(18, 124);
             this.dataGridProductos.Name = "dataGridProductos";
             this.dataGridProductos.ReadOnly = true;
-            this.dataGridProductos.Size = new System.Drawing.Size(635, 219);
+            this.dataGridProductos.Size = new System.Drawing.Size(818, 368);
             this.dataGridProductos.TabIndex = 66;
             // 
             // botonBuscarProducto
@@ -162,7 +162,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(677, 450);
+            this.ClientSize = new System.Drawing.Size(860, 560);
+            this.ControlBox = false;
             this.Controls.Add(this.botonBuscarProducto);
             this.Controls.Add(this.comboCategorias);
             this.Controls.Add(this.lblMarca);

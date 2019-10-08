@@ -50,8 +50,10 @@ namespace ProyectoPAV.Formularios.Transacciones
 
         private void buttonAgregarProducto_Click(object sender, EventArgs e)
         {
+
+            PruebaGestorTransacciones gestor=new PruebaGestorTransacciones();
             IdProducto = "";
-            FrmProductosTransacciones comprasProducto = new FrmProductosTransacciones();
+            FrmProductosTransacciones comprasProducto = new FrmProductosTransacciones(gestor);
             comprasProducto.FormularioPadre = "Compras";
             AddOwnedForm(comprasProducto);
             comprasProducto.ShowDialog();
