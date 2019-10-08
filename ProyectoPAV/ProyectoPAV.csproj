@@ -59,6 +59,7 @@
     <Compile Include="Clases\GestorVentas.cs" />
     <Compile Include="Clases\ProductosABM.cs" />
     <Compile Include="Clases\ProveedoresABM.cs" />
+    <Compile Include="Clases\PruebaGestorTransacciones.cs" />
     <Compile Include="Formularios\Auxiliares\FrmCargos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -70,6 +71,12 @@
     </Compile>
     <Compile Include="Formularios\Auxiliares\FrmCategorias.Designer.cs">
       <DependentUpon>FrmCategorias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FrmProbandoTransaccion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmProbandoTransaccion.designer.cs">
+      <DependentUpon>FrmProbandoTransaccion.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\Transacciones\FrmHistorialPrecio.cs">
       <SubType>Form</SubType>
@@ -269,6 +276,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\FrmClientesConsultar.resx">
       <DependentUpon>FrmClientesConsultar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmProbandoTransaccion.resx">
+      <DependentUpon>FrmProbandoTransaccion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\FrmProductosConsultar.resx">
       <DependentUpon>FrmProductosConsultar.cs</DependentUpon>
