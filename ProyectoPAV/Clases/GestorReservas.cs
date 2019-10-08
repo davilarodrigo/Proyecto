@@ -17,7 +17,7 @@ namespace ProyectoPAV.Clases
         public ResultadoReservas ConsultarReservasFiltros(string nombre, string apellido, string fechaDesde,
                                 string fechaHasta, bool venceHoy, bool vencido)
         {
-            GestorTransaccionesSQL gestor = new GestorTransaccionesSQL();
+            GestorABMCs gestor = new GestorABMCs();
             ResultadoReservas resultado = new ResultadoReservas();
             string sql = @"SELECT r.IdReserva,
                            r.FechaRealizacion as 'Fecha Realizacion',
@@ -26,9 +26,11 @@ namespace ProyectoPAV.Clases
                            r.MontoReserva as 'Monto Reserva',
                            p.Nombre as Producto,
                            r.Canidad as Cantidad,
-                           r.NumeroTalle as 'Numero Talle'
+                           r.NumeroTalle as 'Numero Talle',
+                           h.PrecioPublico as Precio
                            FROM Reserva r JOIN Producto p on r.IdProducto = p.IdProducto
-                           JOIN Cliente c on c.IdCliente = r.IdCliente ";
+                           JOIN Cliente c on c.IdCliente = r.IdCliente
+                           JOIN HistorialPrecio h on p.IdProducto = h.IdProducto  ";
 
             string where = @"WHERE";
             if (nombre != "")
@@ -62,7 +64,7 @@ namespace ProyectoPAV.Clases
 
             DataTable dt = new DataTable();
             if (gestor.EjecutarConsulta(sql) ==
-                GestorTransaccionesSQL.ResultadoTransaccion.correcto)
+                GestorABMCs.ResultadoTransaccion.correcto)
             {
                 tablaReservas = gestor.TablaResultado;
                 resultado = ResultadoReservas.correcto;
@@ -78,7 +80,7 @@ namespace ProyectoPAV.Clases
 
         public ResultadoReservas ConsultarReservas()
         {
-            GestorTransaccionesSQL gestor = new GestorTransaccionesSQL();
+            GestorABMCs gestor = new GestorABMCs();
             ResultadoReservas resultado = new ResultadoReservas();
             string sql = @"SELECT r.IdReserva,
                            r.FechaRealizacion as 'Fecha Realizacion',
@@ -92,7 +94,7 @@ namespace ProyectoPAV.Clases
                            JOIN Cliente c on c.IdCliente = r.IdCliente ";
 
             if (gestor.EjecutarConsulta(sql) ==
-                GestorTransaccionesSQL.ResultadoTransaccion.correcto)
+                GestorABMCs.ResultadoTransaccion.correcto)
             {
                 tablaReservas = gestor.TablaResultado;
                 resultado = ResultadoReservas.correcto;

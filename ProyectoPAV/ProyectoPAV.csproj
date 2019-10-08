@@ -54,7 +54,7 @@
     <Compile Include="Clases\EmpleadosABM.cs" />
     <Compile Include="Clases\GestorCompras.cs" />
     <Compile Include="Clases\GestorReservas.cs" />
-    <Compile Include="Clases\GestorTransaccionesSQL.cs" />
+    <Compile Include="Clases\GestorABMCs.cs" />
     <Compile Include="Clases\AuxiliaresABM.cs" />
     <Compile Include="Clases\GestorVentas.cs" />
     <Compile Include="Clases\ProductosABM.cs" />
@@ -70,6 +70,12 @@
     </Compile>
     <Compile Include="Formularios\Auxiliares\FrmCategorias.Designer.cs">
       <DependentUpon>FrmCategorias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Transacciones\FrmHistorialPrecio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Transacciones\FrmHistorialPrecio.Designer.cs">
+      <DependentUpon>FrmHistorialPrecio.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\Auxiliares\FrmLocalidades.cs">
       <SubType>Form</SubType>
@@ -179,6 +185,12 @@
     <Compile Include="Formularios\Transacciones\FrmComprasConsultar.Designer.cs">
       <DependentUpon>FrmComprasConsultar.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\Transacciones\FrmNuevoHistorialPrecio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Transacciones\FrmNuevoHistorialPrecio.Designer.cs">
+      <DependentUpon>FrmNuevoHistorialPrecio.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Transacciones\FrmProductosTransacciones.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -281,6 +293,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Transacciones\FrmComprasConsultar.resx">
       <DependentUpon>FrmComprasConsultar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Transacciones\FrmHistorialPrecio.resx">
+      <DependentUpon>FrmHistorialPrecio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Transacciones\FrmNuevoHistorialPrecio.resx">
+      <DependentUpon>FrmNuevoHistorialPrecio.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Transacciones\FrmProductosTransacciones.resx">
       <DependentUpon>FrmProductosTransacciones.cs</DependentUpon>

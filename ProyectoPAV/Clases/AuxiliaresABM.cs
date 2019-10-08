@@ -15,9 +15,9 @@ namespace ProyectoPAV.Clases
         {
             string sql_insert = "";
             sql_insert = @"INSERT INTO "+ Tabla +" (Nombre) VALUES ('" + Nombre +"')";
-            GestorTransaccionesSQL gestor = new GestorTransaccionesSQL();
+            GestorABMCs gestor = new GestorABMCs();
             if (gestor.Insertar(sql_insert) ==
-                GestorTransaccionesSQL.ResultadoTransaccion.correcto)
+                GestorABMCs.ResultadoTransaccion.correcto)
             {
                 MessageBox.Show("Se cargaron correctamente los datos", "Importante", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
@@ -30,14 +30,14 @@ namespace ProyectoPAV.Clases
 
         public DataTable ConsultarAuxiliares(string Tabla)
         {
-            GestorTransaccionesSQL gestor = new GestorTransaccionesSQL();
+            GestorABMCs gestor = new GestorABMCs();
             string sql = @"SELECT *
                              FROM " + Tabla;
 
             DataTable dt = new DataTable();
 
             if (gestor.EjecutarConsulta(sql) ==
-                GestorTransaccionesSQL.ResultadoTransaccion.correcto)
+                GestorABMCs.ResultadoTransaccion.correcto)
             {
                 dt = gestor.TablaResultado;
             }
@@ -54,9 +54,9 @@ namespace ProyectoPAV.Clases
         {
             string sql_delete = "";
             sql_delete = @"DELETE FROM "+ Tabla + " WHERE Nombre = '" + Nombre + "'";
-            GestorTransaccionesSQL gestor = new GestorTransaccionesSQL();
+            GestorABMCs gestor = new GestorABMCs();
             if (gestor.Eliminar(sql_delete) ==
-                GestorTransaccionesSQL.ResultadoTransaccion.correcto)
+                GestorABMCs.ResultadoTransaccion.correcto)
             {
                 MessageBox.Show("Se eliminaron correctamente los datos", "Importante", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }

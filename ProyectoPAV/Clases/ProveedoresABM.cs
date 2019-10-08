@@ -16,13 +16,13 @@ namespace ProyectoPAV.Clases
         public ResultadoProveedores ConsultarProveedoresFiltros(string razonsocial)
         {
             ResultadoProveedores resultado = new ResultadoProveedores();
-            GestorTransaccionesSQL gestor = new GestorTransaccionesSQL();
+            GestorABMCs gestor = new GestorABMCs();
             string sql = @"SELECT P.*, L.Nombre
                              FROM Proveedor P JOIN Localidad L ON P.IdLocalidad = L.IdLocalidad
                             WHERE P.RazonSocial LIKE '%" + razonsocial + "%'";
 
             if (gestor.EjecutarConsulta(sql) ==
-                GestorTransaccionesSQL.ResultadoTransaccion.correcto)
+                GestorABMCs.ResultadoTransaccion.correcto)
             {
                 tablaProveedor = gestor.TablaResultado;
                 resultado = ResultadoProveedores.correcto;
@@ -40,11 +40,11 @@ namespace ProyectoPAV.Clases
         public ResultadoProveedores ConsultarProveedores()
         {
             ResultadoProveedores resultado = new ResultadoProveedores();
-            GestorTransaccionesSQL gestor = new GestorTransaccionesSQL();
+            GestorABMCs gestor = new GestorABMCs();
             string sql = "SELECT P.*, L.Nombre FROM Proveedor P JOIN Localidad L ON P.IdLocalidad = L.IdLocalidad";
 
             if (gestor.EjecutarConsulta(sql) ==
-                GestorTransaccionesSQL.ResultadoTransaccion.correcto)
+                GestorABMCs.ResultadoTransaccion.correcto)
             {
                 tablaProveedor = gestor.TablaResultado;
                 resultado = ResultadoProveedores.correcto;
@@ -62,7 +62,7 @@ namespace ProyectoPAV.Clases
         public ResultadoProveedores InsertarProveedor(string razonSocial, string calle, int numeroCalle, int idLocalidad, string email, int telefono)
         {
             ResultadoProveedores resultado = new ResultadoProveedores();
-            GestorTransaccionesSQL gestor = new GestorTransaccionesSQL();
+            GestorABMCs gestor = new GestorABMCs();
             string sql_insert = "";
             sql_insert = @"INSERT INTO Proveedor VALUES ('" + razonSocial + "'," +
                                                         " '" + calle + "'," +
@@ -71,7 +71,7 @@ namespace ProyectoPAV.Clases
                                                         " '" + email + "'," +
                                                         " " + telefono + ")";
             if (gestor.Insertar(sql_insert) ==
-                GestorTransaccionesSQL.ResultadoTransaccion.correcto)
+                GestorABMCs.ResultadoTransaccion.correcto)
             {
                 mensajeRetorno = "Se cargaron correctamente los datos";
                 resultado = ResultadoProveedores.correcto;
@@ -89,10 +89,10 @@ namespace ProyectoPAV.Clases
         {
             string sql_delete = "";
             sql_delete = @"DELETE FROM Proveedor WHERE IdProveedor = " + IdProveedor;
-            GestorTransaccionesSQL gestor = new GestorTransaccionesSQL();
+            GestorABMCs gestor = new GestorABMCs();
             ResultadoProveedores resultado = new ResultadoProveedores();
             if (gestor.Eliminar(sql_delete) ==
-                GestorTransaccionesSQL.ResultadoTransaccion.correcto)
+                GestorABMCs.ResultadoTransaccion.correcto)
             {
                 mensajeRetorno = "Se eliminaron correctamente los datos";
                 resultado = ResultadoProveedores.correcto;
@@ -107,7 +107,7 @@ namespace ProyectoPAV.Clases
 
         public DataTable RecuperarDatos(string id)
         {
-            GestorTransaccionesSQL gestor = new GestorTransaccionesSQL();
+            GestorABMCs gestor = new GestorABMCs();
             string sql = "SELECT * FROM Proveedor WHERE IdProveedor = " + id;
             tablaProveedor = gestor.TablaResultado;
             gestor.EjecutarConsulta(sql);
@@ -138,10 +138,10 @@ namespace ProyectoPAV.Clases
                                                         "Email = '" + email + "'," +
                                                         "Telefono = " + telefono +
                                                         " WHERE IdProveedor = " + idProveedor;
-            GestorTransaccionesSQL gestor = new GestorTransaccionesSQL();
+            GestorABMCs gestor = new GestorABMCs();
             ResultadoProveedores resultado = new ResultadoProveedores();
             if (gestor.Insertar(sql_modificar) ==
-                GestorTransaccionesSQL.ResultadoTransaccion.correcto)
+                GestorABMCs.ResultadoTransaccion.correcto)
             {
                 mensajeRetorno = "Se cargaron correctamente los datos";
                 resultado = ResultadoProveedores.correcto;

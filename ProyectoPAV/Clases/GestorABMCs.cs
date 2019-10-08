@@ -9,7 +9,7 @@ using System.Data.OleDb;
 
 namespace ProyectoPAV.Clases
 {
-    class GestorTransaccionesSQL
+    class GestorABMCs
     {
         public enum ResultadoTransaccion { correcto, error }
         public enum FormaConexion { simple, transaccion }

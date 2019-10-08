@@ -25,7 +25,6 @@ namespace ProyectoPAV.Formularios
         private void FrmVentasNueva_Load(object sender, EventArgs e)
         {
             CargadorCombos cargador = new CargadorCombos();
-            DataTable tablaLocalidades = new DataTable();
             DataTable tablaEmpleado = new DataTable();
 
             tablaEmpleado = cargador.CargarComboEmpleados();
@@ -148,6 +147,12 @@ namespace ProyectoPAV.Formularios
                     , MessageBoxIcon.Exclamation);
             }
             
+        }
+
+        private void BtnAceptar_Click(object sender, EventArgs e)
+        {
+            
+
         }
     }
 }

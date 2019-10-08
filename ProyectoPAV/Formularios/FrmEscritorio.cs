@@ -149,10 +149,10 @@ namespace ProyectoPAV
             frmReservas.ShowDialog();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void historialPrecioToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FrmPruebaTransaccion prueba = new FrmPruebaTransaccion();
-            prueba.ShowDialog();
+            FrmHistorialPrecio frmPrecio = new FrmHistorialPrecio();
+            frmPrecio.ShowDialog();
         }
     }
     

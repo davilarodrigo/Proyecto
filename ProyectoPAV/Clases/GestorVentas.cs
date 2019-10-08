@@ -4,6 +4,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ProyectoPAV.Clases;
 
 namespace ProyectoPAV.Clases
 {
@@ -16,7 +17,7 @@ namespace ProyectoPAV.Clases
 
         public ResultadoVentas ConsultarVentasFiltros(string nombre, string apellido, string fechaDesde, string fechaHasta)
         {
-            GestorTransaccionesSQL gestor = new GestorTransaccionesSQL();
+            GestorABMCs gestor = new GestorABMCs();
             ResultadoVentas resultado = new ResultadoVentas();
             string sql = @"SELECT v.IdVenta,
                            v.FechaVenta as Fecha,
@@ -48,7 +49,7 @@ namespace ProyectoPAV.Clases
 
             DataTable dt = new DataTable();
             if (gestor.EjecutarConsulta(sql) ==
-                GestorTransaccionesSQL.ResultadoTransaccion.correcto)
+                GestorABMCs.ResultadoTransaccion.correcto)
             {
                 tablaVentas = gestor.TablaResultado;
                 resultado = ResultadoVentas.correcto;
@@ -64,7 +65,7 @@ namespace ProyectoPAV.Clases
 
         public ResultadoVentas ConsultarVentas()
         {
-            GestorTransaccionesSQL gestor = new GestorTransaccionesSQL();
+            GestorABMCs gestor = new GestorABMCs();
             ResultadoVentas resultado = new ResultadoVentas();
             string sql = @"SELECT v.IdVenta,
                            v.FechaVenta as Fecha,
@@ -74,7 +75,7 @@ namespace ProyectoPAV.Clases
                            FROM Venta v JOIN Empleado e on v.IdEmpleado = e.IdEmpleado 
                            JOIN Cliente c on c.IdCliente = v.IdCliente ";
             if (gestor.EjecutarConsulta(sql) ==
-                GestorTransaccionesSQL.ResultadoTransaccion.correcto)
+                GestorABMCs.ResultadoTransaccion.correcto)
             {
                 tablaVentas = gestor.TablaResultado;
                 resultado = ResultadoVentas.correcto;
@@ -90,7 +91,7 @@ namespace ProyectoPAV.Clases
 
         public ResultadoVentas ConsultarDetallesVenta(int idVenta)
         {
-            GestorTransaccionesSQL gestor = new GestorTransaccionesSQL();
+            GestorABMCs gestor = new GestorABMCs();
             ResultadoVentas resultado = new ResultadoVentas();
             string sql = @"SELECT v.IdVenta, p.Nombre as Producto,
                            p.NumeroTalle as 'Numero Talle',
@@ -99,7 +100,7 @@ namespace ProyectoPAV.Clases
                            JOIN Producto p on p.IdProducto = dv.IdProducto
                            WHERE dv.IdVenta = " + idVenta+";";
             if (gestor.EjecutarConsulta(sql) ==
-                GestorTransaccionesSQL.ResultadoTransaccion.correcto)
+                GestorABMCs.ResultadoTransaccion.correcto)
             {
                 tablaDetallesVentas = gestor.TablaResultado;
                 resultado = ResultadoVentas.correcto;
@@ -111,6 +112,29 @@ namespace ProyectoPAV.Clases
             }
 
             return resultado;
+        }
+
+        public string InsertarVenta( string idEmpleado, string idCliente, decimal montoTotal)
+        {
+
+
+            string sql = @"INSERT INTO Venta VALUES(" + idEmpleado + ", "
+                                                    + idCliente + ", GETDATE() ,"
+                                                    + montoTotal + ");";
+            return sql;
+
+        }
+
+        public string InsertarDetalleVenta(string idProducto, int numeroTalle, decimal monto)
+        {
+            string sql = @"INSERT INTO DetalleVenta VALUES((SELECT MAX(IdVenta) AS IdVenta FROM Venta), "
+                                                    + idProducto + ", "
+                                                    + numeroTalle + ", "
+                                                    + monto + ")";
+            return sql;
+
+
+
         }
 
     }

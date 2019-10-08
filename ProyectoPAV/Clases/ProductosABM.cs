@@ -15,7 +15,7 @@ namespace ProyectoPAV.Clases
 
         public ResultadoProductos ConsultarProductosFiltros(string nombre, string marca, string categoria)
         {
-            GestorTransaccionesSQL gestor = new GestorTransaccionesSQL();
+            GestorABMCs gestor = new GestorABMCs();
             ResultadoProductos resultado = new ResultadoProductos();
             string sql = @"SELECT P.*, M.Nombre, C.Nombre
                              FROM Producto P JOIN Marca M ON P.IdMarca = M.IdMarca
@@ -44,7 +44,7 @@ namespace ProyectoPAV.Clases
 
             DataTable dt = new DataTable();
             if (gestor.EjecutarConsulta(sql) ==
-                GestorTransaccionesSQL.ResultadoTransaccion.correcto)
+                GestorABMCs.ResultadoTransaccion.correcto)
             {
                 tablaProducto = gestor.TablaResultado;
                 resultado = ResultadoProductos.correcto;
@@ -60,14 +60,14 @@ namespace ProyectoPAV.Clases
 
         public ResultadoProductos ConsultarProductos()
         {
-            GestorTransaccionesSQL gestor = new GestorTransaccionesSQL();
+            GestorABMCs gestor = new GestorABMCs();
             ResultadoProductos resultado = new ResultadoProductos();
             string sql = @"SELECT P.*, M.Nombre, C.Nombre
                              FROM Producto P JOIN Marca M ON P.IdMarca = M.IdMarca
                                 JOIN Categoria C ON P.IdCategoria = C.IdCategoria";
 
             if (gestor.EjecutarConsulta(sql) ==
-                GestorTransaccionesSQL.ResultadoTransaccion.correcto)
+                GestorABMCs.ResultadoTransaccion.correcto)
             {
                 tablaProducto = gestor.TablaResultado;
                 resultado = ResultadoProductos.correcto;
@@ -85,14 +85,14 @@ namespace ProyectoPAV.Clases
                                     int idCategoria, int stock)
         {
             string sql_insert = "";
-            GestorTransaccionesSQL gestor = new GestorTransaccionesSQL();
+            GestorABMCs gestor = new GestorABMCs();
             ResultadoProductos resultado = new ResultadoProductos();
 
             sql_insert = @"INSERT INTO Producto VALUES ('" + codigoProducto + "'," + " " + talle + "," +
                                                         " '" + nombre + "'," + " " + idMarca + "," +
                                                         " " + idCategoria + ", " + stock + ")";
             if (gestor.Insertar(sql_insert) ==
-                GestorTransaccionesSQL.ResultadoTransaccion.correcto)
+                GestorABMCs.ResultadoTransaccion.correcto)
             {
                 mensajeRetorno = "Se cargaron correctamente los datos";
                 resultado = ResultadoProductos.correcto;
@@ -109,10 +109,10 @@ namespace ProyectoPAV.Clases
         {
             string sql_delete = "";
             sql_delete = @"DELETE FROM Producto WHERE IdProducto = " + IdProducto;
-            GestorTransaccionesSQL gestor = new GestorTransaccionesSQL();
+            GestorABMCs gestor = new GestorABMCs();
             ResultadoProductos resultado = new ResultadoProductos();
             if (gestor.Eliminar(sql_delete) ==
-                GestorTransaccionesSQL.ResultadoTransaccion.correcto)
+                GestorABMCs.ResultadoTransaccion.correcto)
             {
                 mensajeRetorno = "Se eliminaron correctamente los datos";
                 resultado = ResultadoProductos.correcto;
@@ -127,7 +127,7 @@ namespace ProyectoPAV.Clases
 
         public DataTable RecuperarDatos(string id)
         {
-            GestorTransaccionesSQL gestor = new GestorTransaccionesSQL();
+            GestorABMCs gestor = new GestorABMCs();
             string sql = "SELECT * FROM Producto WHERE IdProducto = " + id;
             tablaProducto = gestor.TablaResultado;
             gestor.EjecutarConsulta(sql);
@@ -146,10 +146,10 @@ namespace ProyectoPAV.Clases
                                                         " IdCategoria = " + idCategoria + "," +
                                                         " StockDisponible = " + stockDisponible +
                                                         " WHERE IdProducto = " + idProduto;
-            GestorTransaccionesSQL gestor = new GestorTransaccionesSQL();
+            GestorABMCs gestor = new GestorABMCs();
             ResultadoProductos resultado = new ResultadoProductos();
             if (gestor.Insertar(sql_modificar) ==
-                GestorTransaccionesSQL.ResultadoTransaccion.correcto)
+                GestorABMCs.ResultadoTransaccion.correcto)
             {
                 mensajeRetorno = "Se cargaron correctamente los datos";
                 resultado = ResultadoProductos.correcto;
@@ -165,7 +165,7 @@ namespace ProyectoPAV.Clases
 
         public DataTable RecuperarDatosLista(List<string> Productos)
         {
-            GestorTransaccionesSQL gestor = new GestorTransaccionesSQL();
+            GestorABMCs gestor = new GestorABMCs();
             string sql = @"SELECT P.*, M.Nombre, C.Nombre FROM Producto P
                 JOIN Marca M ON P.IdMarca = M.IdMarca JOIN Categoria C ON
                 P.IdCategoria = C.IdCategoria WHERE    P.IdProducto =";
@@ -182,6 +182,53 @@ namespace ProyectoPAV.Clases
             gestor.EjecutarConsulta(whereFinal);
 
             return tablaProducto;
+        }
+
+        public ResultadoProductos consultarPrecio (string idProducto)
+        {
+            GestorABMCs gestor = new GestorABMCs();
+        ResultadoProductos resultado = new ResultadoProductos();
+        string sql = @"SELECT H.*, P.CodigoProducto
+                             FROM Producto P JOIN HistorialPrecio H ON P.IdProducto = H.IdProducto
+                                WHERE P.IdProducto=" + idProducto;
+
+            if (gestor.EjecutarConsulta(sql) ==
+                GestorABMCs.ResultadoTransaccion.correcto)
+            {
+                tablaProducto = gestor.TablaResultado;
+                resultado = ResultadoProductos.correcto;
+            }
+            else
+            {
+                mensajeRetorno = "No se consultaron correctamente los datos debido a: " + gestor.mensajeErrorTransaccion;
+                resultado = ResultadoProductos.error;
+            }
+
+            return resultado;
+        }
+
+        public ResultadoProductos InsertarPrecio(string IdProducto, int talle, decimal prov, decimal publico)
+        {
+            string sql_insert = "";
+            GestorABMCs gestor = new GestorABMCs();
+            ResultadoProductos resultado = new ResultadoProductos();
+
+            sql_insert = @"INSERT INTO HistorialPrecio VALUES (" + IdProducto + "," + " " + talle + "," +
+                                                        " GETDATE()," + " NULL ," +
+                                                        " " + prov + ", " + publico + ")";
+            if (gestor.Insertar(sql_insert) ==
+                GestorABMCs.ResultadoTransaccion.correcto)
+            {
+                mensajeRetorno = "Se cargaron correctamente los datos";
+                resultado = ResultadoProductos.correcto;
+            }
+            else
+            {
+                mensajeRetorno = "NO se cargaron correctamente los datos debido a: " + gestor.mensajeErrorTransaccion;
+                resultado = ResultadoProductos.error;
+            }
+            return resultado;
+
         }
     }
 }

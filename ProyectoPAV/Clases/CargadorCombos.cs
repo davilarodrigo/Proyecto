@@ -10,7 +10,7 @@ namespace ProyectoPAV.Clases
     class CargadorCombos
     {
 
-        GestorTransaccionesSQL gestor = new GestorTransaccionesSQL();
+        GestorABMCs gestor = new GestorABMCs();
 
         public DataTable CargarComboCargos()
         {
@@ -115,6 +115,21 @@ namespace ProyectoPAV.Clases
         public DataTable CargarComboProveedores()
         {
             string sql = "SELECT * FROM Proveedor";
+            DataTable tabla = new DataTable();
+            string resultadoTransaccion;
+            resultadoTransaccion = gestor.EjecutarConsulta(sql).ToString();
+            if (resultadoTransaccion == "correcto")
+            {
+                tabla = gestor.TablaResultado;
+            }
+
+            return tabla;
+
+        }
+
+        public DataTable CargarComboProductos()
+        {
+            string sql = "SELECT * FROM Producto";
             DataTable tabla = new DataTable();
             string resultadoTransaccion;
             resultadoTransaccion = gestor.EjecutarConsulta(sql).ToString();
