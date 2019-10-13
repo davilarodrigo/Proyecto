@@ -52,25 +52,9 @@ namespace ProyectoPAV.Formularios
 
         private void FrmEmpleadosModificar_Load(object sender, EventArgs e)
         {
-            CargadorCombos cargador = new CargadorCombos();
-            DataTable tablaTipoDocumento = new DataTable();
-
-            tablaTipoDocumento = cargador.CargarComboTiposDocumentos();
-
-            comboTipoDoc.DataSource = tablaTipoDocumento;
-            comboTipoDoc.DisplayMember = "Nombre";
-            comboTipoDoc.ValueMember = "IdTipoDocumento";
-            comboTipoDoc.SelectedIndex = -1;
-
-            CargadorCombos cargador2 = new CargadorCombos();
-            DataTable tablaCargos = new DataTable();
-
-            tablaCargos = cargador2.CargarComboCargos();
-
-            comboCargo.DataSource = tablaCargos;
-            comboCargo.DisplayMember = "Nombre";
-            comboCargo.ValueMember= "IdCargo";
-            comboCargo.SelectedIndex = -1;
+            comboCargo = CargadorCombos.CargarComboCargo(comboCargo);
+            comboTipoDoc = CargadorCombos.CargarComboDocumento(comboTipoDoc);
+             
 
             this.RecuperarDatos(IdEmpleado);
         }
@@ -79,14 +63,7 @@ namespace ProyectoPAV.Formularios
         {
             FrmCargos _cargos = new FrmCargos();
             _cargos.ShowDialog();
-            CargadorCombos cargador2 = new CargadorCombos();
-            DataTable tablaCargos = new DataTable();
-
-            tablaCargos = cargador2.CargarComboCargos();
-
-            comboCargo.DataSource = tablaCargos;
-            comboCargo.DisplayMember = "Nombre";
-            comboCargo.ValueMember = "IdCargo";
+            comboCargo = CargadorCombos.CargarComboCargo(comboCargo);
         }
 
         private void BtnGardar_Click(object sender, EventArgs e)

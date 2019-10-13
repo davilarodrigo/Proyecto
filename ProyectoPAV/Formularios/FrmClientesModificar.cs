@@ -58,38 +58,13 @@ namespace ProyectoPAV.Formularios
         {
             FrmLocalidades localidades = new FrmLocalidades();
             localidades.ShowDialog();
-            CargadorCombos cargador4 = new CargadorCombos();
-            DataTable tablaLocalidades = new DataTable();
-
-            tablaLocalidades = cargador4.CargarComboLocalidades();
-
-            comboLocalidad.DataSource = tablaLocalidades;
-            comboLocalidad.DisplayMember = "Nombre";
-            comboLocalidad.ValueMember = "IdLocalidad";
-            comboLocalidad.SelectedIndex = -1;
+            comboLocalidad = CargadorCombos.CargarComboLocalidad(comboLocalidad);
         }
 
         private void FrmClientesModificar_Load(object sender, EventArgs e)
         {
-            CargadorCombos cargador = new CargadorCombos();
-            DataTable tablaTipoDocumento = new DataTable();
-
-            tablaTipoDocumento = cargador.CargarComboTiposDocumentos();
-
-            comboTipoDoc.DataSource = tablaTipoDocumento;
-            comboTipoDoc.DisplayMember = "Nombre";
-            comboTipoDoc.ValueMember = "IdTipoDocumento";
-            comboTipoDoc.SelectedIndex = -1;
-
-            CargadorCombos cargador2 = new CargadorCombos();
-            DataTable tablaLocalidades = new DataTable();
-
-            tablaLocalidades = cargador2.CargarComboLocalidades();
-
-            comboLocalidad.DataSource = tablaLocalidades;
-            comboLocalidad.DisplayMember = "Nombre";
-            comboLocalidad.ValueMember = "IdLocalidad";
-            comboLocalidad.SelectedIndex = -1;
+            comboLocalidad = CargadorCombos.CargarComboLocalidad(comboLocalidad);
+            comboTipoDoc = CargadorCombos.CargarComboDocumento(comboTipoDoc);
 
             this.RecuperarDatos(IdCliente);
         }

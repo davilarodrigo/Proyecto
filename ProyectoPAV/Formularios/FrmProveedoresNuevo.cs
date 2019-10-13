@@ -28,14 +28,7 @@ namespace ProyectoPAV.Formularios
         {
             FrmLocalidades localidades = new FrmLocalidades();
             localidades.ShowDialog();
-            CargadorCombos cargador5 = new CargadorCombos();
-            DataTable tablaTipoDocumentos = new DataTable();
-
-            tablaTipoDocumentos = cargador5.CargarComboLocalidades();
-
-            comboLocalidad.DataSource = tablaTipoDocumentos;
-            comboLocalidad.DisplayMember = "Nombre";
-            comboLocalidad.ValueMember = "IdLocalidad";
+            comboLocalidad = CargadorCombos.CargarComboLocalidad(comboLocalidad);
         }
 
         private void BtnAceptar_Click(object sender, EventArgs e)
@@ -63,15 +56,7 @@ namespace ProyectoPAV.Formularios
 
         private void FrmProveedoresNuevo_Load(object sender, EventArgs e)
         {
-            CargadorCombos cargador5 = new CargadorCombos();
-            DataTable tablaTipoDocumentos = new DataTable();
-
-            tablaTipoDocumentos = cargador5.CargarComboLocalidades();
-
-            comboLocalidad.DataSource = tablaTipoDocumentos;
-            comboLocalidad.DisplayMember = "Nombre";
-            comboLocalidad.ValueMember = "IdLocalidad";
-            comboLocalidad.SelectedIndex = -1;
+            comboLocalidad = CargadorCombos.CargarComboLocalidad(comboLocalidad);
         }
 
         private void btnRecargar_Click(object sender, EventArgs e)

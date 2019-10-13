@@ -29,38 +29,13 @@ namespace ProyectoPAV.Formularios
             FrmMarcas marcas = new FrmMarcas();
             marcas.ShowDialog();
 
-            CargadorCombos cargador3 = new CargadorCombos();
-            DataTable tablaMarcas = new DataTable();
-
-            tablaMarcas = cargador3.CargarComboMarcas();
-
-            comboMarca.DataSource = tablaMarcas;
-            comboMarca.DisplayMember = "Nombre";
-            comboMarca.ValueMember = "IdMarca";
-            comboMarca.SelectedIndex = -1;
+            comboMarca = CargadorCombos.CargarComboMarca(comboMarca);
         }
 
         private void FrmProductosNuevo_Load(object sender, EventArgs e)
         {
-            CargadorCombos cargador4 = new CargadorCombos();
-            DataTable tablaMarcas = new DataTable();
-            DataTable tablaCategorias = new DataTable();
-
-            tablaMarcas = cargador4.CargarComboMarcas();
-
-            comboMarca.DataSource = tablaMarcas;
-            comboMarca.DisplayMember = "Nombre";
-            comboMarca.ValueMember = "IdMarca";
-            comboMarca.SelectedIndex = -1;
-
-            CargadorCombos cargador2 = new CargadorCombos();
-
-            tablaCategorias = cargador2.CargarComboCategorias();
-
-            comboCategoria.DataSource = tablaCategorias;
-            comboCategoria.DisplayMember = "Nombre";
-            comboCategoria.ValueMember = "IdCategoria";
-            comboCategoria.SelectedIndex = -1;
+            comboCategoria = CargadorCombos.CargarComboCategoria(comboCategoria);
+            comboMarca = CargadorCombos.CargarComboMarca(comboMarca);
         }
 
         private void BtnAceptar_Click(object sender, EventArgs e)

@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Data;
 using System.Data.SqlClient;
 using System.Data.OleDb;
+using System.Windows.Forms;
 
 namespace ProyectoPAV.Clases
 {
@@ -43,6 +44,23 @@ namespace ProyectoPAV.Clases
         {
             conexion.Close();
         }
+
+        public DataTable consultarTabla(string sql, bool informarError =true)
+        {
+            DataTable tabla = new DataTable();
+            Conectar();
+            comando.CommandText = sql;
+            try
+            {
+                tabla.Load(comando.ExecuteReader());
+            }
+            catch(Exception x)
+            {
+                MessageBox.Show("No se pudo cargar la tabla: " + x);
+            }
+            Desconectar();
+            return tabla;
+        } 
 
         public ResultadoTransaccion EjecutarConsulta(string sql)
         {

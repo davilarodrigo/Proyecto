@@ -29,15 +29,7 @@ namespace ProyectoPAV.Formularios
             FrmLocalidades localidades = new FrmLocalidades();
             localidades.ShowDialog();
 
-            CargadorCombos cargador3 = new CargadorCombos();
-            DataTable tablaLocalidades = new DataTable();
-
-            tablaLocalidades = cargador3.CargarComboLocalidades();
-
-            comboLocalidad.DataSource = tablaLocalidades;
-            comboLocalidad.DisplayMember = "Nombre";
-            comboLocalidad.ValueMember = "IdCargo";
-            comboLocalidad.SelectedIndex = -1;
+            comboLocalidad = CargadorCombos.CargarComboLocalidad(comboLocalidad);
         }
 
         private void BtnRecargar_Click(object sender, EventArgs e)
@@ -94,25 +86,8 @@ namespace ProyectoPAV.Formularios
 
         private void FrmClientesNuevo_Load(object sender, EventArgs e)
         {
-            CargadorCombos cargador = new CargadorCombos();
-            DataTable tablaLocalidades = new DataTable();
-            DataTable tablaTipoDocumento = new DataTable();
-
-            tablaTipoDocumento = cargador.CargarComboTiposDocumentos();
-
-            comboTipoDoc.DataSource = tablaTipoDocumento;
-            comboTipoDoc.DisplayMember = "Nombre";
-            comboTipoDoc.ValueMember = "IdTipoDocumento";
-            comboTipoDoc.SelectedIndex = -1;
-
-            CargadorCombos cargador2 = new CargadorCombos();
-
-            tablaLocalidades = cargador2.CargarComboLocalidades();
-
-            comboLocalidad.DataSource = tablaLocalidades;
-            comboLocalidad.DisplayMember = "Nombre";
-            comboLocalidad.ValueMember = "IdLocalidad";
-            comboLocalidad.SelectedIndex = -1;
+            comboLocalidad = CargadorCombos.CargarComboLocalidad(comboLocalidad);
+            comboTipoDoc = CargadorCombos.CargarComboDocumento(comboTipoDoc);
         }
 
         private void textBoxApellido_KeyPress(object sender, KeyPressEventArgs e)

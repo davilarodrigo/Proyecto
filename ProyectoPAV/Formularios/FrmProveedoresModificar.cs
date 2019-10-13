@@ -24,16 +24,8 @@ namespace ProyectoPAV.Formularios
 
         private void FrmProveedoresModificar_Load(object sender, EventArgs e)
         {
-            
-            CargadorCombos cargador = new CargadorCombos();
-            DataTable tablaLocalidades = new DataTable();
 
-            tablaLocalidades = cargador.CargarComboLocalidades();
-
-            comboLocalidad.DataSource = tablaLocalidades;
-            comboLocalidad.DisplayMember = "Nombre";
-            comboLocalidad.ValueMember = "IdLocalidad";
-            comboLocalidad.SelectedIndex = -1;
+            comboLocalidad = CargadorCombos.CargarComboLocalidad(comboLocalidad);
             RecuperarDatos(IdProveedor);
         }
 
@@ -46,14 +38,7 @@ namespace ProyectoPAV.Formularios
         {
             FrmLocalidades localidades = new FrmLocalidades();
             localidades.ShowDialog();
-            CargadorCombos cargador = new CargadorCombos();
-            DataTable tablaLocalidades = new DataTable();
-
-            tablaLocalidades = cargador.CargarComboLocalidades();
-
-            comboLocalidad.DataSource = tablaLocalidades;
-            comboLocalidad.DisplayMember = "Nombre";
-            comboLocalidad.ValueMember = "IdLocalidad";
+            comboLocalidad = CargadorCombos.CargarComboLocalidad(comboLocalidad);
         }
 
         private void RecuperarDatos(string id_usuario)

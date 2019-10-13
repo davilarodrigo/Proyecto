@@ -129,16 +129,8 @@ namespace ProyectoPAV
         {
             this.MinimumSize = new Size(600, 400);
 
-            CargadorCombos cargador = new CargadorCombos();
-            DataTable tablaTipoDocumento = new DataTable();
-
-            tablaTipoDocumento = cargador.CargarComboTiposDocumentos();
-
-            comboTipoDocumento.DataSource = tablaTipoDocumento;
-            comboTipoDocumento.DisplayMember = "Nombre";
-            comboTipoDocumento.ValueMember = "IdTipoDocumento";
-            comboTipoDocumento.SelectedIndex = -1;
-            this.Consulta();
+            comboTipoDocumento = CargadorCombos.CargarComboDocumento(comboTipoDocumento);
+            Consulta();
 
         }
 

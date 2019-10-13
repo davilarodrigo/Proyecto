@@ -26,18 +26,11 @@ namespace ProyectoPAV.Formularios
 
         private void BtnNuevoCargo_Click(object sender, EventArgs e)
         {
-            FrmCargos _cargos = new FrmCargos();
-            _cargos.ShowDialog();
+            FrmCargos frmCargos = new FrmCargos();
+            frmCargos.ShowDialog();
 
-            CargadorCombos cargador2 = new CargadorCombos();
-            DataTable tablaCargos = new DataTable();
 
-            tablaCargos = cargador2.CargarComboCargos();
-
-            comboCargo.DataSource = tablaCargos;
-            comboCargo.DisplayMember = "Nombre";
-            comboCargo.ValueMember = "IdCargo";
-            comboCargo.SelectedIndex = -1;
+            comboCargo = CargadorCombos.CargarComboCargo(comboCargo);
         }
 
         private void BtnAceptar_Click(object sender, EventArgs e)
@@ -75,25 +68,10 @@ namespace ProyectoPAV.Formularios
 
         private void FrmEmpleadosNuevo_Load(object sender, EventArgs e)
         {
-            CargadorCombos cargador = new CargadorCombos();
-            DataTable tablaCargos = new DataTable();
-            DataTable tablaTipoDocumento = new DataTable();
+            
+            comboTipoDoc = CargadorCombos.CargarComboDocumento(comboTipoDoc);
 
-            tablaTipoDocumento = cargador.CargarComboTiposDocumentos();
-
-            comboTipoDoc.DataSource = tablaTipoDocumento;
-            comboTipoDoc.DisplayMember = "Nombre";
-            comboTipoDoc.ValueMember = "IdTipoDocumento";
-            comboTipoDoc.SelectedIndex = -1;
-
-            CargadorCombos cargador2 = new CargadorCombos();
-
-            tablaCargos = cargador2.CargarComboCargos();
-
-            comboCargo.DataSource = tablaCargos;
-            comboCargo.DisplayMember = "Nombre";
-            comboCargo.ValueMember = "IdCargo";
-            comboCargo.SelectedIndex = -1;
+            comboCargo = CargadorCombos.CargarComboCargo(comboCargo);
 
         }
 

@@ -80,16 +80,7 @@ namespace ProyectoPAV.Formularios
         private void FrmProductosConsultar_Load(object sender, EventArgs e)
         {
             this.Consulta();
-
-            CargadorCombos cargador = new CargadorCombos();
-            DataTable tablaCategorias = new DataTable();
-
-            tablaCategorias = cargador.CargarComboCategorias();
-
-            comboCategorias.DataSource = tablaCategorias;
-            comboCategorias.DisplayMember = "Nombre";
-            comboCategorias.ValueMember = "IdCategoria";
-            comboCategorias.SelectedIndex = -1;
+            comboCategorias = CargadorCombos.CargarComboCategoria(comboCategorias);
         }
 
         private void BtnBuscar_Click(object sender, EventArgs e)
