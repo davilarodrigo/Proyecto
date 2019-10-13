@@ -19,8 +19,8 @@ namespace ProyectoPAV.Clases
         OleDbConnection conexion = new OleDbConnection();
         OleDbCommand cmd = new OleDbCommand();
 
-        //string cadena_conexion = "Provider=SQLNCLI11;Data Source=.;Integrated Security=SSPI;Initial Catalog=ProyectoPAV";
-        static string cadena_conexion = "Provider=SQLNCLI11;Data Source=DESKTOP-FHCPBI9" + "\u005C" + "SQLEXPRESS01;Integrated Security=SSPI;Initial Catalog=ProyectoPAV";
+        string cadena_conexion = "Provider=SQLNCLI11;Data Source=.;Integrated Security=SSPI;Initial Catalog=ProyectoPAV";
+        //static string cadena_conexion = "Provider=SQLNCLI11;Data Source=DESKTOP-FHCPBI9" + "\u005C" + "SQLEXPRESS01;Integrated Security=SSPI;Initial Catalog=ProyectoPAV";
 
         OleDbTransaction transaccion;
 
@@ -53,11 +53,8 @@ namespace ProyectoPAV.Clases
             transaccion.Rollback();
             tipo_conexion = forma_conexion.simple;
             desconectar();
-
         }
-
-
-
+               
         private void conectar()
         {
             if (conexion.State == ConnectionState.Closed)
@@ -80,7 +77,6 @@ namespace ProyectoPAV.Clases
                 conexion.Close();
                 control_transaccion = estado_BE.correcto;
             }
-
         }
 
         public DataTable ejecutar_consulta(string sql)
