@@ -32,12 +32,12 @@
             this.buttonAgregarProducto = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.dataGridPedido = new System.Windows.Forms.DataGridView();
-            this.ComboEmpleado = new System.Windows.Forms.ComboBox();
+            this.comboEmpleado = new System.Windows.Forms.ComboBox();
             this.LblDocumento = new System.Windows.Forms.Label();
             this.BtnSalir = new System.Windows.Forms.Button();
             this.BtnAceptar = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.ComboProveedor = new System.Windows.Forms.ComboBox();
+            this.comboProveedor = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
@@ -86,11 +86,11 @@
             // 
             // ComboEmpleado
             // 
-            this.ComboEmpleado.FormattingEnabled = true;
-            this.ComboEmpleado.Location = new System.Drawing.Point(383, 24);
-            this.ComboEmpleado.Name = "ComboEmpleado";
-            this.ComboEmpleado.Size = new System.Drawing.Size(206, 21);
-            this.ComboEmpleado.TabIndex = 0;
+            this.comboEmpleado.FormattingEnabled = true;
+            this.comboEmpleado.Location = new System.Drawing.Point(383, 24);
+            this.comboEmpleado.Name = "ComboEmpleado";
+            this.comboEmpleado.Size = new System.Drawing.Size(206, 21);
+            this.comboEmpleado.TabIndex = 0;
             // 
             // LblDocumento
             // 
@@ -130,13 +130,13 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.btnEliminar);
-            this.groupBox1.Controls.Add(this.ComboProveedor);
+            this.groupBox1.Controls.Add(this.comboProveedor);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.buttonAgregarProducto);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.dataGridPedido);
-            this.groupBox1.Controls.Add(this.ComboEmpleado);
+            this.groupBox1.Controls.Add(this.comboEmpleado);
             this.groupBox1.Controls.Add(this.LblDocumento);
             this.groupBox1.Location = new System.Drawing.Point(12, 9);
             this.groupBox1.Name = "groupBox1";
@@ -147,11 +147,11 @@
             // 
             // ComboProveedor
             // 
-            this.ComboProveedor.FormattingEnabled = true;
-            this.ComboProveedor.Location = new System.Drawing.Point(92, 24);
-            this.ComboProveedor.Name = "ComboProveedor";
-            this.ComboProveedor.Size = new System.Drawing.Size(188, 21);
-            this.ComboProveedor.TabIndex = 48;
+            this.comboProveedor.FormattingEnabled = true;
+            this.comboProveedor.Location = new System.Drawing.Point(92, 24);
+            this.comboProveedor.Name = "ComboProveedor";
+            this.comboProveedor.Size = new System.Drawing.Size(188, 21);
+            this.comboProveedor.TabIndex = 48;
             // 
             // label1
             // 
@@ -208,12 +208,12 @@
         private System.Windows.Forms.Button buttonAgregarProducto;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DataGridView dataGridPedido;
-        private System.Windows.Forms.ComboBox ComboEmpleado;
+        private System.Windows.Forms.ComboBox comboEmpleado;
         private System.Windows.Forms.Label LblDocumento;
         private System.Windows.Forms.Button BtnSalir;
         private System.Windows.Forms.Button BtnAceptar;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.ComboBox ComboProveedor;
+        private System.Windows.Forms.ComboBox comboProveedor;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnEliminar;

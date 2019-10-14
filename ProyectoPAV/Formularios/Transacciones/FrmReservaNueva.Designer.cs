@@ -36,7 +36,7 @@
             this.labeNombre = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.labelApellido = new System.Windows.Forms.Label();
-            this.ComboEmpleado = new System.Windows.Forms.ComboBox();
+            this.comboEmpleado = new System.Windows.Forms.ComboBox();
             this.BtnSalir = new System.Windows.Forms.Button();
             this.BtnAceptar = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -138,11 +138,11 @@
             // 
             // ComboEmpleado
             // 
-            this.ComboEmpleado.FormattingEnabled = true;
-            this.ComboEmpleado.Location = new System.Drawing.Point(412, 21);
-            this.ComboEmpleado.Name = "ComboEmpleado";
-            this.ComboEmpleado.Size = new System.Drawing.Size(206, 21);
-            this.ComboEmpleado.TabIndex = 0;
+            this.comboEmpleado.FormattingEnabled = true;
+            this.comboEmpleado.Location = new System.Drawing.Point(412, 21);
+            this.comboEmpleado.Name = "ComboEmpleado";
+            this.comboEmpleado.Size = new System.Drawing.Size(206, 21);
+            this.comboEmpleado.TabIndex = 0;
             // 
             // BtnSalir
             // 
@@ -198,7 +198,7 @@
             this.groupBox1.Controls.Add(this.groupBox2);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.dataGridProductos);
-            this.groupBox1.Controls.Add(this.ComboEmpleado);
+            this.groupBox1.Controls.Add(this.comboEmpleado);
             this.groupBox1.Controls.Add(this.LblDocumento);
             this.groupBox1.Location = new System.Drawing.Point(12, 9);
             this.groupBox1.Name = "groupBox1";
@@ -381,7 +381,7 @@
         private System.Windows.Forms.Label labeNombre;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label labelApellido;
-        private System.Windows.Forms.ComboBox ComboEmpleado;
+        private System.Windows.Forms.ComboBox comboEmpleado;
         private System.Windows.Forms.Button BtnSalir;
         private System.Windows.Forms.Button BtnAceptar;
         private System.Windows.Forms.GroupBox groupBox2;

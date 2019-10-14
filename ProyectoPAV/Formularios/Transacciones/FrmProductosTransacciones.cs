@@ -138,16 +138,8 @@ namespace ProyectoPAV.Formularios.Transacciones
         private void FrmProductosTransacciones_Load(object sender, EventArgs e)
         {
             dataGridProductos.DataSource = gestor.ejecutar_consulta(@"select p.IdProducto,p.Nombre, p.CodigoProducto, p.NumeroTalle, p.StockDisponible, m.Nombre as Marca,c.Nombre as Categoria,p.PrecioUnitario from Producto p join Marca m on p.IdMarca=m.IdMarca join Categoria c on p.IdCategoria=c.IdCategoria where p.StockDisponible>=1 ;");
-            
-            CargadorCombos cargador = new CargadorCombos();
-            DataTable tablaCategorias = new DataTable();
 
-            tablaCategorias = cargador.CargarComboCategorias();
-
-            comboCategorias.DataSource = tablaCategorias;
-            comboCategorias.DisplayMember = "Nombre";
-            comboCategorias.ValueMember = "IdCategoria";
-            comboCategorias.SelectedIndex = -1;
+            comboCategorias = CargadorCombos.CargarComboCategoria(comboCategorias);
         }
 
         private void botonNuevoProducto_Click(object sender, EventArgs e)

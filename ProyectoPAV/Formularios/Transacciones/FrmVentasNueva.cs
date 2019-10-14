@@ -26,23 +26,12 @@ namespace ProyectoPAV.Formularios
         PruebaGestorTransacciones gestor;
         private void FrmVentasNueva_Load(object sender, EventArgs e)
         {
-            CargadorCombos cargador = new CargadorCombos();
-            DataTable tablaLocalidades = new DataTable();
-            DataTable tablaEmpleado = new DataTable();
-
-            tablaEmpleado = cargador.CargarComboEmpleados();
-
-            ComboEmpleado.DataSource = tablaEmpleado;
-            ComboEmpleado.DisplayMember = "Apellido";
-            ComboEmpleado.ValueMember = "IdEmpleado";
-            ComboEmpleado.SelectedIndex = -1;
+            comboEmpleado = CargadorCombos.CargarComboEmpleado(comboEmpleado);
 
             gestor = new PruebaGestorTransacciones();
             gestor.inicio_transaccion();
             string sql = @"insert Venta values (1,1,GETDATE(),0);";
 
-
-            
 
             //aca se genera una venta
             gestor.insertar(sql);
@@ -178,7 +167,7 @@ namespace ProyectoPAV.Formularios
 
         private void BtnAceptar_Click(object sender, EventArgs e)
         {
-            string idempleado = ComboEmpleado.SelectedValue.ToString();
+            string idempleado = comboEmpleado.SelectedValue.ToString();
             gestor.modificar(@"UPDATE Venta SET IdEmpleado = " + idempleado + " WHERE IdVenta = " + idventa + ";");
             gestor.modificar(@"UPDATE Venta SET MontoTotal = (SELECT SUM(D.Monto) FROM DetalleVenta D WHERE IdVenta = " + idventa + " GROUP BY IdVenta) WHERE IdVenta = " + idventa);
             gestor.cerrar_transaccion();

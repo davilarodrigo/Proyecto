@@ -22,25 +22,8 @@ namespace ProyectoPAV.Formularios.Transacciones
 
         private void FrmCompraNueva_Load(object sender, EventArgs e)
         {
-            CargadorCombos cargador = new CargadorCombos();
-            DataTable tablaEmpleado = new DataTable();
-
-            tablaEmpleado = cargador.CargarComboEmpleados();
-
-            ComboEmpleado.DataSource = tablaEmpleado;
-            ComboEmpleado.DisplayMember = "Apellido";
-            ComboEmpleado.ValueMember = "IdEmpleado";
-            ComboEmpleado.SelectedIndex = -1;
-
-            CargadorCombos cargador2 = new CargadorCombos();
-            DataTable tablaProveedores = new DataTable();
-
-            tablaProveedores = cargador.CargarComboProveedores();
-
-            ComboProveedor.DataSource = tablaEmpleado;
-            ComboProveedor.DisplayMember = "RazonSocial";
-            ComboProveedor.ValueMember = "IdProveedor";
-            ComboProveedor.SelectedIndex = -1;
+            comboProveedor = CargadorCombos.CargarComboProveedor(comboProveedor);
+            comboEmpleado = CargadorCombos.CargarComboEmpleado(comboEmpleado);
         }
 
         private void BtnSalir_Click(object sender, EventArgs e)

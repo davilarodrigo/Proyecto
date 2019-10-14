@@ -54,11 +54,21 @@ namespace ProyectoPAV.Clases
             return CargarComboGenerico(comboBox, "Sexo", "IdSexo", "Nombre");
         }
 
+        public static ComboBox CargarComboEmpleado(ComboBox comboBox)
+        {
+            return CargarComboGenerico(comboBox, "Empleado", "IdEmpleado", "Apellido");
+        }
+
+
         public static ComboBox CargarComboCargo(ComboBox comboBox)
         {
             return CargarComboGenerico(comboBox, "Cargo", "IdCargo", "Nombre");
         }
 
+        public static ComboBox CargarComboProveedor(ComboBox comboBox)
+        {
+            return CargarComboGenerico(comboBox, "Proveedor", "IdProveedor", "RazonSocial");
+        }
         //////////////////////////////////////////////////////////////////////////////////////
 
         public DataTable CargarComboCargos()

@@ -24,27 +24,8 @@ namespace ProyectoPAV.Formularios.Transacciones
         {
             this.Consulta();
 
-            CargadorCombos cargador = new CargadorCombos();
-            DataTable tablaLocalidades = new DataTable();
-            DataTable tablaEmpleado = new DataTable();
-
-            tablaEmpleado = cargador.CargarComboEmpleados();
-
-            ComboEmpleado.DataSource = tablaEmpleado;
-            ComboEmpleado.DisplayMember = "Apellido";
-            ComboEmpleado.ValueMember = "IdEmpleado";
-            ComboEmpleado.SelectedIndex = -1;
-
-
-            CargadorCombos cargador2 = new CargadorCombos();
-            DataTable tablaCategorias = new DataTable();
-
-            tablaCategorias = cargador2.CargarComboCategorias();
-
-            comboCategorias.DataSource = tablaCategorias;
-            comboCategorias.DisplayMember = "Nombre";
-            comboCategorias.ValueMember = "IdCategoria";
-            comboCategorias.SelectedIndex = -1;
+            comboCategorias = CargadorCombos.CargarComboCategoria(comboCategorias);
+            comboEmpleado = CargadorCombos.CargarComboEmpleado(comboEmpleado);
         }
 
         private void BtnSalir_Click(object sender, EventArgs e)
