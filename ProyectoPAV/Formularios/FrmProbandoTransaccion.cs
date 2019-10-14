@@ -36,7 +36,7 @@ namespace ProyectoPAV.Formularios
 
             sql_insert = @"INSERT INTO Empleado VALUES (1," + randomDNI + ",'pepe', 'aasd',1,'19750606','','',2,'20181212',null)";
 
-            gestor.insertar(sql_insert);
+            gestor.ejecutar_no_select(sql_insert);
 
         }
 
@@ -56,9 +56,6 @@ namespace ProyectoPAV.Formularios
         private void FrmProbandoTransaccion_Load(object sender, EventArgs e)
         {
             gestor = new PruebaGestorTransacciones();
-
-            gestor.inicio_transaccion();
-
             refrescarDataGrid();
         }
 
@@ -70,7 +67,7 @@ namespace ProyectoPAV.Formularios
 
         private void button2_Click(object sender, EventArgs e)
         {
-            gestor.cerrar_transaccion();
+            gestor.confirmar();
             this.Dispose();
         }
 

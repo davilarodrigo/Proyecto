@@ -24,25 +24,33 @@ namespace ProyectoPAV.Formularios
 
         string idventa;
         PruebaGestorTransacciones gestor;
+
         private void FrmVentasNueva_Load(object sender, EventArgs e)
         {
             comboEmpleado = CargadorCombos.CargarComboEmpleado(comboEmpleado);
 
             gestor = new PruebaGestorTransacciones();
-            gestor.inicio_transaccion();
-            string sql = @"insert Venta values (1,1,GETDATE(),0);";
+
+            string idEmpleatres = 
+            gestor.ejecutar_consulta(@"select min(IdEmpleado) from Empleado;").Rows[0][0].ToString();
+
+            string idClientres = 
+            gestor.ejecutar_consulta(@"select min(IdCliente) from Cliente;").Rows[0][0].ToString();
+
+
+            string sql = @"insert Venta values ("+idEmpleatres+ "," + idClientres + ",GETDATE(),0);";
 
 
             //aca se genera una venta
-            gestor.insertar(sql);
+            gestor.ejecutar_no_select(sql);
 
             //obtener id d la venta
 
             DataTable table = new DataTable();
             table=gestor.ejecutar_consulta(@"select max(IdVenta) from Venta;");
             labelIdVenta.Text = table.Rows[0][0].ToString();
-
             idventa = table.Rows[0][0].ToString();
+
             actualizarcarrito();
 
 
@@ -66,7 +74,7 @@ namespace ProyectoPAV.Formularios
             if (IdCliente != "")
             {
                 recuperarDatosCliente();
-                gestor.modificar(@"UPDATE Venta SET IdCliente = " + IdCliente + " WHERE IdVenta = " + idventa + ";");
+                gestor.ejecutar_no_select(@"UPDATE Venta SET IdCliente = " + IdCliente + " WHERE IdVenta = " + idventa + ";");
             }
         }
 
@@ -168,9 +176,9 @@ namespace ProyectoPAV.Formularios
         private void BtnAceptar_Click(object sender, EventArgs e)
         {
             string idempleado = comboEmpleado.SelectedValue.ToString();
-            gestor.modificar(@"UPDATE Venta SET IdEmpleado = " + idempleado + " WHERE IdVenta = " + idventa + ";");
-            gestor.modificar(@"UPDATE Venta SET MontoTotal = (SELECT SUM(D.Monto) FROM DetalleVenta D WHERE IdVenta = " + idventa + " GROUP BY IdVenta) WHERE IdVenta = " + idventa);
-            gestor.cerrar_transaccion();
+            gestor.ejecutar_no_select(@"UPDATE Venta SET IdEmpleado = " + idempleado + " WHERE IdVenta = " + idventa + ";");
+            gestor.ejecutar_no_select(@"UPDATE Venta SET MontoTotal = (SELECT SUM(D.Monto) FROM DetalleVenta D WHERE IdVenta = " + idventa + " GROUP BY IdVenta) WHERE IdVenta = " + idventa);
+            gestor.confirmar();
             this.Dispose();
         }
     }

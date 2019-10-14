@@ -103,11 +103,11 @@ namespace ProyectoPAV.Formularios.Transacciones
                 //aca se obtine la id del producto
                 IdProducto = dataGridProductos.CurrentRow.Cells[0].Value.ToString();
                 //se le reduce en 1 el stock al producto
-                gestor.modificar(@"update Producto set StockDisponible -=1 where IdProducto='"+IdProducto+"';");
+                gestor.ejecutar_no_select(@"update Producto set StockDisponible -=1 where IdProducto='"+IdProducto+"';");
 
                 string precio = dataGridProductos.CurrentRow.Cells[7].Value.ToString();
 
-                gestor.insertar(@"insert DetalleVenta values ("+idVenta+","+IdProducto+ ",666," + precio + ");");
+                gestor.ejecutar_no_select(@"insert DetalleVenta values ("+idVenta+","+IdProducto+ ",666," + precio + ");");
 
                 //gestor.cerrar_transaccion();
                 this.Dispose();
