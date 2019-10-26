@@ -18,6 +18,7 @@ namespace ProyectoPAV.Formularios
             InitializeComponent();
         }
 
+
         private void BtnNuevo_Click(object sender, EventArgs e)
         {
             FrmVentasNueva ventas = new FrmVentasNueva();
