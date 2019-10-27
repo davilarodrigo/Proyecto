@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using ProyectoPAV.Formularios;
 using ProyectoPAV.Formularios.Auxiliares;
 using ProyectoPAV.Formularios.Transacciones;
+using ProyectoPAV.Formularios.Forms_Reportes;
 
 namespace ProyectoPAV
 {
@@ -153,6 +154,12 @@ namespace ProyectoPAV
         {
             FrmProbandoTransaccion prueba = new FrmProbandoTransaccion();
             prueba.ShowDialog();
+        }
+
+        private void btnEstadisticas_Click(object sender, EventArgs e)
+        {
+            FrmSeleccionReportes reporte = new FrmSeleccionReportes();
+            reporte.ShowDialog();
         }
     }
     

@@ -321,6 +321,7 @@
             this.btnEstadisticas.TabIndex = 7;
             this.btnEstadisticas.Text = "Estadísticas y Reportes";
             this.btnEstadisticas.UseVisualStyleBackColor = true;
+            this.btnEstadisticas.Click += new System.EventHandler(this.btnEstadisticas_Click);
             // 
             // btnProveedores
             // 

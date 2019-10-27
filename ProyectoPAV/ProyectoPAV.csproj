@@ -33,16 +33,49 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.340.80\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.340.80\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.340.80\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.340.80\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebDesign, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.140.1000.523\lib\net40\Microsoft.ReportViewer.WebDesign.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportViewer.Runtime.WebForms.12.0.2402.15\lib\Microsoft.ReportViewer.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.340.80\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="ReportViewerForMvc, Version=1.1.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Chaso.ReportViewerForMvc.1.1.1.1\lib\net461\ReportViewerForMvc.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data.DataSetExtensions">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp">
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Net.Http" />
-    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Forms">
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
@@ -89,6 +122,24 @@
     </Compile>
     <Compile Include="Formularios\Auxiliares\FrmTipoDocumentos.Designer.cs">
       <DependentUpon>FrmTipoDocumentos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Forms Reportes\FrmReporteProductos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Forms Reportes\FrmReporteProductos.Designer.cs">
+      <DependentUpon>FrmReporteProductos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Forms Reportes\FrmReportesClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Forms Reportes\FrmReportesClientes.Designer.cs">
+      <DependentUpon>FrmReportesClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Forms Reportes\FrmReportesVentas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Forms Reportes\FrmReportesVentas.Designer.cs">
+      <DependentUpon>FrmReportesVentas.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\FrmClientesModificar.cs">
       <SubType>Form</SubType>
@@ -174,6 +225,27 @@
     <Compile Include="Formularios\FrmProveedoresNuevo.Designer.cs">
       <DependentUpon>FrmProveedoresNuevo.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\FrmSeleccionReportes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmSeleccionReportes.Designer.cs">
+      <DependentUpon>FrmSeleccionReportes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\ReportesyEstadisticas\DataSetClientes.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetClientes.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\ReportesyEstadisticas\DataSetProductos.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetProductos.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\ReportesyEstadisticas\DataSetVentas.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetVentas.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Transacciones\FrmCompraNueva.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -224,6 +296,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SqlServerTypes\Loader.cs" />
     <Compile Include="TP_PAVDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -243,6 +316,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Auxiliares\FrmTipoDocumentos.resx">
       <DependentUpon>FrmTipoDocumentos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Forms Reportes\FrmReporteProductos.resx">
+      <DependentUpon>FrmReporteProductos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Forms Reportes\FrmReportesClientes.resx">
+      <DependentUpon>FrmReportesClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Forms Reportes\FrmReportesVentas.resx">
+      <DependentUpon>FrmReportesVentas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\FrmClientesModificar.resx">
       <DependentUpon>FrmClientesModificar.cs</DependentUpon>
@@ -286,6 +368,15 @@
     <EmbeddedResource Include="Formularios\FrmProveedoresNuevo.resx">
       <DependentUpon>FrmProveedoresNuevo.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmSeleccionReportes.resx">
+      <DependentUpon>FrmSeleccionReportes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\ReportesyEstadisticas\ReportClientes.rdlc" />
+    <EmbeddedResource Include="Formularios\ReportesyEstadisticas\ReportEstadisticasClientes.rdlc" />
+    <EmbeddedResource Include="Formularios\ReportesyEstadisticas\ReportEstadisticasProductos.rdlc" />
+    <EmbeddedResource Include="Formularios\ReportesyEstadisticas\ReportEstadisticaVentas.rdlc" />
+    <EmbeddedResource Include="Formularios\ReportesyEstadisticas\ReportProductos.rdlc" />
+    <EmbeddedResource Include="Formularios\ReportesyEstadisticas\ReportVentas.rdlc" />
     <EmbeddedResource Include="Formularios\Transacciones\FrmCompraNueva.resx">
       <DependentUpon>FrmCompraNueva.cs</DependentUpon>
     </EmbeddedResource>
@@ -320,6 +411,40 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="Formularios\ReportesyEstadisticas\DataSetClientes.xsc">
+      <DependentUpon>DataSetClientes.xsd</DependentUpon>
+    </None>
+    <None Include="Formularios\ReportesyEstadisticas\DataSetClientes.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetClientes.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Formularios\ReportesyEstadisticas\DataSetClientes.xss">
+      <DependentUpon>DataSetClientes.xsd</DependentUpon>
+    </None>
+    <None Include="Formularios\ReportesyEstadisticas\DataSetProductos.xsc">
+      <DependentUpon>DataSetProductos.xsd</DependentUpon>
+    </None>
+    <None Include="Formularios\ReportesyEstadisticas\DataSetProductos.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetProductos.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Formularios\ReportesyEstadisticas\DataSetProductos.xss">
+      <DependentUpon>DataSetProductos.xsd</DependentUpon>
+    </None>
+    <None Include="Formularios\ReportesyEstadisticas\DataSetVentas.xsc">
+      <DependentUpon>DataSetVentas.xsd</DependentUpon>
+    </None>
+    <None Include="Formularios\ReportesyEstadisticas\DataSetVentas.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetVentas.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Formularios\ReportesyEstadisticas\DataSetVentas.xss">
+      <DependentUpon>DataSetVentas.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -346,6 +471,20 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <Content Include="ReportViewerWebForm.aspx" />
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <None Include="resources\Add_16x16.png" />
     <Content Include="resources\Add_256x256.png" />
     <Content Include="resources\Cancel_256x256.png" />
