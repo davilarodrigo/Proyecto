@@ -28,8 +28,6 @@ namespace ProyectoPAV.Formularios.Forms_Reportes
         private void FrmReportesVentas_Load(object sender, EventArgs e)
         {
             comboBoxEmpleado = CargadorCombos.CargarComboEmpleado(comboBoxEmpleado);
-            this.reportViewerReporte2.RefreshReport();
-            this.reportViewerEstadistica2.RefreshReport();
         }
 
         private void btnReporte_Click(object sender, EventArgs e)

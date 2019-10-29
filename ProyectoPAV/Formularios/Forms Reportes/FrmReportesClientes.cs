@@ -27,14 +27,12 @@ namespace ProyectoPAV.Formularios.Forms_Reportes
         private void FrmReportesClientes_Load(object sender, EventArgs e)
         {
 
-            this.reportViewerReporte2.RefreshReport();
-            this.reportViewerEstadistica2.RefreshReport();
         }
 
         private void btnReporte_Click(object sender, EventArgs e)
         {
             int mes;
-            mes = validarMes(textBoxMes.Text);
+            mes = ValidarMes(textBoxMes.Text);
             OleDbConnection conexion = new OleDbConnection();
             OleDbCommand comando = new OleDbCommand();
             DataTable tabla = new DataTable();
@@ -76,7 +74,7 @@ namespace ProyectoPAV.Formularios.Forms_Reportes
             conexion.Close();
         }
 
-        private int validarMes(string mes)
+        private int ValidarMes(string mes)
         {
             if (mes == "Enero" || mes == "enero")
             {
@@ -132,7 +130,7 @@ namespace ProyectoPAV.Formularios.Forms_Reportes
         private void Reporte2_Click(object sender, EventArgs e)
         {
             int mes;
-            mes = validarMes(textBoxMes.Text);
+            mes = ValidarMes(textBoxMesCompra.Text);
             OleDbConnection conexion = new OleDbConnection();
             OleDbCommand comando = new OleDbCommand();
             DataTable tabla = new DataTable();
