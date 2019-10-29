@@ -16,7 +16,7 @@ namespace ProyectoPAV.Clases
         public enum FormaConexion { simple, transaccion }
         //+ "\u005C" +
         //RODO
-        static string cadenaConexion = "Provider=SQLNCLI11;Data Source=DESKTOP-FHCPBI9" + "\u005C" + "SQLEXPRESS01;Integrated Security=SSPI;Initial Catalog=ProyectoPAV";
+        public static string cadenaConexion = "Provider=SQLNCLI11;Data Source=DESKTOP-FHCPBI9" + "\u005C" + "SQLEXPRESS01;Integrated Security=SSPI;Initial Catalog=ProyectoPAV";
 
 
         //intento de cadena de conexion universal (a lucas no le funciona)

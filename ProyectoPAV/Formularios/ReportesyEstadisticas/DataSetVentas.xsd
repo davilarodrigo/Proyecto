@@ -12,7 +12,7 @@
   <xs:element name="DataSetVentas" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSetVentas" msprop:Generator_UserDSName="DataSetVentas">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="Ventas" msprop:Generator_TableClassName="VentasDataTable" msprop:Generator_TableVarName="tableVentas" msprop:Generator_RowChangedName="VentasRowChanged" msprop:Generator_TablePropName="Ventas" msprop:Generator_RowDeletingName="VentasRowDeleting" msprop:Generator_RowChangingName="VentasRowChanging" msprop:Generator_RowEvHandlerName="VentasRowChangeEventHandler" msprop:Generator_RowDeletedName="VentasRowDeleted" msprop:Generator_RowClassName="VentasRow" msprop:Generator_UserTableName="Ventas" msprop:Generator_RowEvArgName="VentasRowChangeEvent">
+        <xs:element name="Ventas" msprop:Generator_TableClassName="VentasDataTable" msprop:Generator_TableVarName="tableVentas" msprop:Generator_TablePropName="Ventas" msprop:Generator_RowDeletingName="VentasRowDeleting" msprop:Generator_RowChangingName="VentasRowChanging" msprop:Generator_RowEvHandlerName="VentasRowChangeEventHandler" msprop:Generator_RowDeletedName="VentasRowDeleted" msprop:Generator_UserTableName="Ventas" msprop:Generator_RowChangedName="VentasRowChanged" msprop:Generator_RowEvArgName="VentasRowChangeEvent" msprop:Generator_RowClassName="VentasRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="IdVenta" msprop:Generator_ColumnVarNameInTable="columnIdVenta" msprop:Generator_ColumnPropNameInRow="IdVenta" msprop:Generator_ColumnPropNameInTable="IdVentaColumn" msprop:Generator_UserColumnName="IdVenta" type="xs:int" minOccurs="0" />
@@ -23,11 +23,19 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Estadistica1" msprop:Generator_TableClassName="Estadistica1DataTable" msprop:Generator_TableVarName="tableEstadistica1" msprop:Generator_RowChangedName="Estadistica1RowChanged" msprop:Generator_TablePropName="Estadistica1" msprop:Generator_RowDeletingName="Estadistica1RowDeleting" msprop:Generator_RowChangingName="Estadistica1RowChanging" msprop:Generator_RowEvHandlerName="Estadistica1RowChangeEventHandler" msprop:Generator_RowDeletedName="Estadistica1RowDeleted" msprop:Generator_RowClassName="Estadistica1Row" msprop:Generator_UserTableName="Estadistica1" msprop:Generator_RowEvArgName="Estadistica1RowChangeEvent">
+        <xs:element name="Estadistica1" msprop:Generator_TableClassName="Estadistica1DataTable" msprop:Generator_TableVarName="tableEstadistica1" msprop:Generator_TablePropName="Estadistica1" msprop:Generator_RowDeletingName="Estadistica1RowDeleting" msprop:Generator_RowChangingName="Estadistica1RowChanging" msprop:Generator_RowEvHandlerName="Estadistica1RowChangeEventHandler" msprop:Generator_RowDeletedName="Estadistica1RowDeleted" msprop:Generator_UserTableName="Estadistica1" msprop:Generator_RowChangedName="Estadistica1RowChanged" msprop:Generator_RowEvArgName="Estadistica1RowChangeEvent" msprop:Generator_RowClassName="Estadistica1Row">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="NEmpleado" msprop:Generator_ColumnVarNameInTable="columnNEmpleado" msprop:Generator_ColumnPropNameInRow="NEmpleado" msprop:Generator_ColumnPropNameInTable="NEmpleadoColumn" msprop:Generator_UserColumnName="NEmpleado" type="xs:string" minOccurs="0" />
               <xs:element name="Cantidad" msprop:Generator_ColumnVarNameInTable="columnCantidad" msprop:Generator_ColumnPropNameInRow="Cantidad" msprop:Generator_ColumnPropNameInTable="CantidadColumn" msprop:Generator_UserColumnName="Cantidad" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Estadistica2" msprop:Generator_TableClassName="Estadistica2DataTable" msprop:Generator_TableVarName="tableEstadistica2" msprop:Generator_TablePropName="Estadistica2" msprop:Generator_RowDeletingName="Estadistica2RowDeleting" msprop:Generator_RowChangingName="Estadistica2RowChanging" msprop:Generator_RowEvHandlerName="Estadistica2RowChangeEventHandler" msprop:Generator_RowDeletedName="Estadistica2RowDeleted" msprop:Generator_UserTableName="Estadistica2" msprop:Generator_RowChangedName="Estadistica2RowChanged" msprop:Generator_RowEvArgName="Estadistica2RowChangeEvent" msprop:Generator_RowClassName="Estadistica2Row">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Mes" msprop:Generator_ColumnVarNameInTable="columnMes" msprop:Generator_ColumnPropNameInRow="Mes" msprop:Generator_ColumnPropNameInTable="MesColumn" msprop:Generator_UserColumnName="Mes" type="xs:string" minOccurs="0" />
+              <xs:element name="Ganancia" msprop:Generator_ColumnVarNameInTable="columnGanancia" msprop:Generator_ColumnPropNameInRow="Ganancia" msprop:Generator_ColumnPropNameInTable="GananciaColumn" msprop:Generator_UserColumnName="Ganancia" type="xs:decimal" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>

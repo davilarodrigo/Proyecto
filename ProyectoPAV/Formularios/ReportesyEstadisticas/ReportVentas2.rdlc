@@ -6,24 +6,24 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>1.36701cm</Width>
+              <Width>1.15535cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>3.61597cm</Width>
+              <Width>3.27201cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>3.48368cm</Width>
+              <Width>3.08681cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.47354cm</Width>
+              <Width>4.69984cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>4.88506cm</Width>
+              <Width>3.05563cm</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
             <TablixRow>
-              <Height>0.67469cm</Height>
+              <Height>0.68792cm</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
@@ -40,7 +40,9 @@
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Left</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Textbox3</rd:DefaultName>
@@ -67,7 +69,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Apellido</Value>
+                              <Value>Empleado</Value>
                               <Style>
                                 <FontWeight>Bold</FontWeight>
                               </Style>
@@ -84,7 +86,7 @@
                           <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
-                        <BackgroundColor>LightGrey</BackgroundColor>
+                        <BackgroundColor>Silver</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -102,7 +104,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Nombre</Value>
+                              <Value>Cliente</Value>
                               <Style>
                                 <FontWeight>Bold</FontWeight>
                               </Style>
@@ -119,7 +121,7 @@
                           <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
-                        <BackgroundColor>LightGrey</BackgroundColor>
+                        <BackgroundColor>Silver</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -137,7 +139,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Sexo</Value>
+                              <Value>Fecha Venta</Value>
                               <Style>
                                 <FontWeight>Bold</FontWeight>
                               </Style>
@@ -154,7 +156,7 @@
                           <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
-                        <BackgroundColor>LightGrey</BackgroundColor>
+                        <BackgroundColor>Silver</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -172,7 +174,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Fecha Nacimiento</Value>
+                              <Value>Monto Total</Value>
                               <Style>
                                 <FontWeight>Bold</FontWeight>
                               </Style>
@@ -189,7 +191,7 @@
                           <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
-                        <BackgroundColor>LightGrey</BackgroundColor>
+                        <BackgroundColor>Silver</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -201,18 +203,18 @@
               </TablixCells>
             </TablixRow>
             <TablixRow>
-              <Height>0.67469cm</Height>
+              <Height>0.635cm</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="IdCliente">
+                    <Textbox Name="IdVenta">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!IdCliente.Value</Value>
+                              <Value>=Fields!IdVenta.Value</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -221,7 +223,7 @@
                           </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>IdCliente</rd:DefaultName>
+                      <rd:DefaultName>IdVenta</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -237,14 +239,14 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Apellido">
+                    <Textbox Name="NEmpleado">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!Apellido.Value</Value>
+                              <Value>=Fields!NEmpleado.Value</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -253,7 +255,7 @@
                           </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Apellido</rd:DefaultName>
+                      <rd:DefaultName>NEmpleado</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -269,14 +271,14 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Nombre">
+                    <Textbox Name="NCliente">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!Nombre.Value</Value>
+                              <Value>=Fields!NCliente.Value</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -285,7 +287,7 @@
                           </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Nombre</rd:DefaultName>
+                      <rd:DefaultName>NCliente</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -301,14 +303,14 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Sexo">
+                    <Textbox Name="FechaVenta">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!Sexo.Value</Value>
+                              <Value>=Fields!FechaVenta.Value</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -317,7 +319,7 @@
                           </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Sexo</rd:DefaultName>
+                      <rd:DefaultName>FechaVenta</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -333,14 +335,14 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="FechaNacimiento">
+                    <Textbox Name="MontoTotal">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!FechaNacimiento.Value</Value>
+                              <Value>=Fields!MontoTotal.Value</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -349,7 +351,7 @@
                           </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>FechaNacimiento</rd:DefaultName>
+                      <rd:DefaultName>MontoTotal</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -386,11 +388,11 @@
             </TablixMember>
           </TablixMembers>
         </TablixRowHierarchy>
-        <DataSetName>DSClientes</DataSetName>
-        <Top>0.31433cm</Top>
-        <Left>0.3937cm</Left>
-        <Height>1.34938cm</Height>
-        <Width>15.82526cm</Width>
+        <DataSetName>DSReporte2</DataSetName>
+        <Top>0.47308cm</Top>
+        <Left>0.77704cm</Left>
+        <Height>1.32292cm</Height>
+        <Width>15.26963cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -398,17 +400,17 @@
         </Style>
       </Tablix>
     </ReportItems>
-    <Height>0.94792in</Height>
+    <Height>2in</Height>
     <Style />
   </Body>
-  <Width>6.51401in</Width>
+  <Width>6.5in</Width>
   <Page>
     <PageHeader>
       <Height>2.54cm</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>
-        <Textbox Name="Textbox1">
+        <Textbox Name="Textbox2">
           <CanGrow>true</CanGrow>
           <KeepTogether>true</KeepTogether>
           <Paragraphs>
@@ -416,7 +418,9 @@
               <TextRuns>
                 <TextRun>
                   <Value />
-                  <Style />
+                  <Style>
+                    <Color>DarkBlue</Color>
+                  </Style>
                 </TextRun>
               </TextRuns>
               <Style>
@@ -429,6 +433,7 @@
                   <Value />
                   <Style>
                     <FontSize>14pt</FontSize>
+                    <Color>White</Color>
                   </Style>
                 </TextRun>
               </TextRuns>
@@ -439,7 +444,7 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>LISTADO DE CLIENTES - CUMPLEAÑOS EN MES</Value>
+                  <Value>LISTADO DE VENTAS - FECHA VENTA</Value>
                   <Style>
                     <FontSize>14pt</FontSize>
                     <Color>White</Color>
@@ -451,14 +456,15 @@
               </Style>
             </Paragraph>
           </Paragraphs>
-          <rd:DefaultName>Textbox1</rd:DefaultName>
-          <Height>2.46944cm</Height>
+          <rd:DefaultName>Textbox2</rd:DefaultName>
+          <Top>0.01764cm</Top>
+          <Height>2.50472cm</Height>
           <Width>16.51cm</Width>
           <Style>
             <Border>
               <Style>None</Style>
             </Border>
-            <BackgroundColor>MidnightBlue</BackgroundColor>
+            <BackgroundColor>DarkBlue</BackgroundColor>
             <PaddingLeft>2pt</PaddingLeft>
             <PaddingRight>2pt</PaddingRight>
             <PaddingTop>2pt</PaddingTop>
@@ -473,21 +479,10 @@
       </Style>
     </PageHeader>
     <PageFooter>
-      <Height>1.37583cm</Height>
+      <Height>1.21708cm</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>
-        <Line Name="Line1">
-          <Top>0.15558cm</Top>
-          <Left>0.04974cm</Left>
-          <Height>0cm</Height>
-          <Width>16.46026cm</Width>
-          <Style>
-            <Border>
-              <Style>Solid</Style>
-            </Border>
-          </Style>
-        </Line>
         <Textbox Name="PageNumber">
           <CanGrow>true</CanGrow>
           <KeepTogether>true</KeepTogether>
@@ -503,11 +498,10 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>PageNumber</rd:DefaultName>
-          <Top>0.55245cm</Top>
-          <Left>14.01cm</Left>
+          <Top>0.35278cm</Top>
+          <Left>12.99105cm</Left>
           <Height>0.6cm</Height>
           <Width>2.5cm</Width>
-          <ZIndex>1</ZIndex>
           <Style>
             <Border>
               <Style>None</Style>
@@ -518,6 +512,18 @@
             <PaddingBottom>2pt</PaddingBottom>
           </Style>
         </Textbox>
+        <Line Name="Line1">
+          <Top>0.17639cm</Top>
+          <Left>0cm</Left>
+          <Height>0cm</Height>
+          <Width>16.48672cm</Width>
+          <ZIndex>1</ZIndex>
+          <Style>
+            <Border>
+              <Style>Solid</Style>
+            </Border>
+          </Style>
+        </Line>
       </ReportItems>
       <Style>
         <Border>
@@ -536,46 +542,46 @@
   </Page>
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
-    <DataSource Name="DataSetClientes">
+    <DataSource Name="DataSetVentas">
       <ConnectionProperties>
         <DataProvider>System.Data.DataSet</DataProvider>
         <ConnectString>/* Local Connection */</ConnectString>
       </ConnectionProperties>
-      <rd:DataSourceID>e0fa57cc-2662-4f58-9784-2b8451a2275f</rd:DataSourceID>
+      <rd:DataSourceID>23fd8a53-c77e-4719-a267-06c0c351816a</rd:DataSourceID>
     </DataSource>
   </DataSources>
   <DataSets>
-    <DataSet Name="DSClientes">
+    <DataSet Name="DSReporte2">
       <Query>
-        <DataSourceName>DataSetClientes</DataSourceName>
+        <DataSourceName>DataSetVentas</DataSourceName>
         <CommandText>/* Local Query */</CommandText>
       </Query>
       <Fields>
-        <Field Name="IdCliente">
-          <DataField>IdCliente</DataField>
+        <Field Name="IdVenta">
+          <DataField>IdVenta</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
-        <Field Name="Apellido">
-          <DataField>Apellido</DataField>
+        <Field Name="NEmpleado">
+          <DataField>NEmpleado</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="Nombre">
-          <DataField>Nombre</DataField>
+        <Field Name="NCliente">
+          <DataField>NCliente</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="Sexo">
-          <DataField>Sexo</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="FechaNacimiento">
-          <DataField>FechaNacimiento</DataField>
+        <Field Name="FechaVenta">
+          <DataField>FechaVenta</DataField>
           <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="MontoTotal">
+          <DataField>MontoTotal</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
         </Field>
       </Fields>
       <rd:DataSetInfo>
-        <rd:DataSetName>DataSetClientes</rd:DataSetName>
-        <rd:SchemaPath>C:\Users\Lucas\source\repos\Proyecto11\ProyectoPAV\Formularios\ReportesyEstadisticas\DataSetClientes.xsd</rd:SchemaPath>
-        <rd:TableName>Clientes</rd:TableName>
+        <rd:DataSetName>DataSetVentas</rd:DataSetName>
+        <rd:SchemaPath>C:\Users\Lucas\source\repos\Proyecto11\ProyectoPAV\Formularios\ReportesyEstadisticas\DataSetVentas.xsd</rd:SchemaPath>
+        <rd:TableName>Ventas</rd:TableName>
         <rd:TableAdapterFillMethod />
         <rd:TableAdapterGetDataMethod />
         <rd:TableAdapterName />
@@ -583,5 +589,5 @@
     </DataSet>
   </DataSets>
   <rd:ReportUnitType>Cm</rd:ReportUnitType>
-  <rd:ReportID>41b338f8-c309-4117-a96c-f2358d5e5792</rd:ReportID>
+  <rd:ReportID>40535185-9e01-414a-adbf-84ca20eafe34</rd:ReportID>
 </Report>

@@ -31,6 +31,14 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
+        <xs:element name="Estadistica2" msprop:Generator_TableClassName="Estadistica2DataTable" msprop:Generator_TableVarName="tableEstadistica2" msprop:Generator_RowChangedName="Estadistica2RowChanged" msprop:Generator_TablePropName="Estadistica2" msprop:Generator_RowDeletingName="Estadistica2RowDeleting" msprop:Generator_RowChangingName="Estadistica2RowChanging" msprop:Generator_RowEvHandlerName="Estadistica2RowChangeEventHandler" msprop:Generator_RowDeletedName="Estadistica2RowDeleted" msprop:Generator_RowClassName="Estadistica2Row" msprop:Generator_UserTableName="Estadistica2" msprop:Generator_RowEvArgName="Estadistica2RowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Cliente" msprop:Generator_ColumnVarNameInTable="columnCliente" msprop:Generator_ColumnPropNameInRow="Cliente" msprop:Generator_ColumnPropNameInTable="ClienteColumn" msprop:Generator_UserColumnName="Cliente" type="xs:string" minOccurs="0" />
+              <xs:element name="Cantidad" msprop:Generator_ColumnVarNameInTable="columnCantidad" msprop:Generator_ColumnPropNameInRow="Cantidad" msprop:Generator_ColumnPropNameInTable="CantidadColumn" msprop:Generator_UserColumnName="Cantidad" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
       </xs:choice>
     </xs:complexType>
   </xs:element>

@@ -437,7 +437,7 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>LISTADO DE PRODUCTOS</Value>
+                  <Value>LISTADO DE PRODUCTOS - CATEGORIA</Value>
                   <Style>
                     <FontSize>16pt</FontSize>
                     <Color>White</Color>

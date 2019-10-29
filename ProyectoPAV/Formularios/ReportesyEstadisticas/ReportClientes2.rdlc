@@ -6,24 +6,24 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>1.36701cm</Width>
+              <Width>1.38875cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>3.61597cm</Width>
+              <Width>3.90229cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>3.48368cm</Width>
+              <Width>3.49851cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.47354cm</Width>
+              <Width>2.10313cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>4.88506cm</Width>
+              <Width>4.98708cm</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
             <TablixRow>
-              <Height>0.67469cm</Height>
+              <Height>0.6cm</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
@@ -40,7 +40,9 @@
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Left</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Textbox3</rd:DefaultName>
@@ -84,7 +86,7 @@
                           <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
-                        <BackgroundColor>LightGrey</BackgroundColor>
+                        <BackgroundColor>Silver</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -119,7 +121,7 @@
                           <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
-                        <BackgroundColor>LightGrey</BackgroundColor>
+                        <BackgroundColor>Silver</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -154,7 +156,7 @@
                           <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
-                        <BackgroundColor>LightGrey</BackgroundColor>
+                        <BackgroundColor>Silver</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -189,7 +191,7 @@
                           <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
-                        <BackgroundColor>LightGrey</BackgroundColor>
+                        <BackgroundColor>Silver</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -201,7 +203,7 @@
               </TablixCells>
             </TablixRow>
             <TablixRow>
-              <Height>0.67469cm</Height>
+              <Height>0.6cm</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
@@ -386,11 +388,11 @@
             </TablixMember>
           </TablixMembers>
         </TablixRowHierarchy>
-        <DataSetName>DSClientes</DataSetName>
+        <DataSetName>DSClientes2</DataSetName>
         <Top>0.31433cm</Top>
-        <Left>0.3937cm</Left>
-        <Height>1.34938cm</Height>
-        <Width>15.82526cm</Width>
+        <Left>0.28787cm</Left>
+        <Height>1.2cm</Height>
+        <Width>15.87976cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -398,10 +400,10 @@
         </Style>
       </Tablix>
     </ReportItems>
-    <Height>0.94792in</Height>
+    <Height>2in</Height>
     <Style />
   </Body>
-  <Width>6.51401in</Width>
+  <Width>6.74021in</Width>
   <Page>
     <PageHeader>
       <Height>2.54cm</Height>
@@ -439,7 +441,7 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>LISTADO DE CLIENTES - CUMPLEAÑOS EN MES</Value>
+                  <Value>LISTADO DE CLIENTES - COMPRARON EN MES</Value>
                   <Style>
                     <FontSize>14pt</FontSize>
                     <Color>White</Color>
@@ -452,6 +454,7 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox1</rd:DefaultName>
+          <Top>0.03528cm</Top>
           <Height>2.46944cm</Height>
           <Width>16.51cm</Width>
           <Style>
@@ -473,13 +476,13 @@
       </Style>
     </PageHeader>
     <PageFooter>
-      <Height>1.37583cm</Height>
+      <Height>1.45521cm</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>
         <Line Name="Line1">
-          <Top>0.15558cm</Top>
-          <Left>0.04974cm</Left>
+          <Top>0.17639cm</Top>
+          <Left>0.02487cm</Left>
           <Height>0cm</Height>
           <Width>16.46026cm</Width>
           <Style>
@@ -503,8 +506,8 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>PageNumber</rd:DefaultName>
-          <Top>0.55245cm</Top>
-          <Left>14.01cm</Left>
+          <Top>0.35278cm</Top>
+          <Left>13.66763cm</Left>
           <Height>0.6cm</Height>
           <Width>2.5cm</Width>
           <ZIndex>1</ZIndex>
@@ -541,11 +544,11 @@
         <DataProvider>System.Data.DataSet</DataProvider>
         <ConnectString>/* Local Connection */</ConnectString>
       </ConnectionProperties>
-      <rd:DataSourceID>e0fa57cc-2662-4f58-9784-2b8451a2275f</rd:DataSourceID>
+      <rd:DataSourceID>05659b3f-18b5-4962-9b9e-ad2f88d112f2</rd:DataSourceID>
     </DataSource>
   </DataSources>
   <DataSets>
-    <DataSet Name="DSClientes">
+    <DataSet Name="DSClientes2">
       <Query>
         <DataSourceName>DataSetClientes</DataSourceName>
         <CommandText>/* Local Query */</CommandText>
@@ -583,5 +586,5 @@
     </DataSet>
   </DataSets>
   <rd:ReportUnitType>Cm</rd:ReportUnitType>
-  <rd:ReportID>41b338f8-c309-4117-a96c-f2358d5e5792</rd:ReportID>
+  <rd:ReportID>a5a3a8a8-a660-40ea-bee6-37dfe27f71ea</rd:ReportID>
 </Report>

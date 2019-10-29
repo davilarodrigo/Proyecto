@@ -372,11 +372,17 @@
       <DependentUpon>FrmSeleccionReportes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\ReportesyEstadisticas\ReportClientes.rdlc" />
+    <EmbeddedResource Include="Formularios\ReportesyEstadisticas\ReportClientes2.rdlc" />
+    <EmbeddedResource Include="Formularios\ReportesyEstadisticas\ReportEstadisticaProducto2.rdlc" />
+    <EmbeddedResource Include="Formularios\ReportesyEstadisticas\ReportEstadisticasCliente2.rdlc" />
     <EmbeddedResource Include="Formularios\ReportesyEstadisticas\ReportEstadisticasClientes.rdlc" />
     <EmbeddedResource Include="Formularios\ReportesyEstadisticas\ReportEstadisticasProductos.rdlc" />
+    <EmbeddedResource Include="Formularios\ReportesyEstadisticas\ReportEstadisticaVenta2.rdlc" />
     <EmbeddedResource Include="Formularios\ReportesyEstadisticas\ReportEstadisticaVentas.rdlc" />
     <EmbeddedResource Include="Formularios\ReportesyEstadisticas\ReportProductos.rdlc" />
+    <EmbeddedResource Include="Formularios\ReportesyEstadisticas\ReportProductos2.rdlc" />
     <EmbeddedResource Include="Formularios\ReportesyEstadisticas\ReportVentas.rdlc" />
+    <EmbeddedResource Include="Formularios\ReportesyEstadisticas\ReportVentas2.rdlc" />
     <EmbeddedResource Include="Formularios\Transacciones\FrmCompraNueva.resx">
       <DependentUpon>FrmCompraNueva.cs</DependentUpon>
     </EmbeddedResource>
