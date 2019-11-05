@@ -17,7 +17,7 @@ using ProyectoPAV.Clases;
 
 namespace ProyectoPAV.Formularios.Forms_Reportes
 {
-    
+
     public partial class FrmReporteProductos : Form
     {
         public string cadenaConexion = "Provider=SQLNCLI11;Data Source=DESKTOP-FHCPBI9" + "\u005C" + "SQLEXPRESS01;Integrated Security=SSPI;Initial Catalog=ProyectoPAV";
@@ -37,11 +37,22 @@ namespace ProyectoPAV.Formularios.Forms_Reportes
             OleDbConnection conexion = new OleDbConnection();
             OleDbCommand comando = new OleDbCommand();
             DataTable tabla = new DataTable();
-            string sql = @"SELECT p.IdProducto as IdProducto, p.Nombre as Nombre,
+            string sql;
+            if (this.comboCategoria.SelectedIndex == -1)
+            {
+                sql = @"SELECT p.IdProducto as IdProducto, p.Nombre as Nombre,
+                        m.Nombre as Marca, c.Nombre as Categoria, p.StockDisponible as StockDisponible
+                        FROM Producto p JOIN Marca m ON p.IdMarca = m.IdMarca JOIN Categoria c ON p.IdCategoria = c.IdCategoria";
+            }
+
+            else
+            {
+                sql = @"SELECT p.IdProducto as IdProducto, p.Nombre as Nombre,
                         m.Nombre as Marca, c.Nombre as Categoria, p.StockDisponible as StockDisponible
                         FROM Producto p JOIN Marca m ON p.IdMarca = m.IdMarca JOIN Categoria c ON p.IdCategoria = c.IdCategoria
                         WHERE c.IdCategoria = " + comboCategoria.SelectedValue;
-           
+            }
+
 
             conexion.ConnectionString = cadenaConexion;
             conexion.Open();
@@ -82,10 +93,20 @@ namespace ProyectoPAV.Formularios.Forms_Reportes
             OleDbConnection conexion = new OleDbConnection();
             OleDbCommand comando = new OleDbCommand();
             DataTable tabla = new DataTable();
-            string sql = @"SELECT p.IdProducto as IdProducto, p.Nombre as Nombre,
+            string sql;
+            if (this.comboMarcas.SelectedIndex == -1)
+            {
+                sql = @"SELECT p.IdProducto as IdProducto, p.Nombre as Nombre,
                         m.Nombre as Marca, c.Nombre as Categoria, p.StockDisponible as StockDisponible
                         FROM Producto p JOIN Marca m ON p.IdMarca = m.IdMarca JOIN Categoria c ON p.IdCategoria = c.IdCategoria
                         WHERE m.IdMarca = " + comboMarcas.SelectedValue;
+            }
+            else
+            {
+                sql = @"SELECT p.IdProducto as IdProducto, p.Nombre as Nombre,
+                        m.Nombre as Marca, c.Nombre as Categoria, p.StockDisponible as StockDisponible
+                        FROM Producto p JOIN Marca m ON p.IdMarca = m.IdMarca JOIN Categoria c ON p.IdCategoria = c.IdCategoria";
+            }
 
 
             conexion.ConnectionString = cadenaConexion;

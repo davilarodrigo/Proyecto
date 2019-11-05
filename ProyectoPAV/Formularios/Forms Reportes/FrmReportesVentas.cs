@@ -35,11 +35,22 @@ namespace ProyectoPAV.Formularios.Forms_Reportes
             OleDbConnection conexion = new OleDbConnection();
             OleDbCommand comando = new OleDbCommand();
             DataTable tabla = new DataTable();
-            string sql = @"SELECT v.IdVenta as IdVenta, (CONCAT(e.Apellido,'  ', e.Nombre)) as NEmpleado,
+            string sql;
+            if (this.comboBoxEmpleado.SelectedIndex == -1)
+            {
+                sql = @"SELECT v.IdVenta as IdVenta, (CONCAT(e.Apellido,'  ', e.Nombre)) as NEmpleado,
                         (CONCAT(c.Apellido,'  ', c.Nombre)) as NCliente,
                         v.FechaVenta as FechaVenta, v.MontoTotal as MontoTotal
                         FROM Venta v JOIN Empleado e ON v.IdEmpleado = e.IdEmpleado JOIN Cliente c ON v.IdCliente = c.IdCliente
                         WHERE e.IdEmpleado = " + comboBoxEmpleado.SelectedValue;
+            }
+            else
+            {
+                sql = @"SELECT v.IdVenta as IdVenta, (CONCAT(e.Apellido,'  ', e.Nombre)) as NEmpleado,
+                        (CONCAT(c.Apellido,'  ', c.Nombre)) as NCliente,
+                        v.FechaVenta as FechaVenta, v.MontoTotal as MontoTotal
+                        FROM Venta v JOIN Empleado e ON v.IdEmpleado = e.IdEmpleado JOIN Cliente c ON v.IdCliente = c.IdCliente";
+            }
 
 
             conexion.ConnectionString = cadenaConexion;
@@ -88,7 +99,7 @@ namespace ProyectoPAV.Formularios.Forms_Reportes
                         (CONCAT(c.Apellido,'  ', c.Nombre)) as NCliente,
                         v.FechaVenta as FechaVenta, v.MontoTotal as MontoTotal
                         FROM Venta v JOIN Empleado e ON v.IdEmpleado = e.IdEmpleado JOIN Cliente c ON v.IdCliente = c.IdCliente
-                        WHERE v.FechaVenta BETWEEN '" + fechaDesde.ToString("MM-dd-yyyy") + "' AND '" + fechaHasta.ToString("MM-dd-yyyy")+ "'";
+                        WHERE v.FechaVenta BETWEEN '" + fechaDesde.ToString("MM-dd-yyyy") + "' AND '" + fechaHasta.ToString("MM-dd-yyyy") + "'";
 
 
             conexion.ConnectionString = cadenaConexion;
@@ -105,7 +116,7 @@ namespace ProyectoPAV.Formularios.Forms_Reportes
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
+
             OleDbConnection conexion = new OleDbConnection();
             OleDbCommand comando = new OleDbCommand();
             DataTable tabla = new DataTable();

@@ -55,7 +55,7 @@
       <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.340.80\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.1016.290\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
     </Reference>
     <Reference Include="ReportViewerForMvc, Version=1.1.1.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Chaso.ReportViewerForMvc.1.1.1.1\lib\net461\ReportViewerForMvc.dll</HintPath>
@@ -134,6 +134,24 @@
     </Compile>
     <Compile Include="Formularios\Forms Reportes\FrmReportesClientes.Designer.cs">
       <DependentUpon>FrmReportesClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Forms Reportes\FrmReportesCompras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Forms Reportes\FrmReportesCompras.Designer.cs">
+      <DependentUpon>FrmReportesCompras.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Forms Reportes\FrmReportesEmpleados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Forms Reportes\FrmReportesEmpleados.Designer.cs">
+      <DependentUpon>FrmReportesEmpleados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Forms Reportes\FrmReportesProveedores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Forms Reportes\FrmReportesProveedores.Designer.cs">
+      <DependentUpon>FrmReportesProveedores.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\Forms Reportes\FrmReportesVentas.cs">
       <SubType>Form</SubType>
@@ -322,6 +340,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Forms Reportes\FrmReportesClientes.resx">
       <DependentUpon>FrmReportesClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Forms Reportes\FrmReportesCompras.resx">
+      <DependentUpon>FrmReportesCompras.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Forms Reportes\FrmReportesEmpleados.resx">
+      <DependentUpon>FrmReportesEmpleados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Forms Reportes\FrmReportesProveedores.resx">
+      <DependentUpon>FrmReportesProveedores.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Forms Reportes\FrmReportesVentas.resx">
       <DependentUpon>FrmReportesVentas.cs</DependentUpon>

@@ -35,5 +35,23 @@ namespace ProyectoPAV.Formularios
             FrmReportesVentas form = new FrmReportesVentas();
             form.ShowDialog();
         }
+
+        private void BtnEmpleados_Click(object sender, EventArgs e)
+        {
+            FrmReportesEmpleados form = new FrmReportesEmpleados();
+            form.ShowDialog();
+        }
+
+        private void BtnProveedores_Click(object sender, EventArgs e)
+        {
+            FrmReportesProveedores form = new FrmReportesProveedores();
+            form.ShowDialog();
+        }
+
+        private void BtnCompras_Click(object sender, EventArgs e)
+        {
+            FrmReportesCompras form = new FrmReportesCompras();
+            form.ShowDialog();
+        }
     }
 }

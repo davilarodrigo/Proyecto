@@ -60,6 +60,7 @@
             this.btnProveedores.TabIndex = 1;
             this.btnProveedores.Text = "Proveedores";
             this.btnProveedores.UseVisualStyleBackColor = true;
+            this.btnProveedores.Click += new System.EventHandler(this.BtnProveedores_Click);
             // 
             // btnClientes
             // 
@@ -85,6 +86,7 @@
             this.btnEmpleados.TabIndex = 3;
             this.btnEmpleados.Text = "Empleados";
             this.btnEmpleados.UseVisualStyleBackColor = true;
+            this.btnEmpleados.Click += new System.EventHandler(this.BtnEmpleados_Click);
             // 
             // btnCompras
             // 
@@ -97,6 +99,7 @@
             this.btnCompras.TabIndex = 4;
             this.btnCompras.Text = "Compras";
             this.btnCompras.UseVisualStyleBackColor = true;
+            this.btnCompras.Click += new System.EventHandler(this.BtnCompras_Click);
             // 
             // btnVentas
             // 
